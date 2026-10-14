@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CTF 赛事日历 2026 · 全年赛事检索</title>
+<meta name="description" content="2026 全年 CTF 与网络安全竞赛日历：报名开始/截止、比赛开始/结束时间、实时状态判定，支持关键词与时间段检索。" />
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%A9%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-top">
+        <h1>CTF 赛事日历 <span class="year-badge" id="scopeBadge">2026</span></h1>
+        <div class="hero-actions">
+          <button class="btn ghost" id="btnTz" type="button" title="切换显示时区">时区：北京时间</button>
+          <button class="btn ghost" id="btnTheme" type="button" title="切换主题">🌙</button>
+        </div>
+      </div>
+      <p class="hero-sub">
+        收录 <strong id="statTotal">—</strong> 场赛事 · 数据源 <a href="https://ctftime.org" target="_blank" rel="noopener">CTFtime</a> 公开 API + 官方通知人工核验
+      </p>
+
+      <div class="stats" id="stats"></div>
+    </div>
+  </header>
+
+  <section class="panel" aria-label="检索条件">
+    <div class="row row-main">
+      <div class="field grow">
+        <label for="q">关键词检索</label>
+        <div class="input-wrap">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 104.472 10.03l4.749 4.75 1.414-1.415-4.75-4.749A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"/></svg>
+          <input id="q" type="search" placeholder="赛事名 / 主办方 / 地区 / 赛制，如：强网杯、CISCN、Jeopardy、China" autocomplete="off" />
+          <button class="clear" id="qClear" type="button" hidden aria-label="清空">×</button>
+        </div>
+        <div class="hint">多关键词用空格分隔＝全部匹配；<code>|</code> 分隔＝任一匹配；<code>"引号"</code> 精确短语；<code>-词</code> 排除</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <label for="cat">赛事类型</label>
+        <select id="cat">
+          <option value="">全部类型</option>
+          <option value="college">大学生竞赛类</option>
+          <option value="domestic-technical">国内技术性赛事</option>
+          <option value="international-technical">国际赛事</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="rangeField">时间检索维度</label>
+        <select id="rangeField">
+          <option value="contest">比赛时间</option>
+          <option value="registration">报名时间</option>
+          <option value="any">报名或比赛时间</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="from">起始日期</label>
+        <input id="from" type="date" />
+      </div>
+
+      <div class="field">
+        <label for="to">结束日期</label>
+        <input id="to" type="date" />
+      </div>
+
+      <div class="field">
+        <label for="overlap">区间匹配方式</label>
+        <select id="overlap">
+          <option value="overlap">有交集（推荐）</option>
+          <option value="contain">完全落在区间内</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="sort">排序</label>
+        <select id="sort">
+          <option value="start-asc">比赛时间 ↑</option>
+          <option value="start-desc">比赛时间 ↓</option>
+          <option value="reg-asc">报名开始 ↑</option>
+          <option value="weight-desc">赛事权重 ↓</option>
+          <option value="title-asc">名称 A→Z</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row row-chips">
+      <div class="chips" id="statusChips" role="group" aria-label="状态筛选">
+        <span class="chips-label">状态</span>
+        <button class="chip on" data-status="all" type="button">全部</button>
+        <button class="chip" data-status="reg-open" type="button">报名中</button>
+        <button class="chip" data-status="reg-closed" type="button">报名已截止</button>
+        <button class="chip" data-status="upcoming" type="button">未开始</button>
+        <button class="chip" data-status="ongoing" type="button">进行中</button>
+        <button class="chip" data-status="ended" type="button">已结束</button>
+        <button class="chip" data-status="tbd" type="button">时间待定</button>
+      </div>
+      <div class="quick">
+        <button class="btn tiny" data-quick="today" type="button">今天</button>
+        <button class="btn tiny" data-quick="week" type="button">未来 7 天</button>
+        <button class="btn tiny" data-quick="month" type="button">未来 30 天</button>
+        <button class="btn tiny" data-quick="all" type="button">全年</button>
+      </div>
+    </div>
+
+    <div class="row row-foot">
+      <div class="result-count"><strong id="count">—</strong> 条结果<span id="activeFilters" class="active-filters"></span></div>
+      <div class="tools">
+        <button class="btn tiny" id="btnReset" type="button">重置条件</button>
+        <button class="btn tiny" id="btnCsv" type="button">导出 CSV</button>
+        <button class="btn tiny" id="btnIcs" type="button">导出 ICS 日历</button>
+      </div>
+    </div>
+  </section>
+
+  <main id="list" class="list" aria-live="polite"></main>
+  <div id="empty" class="empty" hidden>
+    <div class="empty-ico">🔍</div>
+    <h2>没有匹配的赛事</h2>
+    <p>试试放宽时间范围，或清空关键词。</p>
+    <button class="btn" id="btnReset2" type="button">重置全部条件</button>
+  </div>
+
+  <footer class="foot">
+    <p>
+      <strong>状态判定</strong>基于浏览器当前时间实时计算 ·
+      数据生成于 <span id="genAt">—</span> ·
+      报名时间若原始来源未公布，显示「待定」并可跳转官网核实，绝不臆造。
+    </p>
+    <p class="muted">
+      数据来源：<a href="https://ctftime.org" target="_blank" rel="noopener">CTFtime</a> 公开 API（国际赛事）+
+      各赛事官方通知人工核验（国内赛事）。赛事时间以官方最终通知为准。
+    </p>
+  </footer>
+</div>
+
+<template id="cardTpl">
+  <article class="card">
+    <div class="card-head">
+      <div class="card-title-wrap">
+        <h3 class="card-title"></h3>
+        <div class="card-meta"></div>
+      </div>
+      <div class="card-badges">
+        <span class="badge status"></span>
+        <span class="badge reg"></span>
+      </div>
+    </div>
+    <div class="card-grid">
+      <div class="slot">
+        <span class="slot-label">开始报名</span>
+        <span class="slot-value reg-start"></span>
+      </div>
+      <div class="slot">
+        <span class="slot-label">报名截止</span>
+        <span class="slot-value reg-end"></span>
+      </div>
+      <div class="slot">
+        <span class="slot-label">比赛开始</span>
+        <span class="slot-value c-start"></span>
+      </div>
+      <div class="slot">
+        <span class="slot-label">比赛结束</span>
+        <span class="slot-value c-end"></span>
+      </div>
+    </div>
+    <div class="countdown"></div>
+    <details class="more">
+      <summary>详情 / 报名说明 / 来源</summary>
+      <div class="more-body"></div>
+    </details>
+  </article>
+</template>
+
+<script src="assets/core.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

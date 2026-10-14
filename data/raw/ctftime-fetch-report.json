@@ -1,0 +1,72 @@
+[
+  {
+    "month": "2025-12",
+    "returned": 20,
+    "added": 20
+  },
+  {
+    "month": "2026-01",
+    "returned": 20,
+    "added": 20
+  },
+  {
+    "month": "2026-02",
+    "returned": 17,
+    "added": 17
+  },
+  {
+    "month": "2026-03",
+    "returned": 46,
+    "added": 46
+  },
+  {
+    "month": "2026-04",
+    "returned": 37,
+    "added": 37
+  },
+  {
+    "month": "2026-05",
+    "returned": 39,
+    "added": 39
+  },
+  {
+    "month": "2026-06",
+    "returned": 20,
+    "added": 20
+  },
+  {
+    "month": "2026-07",
+    "returned": 20,
+    "added": 20
+  },
+  {
+    "month": "2026-08",
+    "returned": 30,
+    "added": 30
+  },
+  {
+    "month": "2026-09",
+    "returned": 26,
+    "added": 26
+  },
+  {
+    "month": "2026-10",
+    "returned": 27,
+    "added": 27
+  },
+  {
+    "month": "2026-11",
+    "returned": 17,
+    "added": 17
+  },
+  {
+    "month": "2026-12",
+    "returned": 6,
+    "added": 6
+  },
+  {
+    "month": "2027-01",
+    "returned": 0,
+    "added": 0
+  }
+]
