@@ -191,17 +191,39 @@ export function extractRegistration(description, eventYear) {
   for (const cl of clauses) {
     const ctext = cl.text;
     if (!ctext || ctext.length < 6) continue;
+
+    // 收集本子句内所有报名关键词的位置
+    const kwPos = [];
     REG_KW.lastIndex = 0;
-    if (!REG_KW.test(ctext)) continue;
+    let km;
+    while ((km = REG_KW.exec(ctext))) {
+      kwPos.push({ start: km.index, end: km.index + km[0].length });
+      if (km.index === REG_KW.lastIndex) REG_KW.lastIndex++;
+    }
+    if (!kwPos.length) continue;
 
     const dates = findDates(ctext);
     if (!dates.length) continue;
 
     // 尝试一次区间解析（两个日期 + 中间有区间符）
-    if (dates.length >= 2) {
+    // 收紧条件，避免把「赛程表 / 现场签到时段 / 申请链接」误当报名窗口：
+    //   1) 子句内出现 ≥3 个日期 → 判定为赛程表，整体跳过
+    //   2) 区间必须紧跟在报名关键词之后（≤45 字符）
+    //   3) 关键词与首个日期之间不能是 URL
+    //   4) 两个日期之间不能含具体时刻（那是赛程条目，不是日期区间）
+    const isScheduleLike = dates.length >= 3 || (ctext.match(/\d{1,2}:\d{2}/g) || []).length >= 2;
+    if (dates.length >= 2 && !isScheduleLike) {
       for (let i = 0; i < dates.length - 1; i++) {
         const a = dates[i], b = dates[i + 1];
+        const kw = [...kwPos].reverse().find((k) => k.end <= a.idx);
+        if (!kw) continue;
+        const gap = a.idx - kw.end;
+        if (gap < 0 || gap > 45) continue;
+        const bridge = ctext.slice(kw.end, a.idx);
+        if (/https?:\/\//i.test(bridge)) continue;
+
         const between = ctext.slice(a.idx + a.len, b.idx);
+        if (/\d{1,2}:\d{2}/.test(between)) continue;
         if (RANGE_SEP.test(between) && between.replace(RANGE_SEP_G, '').trim().length <= 12) {
           const yRef = a.y || b.y || eventYear;
           const aIso = build(a, yRef, ctext, 0, 0, false);
@@ -222,6 +244,9 @@ export function extractRegistration(description, eventYear) {
     // 单日期方向判定
     for (const dt of dates) {
       const before = ctext.slice(Math.max(0, dt.idx - 90), dt.idx);
+      // 关键词与日期之间夹着 URL → 多半是「申请链接」而非报名日期
+      const lastKw = [...kwPos].reverse().find((k) => k.end <= dt.idx);
+      if (lastKw && /https?:\/\//i.test(ctext.slice(lastKw.end, dt.idx))) continue;
       const dir = direction(before.slice(-60));
       const yRef = dt.y || eventYear;
       if (dir === 'end') {

@@ -16,6 +16,7 @@
  */
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { extractRegistration } from './lib/registration.mjs';
@@ -56,6 +57,16 @@ function normalizeCtftime(ev) {
   let registrationEnd = reg.end;
   let registrationBasis = reg.basis;
   let registrationNote;
+
+  // 合理性关卡：报名截止晚于比赛结束，对 CTF 而言几乎必然是误抽取
+  //（把赛程表、现场签到时段、申请链接当成了报名窗口）。宁可退回推定档，也不放行可疑值。
+  if (registrationBasis === 'stated' && registrationEnd && ev.finish
+      && Date.parse(registrationEnd) > Date.parse(ev.finish) + 86400000) {
+    console.log(`  ! 丢弃可疑报名时间「${ev.title}」：截止 ${registrationEnd} 晚于比赛结束 ${ev.finish}`);
+    registrationStart = null;
+    registrationEnd = null;
+    registrationBasis = 'unknown';
+  }
 
   if (registrationBasis === 'stated') {
     registrationNote = `自赛事描述抽取原文：${reg.snippets.join(' ／ ')}`;
@@ -101,6 +112,105 @@ function normalizeCtftime(ev) {
   };
 }
 
+/* ------------------------------------------------------------------ *
+ * 去重：两份独立调研难免收录同一赛事（标题写法不同、赛事名带/不带年份）。
+ * 用「标题字符二元组 Dice 相似度 + 比赛日期相容性」判定，避免人工漏合并。
+ * ------------------------------------------------------------------ */
+function titleKey(s) {
+  return String(s).toLowerCase()
+    .replace(/20\d{2}\s*年?/g, '')
+    .replace(/[第届]/g, '')
+    .replace(/[\s（）()【】\[\]·、,，:：\-—_""''""'']/g, '');
+}
+
+function bigrams(s) {
+  const set = new Set();
+  for (let i = 0; i < s.length - 1; i++) set.add(s.slice(i, i + 2));
+  if (s.length === 1) set.add(s);
+  return set;
+}
+
+function dice(a, b) {
+  const A = bigrams(a), B = bigrams(b);
+  if (!A.size || !B.size) return 0;
+  let inter = 0;
+  for (const x of A) if (B.has(x)) inter++;
+  return (2 * inter) / (A.size + B.size);
+}
+
+/** 是否同一赛事：包含关系（强信号）或极高相似度。
+ *  注意：短英文标题的 Dice 容易虚高（如 rstconctf vs hitconctf = 0.75），
+ *  因此设 0.88 高阈值，且必须满足日期相容。 */
+function sameEvent(k1, k2) {
+  if (!k1 || !k2) return false;
+  if (k1 === k2) return true;
+  if (k1.length >= 6 && k2.length >= 6 && (k1.includes(k2) || k2.includes(k1))) return true;
+  return dice(k1, k2) >= 0.88;
+}
+
+/** 日期相容：两者都未知 / 一方未知 / 相差 ≤2 天 —— 视为同一场赛事 */
+function datesCompatible(a, b) {
+  const ta = a.contestStart ? Date.parse(a.contestStart) : null;
+  const tb = b.contestStart ? Date.parse(b.contestStart) : null;
+  if (ta == null || tb == null) return true;
+  return Math.abs(ta - tb) <= 2 * 86400000;
+}
+
+/** 完整度打分：字段越全、可信度越高越优先保留 */
+function completeness(e) {
+  const fields = ['organizer', 'format', 'officialUrl', 'registrationStart', 'registrationEnd',
+    'contestStart', 'contestEnd', 'registrationNote', 'note', 'evidence', 'region', 'subCategory'];
+  let s = fields.reduce((n, f) => n + (e[f] ? 1 : 0), 0);
+  if (e.registrationBasis === 'stated') s += 3;
+  if (e.confidence === 'high') s += 2;
+  else if (e.confidence === 'medium') s += 1;
+  s += (e.sources || []).length * 0.5;
+  return s;
+}
+
+function uniq(arr) { return [...new Set(arr.filter(Boolean))]; }
+
+function mergeTwo(a, b) {
+  const [primary, secondary] = completeness(a) >= completeness(b) ? [a, b] : [b, a];
+  const out = { ...primary };
+  for (const k of Object.keys(secondary)) {
+    const v = secondary[k];
+    if (v == null || v === '' || (Array.isArray(v) && !v.length)) continue;
+    if (out[k] == null || out[k] === '' || (Array.isArray(out[k]) && !out[k].length)) out[k] = v;
+  }
+  out.aliases = uniq([...(a.aliases || []), ...(b.aliases || [])]);
+  out.sources = uniq([...(a.sources || []), ...(b.sources || [])]);
+  const ev = uniq([a.evidence, b.evidence]);
+  out.evidence = ev.join(' ／／ ').slice(0, 600);
+  if (a.title !== b.title) out.aliases = uniq([...out.aliases, a.title, b.title]).filter((t) => t !== out.title);
+  out.mergedFrom = uniq([...(a.mergedFrom || []), ...(b.mergedFrom || []), a.title, b.title]);
+  return out;
+}
+
+function dedupe(events) {
+  const out = [];
+  const keys = [];
+  let merged = 0;
+  for (const e of events) {
+    const k = titleKey(e.title);
+    let hit = -1;
+    for (let i = 0; i < out.length; i++) {
+      if (sameEvent(k, keys[i]) && datesCompatible(out[i], e)) { hit = i; break; }
+    }
+    if (hit >= 0) {
+      console.log(`  合并重复: 「${e.title}」 → 「${out[hit].title}」`);
+      out[hit] = mergeTwo(out[hit], e);
+      keys[hit] = titleKey(out[hit].title);
+      merged++;
+    } else {
+      out.push(e);
+      keys.push(k);
+    }
+  }
+  if (merged) console.log(`  共合并 ${merged} 条重复记录`);
+  return out;
+}
+
 /* ------------------------------------------------------------------ */
 async function readJsonIfExists(p) {
   if (!existsSync(p)) return null;
@@ -112,8 +222,9 @@ async function readJsonIfExists(p) {
   }
 }
 
-function slug(s) {
-  return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+/** 稳定 ID：中文标题 slug 后会变成空串，必须用摘要避免 ID 冲突 */
+function researchId(title) {
+  return 'research-' + createHash('sha1').update(String(title)).digest('hex').slice(0, 10);
 }
 
 function normalizeResearch(item, fallbackCategory) {
@@ -126,7 +237,7 @@ function normalizeResearch(item, fallbackCategory) {
     else basis = 'unknown';
   }
   return {
-    id: item.id || `research-${slug(item.title)}`,
+    id: item.id || researchId(item.title),
     title: item.title,
     titleEn: item.titleEn || item.title,
     aliases: item.aliases || [],
@@ -172,24 +283,20 @@ async function main() {
   for (const item of college) events.push(normalizeResearch(item, 'college'));
   for (const item of domestic) events.push(normalizeResearch(item, 'domestic-technical'));
 
-  // 只保留 2026 自然年
+  // 年度归属：赛程与 2026 自然年有交集即收录（多阶段赛事常跨年）
+  const Y0 = Date.UTC(2026, 0, 1);
+  const Y1 = Date.UTC(2027, 0, 1);
   const inScope = events.filter((e) => {
-    if (e.contestStart) {
-      const t = new Date(e.contestStart).getTime();
-      return t >= Date.UTC(2026, 0, 1) && t < Date.UTC(2027, 0, 1);
-    }
-    return e.year === 2026;
+    const s = e.contestStart ? Date.parse(e.contestStart) : null;
+    const t = e.contestEnd ? Date.parse(e.contestEnd) : null;
+    const a = s == null ? t : s;
+    const b = t == null ? s : t;
+    if (a == null) return e.year === 2026;          // 无赛程：按标注年份
+    return a < Y1 && b >= Y0;                        // 区间与 2026 有交集
   });
 
-  // 去重：同名 + 同开始时间
-  const seen = new Set();
-  const deduped = [];
-  for (const e of inScope) {
-    const key = `${String(e.title).trim().toLowerCase()}|${e.contestStart || ''}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    deduped.push(e);
-  }
+  // 去重：标题相似度 + 日期相容性
+  const deduped = dedupe(inScope);
   deduped.sort((a, b) => {
     const ta = a.contestStart ? new Date(a.contestStart).getTime() : Infinity;
     const tb = b.contestStart ? new Date(b.contestStart).getTime() : Infinity;
@@ -199,7 +306,7 @@ async function main() {
   const stats = {
     generatedAt: new Date().toISOString(),
     scope: '2026-01-01 ~ 2026-12-31',
-    scopeNote: '按比赛开始时间归属自然年；时间为绝对时刻，前端按所选时区渲染',
+    scopeNote: '赛程与 2026 自然年有交集即收录（多阶段赛事常跨年）；时间为绝对时刻，前端按所选时区渲染',
     total: deduped.length,
     byCategory: {},
     byRegistrationBasis: {},

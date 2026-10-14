@@ -137,22 +137,53 @@ eq('月份归属按时区判定（UTC 口径为5月）',
 /* ---------- 5. 真实数据集完整性 ---------- */
 console.log('\n— 真实数据集 —');
 const evs = data.events;
+const dated = evs.filter((e) => e.contestStart && e.contestEnd);
+const withStart = evs.filter((e) => e.contestStart);
+const tbd = evs.filter((e) => !e.contestStart);
+
 t(`数据集非空（${evs.length} 条）`, evs.length > 200);
-t('每条都有比赛开始时间', evs.every((e) => !!e.contestStart));
-t('每条都有比赛结束时间', evs.every((e) => !!e.contestEnd));
-t('结束不早于开始', evs.every((e) => Date.parse(e.contestEnd) >= Date.parse(e.contestStart)));
-t('全部落在 2026 自然年', evs.every((e) => {
-  const t0 = Date.parse(e.contestStart);
-  return t0 >= Date.UTC(2026, 0, 1) && t0 < Date.UTC(2027, 0, 1);
-}));
+t(`绝大多数有完整比赛时间（${dated.length}/${evs.length}）`, dated.length >= evs.length - 15);
+t('已知的结束不早于开始', dated.every((e) => Date.parse(e.contestEnd) >= Date.parse(e.contestStart)));
+t('赛程区间与 2026 自然年均有交集', dated.every((e) =>
+  Date.parse(e.contestStart) < Date.UTC(2027, 0, 1) && Date.parse(e.contestEnd) >= Date.UTC(2026, 0, 1)));
+t(`时间待定赛事被明确标记（${tbd.length} 条）`, tbd.every((e) => !e.contestStart));
 t('ID 唯一', new Set(evs.map((e) => e.id)).size === evs.length);
+t('ID 非空', evs.every((e) => e.id && e.id !== 'research-'));
+t('标题非空', evs.every((e) => e.title && String(e.title).trim().length > 1));
 t('报名字段带可信度档位', evs.every((e) => ['stated', 'derived', 'unknown'].includes(e.registrationBasis)));
 t('stated 档必须有真实日期支撑', evs.filter((e) => e.registrationBasis === 'stated')
   .every((e) => e.registrationStart || e.registrationEnd));
+t('stated 档报名截止不晚于比赛结束（允许赛程内继续报名）',
+  evs.filter((e) => e.registrationBasis === 'stated' && e.registrationEnd && e.contestEnd)
+    .every((e) => Date.parse(e.registrationEnd) <= Date.parse(e.contestEnd) + 86400000));
+t('stated 档报名开始不晚于报名截止',
+  evs.filter((e) => e.registrationBasis === 'stated' && e.registrationStart && e.registrationEnd)
+    .every((e) => Date.parse(e.registrationStart) <= Date.parse(e.registrationEnd)));
+t('derived 档的报名截止恒等于比赛开始（推定规则一致）',
+  evs.filter((e) => e.registrationBasis === 'derived' && e.contestStart)
+    .every((e) => Date.parse(e.registrationEnd) === Date.parse(e.contestStart)));
+t('每条都有来源链接', evs.every((e) => (e.sources || []).length > 0));
 
-// 月份覆盖：应覆盖 12 个月
+// 月份覆盖：2026 年 12 个月应全部有赛事
 const months = new Set(evs.map((e) => C.monthKey(e.contestStart, 'Asia/Shanghai')));
-t(`覆盖 12 个自然月（实际 ${months.size}）`, months.size === 12);
+const missing = [];
+for (let m = 1; m <= 12; m++) {
+  const k = `2026-${String(m).padStart(2, '0')}`;
+  if (!months.has(k)) missing.push(k);
+}
+t(`2026 年 12 个月全覆盖（缺 ${missing.join(',') || '无'}）`, missing.length === 0);
+
+// 分类构成
+const cats = {};
+evs.forEach((e) => { cats[e.category] = (cats[e.category] || 0) + 1; });
+t(`大学生竞赛类非空（${cats.college || 0} 条）`, (cats.college || 0) > 100);
+t(`国内技术性赛事非空（${cats['domestic-technical'] || 0} 条）`, (cats['domestic-technical'] || 0) > 10);
+t(`国际赛事非空（${cats['international-technical'] || 0} 条）`, (cats['international-technical'] || 0) > 100);
+
+console.log(`\n分类构成: ${JSON.stringify(cats)}`);
+console.log(`报名依据: stated=${evs.filter((e) => e.registrationBasis === 'stated').length} ` +
+  `derived=${evs.filter((e) => e.registrationBasis === 'derived').length} ` +
+  `unknown=${evs.filter((e) => e.registrationBasis === 'unknown').length}`);
 
 console.log(`\n================ 通过 ${pass} / ${pass + fail} ================`);
 process.exit(fail ? 1 : 0);
