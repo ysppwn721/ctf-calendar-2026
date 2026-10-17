@@ -92,6 +92,26 @@ eq('仅知开始时间 + durationHours → 自动推算结束',
     contestStart: '2026-06-14T00:00:00Z', durationHours: 48,
   }), now).status, 'ongoing');
 
+/* 回归：比赛已结束的赛事，报名状态不得为 open（曾导致已结束赛事出现在「现在可报名」里） */
+eq('比赛已结束 + 有报名开始但无报名截止 → 报名已关闭',
+  C.computeStatus(EV({
+    registrationBasis: 'stated',
+    registrationStart: '2026-01-31T08:00:00Z',
+    contestStart: '2026-02-21T12:30:00Z', contestEnd: '2026-02-21T22:30:00Z',
+  }), now).reg, 'closed');
+
+t('任何已结束赛事的报名状态都不是 open',
+  [1, 2, 3, 30, 300].every((d) => {
+    const t0 = now - d * 86400000;
+    const st = C.computeStatus(EV({
+      registrationBasis: 'stated',
+      registrationStart: new Date(t0 - 10 * 86400000).toISOString(),
+      contestStart: new Date(t0).toISOString(),
+      contestEnd: new Date(t0 + 2 * 86400000).toISOString(),
+    }), now);
+    return st.reg === 'closed';
+  }));
+
 /* ---------- 2. 关键词检索 ---------- */
 console.log('\n— 关键词检索 —');
 const mk = (title, organizer, region) => ({ title, organizer, region, aliases: [], category: 'college' });

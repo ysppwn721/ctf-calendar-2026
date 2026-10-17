@@ -246,6 +246,15 @@ function normalizeCatalogItem(item, seenNo) {
     url: item.url || null,
     note: item.note || '',
     security: !!item.security,
+    // 以下字段由「赛事时间调研」合并填充（scripts 里的 dates-batch-*.json）
+    contestStart: null,
+    contestEnd: null,
+    registrationStart: null,
+    registrationEnd: null,
+    dateHint: '',
+    confidence: 'low',
+    evidence: '',
+    sources: [],
   };
 }
 
@@ -383,6 +392,55 @@ async function main() {
     console.log(`    [${m.level}] ${m.catalog}  ←  ${m.event}`);
   }
 
+  /* ---- 把赛事时间调研结果合并进目录 ---- */
+  const dateFixes = [];
+  for (let n = 1; n <= 10; n++) {
+    const arr = await readJsonIfExists(resolve(RESEARCH, `dates-batch-${n}.json`));
+    if (Array.isArray(arr)) {
+      dateFixes.push(...arr);
+      console.log(`  dates-batch-${n}: ${arr.length} 条`);
+    }
+  }
+
+  const fixesByNo = new Map();
+  for (const f of dateFixes) {
+    if (!f || f.no == null) continue;
+    const k = String(f.no);
+    if (!fixesByNo.has(k)) fixesByNo.set(k, []);
+    fixesByNo.get(k).push(f);
+  }
+
+  let datedByResearch = 0;
+  let hinted = 0;
+  for (const c of catalog) {
+    const list = fixesByNo.get(String(c.no));
+    if (!list || !list.length) continue;
+    // 同序号可能有多行（如 no=7 的两个子赛项），只给第一行落日期
+    const f = list.shift();
+    const cs = f.contestStart || null;
+    const ce = f.contestEnd || null;
+    // 校验：必须是可解析的 ISO，且结束不早于开始；不合格一律丢弃，绝不带着脏数据往下走
+    const okPair = cs && ce && Number.isFinite(Date.parse(cs)) && Number.isFinite(Date.parse(ce))
+      && Date.parse(ce) >= Date.parse(cs);
+    if (cs && !Number.isFinite(Date.parse(cs))) {
+      console.warn(`  ! 丢弃无法解析的日期「${c.name}」: ${cs}`);
+    }
+    c.contestStart = okPair ? cs : null;
+    c.contestEnd = okPair ? ce : null;
+    c.registrationStart = f.registrationStart && Number.isFinite(Date.parse(f.registrationStart))
+      ? f.registrationStart : null;
+    c.registrationEnd = f.registrationEnd && Number.isFinite(Date.parse(f.registrationEnd))
+      ? f.registrationEnd : null;
+    c.dateHint = f.dateHint || '';
+    c.confidence = f.confidence || 'low';
+    c.evidence = f.evidence || '';
+    c.sources = Array.isArray(f.sources) ? f.sources.filter(Boolean) : [];
+    c.researchNote = f.note || '';
+    if (c.contestStart) datedByResearch++;
+    if (c.dateHint) hinted++;
+  }
+  console.log(`  调研落日期 ${datedByResearch} 条，仅有时段参考(dateHint) ${hinted} 条`);
+
   /* 把目录里还没有对应赛程的条目，也并入赛事列表。
      实验室要的是「学校认定的全部竞赛」，而不只是已公布日期的那些。
      已经通过交叉引用落到真实赛程上的条目不重复生成，避免同一赛事出现两行。 */
@@ -404,17 +462,23 @@ async function main() {
       weight: null,
       officialUrl: c.url || '',
       ctftimeUrl: '',
-      registrationStart: null,
-      registrationEnd: null,
-      registrationBasis: 'unknown',
-      contestStart: null,
-      contestEnd: null,
-      registrationNote: '《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。',
-      note: c.note || '',
+      registrationStart: c.registrationStart || null,
+      registrationEnd: c.registrationEnd || null,
+      registrationBasis: (c.registrationStart || c.registrationEnd) ? 'stated'
+        : (c.contestStart ? 'derived' : 'unknown'),
+      contestStart: c.contestStart || null,
+      contestEnd: c.contestEnd || null,
+      registrationNote: (c.registrationStart || c.registrationEnd)
+        ? '报名时间来自 2026 年官方通知（见来源与原文摘录）。'
+        : c.contestStart
+          ? '官方未公布报名起止；此处「报名截止」按惯例推定为开赛时刻，仅供参考。'
+          : '《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。',
+      note: [c.note, c.researchNote].filter(Boolean).join(' ／ '),
+      dateHint: c.dateHint || '',
       year: 2026,
-      confidence: 'low',
-      sources: c.url ? [c.url] : [],
-      evidence: '',
+      confidence: c.confidence || 'low',
+      sources: (c.sources && c.sources.length) ? c.sources : (c.url ? [c.url] : []),
+      evidence: c.evidence || '',
       logo: '',
       prizes: '',
       durationHours: null,
@@ -445,6 +509,9 @@ async function main() {
     byDept: {},
     missingUrl: catalog.filter((c) => !c.url).length,
     securityRelated: catalog.filter((c) => c.security).length,
+    withContestDate: catalog.filter((c) => c.contestStart).length,
+    withRegistrationDate: catalog.filter((c) => c.registrationStart || c.registrationEnd).length,
+    withDateHint: catalog.filter((c) => c.dateHint).length,
     crossReferenced: nucMatches.length,
     crossRefs: nucMatches,
   };

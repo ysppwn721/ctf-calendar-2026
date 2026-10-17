@@ -39,7 +39,7 @@
     tab: 'calendar',
     tzIndex: 0, theme: 'dark',
     q: '', cat: '', level: '', rangeField: 'contest', from: '', to: '',
-    overlap: 'overlap', sort: 'start-asc', status: 'all',
+    overlap: 'overlap', sort: 'start-asc', status: 'all', openable: false,
     nq: '', nlevel: 'all', ndept: '', nsort: 'no-asc',
     nowOverride: null,
   };
@@ -186,7 +186,8 @@
     node.querySelector('.c-start').outerHTML = slot(ev.contestStart);
     node.querySelector('.c-end').outerHTML = slot(ev.contestEnd);
 
-    node.querySelector('.countdown').innerHTML = countdownText(st);
+    node.querySelector('.countdown').innerHTML = countdownText(st)
+      + (ev.dateHint ? ` <span class="date-hint" title="官方未公布 2026 年确切日期，此处为往年规律，仅供参考">参考：${esc(ev.dateHint)}</span>` : '');
     const link = node.querySelector('.detail-link');
     if (link) link.href = `event.html?id=${encodeURIComponent(ev.id)}`;
     return node;
@@ -207,6 +208,8 @@
       if (state.cat && d.ev.category !== state.cat) return false;
       if (state.level === 'none') { if (d.ev.nucLevel) return false; }
       else if (state.level) { if (d.ev.nucLevel !== state.level) return false; }
+      // 独立开关：只看「报名通道现在开着」的（含推定的推定窗口）
+      if (state.openable && d.st.reg !== 'open') return false;
       return C.statusMatches(d.st, state.status)
         && C.queryMatches(d.hay, groups)
         && C.rangeMatches(d.st, { field: state.rangeField, fromTs, toTs, mode: state.overlap });
@@ -218,9 +221,20 @@
     if (state.cat) bits.push('类型：' + CATEGORY_LABEL[state.cat]);
     if (state.level) bits.push('级别：' + (state.level === 'none' ? '目录未收录' : state.level));
     if (state.status !== 'all') bits.push('状态：' + (STATUS_META[state.status] || {}).label);
+    if (state.openable) bits.push('只看现在可报名');
     if (nGroups) bits.push(`关键词 ${nGroups} 组`);
     if (state.from || state.to) bits.push(`时间 ${state.from || '…'} ~ ${state.to || '…'}`);
     return bits.length ? '　·　' + bits.join('　·　') : '';
+  }
+
+  /** 「现在可报名」计数：报名窗口尚未关闭（含推定窗口） */
+  function updateOpenable(decorated) {
+    const list = decorated || decorate();
+    const n = list.filter((d) => d.st.reg === 'open').length;
+    const badge = $('cntOpenable');
+    if (badge) badge.textContent = String(n);
+    const chip = $('chipOpenable');
+    if (chip) chip.classList.toggle('on', state.openable);
   }
 
   function renderStats(decorated) {
@@ -271,6 +285,7 @@
       el.list.appendChild(frag);
     }
     renderStats(decorated);
+    updateOpenable(decorated);
     syncUrl();
   }
 
@@ -374,6 +389,7 @@
     if (state.overlap !== 'overlap') p.set('ov', state.overlap);
     if (state.sort !== 'start-asc') p.set('sort', state.sort);
     if (state.tzIndex !== 0) p.set('tz', String(state.tzIndex));
+    if (state.openable) p.set('open', '1');
     if (state.nq) p.set('nq', state.nq);
     if (state.nlevel !== 'all') p.set('nlvl', state.nlevel);
     if (state.ndept) p.set('ndept', state.ndept);
@@ -400,6 +416,7 @@
     if (p.get('ndept')) state.ndept = p.get('ndept');
     if (p.get('nsort')) state.nsort = p.get('nsort');
     if (p.get('now')) { const t = new Date(p.get('now')).getTime(); if (!Number.isNaN(t)) state.nowOverride = t; }
+    if (p.get('open') === '1') state.openable = true;
   }
 
   function updateCatHint() {
@@ -555,6 +572,14 @@
       syncControls(); apply();
     });
 
+    const chipOpen = $('chipOpenable');
+    if (chipOpen) {
+      chipOpen.addEventListener('click', () => {
+        state.openable = !state.openable;
+        apply();
+      });
+    }
+
     document.querySelectorAll('[data-quick]').forEach((b) => {
       b.addEventListener('click', () => {
         const tz = TZ();
@@ -587,7 +612,7 @@
     const reset = () => {
       Object.assign(state, {
         q: '', cat: '', level: '', rangeField: 'contest', from: '', to: '',
-        overlap: 'overlap', sort: 'start-asc', status: 'all',
+        overlap: 'overlap', sort: 'start-asc', status: 'all', openable: false,
       });
       syncControls(); apply();
     };

@@ -127,7 +127,7 @@
         <div class="chips" id="statusChips" role="group" aria-label="状态筛选">
           <span class="chips-label">状态</span>
           <button class="chip on" data-status="all" type="button">全部</button>
-          <button class="chip" data-status="reg-open" type="button">报名中</button>
+          <button class="chip" data-status="reg-open" type="button" title="仅统计官方明确公布的报名窗口">报名中（已确认）</button>
           <button class="chip" data-status="reg-closed" type="button">报名已截止</button>
           <button class="chip" data-status="upcoming" type="button" title="比赛尚未开始，且报名未开始或报名时间未知">待开赛</button>
           <button class="chip" data-status="ongoing" type="button">进行中</button>
@@ -139,6 +139,16 @@
           <button class="btn tiny" data-quick="week" type="button">未来 7 天</button>
           <button class="btn tiny" data-quick="month" type="button">未来 30 天</button>
           <button class="btn tiny" data-quick="all" type="button">全年</button>
+        </div>
+      </div>
+
+      <div class="row row-chips row-openable">
+        <div class="chips">
+          <span class="chips-label">报名通道</span>
+          <button class="chip toggle" id="chipOpenable" type="button" title="独立开关：与上方状态筛选叠加生效">
+            只看现在可报名 <b class="lvl-n" id="cntOpenable">0</b>
+          </button>
+          <span class="hint" id="openableHint">含官方明确窗口 + 按惯例推定的窗口</span>
         </div>
       </div>
 

@@ -126,11 +126,17 @@
     else if (cs != null) contest = 'upcoming';
     else contest = 'tbd';
 
+    /* 报名状态。
+       关键修正：比赛一旦结束，报名必然已关闭——不能因为「没有报名截止字段」
+       就一路判成 open（曾经因此让已结束的赛事出现在「现在可报名」筛选里）。
+       同理，已开赛且没有公布报名截止的，保守判为已关闭。 */
     let reg;
-    if (re != null && now > re) reg = 'closed';
+    if (ce != null && now >= ce) reg = 'closed';
+    else if (re != null && now > re) reg = 'closed';
     else if (rs != null && now < rs) reg = 'notopen';
     else if (re != null && (rs == null || now >= rs)) reg = 'open';
-    else if (rs != null && re == null && now >= rs) reg = 'open';
+    else if (rs != null && re == null && (cs == null || now < cs)) reg = 'open';
+    else if (cs != null && now >= cs && re == null) reg = 'closed';
     else reg = 'unknown';
 
     /* 主状态判定。

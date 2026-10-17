@@ -1,6 +1,6 @@
 {
   "stats": {
-    "generatedAt": "2026-10-17T13:17:28.813Z",
+    "generatedAt": "2026-10-17T13:26:21.967Z",
     "scope": "2026-01-01 ~ 2026-12-31",
     "scopeNote": "赛程与 2026 自然年有交集即收录（多阶段赛事常跨年）；时间为绝对时刻，前端按所选时区渲染",
     "total": 462,
@@ -11099,6 +11099,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11137,6 +11138,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11175,6 +11177,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11214,6 +11217,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11252,6 +11256,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11290,6 +11295,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11329,6 +11335,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11367,6 +11374,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11406,6 +11414,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11445,6 +11454,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11483,6 +11493,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11522,6 +11533,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11560,6 +11572,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11598,6 +11611,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11636,6 +11650,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11674,6 +11689,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11712,6 +11728,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11750,6 +11767,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11788,6 +11806,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11826,6 +11845,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11864,6 +11884,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11902,6 +11923,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11940,6 +11962,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -11978,6 +12001,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12016,6 +12040,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12054,6 +12079,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12092,6 +12118,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12131,6 +12158,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12169,6 +12197,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12207,6 +12236,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12245,6 +12275,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "RoboMaster 官网 https://www.robomaster.com/",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12284,6 +12315,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12322,6 +12354,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12360,6 +12393,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12398,6 +12432,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12436,6 +12471,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12474,6 +12510,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12512,6 +12549,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12550,6 +12588,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12588,6 +12627,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "官网「暂未公布」",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [],
@@ -12624,6 +12664,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12662,6 +12703,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12700,6 +12742,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12738,6 +12781,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12779,6 +12823,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12818,6 +12863,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12856,6 +12902,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12894,6 +12941,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12932,6 +12980,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -12970,6 +13019,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13008,6 +13058,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13046,6 +13097,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13084,6 +13136,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13122,6 +13175,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13164,6 +13218,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13202,6 +13257,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13241,6 +13297,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13279,6 +13336,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13317,6 +13375,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13355,6 +13414,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13393,6 +13453,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13431,6 +13492,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13469,6 +13531,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13507,6 +13570,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13546,6 +13610,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "与序号7同属一项赛事的另两个子赛项",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13585,6 +13650,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13623,6 +13689,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13661,6 +13728,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13699,6 +13767,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13737,6 +13806,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13775,6 +13845,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13813,6 +13884,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13851,6 +13923,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13889,6 +13962,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13927,6 +14001,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -13965,6 +14040,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14003,6 +14079,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14042,6 +14119,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14080,6 +14158,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "官网「无」",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [],
@@ -14116,6 +14195,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14154,6 +14234,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14192,6 +14273,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14230,6 +14312,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14268,6 +14351,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "官网「无」",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [],
@@ -14304,6 +14388,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14342,6 +14427,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "官网「无」",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [],
@@ -14378,6 +14464,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "报名渠道为微信公众号：词达人公众号",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [],
@@ -14414,6 +14501,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14452,6 +14540,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14490,6 +14579,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14528,6 +14618,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14566,6 +14657,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "报名渠道为微信公众号：北京市人文知识竞赛组委会",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [],
@@ -14602,6 +14694,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14640,6 +14733,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "官网「无」",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [],
@@ -14676,6 +14770,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14714,6 +14809,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14752,6 +14848,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14791,6 +14888,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14829,6 +14927,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14867,6 +14966,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14905,6 +15005,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -14943,6 +15044,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "官网「无」",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [],
@@ -14980,6 +15082,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15018,6 +15121,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15056,6 +15160,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "官网「无」",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [],
@@ -15092,6 +15197,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "官网「无」",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [],
@@ -15129,6 +15235,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15167,6 +15274,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "官网「无」",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [],
@@ -15205,6 +15313,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15243,6 +15352,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15281,6 +15391,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15319,6 +15430,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15357,6 +15469,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15395,6 +15508,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15433,6 +15547,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15471,6 +15586,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15509,6 +15625,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15547,6 +15664,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15585,6 +15703,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15623,6 +15742,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "官网「无」",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [],
@@ -15659,6 +15779,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15697,6 +15818,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15735,6 +15857,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [
@@ -15773,6 +15896,7 @@
       "contestEnd": null,
       "registrationNote": "《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。",
       "note": "",
+      "dateHint": "",
       "year": 2026,
       "confidence": "low",
       "sources": [

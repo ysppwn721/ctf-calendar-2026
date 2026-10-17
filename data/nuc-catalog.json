@@ -1,6 +1,6 @@
 {
   "stats": {
-    "generatedAt": "2026-10-17T13:17:28.811Z",
+    "generatedAt": "2026-10-17T13:26:21.965Z",
     "source": "中北大学学科竞赛目录（2026版）",
     "sourceType": "PDF 表格（12 页 / 126 行），文本层无可用 ToUnicode 映射，经页面渲染后逐行人工录入",
     "note": "该目录只含竞赛名称/负责单位/级别/国赛官网/负责人，不含任何日期，故不进入日历时间线",
@@ -39,6 +39,9 @@
     },
     "missingUrl": 12,
     "securityRelated": 2,
+    "withContestDate": 0,
+    "withRegistrationDate": 0,
+    "withDateHint": 0,
     "crossReferenced": 5,
     "crossRefs": [
       {
@@ -85,7 +88,15 @@
       ],
       "url": "https://cy.ncss.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-2",
@@ -98,7 +109,15 @@
       ],
       "url": "http://www.tiaozhanbei.net/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-3",
@@ -111,7 +130,15 @@
       ],
       "url": "http://www.tiaozhanbei.net/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-4",
@@ -124,7 +151,15 @@
       ],
       "url": "http://www.ciccwargame.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-5",
@@ -137,7 +172,15 @@
       ],
       "url": "https://uiaec.ujs.edu.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-6",
@@ -150,7 +193,15 @@
       ],
       "url": "http://www.robotcontest.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-7",
@@ -164,7 +215,15 @@
       ],
       "url": "http://meicc.cmes.org/#blade/competitions",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-7-2",
@@ -178,7 +237,15 @@
       ],
       "url": "http://cmes-imic.org.cn/",
       "note": "与序号7同属一项赛事的另两个子赛项",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-8",
@@ -191,7 +258,15 @@
       ],
       "url": "http://www.mse-cn.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-9",
@@ -204,7 +279,15 @@
       ],
       "url": "http://iche.zju.edu.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-10",
@@ -217,7 +300,15 @@
       ],
       "url": "https://www.culsc.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-11",
@@ -230,7 +321,15 @@
       ],
       "url": "http://www.cteic.com/higherEducation-199.html",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-12",
@@ -243,7 +342,15 @@
       ],
       "url": "https://cid.nju.edu.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-13",
@@ -256,7 +363,15 @@
       ],
       "url": "http://opt.zju.edu.cn/gdjs/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-14",
@@ -269,7 +384,15 @@
       ],
       "url": "http://dtcup.dtxiaotangren.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-15",
@@ -282,7 +405,15 @@
       ],
       "url": "http://www.socchina.net/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-16",
@@ -295,7 +426,15 @@
       ],
       "url": "http://www.jcyxds.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-17",
@@ -308,7 +447,15 @@
       ],
       "url": "http://www.digix.org.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-18",
@@ -321,7 +468,15 @@
       ],
       "url": "http://smartcar.moocollege.com/datacenter",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-19",
@@ -334,7 +489,15 @@
       ],
       "url": "http://crc.drct-caa.org.cn/index.php",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-20",
@@ -347,7 +510,15 @@
       ],
       "url": "https://www.robocom.com.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-21",
@@ -360,7 +531,15 @@
       ],
       "url": "http://www.g-ican.com/home/index",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-22",
@@ -374,7 +553,15 @@
       ],
       "url": "http://www.cnrobocon.net/",
       "note": "RoboMaster 官网 https://www.robomaster.com/",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-23",
@@ -387,7 +574,15 @@
       ],
       "url": "http://www.ciscn.cn/",
       "note": "",
-      "security": true
+      "security": true,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-24",
@@ -400,7 +595,15 @@
       ],
       "url": "http://www.ncda.org.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-25",
@@ -417,7 +620,15 @@
       ],
       "url": "http://jsjds.blcu.edu.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-26",
@@ -430,7 +641,15 @@
       ],
       "url": "https://e.huawei.com/cn/talent/#/ict/contest",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-27",
@@ -443,7 +662,15 @@
       ],
       "url": "http://www.fwwb.org.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-28",
@@ -456,7 +683,15 @@
       ],
       "url": "http://iot.sjtu.edu.cn/Default.aspx",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-29",
@@ -469,7 +704,15 @@
       ],
       "url": "https://compiler.educg.net/#/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-30",
@@ -482,7 +725,15 @@
       ],
       "url": "https://star.baidu.com/#/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-31",
@@ -498,7 +749,15 @@
       ],
       "url": "http://www.mcm.edu.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-32",
@@ -511,7 +770,15 @@
       ],
       "url": "http://tjjmds.ai-learning.net/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-33",
@@ -524,7 +791,15 @@
       ],
       "url": "http://www.3chuang.net/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-34",
@@ -537,7 +812,15 @@
       ],
       "url": "http://www.china-cssc.org/list-52-1.html",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-35",
@@ -551,7 +834,15 @@
       ],
       "url": "http://www.xcbds.com/cvds/index",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-36",
@@ -568,7 +859,15 @@
       ],
       "url": "http://cubec.org.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-37",
@@ -581,7 +880,15 @@
       ],
       "url": "https://www.seentao.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-38",
@@ -594,7 +901,15 @@
       ],
       "url": "https://www.gonghangbei.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-39",
@@ -607,7 +922,15 @@
       ],
       "url": "http://ssfk.zufe.edu.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-40",
@@ -621,7 +944,15 @@
       ],
       "url": "http://www.ibizsim.com.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-41",
@@ -635,7 +966,15 @@
       ],
       "url": "http://match.xmkeyun.com.cn/nc/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-42",
@@ -649,7 +988,15 @@
       ],
       "url": "http://uchallenge.unipus.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-43",
@@ -663,7 +1010,15 @@
       ],
       "url": "https://contest.i21st.cn/index.php",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-44",
@@ -676,7 +1031,15 @@
       ],
       "url": "https://www.jingdiansxj.cn/home",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-45",
@@ -690,7 +1053,15 @@
       ],
       "url": "https://ict.sflep.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-46",
@@ -703,7 +1074,15 @@
       ],
       "url": "http://www.sun-ada.net/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-47",
@@ -716,7 +1095,15 @@
       ],
       "url": "https://www.dandad.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-48",
@@ -729,7 +1116,15 @@
       ],
       "url": "http://www.cdec.org.cn",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-49",
@@ -742,7 +1137,15 @@
       ],
       "url": "https://www.cuidc.net/#/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-50",
@@ -756,7 +1159,15 @@
       ],
       "url": "http://www.lalavision.com/fjyl/ch/index.aspx",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-51",
@@ -770,7 +1181,15 @@
       ],
       "url": "http://cmit.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-52",
@@ -783,7 +1202,15 @@
       ],
       "url": "https://icpc.global/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-53",
@@ -796,7 +1223,15 @@
       ],
       "url": "http://www.cnsoftbei.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-54",
@@ -809,7 +1244,15 @@
       ],
       "url": "http://www.c4best.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-55",
@@ -822,7 +1265,15 @@
       ],
       "url": "https://www.isclab.org.cn/",
       "note": "",
-      "security": true
+      "security": true,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-56",
@@ -835,7 +1286,15 @@
       ],
       "url": "http://www.structurecontest.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-57",
@@ -848,7 +1307,15 @@
       ],
       "url": "http://gxbsxs.glodonedu.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-58",
@@ -861,7 +1328,15 @@
       ],
       "url": "https://sljzw.hhu.edu.cn/fenhui/main.jsp",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-59",
@@ -874,7 +1349,15 @@
       ],
       "url": "http://smt.whu.edu.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-60",
@@ -887,7 +1370,15 @@
       ],
       "url": "http://bisai.ccen.com.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-61",
@@ -900,7 +1391,15 @@
       ],
       "url": "https://www.nactrans.net/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-62",
@@ -913,7 +1412,15 @@
       ],
       "url": "http://www.siemenscup-cimc.org.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-63",
@@ -926,7 +1433,15 @@
       ],
       "url": "http://www.jienengjianpai.org/Default.asp",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-64",
@@ -939,7 +1454,15 @@
       ],
       "url": null,
       "note": "官网「暂未公布」",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-65",
@@ -952,7 +1475,15 @@
       ],
       "url": "http://zpy.cstam.org.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-66",
@@ -965,7 +1496,15 @@
       ],
       "url": "http://univ.ciciec.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-67",
@@ -978,7 +1517,15 @@
       ],
       "url": "http://wlsycx.moocollege.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-68",
@@ -991,7 +1538,15 @@
       ],
       "url": "http://gjcxxcy.bit.edu.cn/Index.aspx",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-69",
@@ -1004,7 +1559,15 @@
       ],
       "url": "http://www.chinaus-maker.org.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-70",
@@ -1017,7 +1580,15 @@
       ],
       "url": "http://www.huacanjiang.com/home",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-71",
@@ -1030,7 +1601,15 @@
       ],
       "url": "https://3dds.3ddl.net/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-72",
@@ -1043,7 +1622,15 @@
       ],
       "url": "http://umic.ckcest.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-73",
@@ -1056,7 +1643,15 @@
       ],
       "url": "http://www.chengtudasai.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-74",
@@ -1069,7 +1664,15 @@
       ],
       "url": "http://www.caai.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-75",
@@ -1082,7 +1685,15 @@
       ],
       "url": "http://www.nuedcchina.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-76",
@@ -1095,7 +1706,15 @@
       ],
       "url": "http://www.gcxl.edu.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-77",
@@ -1108,7 +1727,15 @@
       ],
       "url": "http://robot.bistu.edu.cn",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-78",
@@ -1121,7 +1748,15 @@
       ],
       "url": "https://www.ciesc.cn/site/term/29.html",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-79",
@@ -1135,7 +1770,15 @@
       ],
       "url": "http://bjacac.bnu.moocollege.com/home/homepage",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-80",
@@ -1148,7 +1791,15 @@
       ],
       "url": "https://www.cmathc.org.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-81",
@@ -1161,7 +1812,15 @@
       ],
       "url": "http://www.sxccyl.gov.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-82",
@@ -1174,7 +1833,15 @@
       ],
       "url": "http://www.formulastudent.com.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-83",
@@ -1187,7 +1854,15 @@
       ],
       "url": "https://www.sxswlxh.com.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-84",
@@ -1200,7 +1875,15 @@
       ],
       "url": null,
       "note": "官网「无」",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-85",
@@ -1213,7 +1896,15 @@
       ],
       "url": "https://xspace.njust.edu.cn/0b/37/c14263a330551/page.htm",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-86",
@@ -1226,7 +1917,15 @@
       ],
       "url": "http://robo-maker.org/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-87",
@@ -1239,7 +1938,15 @@
       ],
       "url": "http://idi.cmpiji.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-88",
@@ -1252,7 +1959,15 @@
       ],
       "url": "http://pmc.rubbervalley.com/gyds/dszc/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-89",
@@ -1265,7 +1980,15 @@
       ],
       "url": null,
       "note": "官网「无」",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-90",
@@ -1279,7 +2002,15 @@
       ],
       "url": null,
       "note": "官网「无」",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-91",
@@ -1292,7 +2023,15 @@
       ],
       "url": null,
       "note": "官网「无」",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-92",
@@ -1305,7 +2044,15 @@
       ],
       "url": "https://bpetc.tju.edu.cn/dhl_13.html",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-93",
@@ -1318,7 +2065,15 @@
       ],
       "url": "http://cid.nju.edu.cn",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-94",
@@ -1331,7 +2086,15 @@
       ],
       "url": "https://www.bmedesign.cn/#/home",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-95",
@@ -1344,7 +2107,15 @@
       ],
       "url": null,
       "note": "官网「无」",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-96",
@@ -1357,7 +2128,15 @@
       ],
       "url": "http://urc.ilur.org/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-97",
@@ -1370,7 +2149,15 @@
       ],
       "url": "http://www.5lds.org.cn",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-98",
@@ -1383,7 +2170,15 @@
       ],
       "url": "http://www.ncccu.org.cn",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-99",
@@ -1396,7 +2191,15 @@
       ],
       "url": "https://www.h3c.com/cn/pub/2026_Event/h3c_cup2026/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-100",
@@ -1409,7 +2212,15 @@
       ],
       "url": "https://www.pocib.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-101",
@@ -1423,7 +2234,15 @@
       ],
       "url": "http://ds.ocale.net",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-102",
@@ -1436,7 +2255,15 @@
       ],
       "url": null,
       "note": "官网「无」",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-103",
@@ -1449,7 +2276,15 @@
       ],
       "url": null,
       "note": "官网「无」",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-104",
@@ -1462,7 +2297,15 @@
       ],
       "url": "http://www.softcontest.cn",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-105",
@@ -1476,7 +2319,15 @@
       ],
       "url": "https://kone.kingdee.com/bigdataintelligentcompetition",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-106",
@@ -1489,7 +2340,15 @@
       ],
       "url": "https://www.negotiationchina.com/mobile/default.aspx",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-107",
@@ -1504,7 +2363,15 @@
       ],
       "url": null,
       "note": "官网「无」",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-108",
@@ -1517,7 +2384,15 @@
       ],
       "url": "https://www.netinnet.cn/match/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-109",
@@ -1530,7 +2405,15 @@
       ],
       "url": "http://dspt.clppx.org.cn/index/gylhome",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-110",
@@ -1543,7 +2426,15 @@
       ],
       "url": "https://www.netinnet.cn/match/index",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-111",
@@ -1556,7 +2447,15 @@
       ],
       "url": "http://www.lscat.cn",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-112",
@@ -1569,7 +2468,15 @@
       ],
       "url": null,
       "note": "报名渠道为微信公众号：北京市人文知识竞赛组委会",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-113",
@@ -1582,7 +2489,15 @@
       ],
       "url": null,
       "note": "报名渠道为微信公众号：词达人公众号",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-114",
@@ -1595,7 +2510,15 @@
       ],
       "url": "https://oda.org.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-115",
@@ -1608,7 +2531,15 @@
       ],
       "url": "http://www.ktkda.cn",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-116",
@@ -1621,7 +2552,15 @@
       ],
       "url": "https://www.ad-young.com/Home/index",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-117",
@@ -1634,7 +2573,15 @@
       ],
       "url": "https://www.5iidea.com/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-118",
@@ -1647,7 +2594,15 @@
       ],
       "url": "http://www.mooc.test.org",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-119",
@@ -1660,7 +2615,15 @@
       ],
       "url": "http://swcontest.com.cn/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-120",
@@ -1673,7 +2636,15 @@
       ],
       "url": "https://cpedc.cup.edu.cn/c/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-121",
@@ -1687,7 +2658,15 @@
       ],
       "url": null,
       "note": "官网「无」",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-122",
@@ -1700,7 +2679,15 @@
       ],
       "url": "https://www.shejijingsai.com/2026/03/1512289.html",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-123",
@@ -1713,7 +2700,15 @@
       ],
       "url": "https://www.asfc.org.cn/index/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-124",
@@ -1726,7 +2721,15 @@
       ],
       "url": "https://www.asfc.org.cn/ydxm/mnfx/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     },
     {
       "id": "nuc-125",
@@ -1739,7 +2742,15 @@
       ],
       "url": "https://www.asfc.org.cn/index/",
       "note": "",
-      "security": false
+      "security": false,
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationStart": null,
+      "registrationEnd": null,
+      "dateHint": "",
+      "confidence": "low",
+      "evidence": "",
+      "sources": []
     }
   ]
 }

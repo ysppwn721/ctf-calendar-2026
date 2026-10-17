@@ -137,6 +137,7 @@
     kv('分类', esc(ev.subCategory || CATEGORY_LABEL[ev.category]));
     kv('奖项', esc(ev.prizes));
     kv('赛程时长', ev.durationHours ? ev.durationHours + ' 小时' : null);
+    kv('往年赛期参考', ev.dateHint ? esc(ev.dateHint) : null);
     kv('CTFtime 权重', ev.weight != null && ev.weight > 0 ? ev.weight.toFixed(2) : null);
     kv('中北大学认定', ev.nucLevel
       ? `<a class="lvl lvl-${LEVEL_ORDER[ev.nucLevel] || 0}" href="event.html?nuc=${ev.nucNo}">${esc(ev.nucLevel)}</a>（目录第 ${ev.nucNo} 项 · ${esc(ev.nucDept || '')} · 负责人 ${esc((ev.nucOwners || []).join('、'))}）`
@@ -263,6 +264,14 @@
             <tr><th>竞赛负责人</th><td colspan="3">${esc((entry.owners || []).join('、') || '—')}</td></tr>
             <tr><th>国赛参赛官网</th><td colspan="3">${
               official ? `<a href="${esc(official)}" target="_blank" rel="noopener">${esc(official)}</a>` : '<span class="na">目录标注「无」或「暂未公布」</span>'}</td></tr>
+            ${entry.contestStart ? `<tr><th>2026 年比赛时间</th><td colspan="3">${
+              esc(dt(entry.contestStart, tz(), true))} → ${esc(dt(entry.contestEnd, tz(), true) || '')}</td></tr>` : ''}
+            ${(entry.registrationStart || entry.registrationEnd) ? `<tr><th>2026 年报名时间</th><td colspan="3">${
+              esc(dt(entry.registrationStart, tz(), true) || '待定')} → ${esc(dt(entry.registrationEnd, tz(), true) || '待定')}</td></tr>` : ''}
+            ${entry.dateHint ? `<tr><th>往年赛期参考</th><td colspan="3">${esc(entry.dateHint)}</td></tr>` : ''}
+            ${entry.evidence ? `<tr><th>原文摘录</th><td colspan="3"><blockquote>${esc(entry.evidence)}</blockquote></td></tr>` : ''}
+            ${(entry.sources && entry.sources.length) ? `<tr><th>来源</th><td colspan="3">${
+              entry.sources.map((u) => safeUrl(u) ? `<a href="${esc(safeUrl(u))}" target="_blank" rel="noopener">${esc(u)}</a>` : esc(u)).join('<br>')}</td></tr>` : ''}
             ${entry.note ? `<tr><th>备注</th><td colspan="3">${esc(entry.note)}</td></tr>` : ''}
           </tbody>
         </table>
