@@ -186,8 +186,11 @@
     node.querySelector('.c-start').outerHTML = slot(ev.contestStart);
     node.querySelector('.c-end').outerHTML = slot(ev.contestEnd);
 
+    const hint = ev.dateHint
+      ? (ev.dateHint.length > 56 ? ev.dateHint.slice(0, 56) + '…' : ev.dateHint)
+      : '';
     node.querySelector('.countdown').innerHTML = countdownText(st)
-      + (ev.dateHint ? ` <span class="date-hint" title="官方未公布 2026 年确切日期，此处为往年规律，仅供参考">参考：${esc(ev.dateHint)}</span>` : '');
+      + (hint ? ` <span class="date-hint" title="官方未公布 2026 年确切日期，此处为检索到的时段参考，非事实">参考：${esc(hint)}</span>` : '');
     const link = node.querySelector('.detail-link');
     if (link) link.href = `event.html?id=${encodeURIComponent(ev.id)}`;
     return node;
