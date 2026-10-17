@@ -26,23 +26,48 @@ const EV = (o) => Object.assign({
 
 const now = Date.UTC(2026, 5, 15, 12, 0, 0); // 2026-06-15 12:00Z
 
-eq('赛前 + 报名窗口内 → reg-open',
+eq('赛前 + 官方明确报名窗口内 → reg-open',
   C.computeStatus(EV({
+    registrationBasis: 'stated',
     contestStart: '2026-07-01T00:00:00Z', contestEnd: '2026-07-03T00:00:00Z',
     registrationStart: '2026-05-01T00:00:00Z', registrationEnd: '2026-06-30T00:00:00Z',
   }), now).status, 'reg-open');
 
-eq('赛前 + 报名已过 → reg-closed',
+eq('赛前 + 官方明确报名已过 → reg-closed',
   C.computeStatus(EV({
+    registrationBasis: 'stated',
     contestStart: '2026-07-01T00:00:00Z', contestEnd: '2026-07-03T00:00:00Z',
     registrationStart: '2026-05-01T00:00:00Z', registrationEnd: '2026-06-01T00:00:00Z',
   }), now).status, 'reg-closed');
 
 eq('赛前 + 报名未开始 → upcoming',
   C.computeStatus(EV({
+    registrationBasis: 'stated',
     contestStart: '2026-07-01T00:00:00Z', contestEnd: '2026-07-03T00:00:00Z',
     registrationStart: '2026-06-20T00:00:00Z', registrationEnd: '2026-06-30T00:00:00Z',
   }), now).status, 'upcoming');
+
+// 推定窗口不算「报名中」，否则所有赛前赛事都会挤进该档，「待开赛」永远是 0
+eq('赛前 + 推定报名窗口 → 不得判为 reg-open',
+  C.computeStatus(EV({
+    registrationBasis: 'derived',
+    contestStart: '2026-07-01T00:00:00Z', contestEnd: '2026-07-03T00:00:00Z',
+    registrationEnd: '2026-07-01T00:00:00Z',
+  }), now).status, 'upcoming');
+
+eq('推定窗口的 regVerified 为 false',
+  C.computeStatus(EV({
+    registrationBasis: 'derived',
+    contestStart: '2026-07-01T00:00:00Z', contestEnd: '2026-07-03T00:00:00Z',
+    registrationEnd: '2026-07-01T00:00:00Z',
+  }), now).regVerified, false);
+
+eq('官方明确窗口的 regVerified 为 true',
+  C.computeStatus(EV({
+    registrationBasis: 'stated',
+    contestStart: '2026-07-01T00:00:00Z', contestEnd: '2026-07-03T00:00:00Z',
+    registrationStart: '2026-05-01T00:00:00Z', registrationEnd: '2026-06-30T00:00:00Z',
+  }), now).regVerified, true);
 
 eq('比赛进行中 → ongoing',
   C.computeStatus(EV({
@@ -176,7 +201,7 @@ t(`2026 年 12 个月全覆盖（缺 ${missing.join(',') || '无'}）`, missing.
 // 分类构成
 const cats = {};
 evs.forEach((e) => { cats[e.category] = (cats[e.category] || 0) + 1; });
-t(`大学生竞赛类非空（${cats.college || 0} 条）`, (cats.college || 0) > 100);
+t(`大学生竞赛类非空（${cats.college || 0} 条）`, (cats.college || 0) > 10);
 t(`国内技术性赛事非空（${cats['domestic-technical'] || 0} 条）`, (cats['domestic-technical'] || 0) > 10);
 t(`国际赛事非空（${cats['international-technical'] || 0} 条）`, (cats['international-technical'] || 0) > 100);
 
@@ -185,7 +210,38 @@ console.log(`报名依据: stated=${evs.filter((e) => e.registrationBasis === 's
   `derived=${evs.filter((e) => e.registrationBasis === 'derived').length} ` +
   `unknown=${evs.filter((e) => e.registrationBasis === 'unknown').length}`);
 
-/* ---------- 6. 中北大学竞赛目录 ---------- */
+/* ---------- 6. 分类与筛选一致性 ---------- */
+console.log('\n— 分类口径 —');
+const byCat = {};
+evs.forEach((e) => { byCat[e.category] = (byCat[e.category] || 0) + 1; });
+
+t('所有赛事都归类', evs.every((e) => ['college', 'domestic-technical', 'international-technical'].includes(e.category)));
+t(`restrictions=Open 的赛事不得归为大学生竞赛类`,
+  evs.filter((e) => /^open$/i.test(e.restrictions || '')).every((e) => e.category !== 'college'));
+t(`大学生竞赛类均有准入依据（${byCat.college} 条）`,
+  evs.filter((e) => e.category === 'college')
+    .every((e) => /academic|high-school/i.test(e.restrictions || '') || e.id.startsWith('research-')));
+t(`大学生竞赛类占比合理（${((byCat.college / evs.length) * 100).toFixed(1)}% < 20%）`,
+  byCat.college < evs.length * 0.2);
+t('国内技术性赛事均来自人工核验', evs.filter((e) => e.category === 'domestic-technical')
+  .every((e) => e.id.startsWith('research-')));
+
+console.log('\n— 筛选一致性 —');
+const dec = evs.map((e) => ({ ev: e, st: C.computeStatus(e, Date.now()) }));
+const sum = C.summarize(dec);
+const STATUSES = ['reg-open', 'reg-closed', 'upcoming', 'ongoing', 'ended', 'tbd'];
+let acc = 0;
+for (const k of STATUSES) {
+  const n = dec.filter((d) => C.statusMatches(d.st, k)).length;
+  acc += n;
+  eq(`状态「${k}」筛选数与统计数一致`, n, sum[k]);
+}
+eq('六个状态筛选之和等于总数（互斥且完备）', acc, sum.total);
+t('「待开赛」档非空（否则该筛选是死按钮）', sum.upcoming > 0);
+t('「报名中」只含官方明确的报名窗口', dec.filter((d) => d.st.status === 'reg-open')
+  .every((d) => d.ev.registrationBasis === 'stated'));
+
+/* ---------- 7. 中北大学竞赛目录 ---------- */
 console.log('\n— 中北大学竞赛目录（2026版） —');
 const nucData = require('../data/nuc-catalog.json');
 const cat = nucData.entries || [];

@@ -117,13 +117,17 @@
         </div>
       </div>
 
+      <div class="row row-note">
+        <div class="hint" id="catHint">按参赛对象准入划分：大学生竞赛类＝仅限在校学生</div>
+      </div>
+
       <div class="row row-chips">
         <div class="chips" id="statusChips" role="group" aria-label="状态筛选">
           <span class="chips-label">状态</span>
           <button class="chip on" data-status="all" type="button">全部</button>
           <button class="chip" data-status="reg-open" type="button">报名中</button>
           <button class="chip" data-status="reg-closed" type="button">报名已截止</button>
-          <button class="chip" data-status="upcoming" type="button">未开始</button>
+          <button class="chip" data-status="upcoming" type="button" title="比赛尚未开始，且报名未开始或报名时间未知">待开赛</button>
           <button class="chip" data-status="ongoing" type="button">进行中</button>
           <button class="chip" data-status="ended" type="button">已结束</button>
           <button class="chip" data-status="tbd" type="button">时间待定</button>

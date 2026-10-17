@@ -28,16 +28,33 @@ const RESEARCH = resolve(ROOT, 'data', 'research');
 
 /* ------------------------------------------------------------------ *
  * 分类推断
+ *
+ * 判据只认「参赛对象限制」（CTFtime 的 restrictions 字段）。
+ * 曾经的做法是扫描述里有没有 university/student/school —— 那是错的：
+ * 公开赛的说明里普遍会提到学生组别，结果 302 场对外开放的赛事被误标成
+ * 「大学生竞赛类」。分类必须基于赛事的准入规则，而不是宣传文案。
  * ------------------------------------------------------------------ */
 function inferCategory(ev) {
-  const r = (ev.restrictions || '').toLowerCase();
-  const d = `${ev.description || ''} ${ev.title || ''}`.toLowerCase();
-  if (r === 'academic') return { category: 'college', subCategory: '高校/学术限定' };
-  if (/university|college|student|school|students|academic|collegiate/.test(d)) {
-    return { category: 'college', subCategory: '高校/学生向' };
+  const r = (ev.restrictions || '').trim().toLowerCase();
+
+  if (r === 'academic' || r === 'high-school' || r === 'high school'
+      || r === 'collegiate' || r === 'student') {
+    return {
+      category: 'college',
+      subCategory: r === 'high-school' ? '中学生限定' : '高校/学术限定',
+    };
   }
-  if (ev.onsite) return { category: 'international-technical', subCategory: '线下现场赛' };
-  return { category: 'international-technical', subCategory: '国际公开赛' };
+
+  const where = ev.onsite ? '线下现场赛' : '国际公开赛';
+  if (r === 'open' || r === '') return { category: 'international-technical', subCategory: where };
+
+  const label = {
+    casual: '休闲赛',
+    individual: '个人赛',
+    prequalified: '需资格赛',
+    invited: '邀请制',
+  }[r] || ev.restrictions;
+  return { category: 'international-technical', subCategory: `${label} · ${where}` };
 }
 
 function inferRegion(ev) {

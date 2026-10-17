@@ -132,22 +132,39 @@
     else if (rs != null && re == null && now >= rs) reg = 'open';
     else reg = 'unknown';
 
+    /* 主状态判定。
+       注意「报名中」必须要求 registrationBasis === 'stated'：
+       推定窗口（derived）在所有赛前赛事上都成立，若也算「报名中」，
+       则「报名中」会虚高到几十条，而「待开赛」永远是 0 —— 筛选就废了。 */
+    const regVerified = ev.registrationBasis === 'stated';
     let status;
     if (contest === 'ended') status = 'ended';
     else if (contest === 'ongoing') status = 'ongoing';
     else if (contest === 'tbd') status = 'tbd';
-    else if (reg === 'open') status = 'reg-open';
-    else if (reg === 'closed') status = 'reg-closed';
+    else if (reg === 'open' && regVerified) status = 'reg-open';
+    else if (reg === 'closed' && regVerified) status = 'reg-closed';
     else status = 'upcoming';
 
-    return { status, contest, reg, cs, ce, rs, re };
+    return { status, contest, reg, regVerified, cs, ce, rs, re };
   }
 
+  /* 主状态是互斥的六个取值，筛选必须直接按它判。
+     曾经「未开始」按比赛维度（contest==='upcoming'）判，会与「报名中」重叠，
+     导致各状态计数之和大于总数 —— 这是筛选口径不一致的根因。 */
   function statusMatches(st, filter) {
     if (!filter || filter === 'all') return true;
-    if (filter === 'upcoming') return st.contest === 'upcoming';
     return st.status === filter;
   }
+
+  /** 主状态的中文标签（与筛选口径严格一致） */
+  const STATUS_LABEL = {
+    'reg-open': '报名中',
+    'reg-closed': '报名已截止',
+    upcoming: '待开赛',
+    ongoing: '进行中',
+    ended: '已结束',
+    tbd: '时间待定',
+  };
 
   /* ---------------- 关键词检索 ----------------
      语法：空格 = AND；| = OR；"短语" = 精确；-词 = 排除
@@ -226,21 +243,22 @@
     return cmp ? list.sort(cmp) : list;
   }
 
-  /** 汇总统计 */
+  /** 汇总统计：按互斥主状态计数，各项之和恒等于 total */
   function summarize(decorated) {
-    const c = { total: decorated.length, 'reg-open': 0, ongoing: 0, upcoming: 0, ended: 0, tbd: 0 };
+    const c = {
+      total: decorated.length,
+      'reg-open': 0, 'reg-closed': 0, upcoming: 0, ongoing: 0, ended: 0, tbd: 0,
+    };
     for (const d of decorated) {
-      if (d.st.status === 'reg-open') c['reg-open']++;
-      if (d.st.contest === 'ongoing') c.ongoing++;
-      else if (d.st.contest === 'upcoming') c.upcoming++;
-      else if (d.st.contest === 'ended') c.ended++;
-      else c.tbd++;
+      const k = d.st.status;
+      if (c[k] === undefined) c[k] = 0;
+      c[k]++;
     }
     return c;
   }
 
   return {
-    CATEGORY_LABEL, CONF_LABEL, REG_BASIS_LABEL,
+    CATEGORY_LABEL, CONF_LABEL, REG_BASIS_LABEL, STATUS_LABEL,
     tzOffsetMs, zonedToTs, dayStart, dayEnd, toTs, fmtDT, fmtDay, monthKey, tzAbbr, human,
     computeStatus, statusMatches,
     tokenizeQuery, haystack, queryMatches, rangeMatches,

@@ -19,10 +19,17 @@
   const STATUS_META = {
     'reg-open': { label: '报名中', cls: 'reg-open' },
     'reg-closed': { label: '报名已截止', cls: 'upcoming' },
-    upcoming: { label: '未开始', cls: 'upcoming' },
+    upcoming: { label: '待开赛', cls: 'upcoming' },
     ongoing: { label: '进行中', cls: 'ongoing' },
     ended: { label: '已结束', cls: 'ended' },
     tbd: { label: '时间待定', cls: 'tbd' },
+  };
+
+  /* 分类定义：只按「参赛对象准入限制」划分，不按宣传文案里的关键词 */
+  const CATEGORY_DESC = {
+    college: '参赛对象限于在校学生（高校/中学限定，或人工核验的国内大学生学科竞赛）',
+    'domestic-technical': '中国境内举办、面向社会与行业的公开技术赛',
+    'international-technical': '境外举办或无地域限定的公开赛（Open / 个人赛 / 邀请制 / 需资格赛等）',
   };
 
   const state = {
@@ -38,7 +45,7 @@
 
   const $ = (id) => document.getElementById(id);
   const el = {
-    q: $('q'), qClear: $('qClear'), cat: $('cat'), level: $('level'),
+    q: $('q'), qClear: $('qClear'), cat: $('cat'), catHint: $('catHint'), level: $('level'),
     rangeField: $('rangeField'), from: $('from'), to: $('to'),
     overlap: $('overlap'), sort: $('sort'),
     list: $('list'), empty: $('empty'), count: $('count'), stats: $('stats'),
@@ -115,9 +122,9 @@
     const diff = st.cs - t;
     const cls = diff < 7 * 86400000 ? 'cd soon' : 'cd';
     let extra = '';
-    if (st.reg === 'open' && st.re != null) {
+    if (st.regVerified && st.reg === 'open' && st.re != null) {
       extra = ` · 报名还剩 <span class="${cls}">${C.human(st.re - t)}</span>`;
-    } else if (st.reg === 'notopen' && st.rs != null) {
+    } else if (st.regVerified && st.reg === 'notopen' && st.rs != null) {
       extra = ` · 报名将于 <span class="cd">${C.fmtDT(new Date(st.rs).toISOString(), TZ(), false)}</span> 开放`;
     }
     return `距开赛 <span class="${cls}">${C.human(diff)}</span>${extra}`;
@@ -144,15 +151,20 @@
 
     const derived = ev.registrationBasis === 'derived';
     const regBadge = badges.querySelector('.badge.reg');
-    const regMeta = {
-      open: ['报名进行中', 'open'],
-      closed: ['报名已截止', 'closed'],
-      notopen: ['报名未开始', 'notopen'],
-      unknown: ['报名时间待定', 'unknown'],
-    }[st.reg];
-    regBadge.textContent = derived && st.reg === 'open' ? '报名中 · 推定' : regMeta[0];
-    regBadge.classList.add(regMeta[1]);
-    if (derived) regBadge.title = '官方未公布报名截止时间；此处按「报名通道开放至开赛时刻」惯例推定，仅供参考。';
+    if (derived) {
+      regBadge.textContent = '报名时间未公布';
+      regBadge.classList.add('unknown');
+      regBadge.title = '官方未公布报名起止时间；表中「报名截止」为按惯例的推定值，仅供参考。';
+    } else {
+      const regMeta = {
+        open: ['报名进行中', 'open'],
+        closed: ['报名已截止', 'closed'],
+        notopen: ['报名未开始', 'notopen'],
+        unknown: ['报名时间待定', 'unknown'],
+      }[st.reg];
+      regBadge.textContent = regMeta[0];
+      regBadge.classList.add(regMeta[1]);
+    }
 
     const catBadge = document.createElement('span');
     catBadge.className = 'badge cat ' + ev.category;
@@ -214,9 +226,10 @@
     const c = C.summarize(decorated);
     const cards = [
       ['s-total', c.total, '收录赛事'],
-      ['s-reg', c['reg-open'], '正在报名'],
+      ['s-reg', c['reg-open'], '报名中'],
+      ['s-regclosed', c['reg-closed'], '报名已截止'],
+      ['s-upcoming', c.upcoming, '待开赛'],
       ['s-ongoing', c.ongoing, '进行中'],
-      ['s-upcoming', c.upcoming, '未开始'],
       ['s-ended', c.ended, '已结束'],
       ['s-tbd', c.tbd, '时间待定'],
     ];
@@ -388,11 +401,19 @@
     if (p.get('now')) { const t = new Date(p.get('now')).getTime(); if (!Number.isNaN(t)) state.nowOverride = t; }
   }
 
+  function updateCatHint() {
+    if (!el.catHint) return;
+    el.catHint.textContent = state.cat
+      ? CATEGORY_DESC[state.cat]
+      : '按参赛对象准入划分：大学生竞赛类＝仅限在校学生';
+  }
+
   function syncControls() {
     el.q.value = state.q;
     el.qClear.hidden = !state.q;
     el.cat.value = state.cat;
     el.level.value = state.level;
+    updateCatHint();
     el.rangeField.value = state.rangeField;
     el.from.value = state.from;
     el.to.value = state.to;
@@ -518,7 +539,7 @@
     const onSel = (node, key, cb) => node && node.addEventListener('change', () => {
       state[key] = node.value; (cb || apply)();
     });
-    onSel(el.cat, 'cat');
+    onSel(el.cat, 'cat', () => { syncControls(); apply(); });
     onSel(el.level, 'level');
     onSel(el.rangeField, 'rangeField');
     onSel(el.overlap, 'overlap');
