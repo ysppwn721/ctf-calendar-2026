@@ -1,0 +1,1740 @@
+{
+  "stats": {
+    "generatedAt": "2026-10-17T12:47:20.533Z",
+    "source": "中北大学学科竞赛目录（2026版）",
+    "sourceType": "PDF 表格（12 页 / 126 行），文本层无可用 ToUnicode 映射，经页面渲染后逐行人工录入",
+    "note": "该目录只含竞赛名称/负责单位/级别/国赛官网/负责人，不含任何日期，故不进入日历时间线",
+    "total": 126,
+    "byLevel": {
+      "超级": 2,
+      "一级": 75,
+      "二级": 8,
+      "三级": 41
+    },
+    "byDept": {
+      "创新创业学院": 12,
+      "团委": 2,
+      "机电工程学院": 2,
+      "机械工程学院": 6,
+      "材料科学与工程学院": 6,
+      "化学与化工学院": 7,
+      "信息与通信工程学院": 6,
+      "仪器与电子学院": 5,
+      "仪器与电子学院、创新创业学院": 1,
+      "计算机科学与技术学院": 10,
+      "计算机科学与技术学院、艺术学院、创新创业学院": 1,
+      "数学学院": 3,
+      "经济与管理学院": 19,
+      "人文社会科学学院": 8,
+      "艺术学院": 8,
+      "艺术学院、环境与安全学院": 1,
+      "计算机科学与技术学院、创新创业学院": 1,
+      "软件学院": 7,
+      "软件学院（1-4）、信息与通信工程学院（5）": 1,
+      "环境与安全工程学院": 8,
+      "电气与控制工程学院": 2,
+      "能源与动力工程学院": 3,
+      "航空宇航学院": 4,
+      "半导体与物理学院": 3
+    },
+    "missingUrl": 12,
+    "securityRelated": 2,
+    "crossReferenced": 5,
+    "crossRefs": [
+      {
+        "event": "第十九届全国大学生信息安全竞赛（创新实践能力赛）暨第三届“长城杯”网数智安全大赛（防护赛）",
+        "catalog": "全国大学生信息安全竞赛",
+        "level": "一级"
+      },
+      {
+        "event": "2026年（第19届）中国大学生计算机设计大赛",
+        "catalog": "中国大学生计算机设计大赛",
+        "level": "一级"
+      },
+      {
+        "event": "第十九届全国大学生信息安全竞赛（作品赛）暨第三届“长城杯”网数智安全大赛（作品赛）",
+        "catalog": "全国大学生信息安全竞赛",
+        "level": "一级"
+      },
+      {
+        "event": "第十九届全国大学生信息安全竞赛（创新实践能力赛）全国总决赛",
+        "catalog": "全国大学生信息安全竞赛",
+        "level": "一级"
+      },
+      {
+        "event": "2026年全国大学生信息安全竞赛安徽省赛",
+        "catalog": "全国大学生信息安全竞赛",
+        "level": "一级"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "id": "nuc-1",
+      "no": 1,
+      "name": "中国国际大学生创新大赛",
+      "level": "超级",
+      "dept": "创新创业学院",
+      "owners": [
+        "姬文芳"
+      ],
+      "url": "https://cy.ncss.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-2",
+      "no": 2,
+      "name": "“挑战杯”全国大学生课外学术科技作品竞赛",
+      "level": "超级",
+      "dept": "团委",
+      "owners": [
+        "史艳丽"
+      ],
+      "url": "http://www.tiaozhanbei.net/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-3",
+      "no": 3,
+      "name": "“挑战杯”中国大学生创业计划竞赛",
+      "level": "一级",
+      "dept": "团委",
+      "owners": [
+        "史艳丽"
+      ],
+      "url": "http://www.tiaozhanbei.net/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-4",
+      "no": 4,
+      "name": "全国兵棋推演大赛",
+      "level": "一级",
+      "dept": "机电工程学院",
+      "owners": [
+        "王丙龙"
+      ],
+      "url": "http://www.ciccwargame.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-5",
+      "no": 5,
+      "name": "国际大学生智能农业装备创新大赛",
+      "level": "一级",
+      "dept": "机械工程学院",
+      "owners": [
+        "崔学良"
+      ],
+      "url": "https://uiaec.ujs.edu.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-6",
+      "no": 6,
+      "name": "中国高校智能机器人创意大赛",
+      "level": "一级",
+      "dept": "机械工程学院",
+      "owners": [
+        "王义"
+      ],
+      "url": "http://www.robotcontest.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-7",
+      "no": 7,
+      "name": "中国大学生机械工程创新创意大赛——①过程装备实践与创新赛、②起重机创意赛、③智能制造大赛",
+      "level": "一级",
+      "dept": "机械工程学院",
+      "owners": [
+        "高强",
+        "陆春月"
+      ],
+      "url": "http://meicc.cmes.org/#blade/competitions",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-7-2",
+      "no": 7,
+      "name": "中国大学生机械工程创新创意大赛——④铸造工艺设计赛、⑤材料热处理创新创业赛",
+      "level": "一级",
+      "dept": "材料科学与工程学院",
+      "owners": [
+        "王宇",
+        "鲁若鹏"
+      ],
+      "url": "http://cmes-imic.org.cn/",
+      "note": "与序号7同属一项赛事的另两个子赛项",
+      "security": false
+    },
+    {
+      "id": "nuc-8",
+      "no": 8,
+      "name": "全国大学生金相技能大赛",
+      "level": "一级",
+      "dept": "材料科学与工程学院",
+      "owners": [
+        "王志云"
+      ],
+      "url": "http://www.mse-cn.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-9",
+      "no": 9,
+      "name": "全国大学生化工设计竞赛",
+      "level": "一级",
+      "dept": "化学与化工学院",
+      "owners": [
+        "王艳红"
+      ],
+      "url": "http://iche.zju.edu.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-10",
+      "no": 10,
+      "name": "全国大学生生命科学竞赛（CULST）",
+      "level": "一级",
+      "dept": "化学与化工学院",
+      "owners": [
+        "胡楠"
+      ],
+      "url": "https://www.culsc.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-11",
+      "no": 11,
+      "name": "全国大学生化工实验大赛",
+      "level": "一级",
+      "dept": "化学与化工学院",
+      "owners": [
+        "贾广信"
+      ],
+      "url": "http://www.cteic.com/higherEducation-199.html",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-12",
+      "no": 12,
+      "name": "全国大学生化学实验创新设计大赛",
+      "level": "一级",
+      "dept": "化学与化工学院",
+      "owners": [
+        "张学俊"
+      ],
+      "url": "https://cid.nju.edu.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-13",
+      "no": 13,
+      "name": "全国大学生光电设计竞赛",
+      "level": "一级",
+      "dept": "信息与通信工程学院",
+      "owners": [
+        "赵辉"
+      ],
+      "url": "http://opt.zju.edu.cn/gdjs/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-14",
+      "no": 14,
+      "name": "“大唐杯”全国大学生新一代信息通信技术大赛",
+      "level": "一级",
+      "dept": "信息与通信工程学院",
+      "owners": [
+        "辛洁"
+      ],
+      "url": "http://dtcup.dtxiaotangren.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-15",
+      "no": 15,
+      "name": "全国大学生嵌入式芯片与系统设计竞赛",
+      "level": "一级",
+      "dept": "信息与通信工程学院",
+      "owners": [
+        "郝利华"
+      ],
+      "url": "http://www.socchina.net/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-16",
+      "no": 16,
+      "name": "全国大学生基础医学创新研究暨实验设计论坛（大赛）",
+      "level": "一级",
+      "dept": "信息与通信工程学院",
+      "owners": [
+        "刘旭辉"
+      ],
+      "url": "http://www.jcyxds.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-17",
+      "no": 17,
+      "name": "全球校园人工智能算法精英大赛",
+      "level": "一级",
+      "dept": "信息与通信工程学院",
+      "owners": [
+        "李传坤"
+      ],
+      "url": "http://www.digix.org.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-18",
+      "no": 18,
+      "name": "全国大学生智能汽车竞赛",
+      "level": "一级",
+      "dept": "仪器与电子学院",
+      "owners": [
+        "闫晓燕"
+      ],
+      "url": "http://smartcar.moocollege.com/datacenter",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-19",
+      "no": 19,
+      "name": "中国机器人大赛暨RoboCup机器人世界杯中国赛",
+      "level": "一级",
+      "dept": "仪器与电子学院",
+      "owners": [
+        "闫晓燕"
+      ],
+      "url": "http://crc.drct-caa.org.cn/index.php",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-20",
+      "no": 20,
+      "name": "睿抗机器人开发者大赛（RAINCOM）",
+      "level": "一级",
+      "dept": "仪器与电子学院",
+      "owners": [
+        "闫晓燕"
+      ],
+      "url": "https://www.robocom.com.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-21",
+      "no": 21,
+      "name": "iCAN国际创新创业大赛",
+      "level": "一级",
+      "dept": "仪器与电子学院",
+      "owners": [
+        "闫晓燕"
+      ],
+      "url": "http://www.g-ican.com/home/index",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-22",
+      "no": 22,
+      "name": "全国大学生机器人大赛Robocon、RoboMaster",
+      "level": "一级",
+      "dept": "仪器与电子学院、创新创业学院",
+      "owners": [
+        "闫晓燕",
+        "刘姿"
+      ],
+      "url": "http://www.cnrobocon.net/",
+      "note": "RoboMaster 官网 https://www.robomaster.com/",
+      "security": false
+    },
+    {
+      "id": "nuc-23",
+      "no": 23,
+      "name": "全国大学生信息安全竞赛",
+      "level": "一级",
+      "dept": "计算机科学与技术学院",
+      "owners": [
+        "石琼"
+      ],
+      "url": "http://www.ciscn.cn/",
+      "note": "",
+      "security": true
+    },
+    {
+      "id": "nuc-24",
+      "no": 24,
+      "name": "未来设计师·全国高校数字艺术设计大赛",
+      "level": "一级",
+      "dept": "计算机科学与技术学院",
+      "owners": [
+        "熊风光"
+      ],
+      "url": "http://www.ncda.org.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-25",
+      "no": 25,
+      "name": "中国大学生计算机设计大赛",
+      "level": "一级",
+      "dept": "计算机科学与技术学院、艺术学院、创新创业学院",
+      "owners": [
+        "于一",
+        "王博",
+        "李泽宇",
+        "张奋飞",
+        "陆青梅"
+      ],
+      "url": "http://jsjds.blcu.edu.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-26",
+      "no": 26,
+      "name": "华为ICT大赛",
+      "level": "一级",
+      "dept": "计算机科学与技术学院",
+      "owners": [
+        "王斌"
+      ],
+      "url": "https://e.huawei.com/cn/talent/#/ict/contest",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-27",
+      "no": 27,
+      "name": "中国大学生服务外包创新创业大赛",
+      "level": "一级",
+      "dept": "计算机科学与技术学院",
+      "owners": [
+        "庞淑蓉"
+      ],
+      "url": "http://www.fwwb.org.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-28",
+      "no": 28,
+      "name": "全国大学生物联网设计竞赛",
+      "level": "一级",
+      "dept": "计算机科学与技术学院",
+      "owners": [
+        "王丽芳"
+      ],
+      "url": "http://iot.sjtu.edu.cn/Default.aspx",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-29",
+      "no": 29,
+      "name": "全国大学生计算机系统能力大赛",
+      "level": "一级",
+      "dept": "计算机科学与技术学院",
+      "owners": [
+        "井超"
+      ],
+      "url": "https://compiler.educg.net/#/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-30",
+      "no": 30,
+      "name": "百度之星·程序设计大赛",
+      "level": "一级",
+      "dept": "计算机科学与技术学院",
+      "owners": [
+        "王斌"
+      ],
+      "url": "https://star.baidu.com/#/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-31",
+      "no": 31,
+      "name": "全国大学生数学建模竞赛",
+      "level": "一级",
+      "dept": "数学学院",
+      "owners": [
+        "李有文",
+        "张峰",
+        "史娜",
+        "曹文军"
+      ],
+      "url": "http://www.mcm.edu.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-32",
+      "no": 32,
+      "name": "全国大学生统计建模大赛",
+      "level": "一级",
+      "dept": "数学学院",
+      "owners": [
+        "张峰"
+      ],
+      "url": "http://tjjmds.ai-learning.net/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-33",
+      "no": 33,
+      "name": "全国大学生电子商务“创新、创意及创业”挑战赛",
+      "level": "一级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "吕微"
+      ],
+      "url": "http://www.3chuang.net/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-34",
+      "no": 34,
+      "name": "全国大学生市场调查与分析大赛",
+      "level": "一级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "闫莹"
+      ],
+      "url": "http://www.china-cssc.org/list-52-1.html",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-35",
+      "no": 35,
+      "name": "“学创杯”全国大学生创业综合模拟大赛",
+      "level": "一级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "刘俊生",
+        "文楠"
+      ],
+      "url": "http://www.xcbds.com/cvds/index",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-36",
+      "no": 36,
+      "name": "全国高校商业精英挑战赛流通业经营模拟竞赛——①品牌策划竞赛、②会展专业创新创业实践竞赛、③国际贸易竞赛、④创新创业竞赛、⑤会计与商业管理案例竞赛",
+      "level": "一级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "刘俊生",
+        "高扬",
+        "赵晓霞",
+        "李彦华",
+        "吕微"
+      ],
+      "url": "http://cubec.org.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-37",
+      "no": 37,
+      "name": "全国高等院校数智化企业经营沙盘大赛",
+      "level": "一级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "郭心雨"
+      ],
+      "url": "https://www.seentao.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-38",
+      "no": 38,
+      "name": "“工行杯”全国大学生金融科技创新大赛",
+      "level": "一级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "燕志鹏"
+      ],
+      "url": "https://www.gonghangbei.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-39",
+      "no": 39,
+      "name": "全国本科院校税收风险管控案例大赛",
+      "level": "一级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "任海丽"
+      ],
+      "url": "http://ssfk.zufe.edu.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-40",
+      "no": 40,
+      "name": "全国企业竞争模拟大赛",
+      "level": "一级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "刘俊生",
+        "王媛"
+      ],
+      "url": "http://www.ibizsim.com.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-41",
+      "no": 41,
+      "name": "“科云杯”全国大学生财会职业能力大赛",
+      "level": "一级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "王欣荣",
+        "杜增华"
+      ],
+      "url": "http://match.xmkeyun.com.cn/nc/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-42",
+      "no": 42,
+      "name": "“外研社杯”全国大学生英语系列赛：①英语演讲、②英语辩论、③英语写作、④英语阅读",
+      "level": "一级",
+      "dept": "人文社会科学学院",
+      "owners": [
+        "柴瑞琴",
+        "曲明媚"
+      ],
+      "url": "http://uchallenge.unipus.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-43",
+      "no": 43,
+      "name": "“21世纪杯”全国英语演讲比赛",
+      "level": "一级",
+      "dept": "人文社会科学学院",
+      "owners": [
+        "柴瑞琴",
+        "曲明媚"
+      ],
+      "url": "https://contest.i21st.cn/index.php",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-44",
+      "no": 44,
+      "name": "中华经典诵写讲大赛",
+      "level": "一级",
+      "dept": "人文社会科学学院",
+      "owners": [
+        "刘秀芬"
+      ],
+      "url": "https://www.jingdiansxj.cn/home",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-45",
+      "no": 45,
+      "name": "“外教社杯”全国高校学生跨文化能力大赛",
+      "level": "一级",
+      "dept": "人文社会科学学院",
+      "owners": [
+        "柴瑞琴",
+        "曲明媚"
+      ],
+      "url": "https://ict.sflep.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-46",
+      "no": 46,
+      "name": "全国大学生广告艺术大赛",
+      "level": "一级",
+      "dept": "艺术学院",
+      "owners": [
+        "吴闻超"
+      ],
+      "url": "http://www.sun-ada.net/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-47",
+      "no": 47,
+      "name": "米兰设计周——中国高校设计学科师生优秀作品展",
+      "level": "一级",
+      "dept": "艺术学院",
+      "owners": [
+        "吴闻超"
+      ],
+      "url": "https://www.dandad.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-48",
+      "no": 48,
+      "name": "中国好创意暨全国数字艺术设计大赛",
+      "level": "一级",
+      "dept": "艺术学院",
+      "owners": [
+        "吴闻超"
+      ],
+      "url": "http://www.cdec.org.cn",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-49",
+      "no": 49,
+      "name": "全国大学生工业设计大赛",
+      "level": "一级",
+      "dept": "艺术学院",
+      "owners": [
+        "吴闻超"
+      ],
+      "url": "https://www.cuidc.net/#/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-50",
+      "no": 50,
+      "name": "全国大学生花园设计建造竞赛",
+      "level": "一级",
+      "dept": "艺术学院、环境与安全学院",
+      "owners": [
+        "吴闻超",
+        "孟繁敏"
+      ],
+      "url": "http://www.lalavision.com/fjyl/ch/index.aspx",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-51",
+      "no": 51,
+      "name": "全国大学生数字媒体科技作品及创意竞赛",
+      "level": "一级",
+      "dept": "计算机科学与技术学院、创新创业学院",
+      "owners": [
+        "熊风光",
+        "陆青梅"
+      ],
+      "url": "http://cmit.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-52",
+      "no": 52,
+      "name": "ACM-ICPC国际大学生程序设计竞赛",
+      "level": "一级",
+      "dept": "软件学院",
+      "owners": [
+        "潘广贞"
+      ],
+      "url": "https://icpc.global/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-53",
+      "no": 53,
+      "name": "中国“软件杯”大学生软件设计大赛",
+      "level": "一级",
+      "dept": "软件学院",
+      "owners": [
+        "张静"
+      ],
+      "url": "http://www.cnsoftbei.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-54",
+      "no": 54,
+      "name": "中国高校计算机大赛——①大数据挑战赛、②团体程序设计天梯赛、③移动应用创新赛、④网络技术挑战赛、⑤人工智能创意赛",
+      "level": "一级",
+      "dept": "软件学院（1-4）、信息与通信工程学院（5）",
+      "owners": [
+        "赵利辉"
+      ],
+      "url": "http://www.c4best.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-55",
+      "no": 55,
+      "name": "全国大学生信息安全与对抗技术竞赛",
+      "level": "一级",
+      "dept": "软件学院",
+      "owners": [
+        "洪军"
+      ],
+      "url": "https://www.isclab.org.cn/",
+      "note": "",
+      "security": true
+    },
+    {
+      "id": "nuc-56",
+      "no": 56,
+      "name": "全国大学生结构设计竞赛",
+      "level": "一级",
+      "dept": "环境与安全工程学院",
+      "owners": [
+        "郑亮"
+      ],
+      "url": "http://www.structurecontest.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-57",
+      "no": 57,
+      "name": "全国高校BIM毕业设计创新大赛",
+      "level": "一级",
+      "dept": "环境与安全工程学院",
+      "owners": [
+        "薛建英"
+      ],
+      "url": "http://gxbsxs.glodonedu.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-58",
+      "no": 58,
+      "name": "全国大学生水利创新设计大赛",
+      "level": "一级",
+      "dept": "环境与安全工程学院",
+      "owners": [
+        "郭琴琴"
+      ],
+      "url": "https://sljzw.hhu.edu.cn/fenhui/main.jsp",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-59",
+      "no": 59,
+      "name": "全国大学生测绘学科创新创业智能大赛",
+      "level": "一级",
+      "dept": "环境与安全工程学院",
+      "owners": [
+        "张洪萍"
+      ],
+      "url": "http://smt.whu.edu.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-60",
+      "no": 60,
+      "name": "全国数字建筑创新应用大赛",
+      "level": "一级",
+      "dept": "环境与安全工程学院",
+      "owners": [
+        "张慧"
+      ],
+      "url": "http://bisai.ccen.com.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-61",
+      "no": 61,
+      "name": "全国大学生交通科技大赛",
+      "level": "一级",
+      "dept": "电气与控制工程学院",
+      "owners": [
+        "贾建芳"
+      ],
+      "url": "https://www.nactrans.net/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-62",
+      "no": 62,
+      "name": "“西门子杯”中国智能制造挑战赛",
+      "level": "一级",
+      "dept": "电气与控制工程学院",
+      "owners": [
+        "尤文斌"
+      ],
+      "url": "http://www.siemenscup-cimc.org.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-63",
+      "no": 63,
+      "name": "全国大学生节能减排社会实践与科技竞赛",
+      "level": "一级",
+      "dept": "能源与动力工程学院",
+      "owners": [
+        "刘勇"
+      ],
+      "url": "http://www.jienengjianpai.org/Default.asp",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-64",
+      "no": 64,
+      "name": "全国大学生能源经济学术创意大赛",
+      "level": "一级",
+      "dept": "能源与动力工程学院",
+      "owners": [
+        "刘勇"
+      ],
+      "url": null,
+      "note": "官网「暂未公布」",
+      "security": false
+    },
+    {
+      "id": "nuc-65",
+      "no": 65,
+      "name": "周培源全国大学生力学竞赛",
+      "level": "一级",
+      "dept": "航空宇航学院",
+      "owners": [
+        "李海涛"
+      ],
+      "url": "http://zpy.cstam.org.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-66",
+      "no": 66,
+      "name": "全国大学生集成电路创新创业大赛",
+      "level": "一级",
+      "dept": "半导体与物理学院",
+      "owners": [
+        "王旭"
+      ],
+      "url": "http://univ.ciciec.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-67",
+      "no": 67,
+      "name": "全国大学生物理实验竞赛",
+      "level": "一级",
+      "dept": "半导体与物理学院",
+      "owners": [
+        "王旭"
+      ],
+      "url": "http://wlsycx.moocollege.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-68",
+      "no": 68,
+      "name": "全国大学生创新创业训练计划年会展示",
+      "level": "一级",
+      "dept": "创新创业学院",
+      "owners": [
+        "刘晓东"
+      ],
+      "url": "http://gjcxxcy.bit.edu.cn/Index.aspx",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-69",
+      "no": 69,
+      "name": "中美青年创客大赛",
+      "level": "一级",
+      "dept": "创新创业学院",
+      "owners": [
+        "姬文芳"
+      ],
+      "url": "http://www.chinaus-maker.org.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-70",
+      "no": 70,
+      "name": "两岸新锐设计竞赛“华灿奖”",
+      "level": "一级",
+      "dept": "创新创业学院",
+      "owners": [
+        "杜玲琳"
+      ],
+      "url": "http://www.huacanjiang.com/home",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-71",
+      "no": 71,
+      "name": "全国三维数字化创新设计大赛（大学生组）",
+      "level": "一级",
+      "dept": "创新创业学院",
+      "owners": [
+        "翟海光"
+      ],
+      "url": "https://3dds.3ddl.net/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-72",
+      "no": 72,
+      "name": "全国大学生机械创新设计大赛",
+      "level": "一级",
+      "dept": "创新创业学院",
+      "owners": [
+        "董亚峰"
+      ],
+      "url": "http://umic.ckcest.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-73",
+      "no": 73,
+      "name": "全国大学生先进成图技术与产品信息建模创新大赛",
+      "level": "一级",
+      "dept": "创新创业学院",
+      "owners": [
+        "邢秀琴"
+      ],
+      "url": "http://www.chengtudasai.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-74",
+      "no": 74,
+      "name": "中国机器人及人工智能大赛",
+      "level": "一级",
+      "dept": "创新创业学院",
+      "owners": [
+        "刘姿"
+      ],
+      "url": "http://www.caai.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-75",
+      "no": 75,
+      "name": "全国大学生电子设计竞赛",
+      "level": "一级",
+      "dept": "创新创业学院",
+      "owners": [
+        "郎文杰"
+      ],
+      "url": "http://www.nuedcchina.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-76",
+      "no": 76,
+      "name": "全国大学生工程训练综合能力竞赛",
+      "level": "一级",
+      "dept": "创新创业学院",
+      "owners": [
+        "孔为民"
+      ],
+      "url": "http://www.gcxl.edu.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-77",
+      "no": 77,
+      "name": "华北五省（市、自治区）大学生机器人大赛",
+      "level": "二级",
+      "dept": "机械工程学院",
+      "owners": [
+        "刘丽娟"
+      ],
+      "url": "http://robot.bistu.edu.cn",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-78",
+      "no": 78,
+      "name": "中国大学生Chem-E-Car竞赛",
+      "level": "二级",
+      "dept": "化学与化工学院",
+      "owners": [
+        "张立新"
+      ],
+      "url": "https://www.ciesc.cn/site/term/29.html",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-79",
+      "no": 79,
+      "name": "华北五省（市、自治区）及港澳台大学生计算机应用大赛",
+      "level": "二级",
+      "dept": "计算机科学与技术学院",
+      "owners": [
+        "李泽宇",
+        "于一"
+      ],
+      "url": "http://bjacac.bnu.moocollege.com/home/homepage",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-80",
+      "no": 80,
+      "name": "全国大学生数学竞赛",
+      "level": "二级",
+      "dept": "数学学院",
+      "owners": [
+        "李有文"
+      ],
+      "url": "https://www.cmathc.org.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-81",
+      "no": 81,
+      "name": "山西省大学生模拟法庭大赛",
+      "level": "二级",
+      "dept": "人文社会科学学院",
+      "owners": [
+        "刘丹"
+      ],
+      "url": "http://www.sxccyl.gov.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-82",
+      "no": 82,
+      "name": "中国大学生方程式汽车大赛",
+      "level": "二级",
+      "dept": "能源与动力工程学院",
+      "owners": [
+        "陈东东"
+      ],
+      "url": "http://www.formulastudent.com.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-83",
+      "no": 83,
+      "name": "山西省大学生物理学术竞赛",
+      "level": "二级",
+      "dept": "半导体与物理学院",
+      "owners": [
+        "王旭"
+      ],
+      "url": "https://www.sxswlxh.com.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-84",
+      "no": 84,
+      "name": "山西省大学生电子设计竞赛",
+      "level": "二级",
+      "dept": "创新创业学院",
+      "owners": [
+        "郎文杰"
+      ],
+      "url": null,
+      "note": "官网「无」",
+      "security": false
+    },
+    {
+      "id": "nuc-85",
+      "no": 85,
+      "name": "全国武器创新设计大赛",
+      "level": "三级",
+      "dept": "机电工程学院",
+      "owners": [
+        "王丙龙"
+      ],
+      "url": "https://xspace.njust.edu.cn/0b/37/c14263a330551/page.htm",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-86",
+      "no": 86,
+      "name": "格斗机器人系列比赛",
+      "level": "三级",
+      "dept": "机械工程学院",
+      "owners": [
+        "王义"
+      ],
+      "url": "http://robo-maker.org/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-87",
+      "no": 87,
+      "name": "全国机械工业设计创新大赛",
+      "level": "三级",
+      "dept": "创新创业学院",
+      "owners": [
+        "翟海光"
+      ],
+      "url": "http://idi.cmpiji.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-88",
+      "no": 88,
+      "name": "中国大学生高分子材料创新创业大赛",
+      "level": "三级",
+      "dept": "材料科学与工程学院",
+      "owners": [
+        "付一政"
+      ],
+      "url": "http://pmc.rubbervalley.com/gyds/dszc/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-89",
+      "no": 89,
+      "name": "“上纬杯”全国大学生复合材料设计与制作大赛",
+      "level": "三级",
+      "dept": "材料科学与工程学院",
+      "owners": [
+        "张彦飞"
+      ],
+      "url": null,
+      "note": "官网「无」",
+      "security": false
+    },
+    {
+      "id": "nuc-90",
+      "no": 90,
+      "name": "全国大学生失效分析大赛",
+      "level": "三级",
+      "dept": "材料科学与工程学院",
+      "owners": [
+        "王志云",
+        "杨晓敏"
+      ],
+      "url": null,
+      "note": "官网「无」",
+      "security": false
+    },
+    {
+      "id": "nuc-91",
+      "no": 91,
+      "name": "全国大学生焊接创新大赛",
+      "level": "三级",
+      "dept": "材料科学与工程学院",
+      "owners": [
+        "魏守征"
+      ],
+      "url": null,
+      "note": "官网「无」",
+      "security": false
+    },
+    {
+      "id": "nuc-92",
+      "no": 92,
+      "name": "全国大学生制药工程设计大赛",
+      "level": "三级",
+      "dept": "化学与化工学院",
+      "owners": [
+        "赵林秀"
+      ],
+      "url": "https://bpetc.tju.edu.cn/dhl_13.html",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-93",
+      "no": 93,
+      "name": "全国大学生化学实验竞赛",
+      "level": "三级",
+      "dept": "化学与化工学院",
+      "owners": [
+        "张学俊"
+      ],
+      "url": "http://cid.nju.edu.cn",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-94",
+      "no": 94,
+      "name": "全国大学生生物医学工程创新设计竞赛",
+      "level": "三级",
+      "dept": "信息与通信工程学院",
+      "owners": [
+        "刘旭辉"
+      ],
+      "url": "https://www.bmedesign.cn/#/home",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-95",
+      "no": 95,
+      "name": "中国机器人大赛（武术擂台赛）",
+      "level": "三级",
+      "dept": "仪器与电子学院",
+      "owners": [
+        "闫晓燕"
+      ],
+      "url": null,
+      "note": "官网「无」",
+      "security": false
+    },
+    {
+      "id": "nuc-96",
+      "no": 96,
+      "name": "国际先进机器人及仿真技术大赛",
+      "level": "三级",
+      "dept": "机械工程学院",
+      "owners": [
+        "王义"
+      ],
+      "url": "http://urc.ilur.org/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-97",
+      "no": 97,
+      "name": "全国大学生计算机应用能力与信息素养大赛",
+      "level": "三级",
+      "dept": "计算机科学与技术学院",
+      "owners": [
+        "卫星"
+      ],
+      "url": "http://www.5lds.org.cn",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-98",
+      "no": 98,
+      "name": "全国高校计算机能力挑战赛",
+      "level": "三级",
+      "dept": "软件学院",
+      "owners": [
+        "李玉蓉"
+      ],
+      "url": "http://www.ncccu.org.cn",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-99",
+      "no": 99,
+      "name": "新华三杯全国大学生数字技术大赛",
+      "level": "三级",
+      "dept": "计算机科学与技术学院",
+      "owners": [
+        "梁志剑"
+      ],
+      "url": "https://www.h3c.com/cn/pub/2026_Event/h3c_cup2026/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-100",
+      "no": 100,
+      "name": "全国大学生外贸从业能力大赛",
+      "level": "三级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "赵晓霞"
+      ],
+      "url": "https://www.pocib.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-101",
+      "no": 101,
+      "name": "OCALE全国跨境电商创新创业能力大赛",
+      "level": "三级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "白清",
+        "吴云霞"
+      ],
+      "url": "http://ds.ocale.net",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-102",
+      "no": 102,
+      "name": "全国高等院校企业竞争模拟大赛",
+      "level": "三级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "刘俊生"
+      ],
+      "url": null,
+      "note": "官网「无」",
+      "security": false
+    },
+    {
+      "id": "nuc-103",
+      "no": 103,
+      "name": "“福思特杯”全国大学生审计精英挑战赛",
+      "level": "三级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "任海丽"
+      ],
+      "url": null,
+      "note": "官网「无」",
+      "security": false
+    },
+    {
+      "id": "nuc-104",
+      "no": 104,
+      "name": "“品茗杯”全国高校智能建造创新应用大赛",
+      "level": "三级",
+      "dept": "环境与安全工程学院",
+      "owners": [
+        "孟繁敏"
+      ],
+      "url": "http://www.softcontest.cn",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-105",
+      "no": 105,
+      "name": "全国大学生企业数字化管理创新大赛",
+      "level": "三级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "雷振丹",
+        "吴璟"
+      ],
+      "url": "https://kone.kingdee.com/bigdataintelligentcompetition",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-106",
+      "no": 106,
+      "name": "全国大学生商务谈判大赛",
+      "level": "三级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "温丽琴"
+      ],
+      "url": "https://www.negotiationchina.com/mobile/default.aspx",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-107",
+      "no": 107,
+      "name": "全国高校经济决策虚仿实验大赛",
+      "level": "三级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "王志强",
+        "吕淑平",
+        "胡晓晓"
+      ],
+      "url": null,
+      "note": "官网「无」",
+      "security": false
+    },
+    {
+      "id": "nuc-108",
+      "no": 108,
+      "name": "全国高校企业价值创造实战竞赛",
+      "level": "三级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "杜增华"
+      ],
+      "url": "https://www.netinnet.cn/match/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-109",
+      "no": 109,
+      "name": "全国供应链大赛",
+      "level": "三级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "高芳杰"
+      ],
+      "url": "http://dspt.clppx.org.cn/index/gylhome",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-110",
+      "no": 110,
+      "name": "全国大学生财务决策大赛",
+      "level": "三级",
+      "dept": "经济与管理学院",
+      "owners": [
+        "刘凤环"
+      ],
+      "url": "https://www.netinnet.cn/match/index",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-111",
+      "no": 111,
+      "name": "全国口译大赛（英语）",
+      "level": "三级",
+      "dept": "人文社会科学学院",
+      "owners": [
+        "柴瑞琴"
+      ],
+      "url": "http://www.lscat.cn",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-112",
+      "no": 112,
+      "name": "华北五省大学生人文知识竞赛",
+      "level": "三级",
+      "dept": "人文社会科学学院",
+      "owners": [
+        "刘秀芬"
+      ],
+      "url": null,
+      "note": "报名渠道为微信公众号：北京市人文知识竞赛组委会",
+      "security": false
+    },
+    {
+      "id": "nuc-113",
+      "no": 113,
+      "name": "“外教社·词达人杯”全国大学生英语词汇能力大赛",
+      "level": "三级",
+      "dept": "人文社会科学学院",
+      "owners": [
+        "马淑丽"
+      ],
+      "url": null,
+      "note": "报名渠道为微信公众号：词达人公众号",
+      "security": false
+    },
+    {
+      "id": "nuc-114",
+      "no": 114,
+      "name": "东方设计奖·全国高校创新设计大赛",
+      "level": "三级",
+      "dept": "艺术学院",
+      "owners": [
+        "吴闻超"
+      ],
+      "url": "https://oda.org.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-115",
+      "no": 115,
+      "name": "KTK设计奖·全球华人设计比赛",
+      "level": "三级",
+      "dept": "艺术学院",
+      "owners": [
+        "吴闻超"
+      ],
+      "url": "http://www.ktkda.cn",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-116",
+      "no": 116,
+      "name": "时报金犊奖",
+      "level": "三级",
+      "dept": "艺术学院",
+      "owners": [
+        "吴闻超"
+      ],
+      "url": "https://www.ad-young.com/Home/index",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-117",
+      "no": 117,
+      "name": "中国大学生广告艺术节学院奖",
+      "level": "三级",
+      "dept": "艺术学院",
+      "owners": [
+        "吴闻超"
+      ],
+      "url": "https://www.5iidea.com/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-118",
+      "no": 118,
+      "name": "全国大学生软件测试大赛",
+      "level": "三级",
+      "dept": "软件学院",
+      "owners": [
+        "马巧梅"
+      ],
+      "url": "http://www.mooc.test.org",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-119",
+      "no": 119,
+      "name": "全国大学生软件创新大赛",
+      "level": "三级",
+      "dept": "软件学院",
+      "owners": [
+        "李瑞红"
+      ],
+      "url": "http://swcontest.com.cn/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-120",
+      "no": 120,
+      "name": "中国石油工程设计大赛",
+      "level": "三级",
+      "dept": "软件学院",
+      "owners": [
+        "李众"
+      ],
+      "url": "https://cpedc.cup.edu.cn/c/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-121",
+      "no": 121,
+      "name": "全国高校安全科学与工程大学生实践与创新作品大赛",
+      "level": "三级",
+      "dept": "环境与安全工程学院",
+      "owners": [
+        "张蒙",
+        "薛晨露"
+      ],
+      "url": null,
+      "note": "官网「无」",
+      "security": false
+    },
+    {
+      "id": "nuc-122",
+      "no": 122,
+      "name": "“中装杯”全国大学生环境设计大赛",
+      "level": "三级",
+      "dept": "环境与安全工程学院",
+      "owners": [
+        "张海龙"
+      ],
+      "url": "https://www.shejijingsai.com/2026/03/1512289.html",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-123",
+      "no": 123,
+      "name": "CADC中国国际飞行器设计挑战赛",
+      "level": "三级",
+      "dept": "航空宇航学院",
+      "owners": [
+        "刘福"
+      ],
+      "url": "https://www.asfc.org.cn/index/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-124",
+      "no": 124,
+      "name": "全国高校模拟飞行锦标赛",
+      "level": "三级",
+      "dept": "航空宇航学院",
+      "owners": [
+        "王昊"
+      ],
+      "url": "https://www.asfc.org.cn/ydxm/mnfx/",
+      "note": "",
+      "security": false
+    },
+    {
+      "id": "nuc-125",
+      "no": 125,
+      "name": "中国国际飞行器设计挑战赛",
+      "level": "三级",
+      "dept": "航空宇航学院",
+      "owners": [
+        "田佳"
+      ],
+      "url": "https://www.asfc.org.cn/index/",
+      "note": "",
+      "security": false
+    }
+  ]
+}

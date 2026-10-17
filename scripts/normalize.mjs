@@ -211,6 +211,56 @@ function dedupe(events) {
   return out;
 }
 
+/* ------------------------------------------------------------------ *
+ * 中北大学学科竞赛目录（2026版）
+ * 该目录只有「竞赛名称 / 负责单位 / 级别 / 国赛官网 / 负责人」，没有日期，
+ * 因此不进日历时间线，而是作为独立名录 + 与日历赛事的交叉标注。
+ * ------------------------------------------------------------------ */
+function normalizeCatalogItem(item, seenNo) {
+  const dup = seenNo.has(item.no);
+  seenNo.add(item.no);
+  return {
+    id: `nuc-${item.no}${dup ? '-2' : ''}`,
+    no: item.no,
+    name: item.name,
+    level: item.level,
+    dept: item.dept,
+    owners: item.owners || [],
+    url: item.url || null,
+    note: item.note || '',
+    security: !!item.security,
+  };
+}
+
+/** 把目录条目挂到日历赛事的 nuc* 字段上，取最具体（最长）的匹配 */
+function attachNucRefs(events, catalog) {
+  const cand = catalog
+    .map((c) => ({ c, key: titleKey(c.name) }))
+    .filter((x) => x.key.length >= 6)
+    .sort((a, b) => b.key.length - a.key.length);
+
+  const matched = [];
+  for (const e of events) {
+    const ek = titleKey(e.title);
+    let best = null;
+    for (const { c, key } of cand) {
+      const contains = ek.includes(key) || key.includes(ek);
+      const hit = contains
+        ? Math.min(ek.length, key.length) >= 6
+        : dice(ek, key) >= 0.9;
+      if (hit && (!best || key.length > best.key.length)) best = { c, key };
+    }
+    if (best) {
+      e.nucNo = best.c.no;
+      e.nucLevel = best.c.level;
+      e.nucDept = best.c.dept;
+      e.nucOwners = best.c.owners;
+      matched.push({ event: e.title, catalog: best.c.name, level: best.c.level });
+    }
+  }
+  return matched;
+}
+
 /* ------------------------------------------------------------------ */
 async function readJsonIfExists(p) {
   if (!existsSync(p)) return null;
@@ -303,6 +353,37 @@ async function main() {
     return ta - tb || String(a.title).localeCompare(String(b.title));
   });
 
+  /* ---- 中北大学竞赛目录 ---- */
+  const nucRaw = (await readJsonIfExists(resolve(RESEARCH, 'nuc-catalog.json'))) || [];
+  const seenNo = new Set();
+  const catalog = nucRaw.map((it) => normalizeCatalogItem(it, seenNo));
+  catalog.sort((a, b) => a.no - b.no || a.name.localeCompare(b.name, 'zh-CN'));
+  console.log(`中北大学竞赛目录: ${catalog.length} 条`);
+
+  const nucMatches = attachNucRefs(deduped, catalog);
+  console.log(`  与日历赛事交叉命中 ${nucMatches.length} 条`);
+  for (const m of nucMatches) {
+    console.log(`    [${m.level}] ${m.catalog}  ←  ${m.event}`);
+  }
+
+  const nucStats = {
+    generatedAt: new Date().toISOString(),
+    source: '中北大学学科竞赛目录（2026版）',
+    sourceType: 'PDF 表格（12 页 / 126 行），文本层无可用 ToUnicode 映射，经页面渲染后逐行人工录入',
+    note: '该目录只含竞赛名称/负责单位/级别/国赛官网/负责人，不含任何日期，故不进入日历时间线',
+    total: catalog.length,
+    byLevel: {},
+    byDept: {},
+    missingUrl: catalog.filter((c) => !c.url).length,
+    securityRelated: catalog.filter((c) => c.security).length,
+    crossReferenced: nucMatches.length,
+    crossRefs: nucMatches,
+  };
+  for (const c of catalog) {
+    nucStats.byLevel[c.level] = (nucStats.byLevel[c.level] || 0) + 1;
+    nucStats.byDept[c.dept] = (nucStats.byDept[c.dept] || 0) + 1;
+  }
+
   const stats = {
     generatedAt: new Date().toISOString(),
     scope: '2026-01-01 ~ 2026-12-31',
@@ -316,6 +397,8 @@ async function main() {
     withRegistrationStart: deduped.filter((e) => e.registrationStart).length,
     withRegistrationEnd: deduped.filter((e) => e.registrationEnd).length,
     registrationStated: deduped.filter((e) => e.registrationBasis === 'stated').length,
+    nucCatalogTotal: catalog.length,
+    nucCrossReferenced: nucMatches.length,
   };
   for (const e of deduped) {
     stats.byCategory[e.category] = (stats.byCategory[e.category] || 0) + 1;
@@ -325,8 +408,12 @@ async function main() {
 
   await mkdir(resolve(ROOT, 'data'), { recursive: true });
   await writeFile(resolve(ROOT, 'data', 'events.json'), JSON.stringify({ stats, events: deduped }, null, 2), 'utf8');
+  await writeFile(resolve(ROOT, 'data', 'nuc-catalog.json'),
+    JSON.stringify({ stats: nucStats, entries: catalog }, null, 2), 'utf8');
   console.log('\n=== 归一化完成 ===');
   console.log(JSON.stringify(stats, null, 2));
+  console.log('\n=== 中北大学目录 ===');
+  console.log(JSON.stringify(nucStats.byLevel, null, 2));
 }
 
 main().catch((err) => { console.error('FATAL', err); process.exit(1); });

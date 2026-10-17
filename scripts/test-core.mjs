@@ -185,5 +185,37 @@ console.log(`报名依据: stated=${evs.filter((e) => e.registrationBasis === 's
   `derived=${evs.filter((e) => e.registrationBasis === 'derived').length} ` +
   `unknown=${evs.filter((e) => e.registrationBasis === 'unknown').length}`);
 
+/* ---------- 6. 中北大学竞赛目录 ---------- */
+console.log('\n— 中北大学竞赛目录（2026版） —');
+const nucData = require('../data/nuc-catalog.json');
+const cat = nucData.entries || [];
+const LEVELS = ['超级', '一级', '二级', '三级'];
+
+t(`目录条目数（${cat.length}）`, cat.length === 126);
+t('级别取值合法', cat.every((c) => LEVELS.includes(c.level)));
+t('每条都有名称与负责单位', cat.every((c) => c.name && c.dept));
+t('条目 ID 唯一', new Set(cat.map((c) => c.id)).size === cat.length);
+t('序号覆盖 1..125', Math.min(...cat.map((c) => c.no)) === 1 && Math.max(...cat.map((c) => c.no)) === 125);
+t('官网字段要么是 http(s) 要么为空', cat.every((c) => !c.url || /^https?:\/\//i.test(c.url)));
+
+const lv = {};
+cat.forEach((c) => { lv[c.level] = (lv[c.level] || 0) + 1; });
+t(`级别分布 超级=${lv['超级']} 一级=${lv['一级']} 二级=${lv['二级']} 三级=${lv['三级']}`,
+  lv['超级'] === 2 && lv['一级'] === 75 && lv['二级'] === 8 && lv['三级'] === 41);
+
+// 交叉引用：日历里带 nucLevel 的赛事必须能对应到真实目录条目
+const withNuc = evs.filter((e) => e.nucLevel);
+const nos = new Set(cat.map((c) => c.no));
+t(`日历赛事带中北级别标注（${withNuc.length} 条）`, withNuc.length > 0);
+t('带标注的赛事，级别合法', withNuc.every((e) => LEVELS.includes(e.nucLevel)));
+t('带标注的赛事，序号能在目录中找到', withNuc.every((e) => nos.has(e.nucNo)));
+t('带标注的赛事，级别与目录一致', withNuc.every((e) => {
+  const entry = cat.find((c) => c.no === e.nucNo);
+  return entry && entry.level === e.nucLevel;
+}));
+
+console.log(`目录级别分布: ${JSON.stringify(lv)}`);
+console.log(`交叉标注: ${withNuc.length} 条日历赛事 ↔ 目录条目`);
+
 console.log(`\n================ 通过 ${pass} / ${pass + fail} ================`);
 process.exit(fail ? 1 : 0);

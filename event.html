@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>赛事详情 · CTF 赛事日历 2026</title>
+<meta name="description" content="赛事详情：报名与比赛时间、状态判定、来源与原文核验。" />
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/extra.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%A9%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+<div class="app app-narrow">
+
+  <div class="detail-bar no-print">
+    <a class="btn tiny" href="index.html">← 返回列表</a>
+    <div class="detail-bar-actions">
+      <button class="btn tiny" id="btnTz" type="button">时区：北京时间</button>
+      <button class="btn tiny" id="btnIcsOne" type="button">下载 .ics</button>
+      <button class="btn tiny" id="btnPrint" type="button">打印 / 存为 PDF</button>
+    </div>
+  </div>
+
+  <main id="detail" class="detail">
+    <div class="empty"><div class="empty-ico">⏳</div><h2>加载中…</h2></div>
+  </main>
+
+  <footer class="foot no-print">
+    <p class="muted">
+      数据来源：<a href="https://ctftime.org" target="_blank" rel="noopener">CTFtime</a> 公开 API +
+      各赛事官方通知人工核验 + 《中北大学学科竞赛目录（2026版）》。
+      页面所载时间以主办方最终通知为准。
+    </p>
+  </footer>
+</div>
+
+<script src="assets/core.js"></script>
+<script src="assets/detail.js"></script>
+</body>
+</html>

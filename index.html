@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>CTF 赛事日历 2026 · 全年赛事检索</title>
-<meta name="description" content="2026 全年 CTF 与网络安全竞赛日历：报名开始/截止、比赛开始/结束时间、实时状态判定，支持关键词与时间段检索。" />
+<title>CTF 赛事日历 2026 · 全年赛事检索 + 中北大学竞赛目录</title>
+<meta name="description" content="2026 全年 CTF 与网络安全竞赛日历：报名开始/截止、比赛开始/结束时间、实时状态判定，支持关键词与时间段检索；附中北大学学科竞赛目录（2026版）及级别标注。" />
 <link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/extra.css" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%A9%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
@@ -29,104 +30,202 @@
     </div>
   </header>
 
-  <section class="panel" aria-label="检索条件">
-    <div class="row row-main">
-      <div class="field grow">
-        <label for="q">关键词检索</label>
-        <div class="input-wrap">
-          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 104.472 10.03l4.749 4.75 1.414-1.415-4.75-4.749A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"/></svg>
-          <input id="q" type="search" placeholder="赛事名 / 主办方 / 地区 / 赛制，如：强网杯、CISCN、Jeopardy、China" autocomplete="off" />
-          <button class="clear" id="qClear" type="button" hidden aria-label="清空">×</button>
+  <nav class="tabs" role="tablist" aria-label="视图切换">
+    <button class="tab on" id="tabCalendar" data-tab="calendar" role="tab" aria-selected="true" type="button">
+      赛事日历 <span class="tab-n" id="tabNCalendar">—</span>
+    </button>
+    <button class="tab" id="tabCatalog" data-tab="catalog" role="tab" aria-selected="false" type="button">
+      中北大学竞赛目录 <span class="tab-n" id="tabNCatalog">—</span>
+    </button>
+  </nav>
+
+  <!-- ==================== 视图一：赛事日历 ==================== -->
+  <div id="viewCalendar" role="tabpanel">
+
+    <section class="panel" aria-label="检索条件">
+      <div class="row row-main">
+        <div class="field grow">
+          <label for="q">关键词检索</label>
+          <div class="input-wrap">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 104.472 10.03l4.749 4.75 1.414-1.415-4.75-4.749A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"/></svg>
+            <input id="q" type="search" placeholder="赛事名 / 主办方 / 地区 / 赛制，如：强网杯、CISCN、Jeopardy、China" autocomplete="off" />
+            <button class="clear" id="qClear" type="button" hidden aria-label="清空">×</button>
+          </div>
+          <div class="hint">多关键词用空格分隔＝全部匹配；<code>|</code> 分隔＝任一匹配；<code>"引号"</code> 精确短语；<code>-词</code> 排除</div>
         </div>
-        <div class="hint">多关键词用空格分隔＝全部匹配；<code>|</code> 分隔＝任一匹配；<code>"引号"</code> 精确短语；<code>-词</code> 排除</div>
       </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="cat">赛事类型</label>
+          <select id="cat">
+            <option value="">全部类型</option>
+            <option value="college">大学生竞赛类</option>
+            <option value="domestic-technical">国内技术性赛事</option>
+            <option value="international-technical">国际赛事</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="level">中北级别</label>
+          <select id="level">
+            <option value="">全部级别</option>
+            <option value="超级">超级</option>
+            <option value="一级">一级</option>
+            <option value="二级">二级</option>
+            <option value="三级">三级</option>
+            <option value="none">目录未收录</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="rangeField">时间检索维度</label>
+          <select id="rangeField">
+            <option value="contest">比赛时间</option>
+            <option value="registration">报名时间</option>
+            <option value="any">报名或比赛时间</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="from">起始日期</label>
+          <input id="from" type="date" />
+        </div>
+
+        <div class="field">
+          <label for="to">结束日期</label>
+          <input id="to" type="date" />
+        </div>
+
+        <div class="field">
+          <label for="overlap">区间匹配方式</label>
+          <select id="overlap">
+            <option value="overlap">有交集（推荐）</option>
+            <option value="contain">完全落在区间内</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="sort">排序</label>
+          <select id="sort">
+            <option value="start-asc">比赛时间 ↑</option>
+            <option value="start-desc">比赛时间 ↓</option>
+            <option value="reg-asc">报名开始 ↑</option>
+            <option value="weight-desc">赛事权重 ↓</option>
+            <option value="title-asc">名称 A→Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row row-chips">
+        <div class="chips" id="statusChips" role="group" aria-label="状态筛选">
+          <span class="chips-label">状态</span>
+          <button class="chip on" data-status="all" type="button">全部</button>
+          <button class="chip" data-status="reg-open" type="button">报名中</button>
+          <button class="chip" data-status="reg-closed" type="button">报名已截止</button>
+          <button class="chip" data-status="upcoming" type="button">未开始</button>
+          <button class="chip" data-status="ongoing" type="button">进行中</button>
+          <button class="chip" data-status="ended" type="button">已结束</button>
+          <button class="chip" data-status="tbd" type="button">时间待定</button>
+        </div>
+        <div class="quick">
+          <button class="btn tiny" data-quick="today" type="button">今天</button>
+          <button class="btn tiny" data-quick="week" type="button">未来 7 天</button>
+          <button class="btn tiny" data-quick="month" type="button">未来 30 天</button>
+          <button class="btn tiny" data-quick="all" type="button">全年</button>
+        </div>
+      </div>
+
+      <div class="row row-foot">
+        <div class="result-count"><strong id="count">—</strong> 条结果<span id="activeFilters" class="active-filters"></span></div>
+        <div class="tools">
+          <button class="btn tiny" id="btnReset" type="button">重置条件</button>
+          <button class="btn tiny" id="btnCsv" type="button">导出 CSV</button>
+          <button class="btn tiny" id="btnIcs" type="button">导出 ICS 日历</button>
+        </div>
+      </div>
+    </section>
+
+    <main id="list" class="list" aria-live="polite"></main>
+    <div id="empty" class="empty" hidden>
+      <div class="empty-ico">🔍</div>
+      <h2>没有匹配的赛事</h2>
+      <p>试试放宽时间范围，或清空关键词。</p>
+      <button class="btn" id="btnReset2" type="button">重置全部条件</button>
     </div>
+  </div>
 
-    <div class="row">
-      <div class="field">
-        <label for="cat">赛事类型</label>
-        <select id="cat">
-          <option value="">全部类型</option>
-          <option value="college">大学生竞赛类</option>
-          <option value="domestic-technical">国内技术性赛事</option>
-          <option value="international-technical">国际赛事</option>
-        </select>
+  <!-- ==================== 视图二：中北大学竞赛目录 ==================== -->
+  <div id="viewCatalog" role="tabpanel" hidden>
+
+    <section class="panel" aria-label="目录筛选">
+      <div class="notice">
+        <div class="notice-main">
+          <strong>中北大学学科竞赛目录（2026版）</strong>
+          共 <strong id="nucTotal">—</strong> 项，按级别认定
+        </div>
+        <div class="notice-dim">
+          该目录仅含「竞赛名称 / 负责单位 / 级别 / 国赛官网 / 负责人」，<b>不含任何日期</b>，
+          因此不进入日历时间线；它与日历中已收录的赛事互相标注。
+        </div>
+        <div class="notice-actions">
+          <a class="btn tiny" id="nucPdf" href="docs/nuc-competitions-2026.pdf" download>
+            ⬇ 下载原始目录 PDF（2026版）
+          </a>
+          <button class="btn tiny" id="nucPrint" type="button">打印 / 存为 PDF</button>
+        </div>
       </div>
 
-      <div class="field">
-        <label for="rangeField">时间检索维度</label>
-        <select id="rangeField">
-          <option value="contest">比赛时间</option>
-          <option value="registration">报名时间</option>
-          <option value="any">报名或比赛时间</option>
-        </select>
+      <div class="row">
+        <div class="field grow">
+          <label for="nq">目录检索</label>
+          <div class="input-wrap">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 104.472 10.03l4.749 4.75 1.414-1.415-4.75-4.749A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"/></svg>
+            <input id="nq" type="search" placeholder="竞赛名称 / 负责单位 / 负责人，如：信息安全、计算机、石琼" autocomplete="off" />
+            <button class="clear" id="nqClear" type="button" hidden aria-label="清空">×</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="ndept">负责单位</label>
+          <select id="ndept"><option value="">全部单位</option></select>
+        </div>
+        <div class="field">
+          <label for="nsort">排序</label>
+          <select id="nsort">
+            <option value="no-asc">目录序号 ↑</option>
+            <option value="level">级别优先</option>
+            <option value="name-asc">名称 A→Z</option>
+          </select>
+        </div>
       </div>
 
-      <div class="field">
-        <label for="from">起始日期</label>
-        <input id="from" type="date" />
+      <div class="row row-chips">
+        <div class="chips" id="levelChips" role="group" aria-label="级别筛选">
+          <span class="chips-label">级别</span>
+          <button class="chip on" data-level="all" type="button">全部</button>
+          <button class="chip" data-level="超级" type="button">超级 <b class="lvl-n" data-cnt="超级">0</b></button>
+          <button class="chip" data-level="一级" type="button">一级 <b class="lvl-n" data-cnt="一级">0</b></button>
+          <button class="chip" data-level="二级" type="button">二级 <b class="lvl-n" data-cnt="二级">0</b></button>
+          <button class="chip" data-level="三级" type="button">三级 <b class="lvl-n" data-cnt="三级">0</b></button>
+        </div>
+        <div class="quick">
+          <button class="btn tiny" id="nucReset" type="button">重置</button>
+          <button class="btn tiny" id="nucCsv" type="button">导出目录 CSV</button>
+        </div>
       </div>
 
-      <div class="field">
-        <label for="to">结束日期</label>
-        <input id="to" type="date" />
+      <div class="row row-foot">
+        <div class="result-count"><strong id="nucCount">—</strong> 项<span id="nucActiveFilters" class="active-filters"></span></div>
+        <div class="tools"><span class="hint" id="nucCrossRefHint"></span></div>
       </div>
+    </section>
 
-      <div class="field">
-        <label for="overlap">区间匹配方式</label>
-        <select id="overlap">
-          <option value="overlap">有交集（推荐）</option>
-          <option value="contain">完全落在区间内</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="sort">排序</label>
-        <select id="sort">
-          <option value="start-asc">比赛时间 ↑</option>
-          <option value="start-desc">比赛时间 ↓</option>
-          <option value="reg-asc">报名开始 ↑</option>
-          <option value="weight-desc">赛事权重 ↓</option>
-          <option value="title-asc">名称 A→Z</option>
-        </select>
-      </div>
+    <div id="nucList" class="nuc-list" aria-live="polite"></div>
+    <div id="nucEmpty" class="empty" hidden>
+      <div class="empty-ico">🔍</div>
+      <h2>没有匹配的竞赛</h2>
+      <p>试试换个关键词，或切回「全部」级别。</p>
     </div>
-
-    <div class="row row-chips">
-      <div class="chips" id="statusChips" role="group" aria-label="状态筛选">
-        <span class="chips-label">状态</span>
-        <button class="chip on" data-status="all" type="button">全部</button>
-        <button class="chip" data-status="reg-open" type="button">报名中</button>
-        <button class="chip" data-status="reg-closed" type="button">报名已截止</button>
-        <button class="chip" data-status="upcoming" type="button">未开始</button>
-        <button class="chip" data-status="ongoing" type="button">进行中</button>
-        <button class="chip" data-status="ended" type="button">已结束</button>
-        <button class="chip" data-status="tbd" type="button">时间待定</button>
-      </div>
-      <div class="quick">
-        <button class="btn tiny" data-quick="today" type="button">今天</button>
-        <button class="btn tiny" data-quick="week" type="button">未来 7 天</button>
-        <button class="btn tiny" data-quick="month" type="button">未来 30 天</button>
-        <button class="btn tiny" data-quick="all" type="button">全年</button>
-      </div>
-    </div>
-
-    <div class="row row-foot">
-      <div class="result-count"><strong id="count">—</strong> 条结果<span id="activeFilters" class="active-filters"></span></div>
-      <div class="tools">
-        <button class="btn tiny" id="btnReset" type="button">重置条件</button>
-        <button class="btn tiny" id="btnCsv" type="button">导出 CSV</button>
-        <button class="btn tiny" id="btnIcs" type="button">导出 ICS 日历</button>
-      </div>
-    </div>
-  </section>
-
-  <main id="list" class="list" aria-live="polite"></main>
-  <div id="empty" class="empty" hidden>
-    <div class="empty-ico">🔍</div>
-    <h2>没有匹配的赛事</h2>
-    <p>试试放宽时间范围，或清空关键词。</p>
-    <button class="btn" id="btnReset2" type="button">重置全部条件</button>
   </div>
 
   <footer class="foot">
@@ -137,7 +236,8 @@
     </p>
     <p class="muted">
       数据来源：<a href="https://ctftime.org" target="_blank" rel="noopener">CTFtime</a> 公开 API（国际赛事）+
-      各赛事官方通知人工核验（国内赛事）。赛事时间以官方最终通知为准。
+      各赛事官方通知人工核验（国内赛事）+
+      《中北大学学科竞赛目录（2026版）》。赛事时间以官方最终通知为准。
     </p>
   </footer>
 </div>
@@ -173,10 +273,24 @@
       </div>
     </div>
     <div class="countdown"></div>
-    <details class="more">
-      <summary>详情 / 报名说明 / 来源</summary>
-      <div class="more-body"></div>
-    </details>
+    <div class="card-foot">
+      <a class="btn tiny detail-link" href="#">查看详情 / 下载通知 →</a>
+    </div>
+  </article>
+</template>
+
+<template id="nucRowTpl">
+  <article class="nuc-row">
+    <div class="nuc-no"></div>
+    <div class="nuc-main">
+      <div class="nuc-name"></div>
+      <div class="nuc-meta"></div>
+    </div>
+    <div class="nuc-side">
+      <span class="lvl"></span>
+      <a class="btn tiny nuc-link" target="_blank" rel="noopener">官网 ↗</a>
+      <a class="btn tiny nuc-detail" href="#">详情 →</a>
+    </div>
   </article>
 </template>
 

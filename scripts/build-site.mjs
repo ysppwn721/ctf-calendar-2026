@@ -12,10 +12,15 @@ const DIST = resolve(ROOT, 'dist');
 
 const FILES = [
   ['index.html', 'index.html'],
+  ['event.html', 'event.html'],
   ['assets/core.js', 'assets/core.js'],
   ['assets/app.js', 'assets/app.js'],
+  ['assets/detail.js', 'assets/detail.js'],
   ['assets/styles.css', 'assets/styles.css'],
+  ['assets/extra.css', 'assets/extra.css'],
   ['data/events.json', 'data/events.json'],
+  ['data/nuc-catalog.json', 'data/nuc-catalog.json'],
+  ['docs/nuc-competitions-2026.pdf', 'docs/nuc-competitions-2026.pdf'],
 ];
 
 async function main() {
@@ -36,17 +41,21 @@ async function main() {
   // 校验数据可被解析
   const payload = JSON.parse(await readFile(join(DIST, 'data', 'events.json'), 'utf8'));
   if (!payload.events || !payload.events.length) throw new Error('events.json 为空');
+  const nuc = JSON.parse(await readFile(join(DIST, 'data', 'nuc-catalog.json'), 'utf8'));
+  if (!nuc.entries || !nuc.entries.length) throw new Error('nuc-catalog.json 为空');
 
   // SPA/静态站无需路由规则；补一份 _headers 以控制缓存
   await writeFile(join(DIST, '_headers'), [
     '/data/events.json',
+    '  Cache-Control: public, max-age=1800',
+    '/data/nuc-catalog.json',
     '  Cache-Control: public, max-age=1800',
     '/*',
     '  X-Content-Type-Options: nosniff',
     '',
   ].join('\n'), 'utf8');
 
-  console.log(`\ndist/ 就绪：${payload.events.length} 条赛事，共 ${(total / 1024).toFixed(1)} KB`);
+  console.log(`\ndist/ 就绪：${payload.events.length} 条赛事 + ${nuc.entries.length} 项目录，共 ${(total / 1024).toFixed(1)} KB`);
 }
 
 main().catch((e) => { console.error('FATAL', e); process.exit(1); });
