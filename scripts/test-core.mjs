@@ -212,13 +212,27 @@ t('derived 档的报名截止恒等于比赛开始（推定规则一致）',
 t('除目录并入项外，每条都有来源链接',
   evs.filter((e) => e.category !== 'catalog').every((e) => (e.sources || []).length > 0));
 
-// 目录并入项：必须带级别、负责单位，且不得伪造日期
+// 目录并入项：可以带日期（来自人工调研），但必须有来源与原文支撑
 t('目录并入项均带中北级别', catalogRows.every((e) => !!e.nucLevel));
 t('目录并入项均带负责单位', catalogRows.every((e) => !!e.nucDept));
-t('目录并入项不得伪造任何日期', catalogRows.every((e) =>
-  !e.contestStart && !e.contestEnd && !e.registrationStart && !e.registrationEnd));
-t('目录并入项报名依据为未知', catalogRows.every((e) => e.registrationBasis === 'unknown'));
 t('目录并入项序号能对上目录', catalogRows.every((e) => !!e.nucNo));
+t('目录并入项有日期者，结束不早于开始', catalogRows.filter((e) => e.contestStart && e.contestEnd)
+  .every((e) => Date.parse(e.contestEnd) >= Date.parse(e.contestStart)));
+t('目录并入项有比赛日期者，必须附来源与原文摘录',
+  catalogRows.filter((e) => e.contestStart)
+    .every((e) => (e.sources || []).length > 0 && !!e.evidence));
+t('目录并入项的日期必须可解析',
+  catalogRows.filter((e) => e.contestStart)
+    .every((e) => Number.isFinite(Date.parse(e.contestStart)) && Number.isFinite(Date.parse(e.contestEnd))));
+t('目录并入项：stated 档必须至少有一个报名日期',
+  catalogRows.filter((e) => e.registrationBasis === 'stated')
+    .every((e) => e.registrationStart || e.registrationEnd));
+t('目录并入项：derived 档报名截止等于开赛时刻（与主数据同一套推定规则）',
+  catalogRows.filter((e) => e.registrationBasis === 'derived' && e.contestStart)
+    .every((e) => Date.parse(e.registrationEnd) === Date.parse(e.contestStart)));
+t('目录并入项：unknown 档不得带任何报名日期',
+  catalogRows.filter((e) => e.registrationBasis === 'unknown')
+    .every((e) => !e.registrationStart && !e.registrationEnd));
 
 // 月份覆盖：2026 年 12 个月应全部有赛事
 const months = new Set(evs.map((e) => C.monthKey(e.contestStart, 'Asia/Shanghai')));

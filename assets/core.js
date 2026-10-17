@@ -135,7 +135,11 @@
     else if (re != null && now > re) reg = 'closed';
     else if (rs != null && now < rs) reg = 'notopen';
     else if (re != null && (rs == null || now >= rs)) reg = 'open';
-    else if (rs != null && re == null && (cs == null || now < cs)) reg = 'open';
+    else if (rs != null && re == null && (cs == null || now < cs)) {
+      // 没有公布报名截止：用开赛时刻兜底。若连赛程都没有，只在报名开放后 180 天内
+      // 视为开放——否则一年前的报名入口会被永久标成「报名中」，属于误导。
+      reg = (cs != null || (now - rs) <= 180 * 86400000) ? 'open' : 'unknown';
+    }
     else if (cs != null && now >= cs && re == null) reg = 'closed';
     else reg = 'unknown';
 

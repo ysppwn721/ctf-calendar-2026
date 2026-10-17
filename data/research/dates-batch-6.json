@@ -1,0 +1,254 @@
+[
+  {
+    "no": 9,
+    "name": "全国大学生化工设计竞赛",
+    "registrationStart": "2026-03-01T00:00:00+08:00",
+    "registrationEnd": "2026-03-31T23:59:59+08:00",
+    "contestStart": "2026-08-12T00:00:00+08:00",
+    "contestEnd": "2026-08-17T23:59:59+08:00",
+    "dateHint": "赛区决赛于2026年7月31日前进行；全国总决赛参赛名单2026-08-03公布；总决赛队伍2026-08-10前上传决赛作品",
+    "confidence": "high",
+    "sources": [
+      "http://cxcy.jgsu.edu.cn/info/1036/4356.htm",
+      "http://notice.ysu.edu.cn/info/2264/24929.htm",
+      "https://iche.zju.edu.cn/index.php/a/sstz/1656.html"
+    ],
+    "evidence": "「报名时间为3月1日～3月31日，请报名参赛的团队登录全国大学生化工设计竞赛网站（http://iche.zju.edu.cn），在线填写报名表。」「全国总决赛拟于8月12～17日举行，具体赛程安排另行通知。」「2．总决赛承办单位：宁夏大学」",
+    "note": "2026年为第二十届（天正设计杯），总决赛在宁夏银川宁夏大学。官网 iche.zju.edu.cn 通知页（/a/sstz/1656.html）抓取返回 HTTP 500，日期取自井冈山大学、燕山大学对同一份官方通知的完整转载，原文一致。燕山大学另列：省赛决赛7月20日前（石家庄铁道大学）、区赛决赛7月31日前（北京理工大学）。"
+  },
+  {
+    "no": 10,
+    "name": "全国大学生生命科学竞赛（CULST）",
+    "registrationStart": "2026-08-01T00:00:00+08:00",
+    "registrationEnd": "2027-01-15T23:59:59+08:00",
+    "contestStart": null,
+    "contestEnd": null,
+    "dateHint": "第十二届（科学探究类）：2026-08-01下发通知并开通网络报名；2027-01-15报名截止；2027-01-31研究综述与实验设计上传截止；2027-03-31缴费截止；2027-05-31论文/实验记录截止；2027年6-7月网络评审与省赛；2027年7月下旬在陕西师范大学举行全国决赛（仅公布到「下旬」，未给具体日）",
+    "confidence": "high",
+    "sources": [
+      "https://xkjszx.nwafu.edu.cn/sstz/3cb80d6df5e24648a54cec73dd83becc.htm",
+      "http://www.culsc.cn/"
+    ],
+    "evidence": "「2026年8月1日，下发竞赛通知，开始网络报名，竞赛官方网站 http://www.culsc.cn/。2027年1月 15 日，网络报名截止。」「2027 年 6 月～7 月，网络评审和省赛。」「入围项目参加7月下旬在陕西师范大学举行的全国决赛。」",
+    "note": "2026年8月1日启动的是第十二届（2026—2027赛季），报名窗口正好落在本目录编制期内，但全国决赛在2027年7月，故 contestStart/contestEnd 置 null。官网 www.culsc.cn 为动态页面，赛程取自西北农林科技大学教务处对官方通知的完整转载（发布日期2026-09-16）。"
+  },
+  {
+    "no": 11,
+    "name": "全国大学生化工实验大赛",
+    "registrationStart": null,
+    "registrationEnd": null,
+    "contestStart": "2026-08-08T00:00:00+08:00",
+    "contestEnd": "2026-08-11T23:59:59+08:00",
+    "dateHint": "第九届定于2026年7月—8月举办，分学校推选、赛区初赛、全国总决赛三阶段；全国总决赛2026-08-08至08-11在郑州大学",
+    "confidence": "medium",
+    "sources": [
+      "https://jwc.swfu.edu.cn/info/1461/9591.htm",
+      "https://ccce.csu.edu.cn/info/1003/11056.htm",
+      "http://www.cteic.com/higherEducation-199.html"
+    ],
+    "evidence": "「中国化工教育协会定于2026年7月—8月举办第九届全国大学生化工实验大赛。」（中南大学）「4．全国总决赛：2026 年8 月8日至11 日，郑州大学」（西南林业大学）",
+    "note": "西南林业大学通知的「三、时间安排」前3项仍写作2025年（学校报名2025年4月8日~4月20日、初赛2025年5月底~6月初、区域决赛2025年7月四川轻化工大学），明显是沿用第八届文字未改，仅第4项更新为2026年，故报名与初赛日期一律置 null，不作推断。总决赛日期有「2026年8月8日至11日、郑州大学」明确表述，且与中南大学「2026年7月—8月举办」相符。官网 cteic.com 与 edu.cteic.com 的通知为 PDF/动态页，未能直读原文。"
+  },
+  {
+    "no": 12,
+    "name": "全国大学生化学实验创新设计大赛",
+    "registrationStart": null,
+    "registrationEnd": null,
+    "contestStart": null,
+    "contestEnd": null,
+    "dateHint": "第六届全国决赛定于2027年5月举行（2026年10月15日大连理工大学通知明确）；2026年先行举办各省省赛，如贵州省赛2026-05-05至2026-08-20（省决赛2026-08-19至08-20，贵州中医药大学时珍学院）；第五届（2025年）全国总决赛已于2025年8—9月举行",
+    "confidence": "low",
+    "sources": [
+      "http://chem.dlut.edu.cn/info/1010/13800.htm",
+      "http://www.gzhgxh.cn/articles/53/428",
+      "https://lixueyuan.sicau.edu.cn/info/1071/14683.htm",
+      "https://cid.nju.edu.cn/redirectActionNotificationNotice/0"
+    ],
+    "evidence": "「“第六届全国大学生化学实验创新设计大赛”将于2027年5月举行。」（大连理工，2026-10-15）「经研究决定，于2026年5月5日—8月20日举办全国大学生化学实验创新设计大赛(贵州省省赛)……决赛采用现场答辩的形式进行。1.时间：2026年8月19日—2026年8月20日。」（贵州省化学化工学会）",
+    "note": "关键结论：2026年无全国总决赛——第五届总决赛在2025年8—9月（中国科大、兰大、云大等校新闻），第六届总决赛在2027年5月。2026年的赛事形态是省级选拔赛（已核实贵州、四川、云南等省）。官网 cid.nju.edu.cn 为 JS 单页渲染，正文抓不到；南京大学站点通知列表无正文内容。因仅能确定到「2027年5月」这一月份级信息，故全部日期字段置 null。"
+  },
+  {
+    "no": 56,
+    "name": "全国大学生结构设计竞赛",
+    "registrationStart": null,
+    "registrationEnd": null,
+    "contestStart": "2026-10-14T00:00:00+08:00",
+    "contestEnd": "2026-10-18T23:59:59+08:00",
+    "dateHint": "各省分区赛于2026年4月至7月完成；2026-08-05前上报分区赛数据；2026-08-10前确定总决赛名额；2026-08-25前公布总决赛高校名单；2026-09-06前发布总决赛通知",
+    "confidence": "medium",
+    "sources": [
+      "http://m.52jingsai.com/article-23418.html",
+      "http://www.structurecontest.com/",
+      "https://www.sxit.edu.cn/jnjdygcxlzx/info/1056/2530.htm"
+    ],
+    "evidence": "「第十九届全国大学生结构设计总决赛定于 2026 年 10 月 14 日至 18 日在内蒙古科技大学举行。」「2026 年为“十五五”启动年……经全国大学生结构设计竞赛秘书处……共同商定」",
+    "note": "2026年为第十九届，承办高校内蒙古科技大学，总决赛即本周举行。官网 www.structurecontest.com 为摩课云 JS 单页（只返回站点标题），无法直读；通知全文取自我爱竞赛网对全国竞委会秘书处通知的完整转载（2026-01-23）。报名由各省（市、自治区）秘书处分区组织，无全国统一报名起止，故置 null。"
+  },
+  {
+    "no": 57,
+    "name": "全国高校BIM毕业设计创新大赛",
+    "registrationStart": "2026-09-17T00:00:00+08:00",
+    "registrationEnd": "2026-11-30T17:00:00+08:00",
+    "contestStart": null,
+    "contestEnd": null,
+    "dateHint": "第十三届：2026-09-17开展预报名与统计，2026-10-10结束；正式报名须于2026-11-30 17:00前在 gxbsxs.glodonedu.com 填写；海选赛由主办方（广联达）统一组织，时间「预计为12月上旬」，具体以官网公布为准",
+    "confidence": "medium",
+    "sources": [
+      "https://civil.swjtu.edu.cn/info/1055/74062.htm",
+      "https://gxbsxs.glodonedu.com/home",
+      "https://jwc.aufe.edu.cn/_t2244/2026/0330/c2840a245961/page.htm"
+    ],
+    "evidence": "「“第十三届全国高校BIM毕业设计创新大赛”预报名和统计工作已于2026年9月17日开展，并于2026年10月10日正式结束。」「请同学们……在11月30日17时前在报名链接（https://gxbsxs.glodonedu.com）填写自己信息」",
+    "note": "2026年启动的是第十三届（广联达杯），赛季跨年，总决赛在2027年，故 contest 字段置 null；海选赛仅「预计12月上旬」，属未定稿，一并放入 dateHint。官网 gxbsxs.glodonedu.com 为 JS 单页，只返回标题「第十三届国际高校BIM毕业设计大赛」，无法读取赛程原文。"
+  },
+  {
+    "no": 58,
+    "name": "全国大学生水利创新设计大赛",
+    "registrationStart": null,
+    "registrationEnd": null,
+    "contestStart": null,
+    "contestEnd": null,
+    "dateHint": "两年一届：第九届于2025年举办；第十届国赛定于2027年举行——宁夏大学2026-07-10举办的校选拔赛明确「选拔代表学校参加2027年国赛」",
+    "confidence": "low",
+    "sources": [
+      "https://tmsl.nxu.edu.cn/info/1011/8587.htm",
+      "https://sljzw.hhu.edu.cn/fenhui/main.jsp",
+      "https://slxy.neau.edu.cn/info/1163/7568.htm"
+    ],
+    "evidence": "「此次比赛旨在从报名参赛队伍中初步选拔代表学校参加2027年国赛的参赛队伍。」「为2027年冲击全国大赛做好充分准备。」",
+    "note": "结论性判断：2026年为该项赛事的轮空年，无全国赛，因此四个日期字段全部置 null。抓取秘书处站点 sljzw.hhu.edu.cn 只得到框架页，其赛程通知为 PDF（/_upload/article/files/...pdf），本工具不支持 PDF 正文解析，故未能取得第九届/第十届的具体日。第十届国赛在2027年这一点由宁夏大学（国赛承办校之一）的校内选拔赛报道直接佐证。"
+  },
+  {
+    "no": 59,
+    "name": "全国大学生测绘学科创新创业智能大赛",
+    "registrationStart": null,
+    "registrationEnd": null,
+    "contestStart": "2026-07-31T08:30:00+08:00",
+    "contestEnd": "2026-08-01T23:59:59+08:00",
+    "dateHint": "一号通知：拟于2026年7月底举办，承办河南理工大学；软件2026-06-25按最终参赛人数发放；2026-07-01至决赛前统一模拟赛；科技论文2026-06-27前投稿",
+    "confidence": "medium",
+    "sources": [
+      "https://www.163.com/dy/article/L2AHQUEE05319UN7.html",
+      "https://gsee.swjtu.edu.cn/info/1061/32003.htm",
+      "http://smt.whu.edu.cn/"
+    ],
+    "evidence": "「“2026年全国大学生测绘学科创新创业智能大赛”将于2026年7月31日-8月1日在河南理工大学举办」「大赛开幕式：7月31日8:30-9:00」「科技论文竞赛：8月1日上午线上答辩」（二号通知，中国测绘学会教育工作委员会2026年7月15日）",
+    "note": "8月1日仅上午有科技论文竞赛线上答辩，故 contestEnd 取当日23:59:59作保守上界。本站点 smt.whu.edu.cn 及主办方 csgpc.org 均无法读取正文（csgpc.org 详情页报 PHP Fatal error），二号通知全文取自「测绘之家」对学会通知的完整转载；一号通知由西南交通大学地学学院转发。报名无全国统一起止时间，各校自组织，置 null。"
+  },
+  {
+    "no": 60,
+    "name": "全国数字建筑创新应用大赛",
+    "registrationStart": "2026-04-01T00:00:00+08:00",
+    "registrationEnd": "2026-07-31T23:59:59+08:00",
+    "contestStart": "2026-09-12T00:00:00+08:00",
+    "contestEnd": "2026-10-18T23:59:59+08:00",
+    "dateHint": "报名2026年4月—7月31日（正式报名「预计4月初」）；学习备赛2026年4月起；全国选拔赛2026-09-12（线上）；全国总决赛2026-10-18（线上）",
+    "confidence": "high",
+    "sources": [
+      "https://www.ccen.com.cn/info/1150/5937.htm",
+      "http://bisai.ccen.com.cn/"
+    ],
+    "evidence": "「（一）大赛报名（2026年4月-7月31日）参赛团队指导教师通过登录大赛官方网站http://bisai.ccen.com.cn进行报名」「（三）全国选拔赛（2026年9月12日）」「（四）全国总决赛（2026年10月18日）」",
+    "note": "中国建设教育协会官网原文（建教协2026-32号，2026-03-30）。registrationStart 取通知写明的报名起始月份「2026年4月」，通知注明「正式报名时间预计4月初，具体时间请关注大赛官方网站」，故首日按4月1日填并在此说明；contestStart 取全国选拔赛日、contestEnd 取全国总决赛日（同为线上作答）。"
+  },
+  {
+    "no": 78,
+    "name": "中国大学生Chem-E-Car竞赛",
+    "registrationStart": null,
+    "registrationEnd": "2026-04-19T23:59:59+08:00",
+    "contestStart": "2026-07-24T00:00:00+08:00",
+    "contestEnd": "2026-07-27T23:59:59+08:00",
+    "dateHint": "第十届：2026-04-19前提交参赛意向报名表并完成视频竞赛报名；2026-05-06前提交工程文件包（EDP）及增补文件；比赛2026-07-24至07-27，线下赛在新疆克拉玛依中国石油大学（北京）克拉玛依校区",
+    "confidence": "high",
+    "sources": [
+      "https://www.ciesc.cn/site/content/4682.html",
+      "http://www.chemecar.cn/h-col-109.html"
+    ],
+    "evidence": "「中国化工学会定于2026年7月24日-27日在新疆维吾尔自治区克拉玛依市举办第十届“2026中国大学生Chem-E-Car竞赛®”，由中国石油大学（北京）克拉玛依校区承办」「比赛时间：2026年7月24日-7月27日」「各参赛队于2026年4月19日前登录竞赛官网(http://www.chemecar.cn)提交参赛意向报名表」",
+    "note": "中国化工学会官网原文通知（2026-04-07发布）。通知只给出「4月19日前」这一截止点、未写报名起始日，registrationStart 置 null；registrationEnd 取意向报名表截止。"
+  },
+  {
+    "no": 92,
+    "name": "全国大学生制药工程设计大赛",
+    "registrationStart": null,
+    "registrationEnd": null,
+    "contestStart": null,
+    "contestEnd": null,
+    "dateHint": "赛制惯例（据高校竞赛介绍）：报名截止每年4月底至5月中旬，作品提交截止每年9-10月，全国总决赛拟于10-11月举行；第十三届总决赛2025-11-30在上海工程技术大学落幕（历时八个月，174所高校364件作品）",
+    "confidence": "low",
+    "sources": [
+      "https://jwc.xtu.edu.cn/info/1281/4135.htm",
+      "http://spysw.hfut.edu.cn/info/1092/4964.htm",
+      "https://bpetc.tju.edu.cn/dhl_13.html"
+    ],
+    "evidence": "「报名截止时间为每年4月底至5月中旬」「作品提交截止时间为每年9-10月」「全国总决赛拟于10-11月举行，具体时间及决赛形式另行通知」（湘潭大学教务处竞赛介绍）「2025年11月30日，第十三届“东富龙-国药工程杯”全国大学生制药工程设计竞赛全国总决赛在上海工程技术大学圆满落幕」（合肥工业大学）",
+    "note": "未检索到第十四届（2026年）的官方通知日期，故四个日期字段全部置 null。按惯例2026届总决赛应在2026年10-11月，但这是推断，不写入日期字段。注意区分：中国化工教育协会另有一个「2026年全国大学生制药工程实验竞赛」（中化教协发〔2026〕77号，第一轮通知2026-09-22），是不同赛事，不计入本条。官网 bpetc.tju.edu.cn 仅为天津大学参赛简介页，无赛程。"
+  },
+  {
+    "no": 93,
+    "name": "全国大学生化学实验竞赛",
+    "registrationStart": null,
+    "registrationEnd": null,
+    "contestStart": "2026-08-10T00:00:00+08:00",
+    "contestEnd": "2026-08-13T23:59:59+08:00",
+    "dateHint": "第十四届总决赛2026-08-10至08-13在北京师范大学海淀校区举行，155所高校201名学生参赛；参赛资格由各校校赛/省级赛选拔产生",
+    "confidence": "medium",
+    "sources": [
+      "https://chemistry.buct.edu.cn/2026/0831/c1655a222490/page.htm",
+      "http://chemlab.swu.edu.cn/info/1117/1324.htm",
+      "http://cid.nju.edu.cn"
+    ],
+    "evidence": "「第十四届全国大学生化学实验竞赛全国总决赛于2026年8月10日至13日在北京师范大学海淀校区圆满落幕。北京大学、浙江大学等155所高校201名优秀学生参加了竞赛活动。」",
+    "note": "官方通知页 chem.pku.edu.cn（关于举办第十四届全国大学生化学实验竞赛的通知）抓取失败（fetch failed）；chemcenter.zju.edu.cn 的组委会文件为 PDF，无法解析。日期取自北京化工大学化学学院赛后报道（2026-08-31），属事实性报道，故 confidence 记 medium。报名无统一公开截止（参赛者由拔尖/强基基地随机抽取＋省级赛选拔），置 null。"
+  },
+  {
+    "no": 104,
+    "name": "“品茗杯”全国高校智能建造创新应用大赛",
+    "registrationStart": "2026-04-20T00:00:00+08:00",
+    "registrationEnd": "2026-05-20T23:59:59+08:00",
+    "contestStart": null,
+    "contestEnd": null,
+    "dateHint": "2026年赛事归入「第五届全国高校国产软件应用与设计创新大赛」体系：全国报名2026-04-20至2026-05-20，报名网址 www.softcontest.cn；校内选拔赛报名截止同为2026-05-20；全国决赛时间通知中未给出",
+    "confidence": "medium",
+    "sources": [
+      "https://ggxy.ahut.edu.cn/info/1083/10874.htm",
+      "https://www.qdhhc.edu.cn/kindeditor/attached/file/20260511/20260511091614_0869.pdf",
+      "http://www.softcontest.cn"
+    ],
+    "evidence": "「决定启动第五届全国高校国产软件应用与设计创新大赛」「（1）报名时间：2026年4月20日-2026年5月20日」「（2）报名网址：www.softcontest.cn」",
+    "note": "2026年该赛与第五届全国高校国产软件应用与设计创新大赛合并举办（安徽工业大学2026-05-14转发通知）；青岛黄海学院同名附件标注「报名截止时间2026年5月17日」，与安徽工大的5月20日略有出入，取较宽松的5月20日并在 note 中保留差异。全国决赛阶段时间未在可读页面给出，contest 字段置 null。官网 softcontest.cn 为动态站点，未取到正文。"
+  },
+  {
+    "no": 121,
+    "name": "全国高校安全科学与工程大学生实践与创新作品大赛",
+    "registrationStart": null,
+    "registrationEnd": null,
+    "contestStart": "2026-08-19T00:00:00+08:00",
+    "contestEnd": "2026-08-20T23:59:59+08:00",
+    "dateHint": "第12届决赛2026-08-19至08-20在西安科技大学举行，为第36届全国高校安全科学与工程学术年会组成部分；校内选拔：作品提交截止2026-05-20，校赛各环节2026-05-26前完成（中飞院预通知）",
+    "confidence": "medium",
+    "sources": [
+      "https://aqyj.tyut.edu.cn/info/1158/11930.htm",
+      "https://www.cafuc.edu.cn/jwcx/info/1021/1676.htm",
+      "https://aqyj.tyust.edu.cn/info/1126/3920.htm"
+    ],
+    "evidence": "「8月19日至20日，第12届全国高校安全科学与工程大学生实践与创新作品大赛在西安科技大学隆重举行。」「本次大赛是第36届全国高校安全科学与工程学术年会的重要组成部分」「共有90所高校的395件作品参与决赛评审」",
+    "note": "本目录该条无官网（note 记「官网无」）。2026年为第12届。全国赛无统一公开报名起止（各校选拔后统一报送），故置 null；校内选拔节点见中飞院2026-04-09预通知。日期取自太原理工大学安全与应急管理工程学院赛后报道（2026-08-23），另有昆明理工、太原科技等校报道互证。"
+  },
+  {
+    "no": 122,
+    "name": "“中装杯”全国大学生环境设计大赛",
+    "registrationStart": null,
+    "registrationEnd": "2026-06-15T23:59:59+08:00",
+    "contestStart": null,
+    "contestEnd": null,
+    "dateHint": "第十二届（2026）作品提交截止2026-06-15，提交至摩课云竞赛平台；赛题与提交细则发布于中国建筑装饰协会 cbda.cn（2026-03-02）；评审与颁奖时间未公布",
+    "confidence": "medium",
+    "sources": [
+      "https://www.shejijingsai.com/2026/03/1512289.html",
+      "http://www.cbda.cn/html/newjd/20260302/143982.html"
+    ],
+    "evidence": "「作品请按参赛规范整理好，于2026年6月15日前提交至摩课云竞赛平台」「“中装杯”全国大学生环境设计大赛，是一项面向全国在校环境设计及相关专业大学生的公益性大赛，2013年在清华大学启动，十一届大赛共覆盖院校1000余所」",
+    "note": "2026年为第十二届，分本科/研究生组与专科/高职组两个赛道。该赛为作品征集+评审制，无现场比赛日程，故 contest 字段置 null；报名起始日通知未写（随赛题发布即开放），置 null。来源为设计竞赛网（本目录登记的 url）与中国建筑装饰协会附件页，属行业媒体/主办方渠道，故记 medium。"
+  }
+]

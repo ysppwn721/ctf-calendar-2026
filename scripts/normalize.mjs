@@ -392,6 +392,11 @@ async function main() {
     console.log(`    [${m.level}] ${m.catalog}  ←  ${m.event}`);
   }
 
+  /* 已有真实赛程的目录条目（#23 CISCN、#25 中国大学生计算机设计大赛）以**赛程为准**。
+     调研结果不再覆盖它们，否则同一赛事会出现两套互相矛盾的日期
+     （实测 #23 的调研结果给出 8/15「左右」，与官网及权威媒体确认的 8/20–22 冲突）。 */
+  const referencedNos = new Set(nucMatches.map((m) => m.catalogNo));
+
   /* ---- 把赛事时间调研结果合并进目录 ---- */
   const dateFixes = [];
   for (let n = 1; n <= 10; n++) {
@@ -412,9 +417,20 @@ async function main() {
 
   let datedByResearch = 0;
   let hinted = 0;
+  let skippedRef = 0;
   for (const c of catalog) {
     const list = fixesByNo.get(String(c.no));
     if (!list || !list.length) continue;
+
+    if (referencedNos.has(c.no)) {
+      // 已有真实赛程：只吸收「时段参考」与备注，绝不覆盖日期
+      const f = list.shift();
+      c.dateHint = f.dateHint || '';
+      c.researchNote = f.note || '';
+      skippedRef++;
+      continue;
+    }
+
     // 同序号可能有多行（如 no=7 的两个子赛项），只给第一行落日期
     const f = list.shift();
     const cs = f.contestStart || null;
@@ -439,15 +455,22 @@ async function main() {
     if (c.contestStart) datedByResearch++;
     if (c.dateHint) hinted++;
   }
-  console.log(`  调研落日期 ${datedByResearch} 条，仅有时段参考(dateHint) ${hinted} 条`);
+  console.log(`  调研落日期 ${datedByResearch} 条，仅有时段参考(dateHint) ${hinted} 条，`
+    + `因已有真实赛程而跳过覆盖 ${skippedRef} 条`);
 
   /* 把目录里还没有对应赛程的条目，也并入赛事列表。
      实验室要的是「学校认定的全部竞赛」，而不只是已公布日期的那些。
-     已经通过交叉引用落到真实赛程上的条目不重复生成，避免同一赛事出现两行。 */
-  const referencedNos = new Set(nucMatches.map((m) => m.catalogNo));
+     已经通过交叉引用落到真实赛程上的条目不重复生成，避免同一赛事出现两行。
+     （referencedNos 已在上面算好） */
   const synthesized = catalog
     .filter((c) => !referencedNos.has(c.no))
-    .map((c) => ({
+    .map((c) => {
+      const hasReg = !!(c.registrationStart || c.registrationEnd);
+      const basis = hasReg ? 'stated' : (c.contestStart ? 'derived' : 'unknown');
+      // 与 normalizeCtftime 保持同一套推定规则：derived 档的报名截止 = 开赛时刻
+      const regEnd = hasReg ? (c.registrationEnd || null)
+        : (basis === 'derived' ? c.contestStart : null);
+      return ({
       id: `catalog-${c.id}`,
       title: c.name,
       titleEn: c.name,
@@ -463,9 +486,8 @@ async function main() {
       officialUrl: c.url || '',
       ctftimeUrl: '',
       registrationStart: c.registrationStart || null,
-      registrationEnd: c.registrationEnd || null,
-      registrationBasis: (c.registrationStart || c.registrationEnd) ? 'stated'
-        : (c.contestStart ? 'derived' : 'unknown'),
+      registrationEnd: regEnd,
+      registrationBasis: basis,
       contestStart: c.contestStart || null,
       contestEnd: c.contestEnd || null,
       registrationNote: (c.registrationStart || c.registrationEnd)
@@ -486,7 +508,8 @@ async function main() {
       nucLevel: c.level,
       nucDept: c.dept,
       nucOwners: c.owners,
-    }));
+      });
+    });
   deduped.push(...synthesized);
   deduped.sort((a, b) => {
     const ta = a.contestStart ? new Date(a.contestStart).getTime() : Infinity;

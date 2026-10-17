@@ -1,6 +1,6 @@
 {
   "stats": {
-    "generatedAt": "2026-10-17T13:26:21.965Z",
+    "generatedAt": "2026-10-17T13:31:11.735Z",
     "source": "中北大学学科竞赛目录（2026版）",
     "sourceType": "PDF 表格（12 页 / 126 行），文本层无可用 ToUnicode 映射，经页面渲染后逐行人工录入",
     "note": "该目录只含竞赛名称/负责单位/级别/国赛官网/负责人，不含任何日期，故不进入日历时间线",
@@ -39,9 +39,9 @@
     },
     "missingUrl": 12,
     "securityRelated": 2,
-    "withContestDate": 0,
-    "withRegistrationDate": 0,
-    "withDateHint": 0,
+    "withContestDate": 65,
+    "withRegistrationDate": 73,
+    "withDateHint": 116,
     "crossReferenced": 5,
     "crossRefs": [
       {
@@ -91,12 +91,15 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-08-10T00:00:00+08:00",
+      "registrationEnd": "2026-09-25T12:00:00+08:00",
+      "dateHint": "全国总决赛2026年11月（仅到月）；初赛复赛2026年8—10月，各地须于10月25日前完成省级复赛、10月31日前完成入围总决赛项目推荐",
+      "confidence": "high",
+      "evidence": "报名系统开放时间为2026年8月10日，报名截止时间为9月25日12时。（二）初赛复赛（2026年8—10月）……（三）总决赛（2026年11月）。",
+      "sources": [
+        "http://www.moe.gov.cn/srcsite/A08/s5672/202607/t20260731_1445670.html"
+      ],
+      "researchNote": "教育部教高函〔2026〕26号，2026-07-31发布；总决赛只公布到月份，未见具体日期公告，故contestStart/End留空。"
     },
     {
       "id": "nuc-2",
@@ -114,10 +117,14 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "2026年为大挑（第二十届）校内选拔/省赛准备年，全国决赛2027年举行；2026年同期开展“揭榜挂帅”专项赛：报名2026-05-30至06-30，榜题初审9—10月，终审擂台赛11—12月",
+      "confidence": "high",
+      "evidence": "为积极备战2027年第二十届“挑战杯”全国大学生课外学术科技作品竞赛（以下简称“大挑”）……三、竞赛时间 2026年9月-12月（校内选拔赛）。另：报名时间：2026年5月30日—6月30日；终审擂台赛：11月—12月（揭榜挂帅专项赛）。",
+      "sources": [
+        "https://www.hsu.edu.cn/4b/fa/c3718a216058/page.htm",
+        "http://tuanwei.hbu.edu.cn/contents/541/15306.html"
+      ],
+      "researchNote": "2026年不举办第二十届大挑全国决赛（2027年举办），故不填日期。2026年办的是同级“揭榜挂帅”专项赛（第二十届大挑体系内），其报名/擂台时间已写入dateHint。"
     },
     {
       "id": "nuc-3",
@@ -135,10 +142,15 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第十五届：校级初赛2026年5月底前、省级复赛6月底前、国赛申报6月、国赛初审7—9月，全国终审决赛2026年11月在大连理工大学（官方通知原文写作“11月前”，官网赛程图列为10月，口径不一致，未见具体日期公告）",
+      "confidence": "medium",
+      "evidence": "全国决赛（11月前）。全国终审决赛将在大连理工大学举办。／第十五届“挑战杯”中国大学生创业计划竞赛全国线下终审决赛将于今年11月在大连理工大学举办。",
+      "sources": [
+        "https://www.tiaozhanbei.net/article/15842/",
+        "https://2026.tiaozhanbei.net/d51/article/727/",
+        "https://www.jit.edu.cn/info/1003/155063.htm"
+      ],
+      "researchNote": "2026年举办的是“小挑”（第十五届创业计划竞赛），大挑在2027年。全国赛无统一报名起止（报名在校赛/省赛层面：校赛5月底前、省赛6月底前），且决赛日期仅到月，故各日期字段留空。"
     },
     {
       "id": "nuc-4",
@@ -156,10 +168,13 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "2026 年第十届：报名培训 7 月中旬前；分赛区比赛 9 月底前；全国晋级赛 10 月；全国总决赛 11 至 12 月（依据 2026-06-29 中国指挥与控制学会通知）；算法博弈专项赛 11 月底前完成初赛复赛、12 月上旬全国决赛",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "大赛主体赛按照报名培训、分赛区比赛、全国晋级赛、全国总决赛、总结归档五个阶段进行。报名培训（7月中旬前）……分赛区比赛（9月底前）……全国晋级赛（10月）……全国总决赛（11至12月）",
+      "sources": [
+        "https://www.c2.org.cn/h-nd-3068.html"
+      ],
+      "researchNote": "主办方（中国指挥与控制学会）2026 年正式通知只给出「旬/月」级阶段安排，未公布任何一个具体日期，因此四个字段全部 null；总决赛具体日期需待组委会后续通知。官网 www.ciccwargame.com 为报名入口，通知正文未给报名截止日。"
     },
     {
       "id": "nuc-5",
@@ -173,14 +188,18 @@
       "url": "https://uiaec.ujs.edu.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-05-16T00:00:00+08:00",
+      "contestEnd": "2026-05-16T00:00:00+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第十一届（2026）于 2025 年 9 月启动，决赛 2026-05-16 在甘肃农业大学举办（单日）；第十二届由海南大学承办",
+      "confidence": "high",
+      "evidence": "「奥凯杯」第十一届国际大学生智能农业装备创新大赛决赛于5月16日在甘肃农业大学顺利举办……本届大赛于2025年9月正式启动；累计吸引全国240多所高校报名参赛……最终，共计741件作品进入本次决赛。",
+      "sources": [
+        "https://uiaec.ujs.edu.cn/news_show.php?id=233",
+        "https://www.stdaily.com/web/gdxw/2026-05/17/content_517866.html"
+      ],
+      "researchNote": "报名方式为「各高校校内初赛遴选、限额择优推荐」，官网未公布全国统一的报名起止日，故 registration* 为 null。官方只公布决赛 5 月 16 日一天，contestStart/End 用 00:00:00 表示「仅到日」，具体时刻未公布。"
     },
     {
       "id": "nuc-6",
@@ -194,14 +213,17 @@
       "url": "http://www.robotcontest.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-07-12T00:00:00+08:00",
+      "contestEnd": "2026-07-13T00:00:00+08:00",
+      "registrationStart": "2026-03-01T00:00:00+08:00",
+      "registrationEnd": "2026-05-08T23:59:59+08:00",
+      "dateHint": "第九届：区域赛须在 2026-06-10 前公布选拔赛入选名单；产教融合赛决赛时间另行公布",
+      "confidence": "medium",
+      "evidence": "四、区域赛与全国赛时间安排：区域赛时间：各赛区应在2026年6月10日前公布选拔赛入选名单……全国赛时间：2026年7月12-13日。七、报名时间和要求：2026年3月1日至2026年5月8日……报名网址：www.robotcontest.cn。",
+      "sources": [
+        "https://today.hit.edu.cn/article/2026/03/06/127816"
+      ],
+      "researchNote": "该页为哈尔滨工业大学转发的《第九届中国高校智能机器人创意大赛通知（1 号通知）》全文，非大赛官网原页（www.robotcontest.cn 未直接抓到通知页），故 confidence 记 medium。通知明确「各赛区有差异，请以各赛区公布的时间为准」。"
     },
     {
       "id": "nuc-7",
@@ -216,14 +238,19 @@
       "url": "http://meicc.cmes.org/#blade/competitions",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-08-23T00:00:00+08:00",
+      "contestEnd": "2026-08-27T00:00:00+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "①过程装备实践与创新赛（第十七届）国赛 2026-08-18~08-20 北京化工大学；②起重机/物流技术创意赛（第十一届「北起院杯」）国赛 2026-08-22~08-24 武汉理工大学；③智能制造赛国赛第一阶段 2026-08-23~08-27 江汉大学，第二阶段 2026 年 11 月在上海",
+      "confidence": "medium",
+      "evidence": "（智能制造赛）8月23日至27日，2026年中国大学生机械工程创新创意大赛智能制造赛全国总决赛（第一阶段）在江汉大学举行……全国总决赛后续赛程将于11月在上海举办。（起重机）8月22日至24日，第十一届中国大学生机械工程创新创意大赛「北起院杯」物流技术创意赛全国总决赛在武汉理工大学落下帷幕。（过程装备）8月18日至20日，2026年中国大学生机械工程创新创意大赛——第十七届过程装备实践与创新赛全国总决赛在北京化工大学举办。",
+      "sources": [
+        "https://news.jhun.edu.cn/8b/33/c8088a232243/page.htm",
+        "https://jx.tyust.edu.cn/info/1032/5371.htm",
+        "https://zsb.fzu.edu.cn/info/1151/2778.htm"
+      ],
+      "researchNote": "一个条目含三个子赛项，赛期各不相同；contestStart/End 取③智能制造赛（国赛主体、最贴合机械/智能制造方向）第一阶段，①②见 dateHint。三项国赛报名均由校赛/区域赛层层推荐，未公开全国统一报名截止日，故 registration* 为 null。"
     },
     {
       "id": "nuc-7-2",
@@ -238,14 +265,18 @@
       "url": "http://cmes-imic.org.cn/",
       "note": "与序号7同属一项赛事的另两个子赛项",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-07-18T00:00:00+08:00",
+      "contestEnd": "2026-07-19T00:00:00+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-05-10T23:59:59+08:00",
+      "dateHint": "④铸造工艺设计赛全国总决赛暨颁奖典礼 2026-07-31~08-03 太原科技大学（169 所高校 177 份作品）；⑤材料热处理创新创业赛总决赛 2026-07-18~07-19 山东大学（千佛山校区），区域/省级选拔赛 5 月 31 日前",
+      "confidence": "medium",
+      "evidence": "（热处理）各参赛队请于5月10日24:00前在官网提交参赛报名表、作品简介和学生证扫描件等材料……区域/省级选拔赛（5月31日前）……总决赛定于7月18日至19日在山东大学（千佛山校区）举办。（铸造）7月31日至8月3日，2026年中国大学生机械工程创新创意大赛：铸造工艺设计赛全国总决赛暨颁奖典礼在太原科技大学火热举行。",
+      "sources": [
+        "https://3y.nuc.edu.cn/info/1041/18218.htm",
+        "https://www.tyust.edu.cn/info/1339/13735.htm"
+      ],
+      "researchNote": "第二条 no=7（材料学院口径）同样含两个子赛项：registrationEnd 与 contestStart/End 取⑤材料热处理赛（该赛项同时有明确报名截止与决赛日期），④铸造赛的赛期见 dateHint（其报名截止日未见公开通知）。热处理赛通知见中北大学材料科学与工程学院官网转发。"
     },
     {
       "id": "nuc-8",
@@ -259,14 +290,18 @@
       "url": "http://www.mse-cn.com/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-07-25T00:00:00+08:00",
+      "contestEnd": "2026-07-29T00:00:00+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第十五届决赛阶段（第一赛道「徕卡杯」+第二赛道「永新杯」第四届全国大学生金相大会）2026-07-25~07-29 武汉理工大学南湖校区；第一赛道分赛区复赛 6 月 20 日前，第二赛道复赛 2026-06-27；校内报名截止 2026-04-05（燕山大学通知）",
+      "confidence": "medium",
+      "evidence": "由教育部高等学校材料类专业教学指导委员会指导、全国274所高校材料类相关院系联合主办、武汉理工大学承办的第十五届全国大学生金相技能大赛（含第一赛道「徕卡杯」……和第二赛道「永新杯」第四届全国大学生金相大会）决赛阶段比赛于2026年7月25日至29日在武汉理工大学南湖校区举行。",
+      "sources": [
+        "https://www.xbmu.edu.cn/tmxy/info/1221/12001.htm",
+        "http://notice.ysu.edu.cn/info/2264/25040.htm"
+      ],
+      "researchNote": "三级赛制（校赛—分赛区复赛—全国总决赛），全国无统一报名截止日；燕山大学通知载「报名截止时间：2026年4月5日之前」（校内报名）。官网 www.mse-cn.com 已公告迁移至 www.jxds.tech，后者「当届大赛」页已换成 2026-09-22 发布的第十六届通知，故第十五届赛期取自高校官方获奖报道。"
     },
     {
       "id": "nuc-9",
@@ -280,14 +315,19 @@
       "url": "http://iche.zju.edu.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-08-12T00:00:00+08:00",
+      "contestEnd": "2026-08-17T23:59:59+08:00",
+      "registrationStart": "2026-03-01T00:00:00+08:00",
+      "registrationEnd": "2026-03-31T23:59:59+08:00",
+      "dateHint": "赛区决赛于2026年7月31日前进行；全国总决赛参赛名单2026-08-03公布；总决赛队伍2026-08-10前上传决赛作品",
+      "confidence": "high",
+      "evidence": "「报名时间为3月1日～3月31日，请报名参赛的团队登录全国大学生化工设计竞赛网站（http://iche.zju.edu.cn），在线填写报名表。」「全国总决赛拟于8月12～17日举行，具体赛程安排另行通知。」「2．总决赛承办单位：宁夏大学」",
+      "sources": [
+        "http://cxcy.jgsu.edu.cn/info/1036/4356.htm",
+        "http://notice.ysu.edu.cn/info/2264/24929.htm",
+        "https://iche.zju.edu.cn/index.php/a/sstz/1656.html"
+      ],
+      "researchNote": "2026年为第二十届（天正设计杯），总决赛在宁夏银川宁夏大学。官网 iche.zju.edu.cn 通知页（/a/sstz/1656.html）抓取返回 HTTP 500，日期取自井冈山大学、燕山大学对同一份官方通知的完整转载，原文一致。燕山大学另列：省赛决赛7月20日前（石家庄铁道大学）、区赛决赛7月31日前（北京理工大学）。"
     },
     {
       "id": "nuc-10",
@@ -303,12 +343,16 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-08-01T00:00:00+08:00",
+      "registrationEnd": "2027-01-15T23:59:59+08:00",
+      "dateHint": "第十二届（科学探究类）：2026-08-01下发通知并开通网络报名；2027-01-15报名截止；2027-01-31研究综述与实验设计上传截止；2027-03-31缴费截止；2027-05-31论文/实验记录截止；2027年6-7月网络评审与省赛；2027年7月下旬在陕西师范大学举行全国决赛（仅公布到「下旬」，未给具体日）",
+      "confidence": "high",
+      "evidence": "「2026年8月1日，下发竞赛通知，开始网络报名，竞赛官方网站 http://www.culsc.cn/。2027年1月 15 日，网络报名截止。」「2027 年 6 月～7 月，网络评审和省赛。」「入围项目参加7月下旬在陕西师范大学举行的全国决赛。」",
+      "sources": [
+        "https://xkjszx.nwafu.edu.cn/sstz/3cb80d6df5e24648a54cec73dd83becc.htm",
+        "http://www.culsc.cn/"
+      ],
+      "researchNote": "2026年8月1日启动的是第十二届（2026—2027赛季），报名窗口正好落在本目录编制期内，但全国决赛在2027年7月，故 contestStart/contestEnd 置 null。官网 www.culsc.cn 为动态页面，赛程取自西北农林科技大学教务处对官方通知的完整转载（发布日期2026-09-16）。"
     },
     {
       "id": "nuc-11",
@@ -322,14 +366,19 @@
       "url": "http://www.cteic.com/higherEducation-199.html",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-08-08T00:00:00+08:00",
+      "contestEnd": "2026-08-11T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第九届定于2026年7月—8月举办，分学校推选、赛区初赛、全国总决赛三阶段；全国总决赛2026-08-08至08-11在郑州大学",
+      "confidence": "medium",
+      "evidence": "「中国化工教育协会定于2026年7月—8月举办第九届全国大学生化工实验大赛。」（中南大学）「4．全国总决赛：2026 年8 月8日至11 日，郑州大学」（西南林业大学）",
+      "sources": [
+        "https://jwc.swfu.edu.cn/info/1461/9591.htm",
+        "https://ccce.csu.edu.cn/info/1003/11056.htm",
+        "http://www.cteic.com/higherEducation-199.html"
+      ],
+      "researchNote": "西南林业大学通知的「三、时间安排」前3项仍写作2025年（学校报名2025年4月8日~4月20日、初赛2025年5月底~6月初、区域决赛2025年7月四川轻化工大学），明显是沿用第八届文字未改，仅第4项更新为2026年，故报名与初赛日期一律置 null，不作推断。总决赛日期有「2026年8月8日至11日、郑州大学」明确表述，且与中南大学「2026年7月—8月举办」相符。官网 cteic.com 与 edu.cteic.com 的通知为 PDF/动态页，未能直读原文。"
     },
     {
       "id": "nuc-12",
@@ -347,10 +396,16 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "第六届全国决赛定于2027年5月举行（2026年10月15日大连理工大学通知明确）；2026年先行举办各省省赛，如贵州省赛2026-05-05至2026-08-20（省决赛2026-08-19至08-20，贵州中医药大学时珍学院）；第五届（2025年）全国总决赛已于2025年8—9月举行",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "「“第六届全国大学生化学实验创新设计大赛”将于2027年5月举行。」（大连理工，2026-10-15）「经研究决定，于2026年5月5日—8月20日举办全国大学生化学实验创新设计大赛(贵州省省赛)……决赛采用现场答辩的形式进行。1.时间：2026年8月19日—2026年8月20日。」（贵州省化学化工学会）",
+      "sources": [
+        "http://chem.dlut.edu.cn/info/1010/13800.htm",
+        "http://www.gzhgxh.cn/articles/53/428",
+        "https://lixueyuan.sicau.edu.cn/info/1071/14683.htm",
+        "https://cid.nju.edu.cn/redirectActionNotificationNotice/0"
+      ],
+      "researchNote": "关键结论：2026年无全国总决赛——第五届总决赛在2025年8—9月（中国科大、兰大、云大等校新闻），第六届总决赛在2027年5月。2026年的赛事形态是省级选拔赛（已核实贵州、四川、云南等省）。官网 cid.nju.edu.cn 为 JS 单页渲染，正文抓不到；南京大学站点通知列表无正文内容。因仅能确定到「2027年5月」这一月份级信息，故全部日期字段置 null。"
     },
     {
       "id": "nuc-13",
@@ -364,14 +419,18 @@
       "url": "http://opt.zju.edu.cn/gdjs/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-06-20T00:00:00+08:00",
+      "contestEnd": "2026-06-21T23:59:59+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
+      "registrationEnd": "2026-05-01T23:59:59+08:00",
       "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "confidence": "medium",
+      "evidence": "报名时间：即日起至2026年5月1日24点。（创意赛道）；光学设计赛道：(1)报名时间：2026年3月16日至5月1日24点。作品提交：2026年4月3日至5月1日。——太原理工大学《关于组织参加2026年全国大学生光电设计竞赛的通知》2026-04-15。另：于5月30日-31日参加了由东北大学秦皇岛分校承办的华北区赛，于6月20日-21日参加了由长春理工大学承办的全国总决赛。——燕山大学新闻2026-08-04",
+      "sources": [
+        "https://cxcy.tyut.edu.cn/info/1026/6903.htm",
+        "https://ise.ysu.edu.cn/info/1073/9648.htm"
+      ],
+      "researchNote": "第十四届。报名截止与国赛日期均有据：报名/作品提交截止 2026-05-01（校级通知），全国总决赛 2026-06-20~21 于长春理工大学（高校新闻）。中间环节：校内选拔 4—5 月，华北区赛 2026-05-30~31（东北大学秦皇岛分校）。registrationStart 通知写“即日起”，未给具体起始日故填 null。官网 gd.moocollege.com 为 JS 应用，抓取仅得标题，未能读取官方原文，故置信度 medium。"
     },
     {
       "id": "nuc-14",
@@ -385,14 +444,18 @@
       "url": "http://dtcup.dtxiaotangren.com/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-07-14T00:00:00+08:00",
+      "contestEnd": "2026-07-18T23:59:59+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
+      "registrationEnd": "2026-03-10T23:59:59+08:00",
       "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "confidence": "medium",
+      "evidence": "2026年第十三届“大唐杯”……即日起接受报名，截止时间为2026年3月10日。——北京石油化工学院信息工程学院报名通知（2025-12-26发布）。2026年7月14日至18日，第十三届大学生新一代信息通信科技大赛……全国总决赛在武汉科技大学成功举办。——燕山大学新闻2026-07-23",
+      "sources": [
+        "https://www.bipt.edu.cn/pub/xinxi/xwdt/b2eec69601f24bbc8a66150bb38e5618.htm",
+        "https://ise.ysu.edu.cn/info/1073/9639.htm"
+      ],
+      "researchNote": "第十三届，赛事已由“大唐杯”更名为“大学生新一代信息通信科技大赛”。报名截止 2026-03-10（校级转发通知），全国总决赛 2026-07-14~18 于武汉科技大学（高校新闻）。省赛在国赛之前举行，官方未公布具体省赛日期。官网 dtcup.dtxiaotangren.com 解析失败（getaddrinfo ENOTFOUND），未能读取官方原文，故 medium。"
     },
     {
       "id": "nuc-15",
@@ -409,11 +472,14 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-04-20T23:59:59+08:00",
+      "dateHint": "2026 年 7 月进行赛区初赛及复赛评审，2026 年 8 月全国总决赛（具体时间地点待定）",
+      "confidence": "medium",
+      "evidence": "四、大赛安排 报名截止时间：2026年4月20日；作品提交截止时间：2026年7月上旬；初赛及复赛评审时间：2026年7月；全国总决赛评审时间：2026年8月初赛、复赛及全国总决赛具体时间地点待定。——郑州航空工业管理学院《关于组织第九届（2026）全国大学生嵌入式芯片与系统设计竞赛的通知》2026-03-20",
+      "sources": [
+        "https://sczx.zua.edu.cn/info/1089/4190.htm"
+      ],
+      "researchNote": "第九届（2026），设芯片应用/芯片设计/FPGA创新设计三个赛道，本通知为芯片应用赛道。报名自通知发布（2026年2月启动）起开放，故 registrationStart 填 null。比赛阶段只公布到“月”，故 contestStart/End 为 null，赛期写入 dateHint。分北部赛区（含山西）等六大赛区。"
     },
     {
       "id": "nuc-16",
@@ -430,11 +496,14 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-04-15T23:59:59+08:00",
+      "dateHint": "2026 年 1—8 月举办：校赛 4 月 30 日前完成，复赛（区赛）5—7 月，总决赛 8 月中下旬在复旦大学（上海）举行",
+      "confidence": "medium",
+      "evidence": "报名截止时间：2026 年 4 月 15 日前。（校赛）2.时间:2026年4月30日前完成校赛。（复赛）2.时间:2026年5月~7月。（总决赛）2.时间:8月中下旬 3.地点:上海 4.承办高校:复旦大学。——中国海洋大学《第十二届全国大学生医学创新大赛暨“一带一路”国际竞赛中国海洋大学校级选拔赛通知》2026-02-03",
+      "sources": [
+        "http://smp.ouc.edu.cn/2026/0203/c16692a515645/page.htm"
+      ],
+      "researchNote": "赛事已更名：“全国大学生医学创新大赛暨‘一带一路’国际竞赛（原全国大学生基础医学创新研究暨实验设计论坛）”，2026 年为第十二届。报名截止 2026-04-15（大赛官网 www.jcyxds.com 填报）。复赛/决赛只到“月/旬”，故 contestStart/End 为 null。中国海洋大学通知正文误写“第十一届”，应以标题“第十二届”及 2026 年届次为准。"
     },
     {
       "id": "nuc-17",
@@ -450,12 +519,16 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
+      "registrationStart": "2026-04-28T00:00:00+08:00",
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "2026 年 4—12 月举办；各赛题报名截止 9 月 20 日至 11 月 15 日不等（如 10 月 20 日 20:00、10 月 24 日 20:00、11 月 15 日 20:00）；复赛 11 月，全国总决赛 2026 年 12 月（12 月底前完成）",
+      "confidence": "medium",
+      "evidence": "大赛官网（www.aicomp.cn）已于2026年4月28日起开放报名系统。各赛题报名截止时间以本通知第三条规定为准，逾期系统将自动关闭。——大赛组委会《关于第八届AIC大赛“算法应用赛道”（赛马制赛题）竞赛日程的通知》2026-09-04；该文赛题时间表原文：| 1 | 无人车视觉巡航赛 | 2026年10月20日20:00 | 2026年11月1日-15日 | 2026年12月 |；| 12 | 智慧社区 | 2026年9月20日20:00 | 复赛及总决赛预选赛于10月中旬 | 2026年12月 |。另：决定于2026年4月-12月期间举办第八届全球校园人工智能算法精英大赛……（三）全国总决赛：12月底前完成所有竞赛项目全国总决赛。——东北大学秦皇岛分校《关于组织参加2026年第八届全球校园人工智能算法精英大赛的通知》2026-07-22",
+      "sources": [
+        "https://www.aicomp.cn/notice/5229.html",
+        "http://jsjytx.neuq.edu.cn/info/1387/9028.htm"
+      ],
+      "researchNote": "第八届（AIC）。报名起始 2026-04-28（官网开放报名系统，官方文件明载）。报名截止按赛题不同从 9/20 到 11/15 不等，无法给出单一日期，故 registrationEnd=null 并在 dateHint 列出区间。总决赛统一在 2026 年 12 月，只到“月”，故 contestStart/End=null。官网 www.aicomp.cn 与学校通知互相印证。"
     },
     {
       "id": "nuc-18",
@@ -469,14 +542,19 @@
       "url": "http://smartcar.moocollege.com/datacenter",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-08-22T00:00:00+08:00",
+      "contestEnd": "2026-08-23T23:59:59+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
+      "registrationEnd": "2026-07-01T23:59:59+08:00",
       "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "confidence": "medium",
+      "evidence": "8月22日至23日，11个组别的预、决赛在安徽大学磬苑校区体育馆和北体育场精彩对决……8月21日，是参赛队伍报到的日子。——逐飞科技《第21届智能汽车竞赛总决赛回顾》2026-10-15。报名截止：（一）报名截止时间 室内赛道：即日起至2026年7月1日 室外赛道：即日起至2026年11月1日。——云南大学《关于组织参加2026年第21届全国大学生智能汽车竞赛的通知》2026-06-25",
+      "sources": [
+        "https://www.eet-china.com/mp/a531244.html",
+        "https://jyt.ah.gov.cn/xwzx/gdjy/40798709.html",
+        "http://jwc.ynu.edu.cn/info/1009/4315.htm"
+      ],
+      "researchNote": "第二十一届。全国总决赛 2026-08-22~23 于安徽大学磬苑校区（8/21 报到），由赛事计时服务商逐日实录给出，安徽省教育厅 2026-08-25 新闻亦确认“在浙江大学城市学院圆满落幕”（该表述有误，实际承办校为安徽大学，决赛场地以实录为准）。registrationEnd 采用室内赛道校级报名截止 2026-07-01（云南大学口径）；室外赛道校级报名截止 2026-11-01，各省/校不一，供参考。注意矛盾点：云南大学通知称室外赛道区域赛 12 月上旬、总决赛 12 月底，而总决赛实录显示 11 个组别（含室外卡丁快跑/轮腿穿越/单车定向）于 8/22-23 同场竞技，故本条目按 8 月填，并建议向组委会复核。"
     },
     {
       "id": "nuc-19",
@@ -490,14 +568,18 @@
       "url": "http://crc.drct-caa.org.cn/index.php",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-10-16T00:00:00+08:00",
+      "contestEnd": "2026-10-18T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
       "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "confidence": "high",
+      "evidence": "2026中国机器人大赛暨RoboCup机器人世界杯中国赛（中国机器人大赛赛区）比赛将于2026年10月16日至18日在白马湖国际会展中心（浙江省杭州市滨江区长江路 336 号）举行。——中国自动化学会机器人竞赛与培训部官网《第一轮比赛通知》2026-08-03。另：《赛程赛制及报到须知》2026-09-30 发布。",
+      "sources": [
+        "https://rcccaa.drct-caa.org.cn/article_info.php?id=139",
+        "https://rcccaa.drct-caa.org.cn/article_info.php?id=149"
+      ],
+      "researchNote": "官方网站原文确认。本条按“中国机器人大赛赛区”总决赛填（10/16—18，杭州白马湖国际会展中心）。同日仅为“中国机器人大赛赛区”；“RoboCup 赛区”为春季单独举办（2026-03-13 已发第一轮通知，2026-04 有赛程/报到须知），具体日期在 PDF 附件中，未能读取，故不填。报名截止未在可读页面公布。"
     },
     {
       "id": "nuc-20",
@@ -514,11 +596,14 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-04-15T23:59:59+08:00",
+      "dateHint": "北京市赛 2026 年 5 月 29—30 日；全国决赛 2026 年 8—9 月（具体日程以各赛道通知为准）",
+      "confidence": "medium",
+      "evidence": "三、日程安排 1、校内报名时间：2026年4月9日（周四）—4月15日（周三），扫描二维码入群填写报名信息。2、北京市赛时间：2026年5月29日、30日；3、全国决赛时间：2026年8月—9月 注：具体竞赛日程和比赛地点，以各赛道通知为准。——北京科技大学《关于发布2026年睿抗机器人开发者大赛的通知》教通知【2026】53号",
+      "sources": [
+        "https://jwc.ustb.edu.cn/pub/jwc/tztg/7a4552245dcb452b987023876778037b.htm"
+      ],
+      "researchNote": "2026 年设 CAIM工创、CAIA设计、CAIP强脑、CAIR强体四个赛道。报名截止 2026-04-15 为北科大校内报名（全国层面各赛道/省区报名时间不同，未取得统一截止日）。北京市赛 5/29—30 为日级；全国决赛只到“月”，故 contestStart/End=null。官网应为 www.raicom.com.cn（竞赛目录登记为 robocom.com.cn，未见该域名）。"
     },
     {
       "id": "nuc-21",
@@ -534,12 +619,15 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-04-01T00:00:00+08:00",
+      "registrationEnd": "2026-08-31T23:59:59+08:00",
+      "dateHint": "全国总决赛 2026 年 11 月中下旬（创新赛道/创业赛道同）",
+      "confidence": "medium",
+      "evidence": "二、赛事时间安排 网络报名：2026年4月1日 —8月31日（截止当日24:00） 创新赛道 校内赛：2026年9月1日 —9月15日 区域赛：2026年9月19日 —10月25日 全国总决赛：2026年11月中下旬 创业赛道 初赛：2026年9月 复赛：2026年9月 —10月 全国总决赛：2026年11月中下旬。——重庆医科大学《关于组织启动我校参加2026年第二十届iCAN大学生创新创业大赛的通知》2026-05-20（附大赛参赛须知）",
+      "sources": [
+        "https://ltmc.cqmu.edu.cn/info/1123/2066.htm"
+      ],
+      "researchNote": "第二十届，2026 年 4 月至 11 月举办，设创新/创业/挑战三赛道。报名起止 2026-04-01 至 2026-08-31（日级＋明确 24:00）。contestStart 取区域赛首日 2026-09-19（日级）；全国总决赛只到“中下旬”，故 contestEnd=null 并写入 dateHint。挑战赛道赛制另行通知。"
     },
     {
       "id": "nuc-22",
@@ -554,14 +642,20 @@
       "url": "http://www.cnrobocon.net/",
       "note": "RoboMaster 官网 https://www.robomaster.com/",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-07-09T00:00:00+08:00",
+      "contestEnd": "2026-08-09T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "ROBOCON 总决赛 2026 年 7 月 9—17 日（南京理工大学江阴校区）；RoboMaster 全国总决赛 2026 年 8 月 9 日在深圳收官（分区赛 5—6 月）",
+      "confidence": "medium",
+      "evidence": "第二十五届全国大学生机器人大赛ROBOCON总决赛于 2026年7月9日至17日在南京理工大学江阴校区圆满落幕。——西安科技大学机械工程学院2026-08-03。第二十五届全国大学生机器人大赛——RoboMaster 2026机甲大师超级对抗赛·全国赛8月9日在深圳收官，东北大学TDT战队获得全国总冠军。——新华社（2026-08-10）。另：第二十五届全国大学生机器人大赛ROBOTAC……赛程自7月17日至21日共五天。——新京报2026-07-19",
+      "sources": [
+        "https://jxxy.xust.edu.cn/info/1213/9788.htm",
+        "https://www.sohu.com/a/1061129697_267106",
+        "https://www.stdaily.com/web/gdxw/2026-08/10/content_561642.html",
+        "https://m.bjnews.com.cn/detail/1784455794129290.html"
+      ],
+      "researchNote": "第二十五届，条目含两个子赛事，故 contestStart/End 覆盖两端：ROBOCON 总决赛 7/9—17（江阴）→ RoboMaster 全国赛 8/9 收官（深圳）。另有 ROBOTAC 子赛事 7/17—21 在北京通州举行。报名时间三赛事各异且未见可读公告，填 null。robomaster.com 当前已切换到 2027 赛季页面（2027 报名 2026-10-20 15:00 至 10-27 15:00）。"
     },
     {
       "id": "nuc-23",
@@ -579,10 +673,11 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "作品赛：报名及提交作品 5 月 29 日—7 月 5 日，线上初评 7 月 11—25 日，决赛名单公示 7 月 31 日，线下决赛会评 8 月 15 日左右、颁奖 8 月 17 日左右（原文为「左右」，属约数）；创新实践能力赛（防护赛）：线上初赛 2025-12-28 9:00-17:00，半决赛 2026-03-22，决赛定于 2026 年 7 月（另行通知），长城杯防护赛决赛拟 2026 年 4 月于福州",
       "confidence": "low",
       "evidence": "",
-      "sources": []
+      "sources": [],
+      "researchNote": "一本赛事双轨并行：本行 registrationStart/End 取「作品赛」（第十九届，哈工大承办，2026 年 8 月举办）；contestStart/End 取该赛线下决赛会评—颁奖区间，原文带「左右」二字，属约数，请按 8 月中旬预留。创新实践能力赛贯穿 2025 年 12 月—2026 年 7 月，其初赛/半决赛日期已在 dateHint 列出。日期来自两所高校教务处 2026 年正式通知 + 大赛官网参赛规程。"
     },
     {
       "id": "nuc-24",
@@ -596,14 +691,17 @@
       "url": "http://www.ncda.org.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-07-01T00:00:00+08:00",
+      "contestEnd": "2026-08-26T23:59:59+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-06-20T23:59:59+08:00",
+      "dateHint": "颁奖典礼 2026 年 11 月（暂定）；报名表述为「即日起开始报名」，通知发布于 2026-03-30，未给出报名起始日",
+      "confidence": "high",
+      "evidence": "「二、大赛日程 ·报名参赛：即日起开始报名，2026年6月20日截止投稿；·省级赛：2026年7月1日—2026年8月8日，公布省级赛奖项；·全国赛：2026年8月9日—2026年8月26日，公布全国赛奖项；·颁奖典礼：2026年11月（暂定)。」（第14届，2026-03-30 发布）",
+      "sources": [
+        "https://www.ncda.org.cn/news/2026/0330/714.html"
+      ],
+      "researchNote": "大赛官网 2026 年第 14 届正式通知。contestStart 取省级赛起始日 7 月 1 日、contestEnd 取全国赛结束日 8 月 26 日（省级赛 7/1—8/8、全国赛 8/9—8/26）。报名起始日原文只写「即日起」，未落到具体日期，故留 null。"
     },
     {
       "id": "nuc-25",
@@ -625,10 +723,11 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "国赛 6 个决赛区依次：上海 7/17-21、杭州 7/22-26、合肥 7/27-31、长春 8/6-10、青岛 8/11-15、无锡 8/16-20；校级赛与省级赛 3—5 月，报名截止由各省赛区自定（如北京市赛要求 2026-04-30 前完成报名、5-30 前完成国赛平台报名）",
       "confidence": "low",
       "evidence": "",
-      "sources": []
+      "sources": [],
+      "researchNote": "报名起止由各省赛区自行规定，全国无统一截止日，故留 null；北航通知中的 4/30、5/30 属北京市赛口径，仅供参考不入字段。contestStart/End 为国赛首个决赛区开始至末个决赛区结束的整体跨度。"
     },
     {
       "id": "nuc-26",
@@ -642,14 +741,17 @@
       "url": "https://e.huawei.com/cn/talent/#/ict/contest",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-11-14T00:00:00+08:00",
+      "contestEnd": "2026-12-06T23:59:59+08:00",
+      "registrationStart": "2026-08-31T00:00:00+08:00",
+      "registrationEnd": "2026-11-30T23:59:59+08:00",
+      "dateHint": "第十一届（2026-2027 赛季，广西选拔赛口径）：实践赛校赛报名 即日—2026-10-21、校赛 2026-10-24 9:00、省资格赛 2026-11-14/15、省赛 2026-12-05/06、中国总决赛 2027 年 3 月；创新赛/编程赛 省赛报名 2026-08-31—11-30、初赛 2026 年 12 月、中国总决赛 2027 年 3 月；教学赛 复赛 2027 年 1 月、总决赛 2027 年 4 月",
+      "confidence": "medium",
+      "evidence": "「实践赛……校赛报名时间：即日-2026年10月21日；校赛比赛时间：2026年10月24日上午9:00；省资格赛时间：2026年11月14-15日；省赛时间：2026年12月5-6日；中国总决赛时间：2027年3月」；「创新赛……省赛报名时间：2026年8月31日-11月30日；初赛时间：2026年12月」。",
+      "sources": [
+        "https://www.guet.edu.cn/utsc/2026/1012/c5309a160820/page.htm"
+      ],
+      "researchNote": "桂电教务处 2026-10-12 校内选拔赛通知，依据《关于举办第十一届华为ICT大赛中国赛广西选拔赛的通知》。字段取「创新赛/编程赛」省级报名窗口 + 实践赛省资格赛至省赛区间（最贴近整体的 2026 年赛期）。报名起始日对实践赛为「即日」，仅有创新赛/编程赛的 8/31 是明确日期。中国总决赛落到 2027 年 3 月，不在 2026 年字段内。"
     },
     {
       "id": "nuc-27",
@@ -663,14 +765,18 @@
       "url": "http://www.fwwb.org.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-08-20T00:00:00+08:00",
+      "contestEnd": "2026-08-22T23:59:59+08:00",
+      "registrationStart": "2026-02-11T00:00:00+08:00",
+      "registrationEnd": "2026-03-20T16:00:00+08:00",
+      "dateHint": "整体赛期 2026 年 2 月至 2026 年 8 月；全国赛决赛 2026-08-20 至 08-22 在无锡举行，8 月 21 日现场答辩、8 月 22 日颁奖仪式",
+      "confidence": "medium",
+      "evidence": "哈工大：「定于2026年2月至2026年8月举办第十七届“中国大学生服务外包创新创业大赛”」「报名时间为2026年2月11日至2026年3月20日16:00止」。北京号（江南大学）：「8月20日至22日，第十七届中国大学生服务外包创新创业大赛全国赛决赛在无锡举行」「8月21日，参赛团队在无锡（国家）软件园参加现场答辩」「8月22日上午举行的颁奖仪式」。",
+      "sources": [
+        "https://today.hit.edu.cn/article/2026/02/27/127666",
+        "https://peking.bjd.com.cn/content/s6a919125e4b0e45f3fd6a22d.html"
+      ],
+      "researchNote": "报名窗口来自哈工大 2026-02-27 校内通知（转大赛正式通知）；决赛日期来自江南大学赛后报道（媒体转载，故 confidence 记 medium）。区域赛（西部/中部/东部/北部四赛区）具体日期未获取。"
     },
     {
       "id": "nuc-28",
@@ -684,14 +790,17 @@
       "url": "http://iot.sjtu.edu.cn/Default.aspx",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-08-20T00:00:00+08:00",
+      "contestEnd": "2026-08-31T23:59:59+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-06-15T23:59:59+08:00",
+      "dateHint": "2026-04-05 前发布竞赛通知/章程/命题；作品设计方案与演示视频提交截止 2026-07-27；分赛区网上评审 8 月 10 日前、分赛区决赛 8 月 20 日前；全国总决赛暨颁奖 8 月 20-31 日",
+      "confidence": "medium",
+      "evidence": "「3.2026年6月15日 线上提交报名表截止。」「4.2026年7月27日 作品完整设计方案和作品实物演示视频线上提交截止。」「5. 2026年8月10日前 各分赛区完成网上作品评审」「6. 2026年8月20日前 各分赛区决赛、公布入围全国总决赛名单」「7. 2026年8月20-31日 全国总决赛暨颁奖典礼」。",
+      "sources": [
+        "http://today.hit.edu.cn/article/2026/05/11/129744"
+      ],
+      "researchNote": "第十三届（2026 年）。哈工大电信学院 2026-05-11 报名通知，赛程引自组委会章程。报名起始日未给出（原文只说 4 月 5 日前组委会发布通知），故 registrationStart 留 null。分赛区决赛须在 8 月 20 日前完成，故整体竞赛实际早于 8/20 启动，字段取全国总决赛区间。"
     },
     {
       "id": "nuc-29",
@@ -705,14 +814,18 @@
       "url": "https://compiler.educg.net/#/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-04-29T10:35:00+08:00",
+      "contestEnd": "2026-08-19T17:30:00+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "编译系统设计赛（编译系统实现赛）：初赛 04/29 10:35—08/05 23:59，初赛申诉 08/11-08/14，决赛答辩文件提交 08/15-08/21，决赛 08/19 08:30-17:30，决赛申诉 08/21-08/23，获奖信息填报 09/09-09/23，赛程 09/30 18:00 结束。各赛道 2026 年报名窗口：CPU设计赛 03-25—06-20、操作系统赛 03-18—05-28、智能系统创新赛 03-09—05-27、编译系统赛「预计4月启动」、数据库系统赛「预计4月启动」、智能计算创新赛「预计5/6月启动」",
+      "confidence": "medium",
+      "evidence": "参赛平台页面（2026年全国大学生计算机系统能力大赛-编译系统设计赛-编译系统实现赛）：「2026年编译系统实现赛 - RISCV赛道-初赛 04/29 10:35 - 08/05 23:59」「2026年编译系统设计赛-编译系统实现赛-决赛-RISCV赛道 08/19 08:30 - 08/19 17:30」「结束 09/30 18:00」。哈工大（威海）举办通知：「编译系统赛：报名时间：预计4月启动」「CPU设计赛：报名时间：2026年3月25日——2026年6月20日」「操作系统赛：2026年3月18日——2026年5月28日」。",
+      "sources": [
+        "https://course.educg.net/pages/contest/contest.jsp?contestID=Zd6BcaiCWJ4&tabDocID=503583&my=false&contestCID=0",
+        "https://cst.hitwh.edu.cn/2026/0330/c371a211687/page.htm"
+      ],
+      "researchNote": "目录中该条 url 指向 compiler.educg.net，故赛期取「编译系统设计赛」赛道（官方参赛平台页面）。报名起止该赛道仅「预计 4 月启动」，无确切日期，故留 null；其余赛道报名窗口已列于 dateHint。日期均为 2026 年（页面标题含 2026）。"
     },
     {
       "id": "nuc-30",
@@ -726,14 +839,17 @@
       "url": "https://star.baidu.com/#/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-08-23T00:00:00+08:00",
+      "contestEnd": "2026-09-19T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第二十二届初赛（省赛）两场线上赛：第一场 2026-08-23、第二场 2026-09-19；决赛「具体情况再行通知」；报名截止按场次为每场开赛前一小时；报名费 80 元/人/单场",
+      "confidence": "medium",
+      "evidence": "「第一场（线上）：2026年8月 23 日；第二场（线上）：2026年9月19日」「参赛选手登录竞赛网站 https://www.matiji.net/exam/contest/astar 完成报名，报名截止时间按场次依次为每场次开赛前一小时。」「2.决赛。具体情况再行通知。」",
+      "sources": [
+        "https://www.czu.cn/_t454/2026/0722/c6a176600/page.htm"
+      ],
+      "researchNote": "常州工学院 2026-07-22 通知（第二十二届）。报名无固定起止日（原文只给「每场开赛前一小时」的截止规则），故两字段留 null。contestStart/End 取两场初赛日期，决赛日期尚未公布。注意：网上另有转载把 2026 年误标为「第二十届」，本届实为第 22 届（2005 年起第 22 年）。"
     },
     {
       "id": "nuc-31",
@@ -750,14 +866,19 @@
       "url": "http://www.mcm.edu.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-09-10T18:00:00+08:00",
+      "contestEnd": "2026-09-13T20:00:00+08:00",
       "registrationStart": null,
       "registrationEnd": null,
       "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "confidence": "high",
+      "evidence": "2026年竞赛时间定为9月10日（周四）18时至9月13日（周日）20时。——全国大学生数学建模竞赛组委会《2026高教社杯全国大学生数学建模竞赛第一次通知》2026-08-07（中国大学生在线国赛公告）。官网首页：2026年赛题将于竞赛开始时（2026年9月10日晚上6：00）发布……2026年……89516队……报名参赛。",
+      "sources": [
+        "https://www.mcm.edu.cn/",
+        "http://dxs.moe.gov.cn/zx/a/hd_sxjm_gsyw/260807/2039331.shtml",
+        "https://jwc.nufe.edu.cn/info/1031/18284.htm"
+      ],
+      "researchNote": "官方一手来源，赛期精确到时刻，置信度 high。全国报名通过中国知网（cumcm.cnki.net）进行，组委会通知未设统一报名截止日；各校校内报名自定，例如南京财经大学为 2026-07-10 至 07-19，故 registrationStart/End 填 null（校级差异过大，不宜作为全国口径）。2026 年报名规模已达 89516 队。"
     },
     {
       "id": "nuc-32",
@@ -771,14 +892,18 @@
       "url": "http://tjjmds.ai-learning.net/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-08-18T00:00:00+08:00",
+      "contestEnd": "2026-08-19T23:59:59+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
+      "registrationEnd": "2026-05-17T23:59:59+08:00",
       "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "confidence": "high",
+      "evidence": "（四）各校选拔推荐省赛队伍。5月17日前，各学校按照名额数选拔推荐队伍进入省赛……最终推荐队伍指派一人登录全国大学生统计建模大赛官网……提交最终参赛材料。（五）省赛。6月中旬开展省赛。（六）国赛……7月—8月实施。——中国统计教育学会《关于举办2026年（第十二届）全国大学生统计建模大赛的通知》2026-03-10。国赛现场答辩：（一）时间：2026年8月17—19日。17日14:00—19:00报到，18日开展现场答辩，19日上午召开总结会，总结会结束后返程。（二）报到地点：内蒙古财经大学（西校区）。——大赛组委会2026-07-31",
+      "sources": [
+        "http://tjjmds.ai-learning.net/dstz/37119.jhtml",
+        "http://tjjmds.ai-learning.net/dsdt/37135.jhtml"
+      ],
+      "researchNote": "官方一手来源。registrationEnd 取“5月17日前推荐省赛队伍并官网提交材料”＝全国口径报名/提交截止。contestStart/End 取国赛现场答辩阶段（8/18 答辩、8/19 上午总结会）；8/17 为报到日，未计入赛期。省赛 6 月中旬、国赛通讯与会议评审 7—8 月均已写入证据。"
     },
     {
       "id": "nuc-33",
@@ -792,14 +917,19 @@
       "url": "http://www.3chuang.net/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-07-10T00:00:00+08:00",
+      "contestEnd": "2026-08-10T23:59:59+08:00",
+      "registrationStart": "2025-10-20T00:00:00+08:00",
+      "registrationEnd": "2025-12-31T23:59:59+08:00",
+      "dateHint": "第十六届（即2026届）赛期：校赛2026年4月前后、省级赛2026年5—6月、全国总决赛2026年7月10日—8月10日（为公布的时间窗，不同赛道分批举行）。安徽省赛区省级选拔赛2026年5月25日—6月22日在合肥工业大学举行。",
+      "confidence": "medium",
+      "evidence": "厦门理工学院《第十六届全国大学生电子商务“创新、创意及创业”挑战赛报名通知》：“二、比赛时间安排 1.参赛队报名时间：2025年10月20日-2025年12月31日；2.校赛举办时间：2026年4月前后，具体时间另行通知；3.省级赛举办时间：2026年5-6月，具体时间另行通知；4.全国总决赛时间：2026年7月10日-2026年8月10日”；安徽省教育厅通知：“安徽赛区省级选拔赛于2026年5月25日—6月22日在合肥工业大学举行。”",
+      "sources": [
+        "https://iep.xmut.edu.cn/info/1014/2012.htm",
+        "https://jyt.ah.gov.cn/tsdw/gdjyc/dxsxkhjnjs/40790593.html",
+        "http://www.3chuang.net/"
+      ],
+      "researchNote": "三创赛为跨年赛事：第十六届（2026届）的报名在2025年10—12月完成，故 registrationStart/End 为2025年真实日期（未编造）。contestStart/End 为国赛公布的起止窗口，非单一赛道精确比赛日。"
     },
     {
       "id": "nuc-34",
@@ -813,14 +943,18 @@
       "url": "http://www.china-cssc.org/list-52-1.html",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-05-30T00:00:00+08:00",
+      "contestEnd": "2026-05-31T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第十六届（2026届）本科组：国赛初赛材料提交2026-05-01 09:00至05-10 12:00，初赛结果5月18日公布，全国总决赛（现场答辩）2026-05-30小组赛、05-31公开赛及闭幕，地点大连理工大学。下一届（第十七届）报名截止2026-10-31，知识赛2026-11-01至11-20，校实践赛2027-03-22前，国赛决赛本科组2027-05-29/30（上海财经大学）。",
+      "confidence": "high",
+      "evidence": "中国商业统计学会《关于组织实施“正大杯”第十六届全国大学生市场调查与分析大赛总决赛报名通知（本科组）》：“本科组总决赛拟于2026年5月下旬在大连理工大学举行”“参赛团队于2026年5月1日9:00至5月10日12:00期间，向全国大赛组委会提交参赛材料”“5月30日，开赛仪式、全天小组赛，选出国赛一等奖和部分国赛二等奖。5月31日，公开赛、闭幕仪式”（落款2026年4月16日）；中北大学经管学院《关于举办中北大学“正大杯”第十七届全国大学生市场调查与分析大赛校赛的通知》：“参赛报名 即日起至2026年10月31日……知识赛拟于2026年11月1日至11月20日举行”。",
+      "sources": [
+        "http://www.china-cssc.org/show-568-2070-1.html",
+        "https://jgy.nuc.edu.cn/info/1047/25799.htm"
+      ],
+      "researchNote": "本条的 contestStart/End 取“2026年上半年举办”的第十六届国赛决赛日期；第十六届报名（应在2025年秋）未检索到原始通知，故 registration 字段留空。当前正在进行的第十七届报名截止2026-10-31，见 dateHint。"
     },
     {
       "id": "nuc-35",
@@ -839,10 +973,15 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "第十三届（2026年）：校赛报名截止各校自定（西安交通大学2026-05-20、中国民航飞行学院2026-04-30 24:00）；校内选拔2026年5月下旬；省赛团队推荐截止2026-06-10 18:00；陕西省省赛2026-06-27至06-28（现场赛）；全国决赛时间“另行通知”（未查到）。设创业综合模拟、数字营销模拟、财务决策模拟三个赛项。",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "西安交通大学管理学院/实践教学中心通知《关于组织参加2026年学创杯全国大学生创业综合模拟大赛的通知》（2026年4月28日）：“三、重要时间节点 1.校赛报名截止：2026年5月20日 2.校内选拔：2026年5月下旬（具体另行通知）3.省赛团队推荐截止：2026年6月10日18:00前 4.省赛模拟策略书提交截止：2026年6月14日18:00前 5.陕西省省赛时间：2026年6月27日~28日（现场赛）6.全国决赛时间及晋级规则另行通知。”",
+      "sources": [
+        "http://xbxsklm.com:8088/articleBrowse/id/497.html",
+        "https://www.cafuc.edu.cn/jwcx/info/1211/1423.htm",
+        "http://www.xcbds.com/cvds/index"
+      ],
+      "researchNote": "全国层面只公布到“省赛”，未查到2026年国赛日期，故四个日期字段全部留空；校级报名截止日期各校不同，不宜当作全国报名时间。官网 www.xcbds.com 需交互查询，未能取到静态赛程页。"
     },
     {
       "id": "nuc-36",
@@ -864,10 +1003,15 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "2026年度组委会赛历（分赛道，各自独立）：国际贸易竞赛——知识赛2025年9月—2026年1月，实践赛选拔赛2026年4月上旬，总决赛资料2026-04-20前，全国总决赛2026年5月下旬（浙江宁波国际会展中心）；会计与商业管理案例竞赛——校内知识赛2026-04-01前，预选赛方案2026-04-10，总决赛名单2026-04-20，全国总决赛2026-06-06至06-07，全国精英赛2026-06-27至06-28，内地与港澳地区赛2026-07-24至07-26；品牌策划竞赛——知识赛及校赛2026-02-15前，团队信息表2026-02-27前，预选赛作品2026-03-05前，省赛2026-03-15前，总决赛名单2026-03-20前，全国总决赛（线上）2026-04-25至04-26，全国精英赛（线下）2026-05-22至05-24，全球总决赛2026年11月下旬（暂定）；物流与供应链竞赛——知识赛2025年9月上旬—2026年3月底，预选赛材料2026-04-20前，总决赛名单2026-04-28前，全国总决赛2026-05-16至05-17。",
+      "confidence": "medium",
+      "evidence": "共青团河北大学委员会/经济学院《关于组织开展2026年全国高校商业精英挑战赛的通知》（2025年11月1日，转发组委会赛历）：“三、竞赛时间安排（一）国际贸易竞赛 2025年9月-2026年1月：知识赛阶段；2026年4月上旬：完成实践赛选拔赛（省赛或校赛）；2026年4月20日前：提交总决赛资料；2026年5月下旬：全国总决赛（浙江·宁波）”“（二）会计与商业管理案例竞赛……2026年6月6–7日：全国总决赛”“（三）品牌策划竞赛……2026年4月25–26日：全国总决赛（线上赛）；2026年5月22–24日：全国精英赛（线下赛）”“（四）物流与供应链竞赛……2026年5月16–17日：全国总决赛”。",
+      "sources": [
+        "http://tuanwei.hbu.cn/contents/541/14113.html",
+        "https://cubec.org.cn/apply",
+        "https://www.ccpitcsc.org/eduxq/4864"
+      ],
+      "researchNote": "该条目实际是多赛道并行赛事，各赛道报名与国赛时间互不相同，无法用单一 registration/contest 区间表达，故四个字段留空、把2026年度完整赛历写入 dateHint（这些都是2026年确定日期，非往年推测）。会展专业创新创业实践竞赛、创新创业竞赛两个赛道的2026年具体日期未在本轮检索到。"
     },
     {
       "id": "nuc-37",
@@ -881,14 +1025,19 @@
       "url": "https://www.seentao.com/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-09-19T00:00:00+08:00",
+      "contestEnd": "2026-09-20T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第二十二届（2026年）：大赛2026年6月正式启动；校级报名2026-06-12、校内选拔2026-06-13（哈工大深圳）；省赛2026-06-27（广州软件学院，广东赛区）；全国总决赛（本科组）2026-09-19沙盘模拟对抗、2026-09-20管理创新路演答辩及落幕，141支队伍参赛。",
+      "confidence": "medium",
+      "evidence": "福建理工大学管理学院《管理学院学子在全国高等院校数智化企业经营沙盘全国总决赛中荣获三等奖》（2026-09-26）：“9月20日，第22届全国高等院校数智化企业经营沙盘大赛（本科组）全国总决赛顺利落幕，来自全国各地高校的141支队伍同台竞技……从9月19日沙盘模拟角逐，到9月20日路演答辩”；哈工大（深圳）《2026年第二十二届全国高等院校数智化企业经营沙盘大赛报名通知》：“大赛计划于6月正式启动，校赛、省赛、总决赛时间及赛程安排预计如下……校赛报名 6月12日；校内选拔赛 6月13日；省赛 6月27日（广州软件学院）；全国总决赛 9月（预计）”。",
+      "sources": [
+        "https://glxy.fjut.edu.cn/2026/0929/c2322a271911/page.htm",
+        "https://ecei.hitsz.edu.cn/info/1127/5187.htm",
+        "https://www.seentao.com/"
+      ],
+      "researchNote": "contestStart/End 为国赛（本科组）已发生的实际日期；报名与省赛日期因校、因省而异，未查到全国统一报名窗口，registration 字段留空。赛事主办：中国商业联合会、新道科技股份有限公司。"
     },
     {
       "id": "nuc-38",
@@ -906,10 +1055,16 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第十七届（2026年）：2026年5月启动；大赛宣讲、报名及作品提交2026年5—9月（黄山学院转述为“报名及提交作品：2026年10月截止”，哈工程为“报名截止：即日起至2026年9月”，两说略有出入）；省赛2026年10—11月（哈工程写“省赛：2026年10月”）；全国半决赛2026年11月；全国总决赛2026年12月。",
+      "confidence": "medium",
+      "evidence": "西南大学团委《第十七届“工行杯”全国大学生金融创新大赛西南大学校园赛通知》（2026-09-08）：“05 赛程赛制 2026年5月 大赛启动 2026年5-9月 大赛宣讲、报名及作品提交 2026年10月 省赛阶段 2026年11月 全国半决赛 2026年12月 全国总决赛（详细赛程及时间以“工行杯大学生金融科技创新大赛”公众号推文为准）”；黄山学院教务处通知：“大赛宣讲：2026年5月-9月；报名及提交作品：2026年10月截止；省赛：2026年10月-11月；全国半决赛：2026年11月；全国总决赛：2026年12月”。",
+      "sources": [
+        "https://www.hsu.edu.cn/4a/8e/c3718a215694/page.htm",
+        "http://qihang.hrbeu.edu.cn/2026/0704/c3223a350559/page.htm",
+        "http://gqt.swu.edu.cn/info/1006/2835.htm",
+        "http://www.hq.xinhua.org/20260710/9b13c11a067548ea9e9c5c60209096f4/c.html"
+      ],
+      "researchNote": "组委会只发布到“月”级精度，未公布具体日，按铁律不写入具体日期，全部进 dateHint。官网 www.gonghangbei.com 为报名系统，静态页未给出精确日程。"
     },
     {
       "id": "nuc-39",
@@ -926,11 +1081,15 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-09-20T23:59:59+08:00",
+      "dateHint": "2026年：报名截止2026-09-20（官网 http://ssfkds.moocollege.com 报名，每队150元）；全国总决赛名额不超过200支，晋级名单2026年11月第一周公布；分区赛比赛日与全国总决赛日未在已打开页面中给出。",
+      "confidence": "medium",
+      "evidence": "南通大学商学院转发《关于举办2026年全国本科院校税收风险管控案例大赛江苏省分区赛竞赛通知》（2026-07-10）：“（一）报名截止时间 2026 年 9 月 20 日……（五）缴费标准与方式 大赛报名费按一支队伍 150 元标准收取”“（一）本次大赛全国总决赛队伍名额不超过200 支……（四）晋级名单公布时间为 2026 年 11 月第一周。”",
+      "sources": [
+        "https://sem.ntu.edu.cn/2026/0710/c11410a297036/page.htm",
+        "https://ssfkds.moocollege.com/home/homepage"
+      ],
+      "researchNote": "分区赛/总决赛具体比赛日只在附件PDF规程中（xatu.edu.cn、sem.ntu.edu.cn 的PDF无法解码读取），故 contest 字段留空。报名截止日取自江苏省分区赛规程，全国各赛区应一致但未逐省核对。"
     },
     {
       "id": "nuc-40",
@@ -948,11 +1107,16 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-03-23T23:59:59+08:00",
+      "dateHint": "2026年：校内初赛报名在摩课云 https://ibizsim.moocollege.com，各校须于2026-03-23前完成校内初赛与选拔；随后全国复赛、全国半决赛、总决赛资格赛；全国总决赛2026年6月上旬在河北唐山（华北理工大学）举行（275所院校382支队伍晋级）。赛道：企业决策/企业运营/供应链决策/数智沙盘。",
+      "confidence": "high",
+      "evidence": "全国企业竞争模拟大赛组委会《2026年全国企业竞争模拟大赛通知与规程》（2026-03-19发布）：“3、每所学校只能从校内初赛报名系统中推选优秀队伍进入全国复赛，每所学校须于2026年3月23日前完成校内初赛和选拔”“07赛程安排 本届大赛分为校内初赛、全国复赛、全国半决赛、总决赛资格赛（备选）、全国总决赛多个阶段，具体赛程安排将于全国复赛报名截止后及时发布。”；北京林业大学新闻（2026/06/11）：“近日，2026年全国企业竞争模拟大赛总决赛在河北唐山落幕。”",
+      "sources": [
+        "http://www.ibizsim.cn/main/news/275",
+        "http://news.bjfu.edu.cn/lsxy/862a9b7597394d0f8437fab2e4f7d7fb.html",
+        "https://ibs.sdnu.edu.cn/info/1099/16849.htm"
+      ],
+      "researchNote": "组委会未公布复赛/半决赛/总决赛的精确日程（通知明确“报名截止后发布”，未检索到后续文件）；总决赛仅确认在2026年6月上旬，故 contest 字段留空。"
     },
     {
       "id": "nuc-41",
@@ -967,14 +1131,19 @@
       "url": "http://match.xmkeyun.com.cn/nc/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-11-21T00:00:00+08:00",
+      "contestEnd": "2026-12-19T23:59:59+08:00",
+      "registrationStart": "2026-08-31T00:00:00+08:00",
+      "registrationEnd": "2026-10-30T23:59:59+08:00",
+      "dateHint": "第十一届（2026年）官方节奏：在线训练2026-08-24至大赛结束；校内选拔赛2026-08-31至10-29；报名2026-08-31至10-30；本科组全国选拔赛2026-11-21、高职组选拔赛2026-11-22、研究生组竞赛2026-11-22；本科组全国总决赛2026-12-19、高职组总决赛2026-12-20。中北大学校赛：报名截止2026-09-20，校赛2026-10-17（星期六）。",
+      "confidence": "medium",
+      "evidence": "南通大学商学院《2026年第十一届“科云杯”全国大学生财会职业能力大赛》：“赛事安排：整体分为校内选拔赛→全国网络选拔赛→全国总决赛三个阶段……2026年核心节奏如下：1.在线训练 2026.8.24 至大赛结束 2.校内选拔赛 2026.8.31-2026.10.29 3.报名 2026.8.31-2026.10.30 4.本科组选拔赛 2026.11.21 5.高职组选拔赛 2026.11.22 6.研究生组竞赛 2026.11.22 7.本科组总决赛 2026.12.19 8.高职组总决赛 2026.12.20”；中北大学经管学院通知：“报名截止日期：2026年9月20日；校赛比赛日期：暂定2026年10月17日（星期六）上午+下午；校赛地点：逸夫楼机房”。",
+      "sources": [
+        "https://sem.ntu.edu.cn/2026/0813/c11410a297192/page.htm",
+        "https://jgy.nuc.edu.cn/info/1047/25519.htm",
+        "http://match.xmkeyun.com.cn/nc/"
+      ],
+      "researchNote": "contestStart 取本科组全国选拔赛日（11-21），contestEnd 取本科组全国总决赛日（12-19）；两者之间为晋级环节，并非连续赛程。"
     },
     {
       "id": "nuc-42",
@@ -993,10 +1162,16 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "2026 官方通知（北京外国语大学，2026-04-16 发布）：校赛 4—10 月、省赛 9—11 月、国赛 10—12 月；赛制已改为英语组（国际传播综合能力/笔译/短视频/“四新”专项）+多语种组+国际中文组，原“写作/阅读”并入国际传播综合能力赛项，英语组口译赛项改为隔年举办（2026 年不设，下次 2027 年）。校级初赛实例（燕山大学 2026 通知）：英语演讲初赛 2026-09-12 19:00（报名截止 2026-09-09）、综合能力赛项（写作/阅读）2026-10-11 13:30—15:00（报名截止 2026-10-04）、笔译赛项 2026-10-11 16:00—18:00（报名截止 2026-10-04）",
+      "confidence": "high",
+      "evidence": "官方通知原文：“北京外国语大学定于2026年4月至12月举办2026‘外研社·国才杯’‘理解当代中国’全国大学生外语能力大赛……校赛：4月至10月，由各院校自行组织。省赛：9月至11月，由各省赛组委会组织实施。国赛：10月至12月，由北京外国语大学主办……注：英语组口译赛项改为隔年举办，下一次举办为2027年。” 燕山大学校赛通知：“演讲大赛……比赛时间：2026年9月12日19:00……报名时间：（1）即日起—9月9日，参赛同学登录‘外研社·国才杯’大赛官网https://ucc.fltrp.com/报名”；“综合能力赛项（写作、阅读比赛）……比赛时间：2026年10月11日13:30-15:00；报名时间：即日起—10月4日”。",
+      "sources": [
+        "https://ucc.fltrp.com/c/2026-04-15/517928.shtml",
+        "https://ucc.fltrp.com/",
+        "https://notice.ysu.edu.cn/info/2264/25796.htm",
+        "http://uchallenge.unipus.cn/"
+      ],
+      "researchNote": "官网赛程只到“月”级，故 4 个 ISO 字段留空，月级信息全部进 dateHint（未编造日级日期）。目录里的 url（uchallenge.unipus.cn）内容停留在 2023 年，2026 年真正在用的大赛官网已是 ucc.fltrp.com。燕山大学的日级日期是“校级初赛”节点，非全国统一日期，仅供参考；中北大学校内选拔时间需以本校通知为准。"
     },
     {
       "id": "nuc-43",
@@ -1015,10 +1190,14 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第 31 届（2026）官方通知（contest.i21st.cn，2026-01-31 发布）：报名和校园选拔赛/地区初赛 2026 年 1 月—4 月；地区半决赛/决赛 2026 年 4 月—7 月；全国半决赛/总决赛拟于 2026 年 10 月举办（地点待定）。已备演讲主题：Setbacks are one's greatest guarantee of success",
+      "confidence": "high",
+      "evidence": "《第31届中国日报社“21世纪杯”全国英语演讲比赛通知》：“一、时间安排 本届赛事全程分为三个阶段：1．报名和校园选拔赛/地区初赛：2026年1月 ~ 4月 2．地区半决赛/决赛：2026年4月 ~ 7月 3．全国半决赛/总决赛：2026年10月（拟）”；“全国半决赛/总决赛拟于2026年10月举办，地点待定。”",
+      "sources": [
+        "https://contest.i21st.cn/college/article/6991.html",
+        "https://contest.i21st.cn/college/article/6990.html"
+      ],
+      "researchNote": "官网三阶段只给“月”级区间，无具体起止日，故 ISO 字段全部留空、月级信息进 dateHint。报名入口是微信服务号“21世纪杯”底部菜单“活动中心-活动报名”，网页端不提供具体报名起止日期。"
     },
     {
       "id": "nuc-44",
@@ -1035,11 +1214,17 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-07-02T23:59:59+08:00",
+      "dateHint": "第八届（2026）：校赛报名/作品提交 2026-06-24—07-02（校赛比赛 2026-07-02）；初赛选拔 2026-06-24—06-30；省赛（复赛）作品提交 2026 年 6—7 月；国赛/全国总决赛 2026 年 8—9 月。另燕山大学 2026 通知：诵读/书写校赛提交截止 2026-06-24，“讲解大赛”“篆刻大赛”2026-08-05 前自行在官网提交；报送省赛 2026-07-01",
+      "confidence": "medium",
+      "evidence": "教育部、国家语委《关于举办第八届中华经典诵写讲大赛的通知》（教语用函〔2026〕1号，2026-05-28 发布）：“（四）赛程组织 包括初赛、复赛、决赛、交流展示等，具体安排见赛项方案。”未给日期。山西工程技术学院校赛通知（2026-06-20）：“报名/初赛项目提交：2026年6月24日-7月2日；初赛选拔：2026年6月24-6月30日；复赛/省赛项目提交：2026年6月-7月；国赛/全国总决赛：2026年8月-9月”“校赛截止报名时间：2026年7月2日”。",
+      "sources": [
+        "http://www.moe.gov.cn/srcsite/A18/s3137/202605/t20260528_1437956.html",
+        "http://jyt.shanxi.gov.cn/xwzx/ggtz/202606/t20260611_10144714.html",
+        "https://www.sxit.edu.cn/jnjdygcxlzx/info/1056/2558.htm",
+        "http://notice.ysu.edu.cn/info/2264/25544.htm"
+      ],
+      "researchNote": "教育部主通知与山西省教育厅通知（晋教语函〔2026〕10号）都把具体日期放在《赛项实施方案》PDF/DOCX 附件里，网页正文无日期，附件为 docx/pdf 无法直接读取。ISO 字段里填的 2026-07-02 是山西省内高校（山西工程技术学院）2026 年校赛报名截止日；中北大学校赛日期须以本校通知为准，国赛仅到“月”级故留空。"
     },
     {
       "id": "nuc-45",
@@ -1057,11 +1242,17 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-09-09T23:59:59+08:00",
+      "dateHint": "第九届（2026）：校赛（初赛）2026 年 9 月上旬，多数院校截止 2026-09-09（山东管理学院）/2026-09-10（太原理工大学，报名截止 2026-09-10 24:00，案例文本与视频 2026-09-13 12:00 前提交，决赛 2026-09-19）；省赛（复赛、决赛）2026 年 10 月（山东赛区定于 2026-10-24—10-25 在临沂大学举办）；全国赛（决赛、总决赛）2026 年 11 月",
+      "confidence": "medium",
+      "evidence": "山东管理学院教务处通知（2026-07-10）：“三、时间安排 校赛（初赛）：即日起至2026年9月9日 省赛（复赛、决赛）：2026年10月24日-25日在临沂大学举办 全国赛（决赛、总决赛）：2026年11月”。太原理工大学文法与外语学院通知（2026-07-23）：“请各参赛队于9月10日24点前（即报名截止时间）提交报名表……初赛提交跨文化交际案例评述文本、案例展示视频的时间为9月13日中午12点前……决赛时间暂定9月19日举行”。",
+      "sources": [
+        "https://jwc.sdmu.edu.cn/info/1053/6216.htm",
+        "https://wfywy.tyut.edu.cn/info/1015/7631.htm",
+        "https://jwc.hustwenhua.net/info/1421/5111.htm",
+        "https://ict.sflep.com/index.php?m=content&c=index&a=lists&catid=51"
+      ],
+      "researchNote": "ISO 中的 2026-09-09 是校赛截止日（山东管理学院口径；太原理工大学为 09-10），属校赛节点，省赛/国赛只到“月”级故留空。太原理工大学为山西省内高校，其 9 月校赛节奏可作中北大学参照。官网 ict.sflep.com 仅有第九届“国赛章程”PDF（无法解析文本），未见日级赛程网页。"
     },
     {
       "id": "nuc-46",
@@ -1077,12 +1268,17 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-05-10T00:00:00+08:00",
+      "registrationEnd": "2026-06-12T16:00:00+08:00",
+      "dateHint": "第 18 届（2026）：作品提交平台 2026-05-10 正式开放、2026-06-12 16:00 关闭；线下报名表交校截止 2026-06-13 16:00；各校报赛区 2026-06-15 16:00 前；分赛区评选 2026-06-22 前完成、2026-07-05 前提交全国总评审；退赛申请截止 2026-06-24 24:00（06-25 后不受理）",
+      "confidence": "high",
+      "evidence": "大广赛官网（sun-ada.net）《第18届全国大学生广告艺术大赛 甘肃赛区 选拔赛参赛办法》（2026-05-29）：“第 18 届大广赛提交平台将于 5 月 10 日正式开放，截至 6 月 12 日 16:00 关闭，学生须在第十八届大广赛作品提交平台注册、填写报名表、承诺书，并按要求上传作品”“参赛院校于 2026 年 6 月 15 日 16:00 前，将初评筛出的作品报送至大赛组委会进行评选”“大赛组委会于 2026 年 6 月 22 日前进行评选，并将评选出的作品于 7 月 5 日前提交至大赛组委会进行全国总评审”“如参赛者决定退赛，可在 2026 年 6 月 24 日 24:00 前……申请退赛”。燕山大学校赛通知（2026-05-11）：“参赛学生请于2026年6月12日16:00前线上提交……作品线下提交截止时间：6月12日17:00”。",
+      "sources": [
+        "https://www.sun-ada.net/news_xq3s779.html?sid=4",
+        "http://notice.ysu.edu.cn/info/2264/25404.htm",
+        "https://www.sun-ada.net/home/about_intrs3.html"
+      ],
+      "researchNote": "官网“参赛通知”页面（about_intrs3.html）正文是一张图片，无文字赛程，故采用官网“赛区动态”里 2026-05-29 发布的赛区参赛办法（同一官网域名）。registrationStart 按“平台 5 月 10 日开放”记为该日 00:00；报名与作品提交是同一动作（提交即报名）。contestStart/End 留空：全国总评审及颁奖只在往年经验中为 7—9 月，2026 年未见日级公告，未写入。各省赛区内部截止日可能早于 06-12。"
     },
     {
       "id": "nuc-47",
@@ -1099,11 +1295,16 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-04-10T23:59:59+08:00",
+      "dateHint": "第十届（2026）：2025 年 10 月起院校管理员/参赛者注册与线上报名；非命题赛场作品提交截止 2026-04-10 23:59，院校审核及个人缴费截止 2026-04-15 23:59；省赛评审 2026 年 4—5 月；国赛评审 2026 年 5—6 月；颁奖典礼及学术活动 2026 年 7—8 月。另有专项赛场/命题赛场各自截止（如铜陵学院通知口径：非命题赛道校内截止 2026-04-05，校赛评比 2026-04-07）",
+      "confidence": "medium",
+      "evidence": "湖北美术学院时尚艺术学院（校赛承办单位）《“2026第十届米兰设计周-中国高校设计学科师生优秀作品展”非命题赛道即将截稿》（2026-03-27）：“非命题赛场将于4月10日23:59分正式截稿”“作品提交截止时间 2026年4月10日 23:59”“院校审核及个人缴费截止时间 2026年4月15日 23:59”；“06 赛事赛程 2．线上报名：巡讲巡展、提交参赛作品、专项赛场及命题赛场评审（2025年10月至2026年3月）3．省赛评审：……（2026年4-5月）4．国赛评审：……（2026年5-6月）5．系列活动：颁奖典礼及学术活动（2026年7-8月）”。",
+      "sources": [
+        "http://fzx.hifa.edu.cn/info/1003/2449.htm",
+        "https://jwc.tlu.edu.cn/2026/0309/c1859a125699/page.htm",
+        "https://milan-aap.org.cn/"
+      ],
+      "researchNote": "目录里的 url（www.dandad.cn）抓取失败（fetch failed），实际官网为 milan-aap.org.cn，且该站现首页已切到“2027第十一届”预告页（说明 2026 第十届已结束），故赛程取自承办院校转发的官方通知。铜陵学院通知写的“2026年4月5日”是该校校内提交截止，非全国截稿日，已分别标注。"
     },
     {
       "id": "nuc-48",
@@ -1120,11 +1321,15 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-06-30T17:00:00+08:00",
+      "dateHint": "第 20 届（2026）：报名及截稿 即日起—2026-06-30 17:00（系统关闭）；校赛推优 2026-07-01 08:00—07-05 17:00；省赛评审 2026-07-08—07-20 17:00；省赛获奖名单上传公示 2026-07-30 17:00",
+      "confidence": "medium",
+      "evidence": "《第20届中国好创意暨全国数字艺术设计大赛（辽宁赛区）参赛简章》（大连交通大学艺术设计学院，2026-03-24）：“（三）竞赛时间及报名方式 1、作品投稿统一时间如下……(1) 报名及截稿时间：即日-2026年6月30日17:00止（系统关闭）；(2) 校赛推优时间：2026年7月1日8:00-7月5日17:00止（系统关闭）；(3) 省赛评审时间：2026年7月8-20日17:00止（系统关闭）；(4) 省赛获奖名单上传公示：2026年7月30日17:00止（系统关闭）”；“学生在大赛官网统一报名并上传作品。网址：https://www.cdec.org.cn”。",
+      "sources": [
+        "http://art.djtu.edu.cn/28/528.html",
+        "http://www.cdec.org.cn"
+      ],
+      "researchNote": "报名开始日原文只写“即日”（简章发布于 2026-03-24），未给具体日期，故 registrationStart 留空。全国赛（国赛）评审/颁奖日期未在该简章中出现，未写入。"
     },
     {
       "id": "nuc-49",
@@ -1140,12 +1345,15 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-05-26T00:00:00+08:00",
+      "registrationEnd": "2026-06-30T23:59:59+08:00",
+      "dateHint": "第八届（2026）：报名及提交作品 2026-05-26—06-30（官网 www.cuidc.net 在线注册报名）；分赛区评审 2026 年 7—8 月；全国总赛区复评 2026 年 9 月；晋级终评作品准备模型 2026 年 10 月；全国总赛区终评颁奖典礼及优秀作品展 2026 年 11 月。大赛于 2026 年 5 月正式启动，主题“AI·ài·@i”；省赛通知尚未发布",
+      "confidence": "medium",
+      "evidence": "中国民用航空飞行学院教务处《2026年第八届全国大学生工业设计大赛报名通知》（2026-05-28）：“4报名方式 2026年5月26日—6月30日，参赛者登录大赛官方网站(www.cuidc.net)在线注册报名。注册报名及上传作品需在电脑端进行。”；“6大赛赛程 2026年5月26日—6月30日：报名及提交作品；2026年7月—8月：分赛区评审，分赛区推荐作品至全国总赛区；2026年9月：全国总赛区复评；2026年10月：晋级终评作品准备作品模型；2026年11月：全国总赛区终评颁奖典礼及优秀作品展。”；“目前，省赛通知暂未发布。”",
+      "sources": [
+        "https://www.cafuc.edu.cn/jwcx/info/1021/1774.htm"
+      ],
+      "researchNote": "cuidc.net 官网未直接抓取成功，赛程取自高校教务处转发的大赛通知全文（含官方赛程原文），属权威转载。截止日原文只写“6月30日”未给时刻，按当日 23:59:59 归一化。"
     },
     {
       "id": "nuc-50",
@@ -1182,14 +1390,17 @@
       "url": "http://cmit.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-10-24T00:00:00+08:00",
+      "contestEnd": "2026-11-29T23:59:59+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-10-23T23:59:59+08:00",
+      "dateHint": "校级初赛 10/24-28、赛区选拔赛 11/2-15、入围名单公布 11/19-22、全国总决赛 11/27-29、颁奖典礼与作品展 12/4-6（北京）",
+      "confidence": "medium",
+      "evidence": "武汉大学本科生院表：「报名及作品提交｜截至2026年10月23日23:59:59」「校级初赛｜2026年10月24日—10月28日」「赛区选拔赛｜2026年11月2日—11月15日」「入围名单公布｜2026年11月19日—11月22日」「全国总决赛｜2026年11月27日—11月29日」「颁奖典礼、作品展（待定）｜2026年12月4日—12月6日｜举办地点：北京」。",
+      "sources": [
+        "https://uc.whu.edu.cn/info/1517/128591.htm"
+      ],
+      "researchNote": "第十四届（2026 年）。武汉大学 2026-09-30 转发组委会通知，赛程与官网 www.cmit.cn 一致。报名起始日未给出（只给截止），故 registrationStart 留 null。注意报名截止 10/23 距今仅 6 天，是 20 条中最近的一个 deadline。"
     },
     {
       "id": "nuc-52",
@@ -1203,14 +1414,18 @@
       "url": "https://icpc.global/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-09-06T00:00:00+08:00",
+      "contestEnd": "2026-12-20T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "2026-27 赛季（第 51 届）亚洲区：网络预选赛 9/6、9/12；西安 10/17-18、成都 10/24-25、武汉 10/30-11/1、南京 11/7-8、沈阳 11/14-15、上海 12/5-6、南昌 12/19-20；香港 2027-01-09/10；亚洲 EC-Final 2027-01-26~28",
+      "confidence": "high",
+      "evidence": "ICPC 北京总部公告列表：「第51届ICPC亚洲区域赛（沈阳）邀请函[2026-10-17]」「第51届ICPC国际大学生程序设计竞赛亚洲区域赛（南京）邀请函 & 报名指南[2026-09-30]」「2026-2027赛季网络预选赛时间安排[2026-06-18]」。ICPC Asia EC Info（2026–27 Season）：「Online Qualification Contests (6 & 12 Sept)」「Xi'an Regional Contest (17–18 Oct)」「Chengdu (24–25 Oct)」「Wuhan (30 Oct – 1 Nov)」「Nanjing (7–8 Nov)」「Shenyang (14–15 Nov)」「Shanghai (5–6 Dec)」「Nanchang (19–20 Dec)」「Hong Kong (9–10 Jan 2027)」「Asia EC Final Contest (26–28 Jan 2027)」。",
+      "sources": [
+        "https://icpc.pku.edu.cn/tzgg/",
+        "https://hkucpc.github.io/icpc-aec-info/"
+      ],
+      "researchNote": "报名为各赛站分别报名（网络预选赛报名通知 2026-08-10 发布），无全国统一报名起止日，故两字段留 null。contestStart 取网络预选赛首场 9/6，contestEnd 取 2026 年内最后一站（南昌）12/20；香港站与 EC-Final 落在 2027 年，已列 dateHint。赛站日期来自官方公告 + 社区翻译页（该页声明为非官方，官方中文公告为准），官方公告列表已逐条印证。"
     },
     {
       "id": "nuc-53",
@@ -1224,14 +1439,18 @@
       "url": "http://www.cnsoftbei.com/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-08-21T00:00:00+08:00",
+      "contestEnd": "2026-08-23T23:59:59+08:00",
+      "registrationStart": "2026-03-24T00:00:00+08:00",
+      "registrationEnd": "2026-06-30T15:00:00+08:00",
+      "dateHint": "第十五届：报名 2026-03-24 至 06-30，作品提交截止 2026-06-30 15:00，初赛为作品评审；全国总决赛原定线下改为线上，8/21 环境测试、8/22 第一轮评审、8/23 答辩；A7 赛题延至 8/30 评审",
+      "confidence": "high",
+      "evidence": "哈工大（威海）：「报名阶段：2026年3月24日-6月30日」「作品提交、初赛评审：作品提交截止时间暂定2026年6月30日15:00」「总决赛及颁奖典礼：拟定于2026年8月举办」。大赛官网：「总决赛评审日程安排如下：8月21日13:30-19:30 比赛环境测试；8月22日11:00-20:30 第一轮线上评审；8月23日 09:30-19:00 总决赛答辩」。",
+      "sources": [
+        "https://www.cnsoftbei.com/content-1-1357-1.html",
+        "https://cst.hitwh.edu.cn/_t6/2026/0330/c371a211686/page.htm"
+      ],
+      "researchNote": "第十五届。官网 2026-08-13 通知说明线下总决赛因筹备周期与场地承载调整为线上举办。作品修改提交窗口 2026-08-15 9:00—08-18 24:00。决赛期间不收任何费用。"
     },
     {
       "id": "nuc-54",
@@ -1245,14 +1464,17 @@
       "url": "http://www.c4best.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-03-26T10:00:00+08:00",
+      "contestEnd": "2026-08-02T23:59:59+08:00",
+      "registrationStart": "2026-03-26T10:00:00+08:00",
+      "registrationEnd": "2026-07-15T12:00:00+08:00",
+      "dateHint": "大数据挑战赛：报名&组队 2026-03-26 10:00—07-15 12:00；线上赛（A/B 阶段）3-26—8-2，A 阶段提交窗口 4/25-26、5/30-31、6/27-28，B 阶段 8/1-2；决赛 2026 年 8 月中下旬（另行通知）",
+      "confidence": "medium",
+      "evidence": "「1.报名&组队：2026年3月26日10:00 - 2026年7月15日12:00」「2.线上赛：2026年3月26日 - 2026年8月2日」「3.决赛：2026年8月中下旬（具体安排另行通知）」。",
+      "sources": [
+        "https://cxcy.tyut.edu.cn/info/1026/6783.htm"
+      ],
+      "researchNote": "目录中该条含 5 个子赛项，各自独立报名与赛程，本行日期取①大数据挑战赛（太原理工大学创新创业学院 2026-04-07 通知，赛制引自清华大学/大数据系统软件国家工程研究中心官方方案，官网 netclds.tsinghua.edu.cn）。②天梯赛、③移动应用创新赛、④网络技术挑战赛、⑤人工智能创意赛的 2026 年赛期未逐一查证，勿套用本行日期。"
     },
     {
       "id": "nuc-55",
@@ -1266,14 +1488,18 @@
       "url": "https://www.isclab.org.cn/",
       "note": "",
       "security": true,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-05-01T08:00:00+08:00",
+      "contestEnd": "2026-05-18T20:00:00+08:00",
+      "registrationStart": "2026-04-24T08:00:00+08:00",
+      "registrationEnd": "2026-05-06T20:00:00+08:00",
+      "dateHint": "破阵夺旗赛三级赛制：校级赛 5/1 8:00—5/6 20:00、区域赛 5/9 8:00—5/15 20:00、总决赛 5/16 8:00—5/18 20:00；无限擂台赛 5/9—5/18；数据安全赛 5/1—5/18。其他赛项另行发文：博弈对抗赛预报名通知 2026-07-23、智能安全赛通知 2026-09-04/09-10、密码安全赛通知 2026-09-08",
+      "confidence": "high",
+      "evidence": "「4.1 报名起止时间 破阵夺旗赛、无限擂台赛、数据安全赛报名时间（持续13天）：2026年04月24日8:00至2026年05月06日20:00。」「校级赛起止时间（持续6天）：2026年05月01日8:00至2026年05月06日20:00。」「总决赛起止时间（持续3天）：2026年05月16日8:00至2026年05月18日20:00。」简况：「第23届信息安全与对抗技术竞赛（ISCC2026）“线上挑战赛”于2026年5月1日-18日举行……共12700余人报名」。",
+      "sources": [
+        "https://www.isclab.org.cn/2026/03/16/2026%e5%b9%b4%e7%ac%ac23%e5%b1%8a%e4%bf%a1%e6%81%af%e5%ae%89%e5%85%a8%e4%b8%8e%e5%af%b9%e6%8a%97%e6%8a%80%e6%9c%af%e7%ab%9e%e8%b5%9b%e9%80%9a%e7%9f%a5-%e7%ba%bf%e4%b8%8a%e6%8c%91%e6%88%98%e8%b5%9b/",
+        "https://www.isclab.org.cn/2026/07/15/2026%e5%b9%b4%e7%ac%ac23%e5%b1%8a%e4%bf%a1%e6%81%af%e5%ae%89%e5%85%a8%e4%b8%8e%e5%af%b9%e6%8a%97%e6%8a%80%e6%9c%af%e7%ab%9e%e8%b5%9b%e7%ba%bf%e4%b8%8a%e6%8c%91%e6%88%98%e8%b5%9b-6/"
+      ],
+      "researchNote": "第 23 届（ISCC2026）。字段取「线上挑战赛」（破阵夺旗赛/无限擂台赛/数据安全赛），三类赛项共用一次报名。该赛事另有博弈对抗赛、创新作品赛、智能安全赛、无人安全赛等赛项，各自单独发文、日期不同。"
     },
     {
       "id": "nuc-56",
@@ -1287,14 +1513,19 @@
       "url": "http://www.structurecontest.com/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-10-14T00:00:00+08:00",
+      "contestEnd": "2026-10-18T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "各省分区赛于2026年4月至7月完成；2026-08-05前上报分区赛数据；2026-08-10前确定总决赛名额；2026-08-25前公布总决赛高校名单；2026-09-06前发布总决赛通知",
+      "confidence": "medium",
+      "evidence": "「第十九届全国大学生结构设计总决赛定于 2026 年 10 月 14 日至 18 日在内蒙古科技大学举行。」「2026 年为“十五五”启动年……经全国大学生结构设计竞赛秘书处……共同商定」",
+      "sources": [
+        "http://m.52jingsai.com/article-23418.html",
+        "http://www.structurecontest.com/",
+        "https://www.sxit.edu.cn/jnjdygcxlzx/info/1056/2530.htm"
+      ],
+      "researchNote": "2026年为第十九届，承办高校内蒙古科技大学，总决赛即本周举行。官网 www.structurecontest.com 为摩课云 JS 单页（只返回站点标题），无法直读；通知全文取自我爱竞赛网对全国竞委会秘书处通知的完整转载（2026-01-23）。报名由各省（市、自治区）秘书处分区组织，无全国统一报名起止，故置 null。"
     },
     {
       "id": "nuc-57",
@@ -1310,12 +1541,17 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-09-17T00:00:00+08:00",
+      "registrationEnd": "2026-11-30T17:00:00+08:00",
+      "dateHint": "第十三届：2026-09-17开展预报名与统计，2026-10-10结束；正式报名须于2026-11-30 17:00前在 gxbsxs.glodonedu.com 填写；海选赛由主办方（广联达）统一组织，时间「预计为12月上旬」，具体以官网公布为准",
+      "confidence": "medium",
+      "evidence": "「“第十三届全国高校BIM毕业设计创新大赛”预报名和统计工作已于2026年9月17日开展，并于2026年10月10日正式结束。」「请同学们……在11月30日17时前在报名链接（https://gxbsxs.glodonedu.com）填写自己信息」",
+      "sources": [
+        "https://civil.swjtu.edu.cn/info/1055/74062.htm",
+        "https://gxbsxs.glodonedu.com/home",
+        "https://jwc.aufe.edu.cn/_t2244/2026/0330/c2840a245961/page.htm"
+      ],
+      "researchNote": "2026年启动的是第十三届（广联达杯），赛季跨年，总决赛在2027年，故 contest 字段置 null；海选赛仅「预计12月上旬」，属未定稿，一并放入 dateHint。官网 gxbsxs.glodonedu.com 为 JS 单页，只返回标题「第十三届国际高校BIM毕业设计大赛」，无法读取赛程原文。"
     },
     {
       "id": "nuc-58",
@@ -1333,10 +1569,15 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "两年一届：第九届于2025年举办；第十届国赛定于2027年举行——宁夏大学2026-07-10举办的校选拔赛明确「选拔代表学校参加2027年国赛」",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "「此次比赛旨在从报名参赛队伍中初步选拔代表学校参加2027年国赛的参赛队伍。」「为2027年冲击全国大赛做好充分准备。」",
+      "sources": [
+        "https://tmsl.nxu.edu.cn/info/1011/8587.htm",
+        "https://sljzw.hhu.edu.cn/fenhui/main.jsp",
+        "https://slxy.neau.edu.cn/info/1163/7568.htm"
+      ],
+      "researchNote": "结论性判断：2026年为该项赛事的轮空年，无全国赛，因此四个日期字段全部置 null。抓取秘书处站点 sljzw.hhu.edu.cn 只得到框架页，其赛程通知为 PDF（/_upload/article/files/...pdf），本工具不支持 PDF 正文解析，故未能取得第九届/第十届的具体日。第十届国赛在2027年这一点由宁夏大学（国赛承办校之一）的校内选拔赛报道直接佐证。"
     },
     {
       "id": "nuc-59",
@@ -1350,14 +1591,19 @@
       "url": "http://smt.whu.edu.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-07-31T08:30:00+08:00",
+      "contestEnd": "2026-08-01T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "一号通知：拟于2026年7月底举办，承办河南理工大学；软件2026-06-25按最终参赛人数发放；2026-07-01至决赛前统一模拟赛；科技论文2026-06-27前投稿",
+      "confidence": "medium",
+      "evidence": "「“2026年全国大学生测绘学科创新创业智能大赛”将于2026年7月31日-8月1日在河南理工大学举办」「大赛开幕式：7月31日8:30-9:00」「科技论文竞赛：8月1日上午线上答辩」（二号通知，中国测绘学会教育工作委员会2026年7月15日）",
+      "sources": [
+        "https://www.163.com/dy/article/L2AHQUEE05319UN7.html",
+        "https://gsee.swjtu.edu.cn/info/1061/32003.htm",
+        "http://smt.whu.edu.cn/"
+      ],
+      "researchNote": "8月1日仅上午有科技论文竞赛线上答辩，故 contestEnd 取当日23:59:59作保守上界。本站点 smt.whu.edu.cn 及主办方 csgpc.org 均无法读取正文（csgpc.org 详情页报 PHP Fatal error），二号通知全文取自「测绘之家」对学会通知的完整转载；一号通知由西南交通大学地学学院转发。报名无全国统一起止时间，各校自组织，置 null。"
     },
     {
       "id": "nuc-60",
@@ -1371,14 +1617,18 @@
       "url": "http://bisai.ccen.com.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-09-12T00:00:00+08:00",
+      "contestEnd": "2026-10-18T23:59:59+08:00",
+      "registrationStart": "2026-04-01T00:00:00+08:00",
+      "registrationEnd": "2026-07-31T23:59:59+08:00",
+      "dateHint": "报名2026年4月—7月31日（正式报名「预计4月初」）；学习备赛2026年4月起；全国选拔赛2026-09-12（线上）；全国总决赛2026-10-18（线上）",
+      "confidence": "high",
+      "evidence": "「（一）大赛报名（2026年4月-7月31日）参赛团队指导教师通过登录大赛官方网站http://bisai.ccen.com.cn进行报名」「（三）全国选拔赛（2026年9月12日）」「（四）全国总决赛（2026年10月18日）」",
+      "sources": [
+        "https://www.ccen.com.cn/info/1150/5937.htm",
+        "http://bisai.ccen.com.cn/"
+      ],
+      "researchNote": "中国建设教育协会官网原文（建教协2026-32号，2026-03-30）。registrationStart 取通知写明的报名起始月份「2026年4月」，通知注明「正式报名时间预计4月初，具体时间请关注大赛官方网站」，故首日按4月1日填并在此说明；contestStart 取全国选拔赛日、contestEnd 取全国总决赛日（同为线上作答）。"
     },
     {
       "id": "nuc-61",
@@ -1392,14 +1642,17 @@
       "url": "https://www.nactrans.net/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-05-23T00:00:00+08:00",
+      "contestEnd": "2026-05-24T00:00:00+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-04-10T23:59:59+08:00",
+      "dateHint": "第二十一届（「船视宝」杯）：2026 年 1 月启动；3 月 15 日前交邀请函回执；4 月 1-10 日系统提交作品登记表/申报书/说明文档；5 月上旬公布入选决赛名单",
+      "confidence": "medium",
+      "evidence": "四、举办时间：大赛2026 年1 月开始，2026 年5 月23-24日（星期六-星期日）在北京建筑大学举行决赛答辩和颁奖典礼以及参赛高校交流活动。……七、参赛单位向承办学校报送资料的时间表：邀请函回执 2026 年3月15日前；参赛作品登记表/申报书/说明文档 2026 年4月1-10日。",
+      "sources": [
+        "https://tumu.bucea.edu.cn/xyxw/0a70a22cd0ff4da6842af9c31e7a7068.htm"
+      ],
+      "researchNote": "registrationEnd 取「作品申报书+说明文档系统上传」截止（2026-04-10），此环节即实质报名/作品报送；更早还有 3 月 15 日邀请函回执。通知由承办高校北京建筑大学发布（转载大赛 2 号通知实施方案），故 medium。"
     },
     {
       "id": "nuc-62",
@@ -1413,14 +1666,19 @@
       "url": "http://www.siemenscup-cimc.org.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-08-14T00:00:00+08:00",
+      "contestEnd": "2026-08-18T00:00:00+08:00",
+      "registrationStart": "2026-03-01T00:00:00+08:00",
+      "registrationEnd": "2026-05-31T23:59:59+08:00",
+      "dateHint": "全国分赛区初赛 2026-07-20 正式开赛（报到、抽签线上进行）；总决赛 2026-08-14~18 北京化工大学（昌平校区）",
+      "confidence": "high",
+      "evidence": "请参赛队伍于2026年3月1日至5月31日通过大赛官网http://www.siemenscup-cimc.org.cn 进行注册并组队报名参赛。（初赛通知）2026年7月20日正式开赛。（总决赛通知）2026年CIMC全国总决赛将于2026年8月14日-18日在北京化工大学（昌平校区）进行。",
+      "sources": [
+        "https://www.siemenscup-cimc.org.cn/notice/NoticeDetail?id=2431",
+        "https://www.siemenscup-cimc.org.cn/notice/NoticeDetail?id=2432",
+        "https://www.siemenscup-cimc.org.cn/notice/NoticeDetail?id=2946"
+      ],
+      "researchNote": "三份官网通知互相印证：报名（注册组队）3/1—5/31；分赛区初赛 7/20 起；全国总决赛 8/14—18 北京化工大学昌平校区。规模：1070 所高校、13524 支队伍。"
     },
     {
       "id": "nuc-63",
@@ -1434,14 +1692,17 @@
       "url": "http://www.jienengjianpai.org/Default.asp",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-07-31T00:00:00+08:00",
+      "contestEnd": "2026-08-02T00:00:00+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-05-20T23:59:59+08:00",
+      "dateHint": "第十九届（大连理工大学承办）：高校《报名表》2026-04-12 18:00 前邮件提交；函评 2026-05-21~06-03；会评（确定入围决赛名单）2026-06-20~06-21；决赛 2026-07-31~08-02",
+      "confidence": "medium",
+      "evidence": "1.竞赛报名：参赛单位在2026年4月12日18:00前将加盖学校公章的《高校报名表》扫描并以电子版（PDF文件）形式通过电子邮件发送至大赛组委会邮箱……（2）通过网站系统提交。……截止时间为2026年5月20日24:00……6.决赛：初定于2026年7月31日-8月2日在大连理工大学举办全国总决赛。",
+      "sources": [
+        "http://cxcy.jgsu.edu.cn/info/1036/4526.htm"
+      ],
+      "researchNote": "该页为井冈山大学转载的大赛官方《第一轮通知》（2026 年 3 月 12 日，全国大学生节能减排社会实践与科技竞赛委员会秘书处/大连理工大学能源与动力学院），故 medium。registrationEnd 取作品系统提交截止 5-20 24:00（另需 5-23 18:00 前邮件确认）。"
     },
     {
       "id": "nuc-64",
@@ -1457,12 +1718,16 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2025-10-13T00:00:00+08:00",
+      "registrationEnd": "2025-11-16T23:59:59+08:00",
+      "dateHint": "第十二届（2026）：报名 2025-10-13~11-16；作品提交 2026-02-23~03-15；区域赛 2026-03-16~04-16；国赛通讯评审/会评 2026-04-18~05-10；总决赛 2026 年 5 月下旬在安徽财经大学（仅到「月下旬」）。绿色低碳经营实战赛道全国总决赛 2026-11-13~11-14 山东师范大学长清湖校区（11-13 报到，11-14 正式比赛）",
+      "confidence": "medium",
+      "evidence": "1.报名时间：2025年10月13日—11月16日报名系统：http://energy.qibebt.ac.cn/eneco/contribution/……2.作品全文提交时间：2026年2月23日—3月15日……5.第十二届大赛总决赛及颁奖仪式时间：2026年5月下旬。地点：安徽财经大学。（主办学会预通知）绿色低碳经营实战赛道全国总决赛，拟于2026年11月13-14日在山东师范大学长清湖校区举办。",
+      "sources": [
+        "https://jwc.cueb.edu.cn/jwgg/707928a45afc4561bc41292a5ce59db4.htm",
+        "http://www.scope.org.cn/newsMes.aspx?t=64&id=13141"
+      ],
+      "researchNote": "跨年度赛事（报名在上一年 10 月）。主赛道总决赛只公布「5 月下旬」，故 contestStart/End 为 null，只在 dateHint 记；实战赛道有确切日期但属另一赛道。第一条来源为首都经济贸易大学转发的官方报名通知，第二条为主办学会（中国优选法统筹法与经济数学研究会）官网预通知。"
     },
     {
       "id": "nuc-65",
@@ -1480,10 +1745,14 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "两年一届：第十五届（2025）全国个人赛 2025-05-18 举行（30591 人报名、500 余所高校）；第十六届为 2027 年赛事，2026 年 10 月起各校已启动校内选拔（如石河子大学校赛 2026-11-28 16:00-18:30，报名 2026-10-15~11-15）",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "2025年5月18日，第十五届全国周培源大学生力学竞赛在全国举行……竞赛每两年举行一次，本年度为第十五届。（石河子大学通知）关于举办第十六届全国周培源大学生力学竞赛石河子大学选拔赛的通知……四、竞赛时间及地点：2026年11月28日(星期六)下午16:00-18:30；七、报名时间：2026年10月15日至11月15日。",
+      "sources": [
+        "https://m.cstam.org.cn/187/202505/21369.html",
+        "https://jwc.shzu.edu.cn/2026/1015/c12118a236988/page.htm"
+      ],
+      "researchNote": "竞赛为两年一届，2026 年没有全国赛，故 2026 年四个日期字段全为 null。官网 zpy.cstam.org.cn 两次访问均超时、www.cstam.org.cn 被防火墙拦截（403），未能取得第十六届正式通知，第十六届全国赛具体日期未确认（按两年周期应为 2027 年，仅据周期推断，未写入字段）。"
     },
     {
       "id": "nuc-66",
@@ -1500,11 +1769,14 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-03-31T23:59:59+08:00",
+      "dateHint": "2026 年 1 月—3 月 31 日报名；初赛作品提交截止 2026 年 5 月 7 日；分赛区决赛 2026 年 6—7 月；全国总决赛 2026 年 7 月下旬（拟）",
+      "confidence": "medium",
+      "evidence": "2.报名时间：2026年1月—2026年3月31日。2.初赛阶段：作品提交截止至2026年5月7日，5月由命题企业专家线上技术评审。3.分赛区决赛阶段：2026年6月—7月，分赛区承办方组织专家评审。4.全国总决赛阶段：2026年7月下旬（拟），组委会组织专家评审，公示全国获奖名单。——四川大学《关于开展2026年第十届全国大学生集成电路创新创业大赛的通知》2026-01-31",
+      "sources": [
+        "https://jwc.scu.edu.cn/info/1043/10448.htm"
+      ],
+      "researchNote": "第十届。报名截止 2026-03-31（日级）。报名起始只到“2026 年 1 月”（月级）→ registrationStart=null。分赛区决赛与总决赛只到“月/下旬”→ contestStart/End=null，均写入 dateHint。官网 univ.ciciec.com。"
     },
     {
       "id": "nuc-67",
@@ -1521,11 +1793,16 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-09-15T23:59:59+08:00",
+      "dateHint": "2026 年 3—12 月：5 月 15 日前填报预赛报名表，9 月 1—15 日正式报名并上传作品/缴费，9 月初国赛初赛，11 月底国赛决赛（哈尔滨工业大学承办）",
+      "confidence": "medium",
+      "evidence": "各高校在2026年5月15日前，通过网络填报预赛报名表（待5月初发布）。9月1日~ 9月15日向组委会提交正式报名、上传参赛资料、完成缴费，详细方案待第二轮竞赛通知明确。——常州工学院《关于参加2026年第十二届全国大学生物理实验竞赛的通知》2026-03-27。承办：哈尔滨工业大学 黑龙江省物理学会。另：2026年9月初，国赛初赛；2026年11月底，国赛决赛。——江汉大学通知2026-03-26",
+      "sources": [
+        "http://www.czust.edu.cn/_t454/2026/0327/c6a171578/page.htm",
+        "https://jwzx.jhun.edu.cn/74/a7/c7531a226471/pagem.htm",
+        "https://aao.njau.edu.cn/info/1144/6788.htm"
+      ],
+      "researchNote": "第十二届（创新），哈尔滨工业大学承办，赛期 2026 年 3—12 月。registrationEnd 取全国正式报名截止 2026-09-15（日级，含上传作品与缴费）；5/15 为预赛报名表填报截止。国赛初赛“9 月初”、决赛“11 月底”只到旬，故 contestStart/End=null。校级报名普遍在 3 月 1 日—4 月 15 日（如南京农业大学）。"
     },
     {
       "id": "nuc-68",
@@ -1542,11 +1819,14 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-10-30T23:59:59+08:00",
+      "dateHint": "第十九届全国大学生创新年会初定2026年12月举办（具体日期另行通知），由西南交通大学主办；中央部委所属高校填报截止2026-10-23，各省教育厅填报截止2026-10-30",
+      "confidence": "high",
+      "evidence": "经研究，拟于2026年12月举办第十九届全国大学生创新年会……时间初定为2026年12月，具体日期和参会事宜另行通知。年会由西南交通大学主办。……各中央部委所属高校填报截止日期为10月23日，各省（区、市）教育厅（教委）填报截止日期为10月30日。",
+      "sources": [
+        "https://www.gjcxcy.cn/PublicColumn/Notice/ea09170e-3609-4ca3-9b9d-aaa79fc04d68"
+      ],
+      "researchNote": "registrationEnd取“地方所属高校经省教育厅填报”的截止10月30日（中北大学为山西省属高校）；年会本身日期仅到月。无个人报名开始日期（项目由学校/省厅遴选报送）。"
     },
     {
       "id": "nuc-69",
@@ -1560,14 +1840,19 @@
       "url": "http://www.chinaus-maker.org.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-07-28T00:00:00+08:00",
+      "contestEnd": "2026-07-31T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "全国总决赛2026年7月28—31日（教育部采购公告标注“拟”，上海张江科学会堂，预计4天）；分赛区报名/作品提交截止约2026年6月21日（云南大学通知转述西安赛区口径，山西所属赛区未在公开页面明确）",
+      "confidence": "medium",
+      "evidence": "计划于2026年7月28-31日（拟），在上海举办2026年中美青年创客大赛总决赛及配套活动，活动时间预计4天。／2026中美青年创客大赛总决赛昨天在张江科学会堂落下帷幕（2026-08-01报道）。／参赛团队报名：2026年6月21日前……作品及参赛信息提交：2026年6月21日前。",
+      "sources": [
+        "https://www.zfcg.edu.cn/moestatic/jggg/20260721/1480.html",
+        "https://www.shanghai.gov.cn/nw4411/20260801/8deaeb1da4fd48908dc2b5add7644a20.html",
+        "http://www.jwc.ynu.edu.cn/info/1009/4292.htm"
+      ],
+      "researchNote": "决赛起始日为采购公告的“拟”定日期，媒体证实7月31日前后收官（另有8月1日报道口径）；报名为分赛区各自截止，无全国统一报名窗口，故registration留空。官网 www.chinaus-maker.org.cn 与 cscse.cn 均无法解析/连接。"
     },
     {
       "id": "nuc-70",
@@ -1584,11 +1869,14 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-11-27T17:00:00+08:00",
+      "dateHint": "创意赛道作品征集截止2026-11-27 17:00；校赛截止2026-12-29 17:00；赛区赛截止2027-01-29 17:00；定向主题征集截止2027-03-05 17:00；总决赛2027年3—4月；颁奖及路演2027年5月",
+      "confidence": "high",
+      "evidence": "创意赛道作品征集截止时间：2026年11月27日17:00；校赛截止时间：2026年12月29日17:00；赛区赛截止时间：2027年1月29日17:00；定向主题作品征集截止时间：2027年3月5日17:00；总决赛时间：2027年3-4月。",
+      "sources": [
+        "https://zhijiao.eol.cn/detail/2026/09/14/1789372215_28507.html"
+      ],
+      "researchNote": "2026年更名为“2026新锐设计竞赛·华灿奖”（中国高等教育学会2026-09-11通知）；总决赛在2027年，故contestStart/End留空。官网2026-10-19起开放（www.cahe.edu.cn/site/term/906.html）。"
     },
     {
       "id": "nuc-71",
@@ -1604,12 +1892,16 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-04-03T00:00:00+08:00",
+      "registrationEnd": "2026-06-30T23:59:59+08:00",
+      "dateHint": "初赛作品/项目提交2026-04-03至07-20；初赛选拔4—8月；复赛/省赛8—10月；国赛/全国总决赛2026年11—12月（仅到月）",
+      "confidence": "high",
+      "evidence": "初赛报名：4月3日-6月30日；初赛作品/项目提交：4月3日-7月20日；初赛选拔：4月-8月；复赛/省赛选拔：8月-10月；国赛/全国总决赛：11月-12月。",
+      "sources": [
+        "https://3dds.3ddl.net/index.php?ctl=Informationlist&met=newsdetails&id=696",
+        "https://cmee.upc.edu.cn/2026/0329/c21203a486291/page.htm"
+      ],
+      "researchNote": "2026第19届，组委会通知发文2026年3月18日（文中月日未写年份，按2026年计）；全国总决赛只到月份，故contestStart/End留空。"
     },
     {
       "id": "nuc-72",
@@ -1623,14 +1915,19 @@
       "url": "http://umic.ckcest.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-07-17T00:00:00+08:00",
+      "contestEnd": "2026-07-20T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "校赛报名截止2025-10-26（河北工程大学通知，各校不同）；山西赛区2026-05-09至05-10（太原理工大学承办）；全国决赛2026年7月中下旬在哈尔滨工业大学（“博实杯”第十二届，常规赛赛季）",
+      "confidence": "high",
+      "evidence": "“博实杯”第十二届全国大学生机械创新设计大赛常规赛全国决赛第二阶段现场评审活动，于2026年7月17日—20日在哈尔滨工业大学顺利举办。／5月9日至10日，“贝尔杯”第十二届全国大学生机械创新设计大赛山西赛区（2026）竞赛在我校迎西校区成功举办。",
+      "sources": [
+        "https://jwc.hnu.edu.cn/info/1021/14761.htm",
+        "https://www.tyut.edu.cn/info/1027/88461.htm",
+        "https://www.hebeu.edu.cn/info/1175/37192.htm"
+      ],
+      "researchNote": "第十二届分两个赛季：2026常规赛、2027数字孪生挑战赛。报名在全国层面无统一窗口（校赛报名截止2025-10-26为河北工程大学口径），故registration留空。"
     },
     {
       "id": "nuc-73",
@@ -1644,14 +1941,19 @@
       "url": "http://www.chengtudasai.com/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-07-20T00:00:00+08:00",
+      "contestEnd": "2026-07-23T23:59:59+08:00",
+      "registrationStart": "2026-06-05T09:00:00+08:00",
+      "registrationEnd": "2026-06-25T23:59:59+08:00",
+      "dateHint": "省赛2026-05-29至05-30；省赛报名2026-04-01 09:00至04-25 24:00；国赛报名2026-06-05 09:00至06-25 24:00；第一轮通知曾计划国赛2026-07-31至08-03（主赛场大连理工大学），实际承办改为长江大学",
+      "confidence": "medium",
+      "evidence": "全国总决赛（国赛）：2026年7月31日至8月3日……国赛报名：2026年6月5日09:00-6月25日24:00。／7月20日至23日……第十九届“高教杯”全国大学生先进成图技术与产品信息建模创新大赛全国总决赛在我校顺利举办（长江大学承办，7月23日下午闭幕）。",
+      "sources": [
+        "https://jdxy.lzit.edu.cn/info/1230/6004.htm",
+        "https://jxgc.yangtzeu.edu.cn/info/1065/2219.htm",
+        "https://www.nuc.edu.cn/info/1936/59953.htm"
+      ],
+      "researchNote": "日期存在冲突：1月第一轮通知计划7/31—8/3（主赛场原定大连理工）；承办方长江大学新闻为7月20—23日；中北大学新闻称“7月18日至19日”。本条目取承办高校口径7/20—7/23，并列明冲突。"
     },
     {
       "id": "nuc-74",
@@ -1665,14 +1967,18 @@
       "url": "http://www.caai.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-07-18T00:00:00+08:00",
+      "contestEnd": "2026-07-19T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第二十八届；省级层次选拔赛通知2026-06-08发布；全国总决赛线下赛2026-07-18至07-19在安徽合肥；另设全国决赛（线上）与（哈尔滨）及人形机器人专项赛决赛（2026-07-04、07-02、07-01分别发布通知）",
+      "confidence": "medium",
+      "evidence": "7月18日至19日，第二十八届中国机器人及人工智能大赛全国总决赛线下赛在安徽合肥举行。本次比赛吸引了……1200余支队伍同台竞技。自2026年4月启动备赛工作以来……",
+      "sources": [
+        "https://xy.cqust.edu.cn/info/1014/3004.htm",
+        "https://www.caairobot.com/?p=43900"
+      ],
+      "researchNote": "官网通知正文为图片/网盘PDF（pan.baidu.com），无法读取报名起止，故registration留空；合肥线下决赛日期来自参赛高校官方新闻。"
     },
     {
       "id": "nuc-75",
@@ -1690,10 +1996,14 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "2026年不举办全国大学生电子设计竞赛主赛（单数年举办，2025年已办）；2026年举办三项专题竞赛：TI杯模拟电子系统设计专题赛（初赛7月下旬与省级赛合并、决赛2026-08-23至08-27武汉大学）、信息科技前沿专题赛（瑞萨杯）、嵌入式AI专题赛（英特尔杯）",
+      "confidence": "high",
+      "evidence": "全国大学生电子设计竞赛组委会研究决定，2026年继续组织三项专题竞赛……全国大学生电子设计竞赛模拟电子系统专题赛（TI杯），是全国大学生电子设计竞赛在双数年举办的一项专题竞赛。……专题赛决赛将于2026年8月23日—27日在武汉大学举行。",
+      "sources": [
+        "https://www.nuedc-training.com.cn/index/news/details/new_id/343",
+        "https://www.nuedc-training.com.cn/index/news/details/new_id/345"
+      ],
+      "researchNote": "2026年不举办主赛（全国统一命题、单数年举办），按规定不填日期；2026年实际举办的是三项专题竞赛。官网 www.nuedcchina.com 对应 nuedc-training.com.cn。"
     },
     {
       "id": "nuc-76",
@@ -1711,10 +2021,15 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "赛事已更名为“中国大学生工程实践与创新能力大赛”：第九届2025年举办；2026年不举办全国决赛，第十届2027年举办（哈工大2026-05-27启动备赛）；2026年仅有校赛/省赛选拔（如第十二届河北省赛2026年9—10月，报名截止2026-09-15）",
+      "confidence": "medium",
+      "evidence": "《关于启动第十届中国大学生工程实践与创新能力大赛哈尔滨工业大学备赛工作的通知》(2026-05-27)；《关于组织我校学生参加2027年第十届中国大学生工程实践与创新能力大赛的通知》；中国大学生工程实践与创新能力大赛（简称：中国大学生工创大赛）预计于今年9-10月举办……线上报名需在9月15日前完成（河北省赛）。",
+      "sources": [
+        "http://today.hit.edu.cn/article/2026/05/27/130186",
+        "https://gcxlzx.haust.edu.cn/info/1009/2680.htm",
+        "https://hebuee.edu.cn/info/1284/9841.htm"
+      ],
+      "researchNote": "未检索到2026年全国决赛，第十届为2027年，故不填日期；gcxl.edu.cn（原工训竞赛官网）最新通知仍停留在2024年。"
     },
     {
       "id": "nuc-77",
@@ -1728,14 +2043,17 @@
       "url": "http://robot.bistu.edu.cn",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-11-07T00:00:00+08:00",
+      "contestEnd": "2026-11-07T00:00:00+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-10-26T17:00:00+08:00",
+      "dateHint": "决赛 2026-11-07 一天；北京地区高校须 2026-09-30 17:00 前报送赛事负责人信息表；9 大类 16 小项",
+      "confidence": "high",
+      "evidence": "2026年华北五省（市、自治区）大学生机器人大赛报名工作已经启动，大赛决赛时间为2026年11月7日……（二）提交大赛参赛报名表：各赛区承办高校及北京地区高校请于10月26日晚17:00前，向大赛组委会指定邮箱提交以下报名材料。",
+      "sources": [
+        "https://robot.bistu.edu.cn/tzgg/ce6d4ae0373c4e5cb7aa84372e4d96e2.html"
+      ],
+      "researchNote": "官方网站（北京信息科技大学承办）2026-09-11 正式报名通知。报名由各赛区承办高校统一汇总提交，报名开始日未公布（故 registrationStart 为 null）；决赛仅公布 11 月 7 日，contestStart/End 用 00:00:00 表示仅到日。中北大学为五省赛承办单位之一。"
     },
     {
       "id": "nuc-78",
@@ -1749,14 +2067,18 @@
       "url": "https://www.ciesc.cn/site/term/29.html",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-07-24T00:00:00+08:00",
+      "contestEnd": "2026-07-27T23:59:59+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-04-19T23:59:59+08:00",
+      "dateHint": "第十届：2026-04-19前提交参赛意向报名表并完成视频竞赛报名；2026-05-06前提交工程文件包（EDP）及增补文件；比赛2026-07-24至07-27，线下赛在新疆克拉玛依中国石油大学（北京）克拉玛依校区",
+      "confidence": "high",
+      "evidence": "「中国化工学会定于2026年7月24日-27日在新疆维吾尔自治区克拉玛依市举办第十届“2026中国大学生Chem-E-Car竞赛®”，由中国石油大学（北京）克拉玛依校区承办」「比赛时间：2026年7月24日-7月27日」「各参赛队于2026年4月19日前登录竞赛官网(http://www.chemecar.cn)提交参赛意向报名表」",
+      "sources": [
+        "https://www.ciesc.cn/site/content/4682.html",
+        "http://www.chemecar.cn/h-col-109.html"
+      ],
+      "researchNote": "中国化工学会官网原文通知（2026-04-07发布）。通知只给出「4月19日前」这一截止点、未写报名起始日，registrationStart 置 null；registrationEnd 取意向报名表截止。"
     },
     {
       "id": "nuc-79",
@@ -1771,14 +2093,17 @@
       "url": "http://bjacac.bnu.moocollege.com/home/homepage",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-11-14T00:00:00+08:00",
+      "contestEnd": "2026-11-14T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "大赛 9 月开启；校内流程（北京科技大学口径）：9/7-9/19 校内系统作品提交、9/20 前报名、9/25 前校内赛、9/28 前官网填报、10/8-10/10 大赛网站作品调试与提交、10/21 前赛区评审、11/14 决赛答辩。各校内部截止日不同",
+      "confidence": "medium",
+      "evidence": "「2026年华北五省（市、自治区）及港澳台大学生计算机应用大赛将于9月份开启」「10月8日~10月10日：各参赛队须在大赛网站上完成作品的调试、运行和最终的作品提交。」「10月21日前：各赛区组织专家评审本赛区的作品，确定入围决赛的作品名单。」「11月14日：决赛答辩。」。本届主题「人工智能赋能应用创新」，下设大模型与智能体应用、智能网联与智能终端、具身智能与物理 AI 三个赛道。",
+      "sources": [
+        "https://jwc.ustb.edu.cn/tztg/6523a882fb664943b52b1c6d58881133.htm"
+      ],
+      "researchNote": "教通知【2026】132 号（北京科技大学教务处）。报名为各校在校内系统自行组织，全国/赛区无统一报名起止日，故留 null；dateHint 内 9/20 等为北科大校内节点，中北大学须以本校通知为准。contestStart 与 contestEnd 同为 11/14（决赛答辩当日），非区间。"
     },
     {
       "id": "nuc-80",
@@ -1792,14 +2117,17 @@
       "url": "https://www.cmathc.org.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-11-14T09:00:00+08:00",
+      "contestEnd": "2026-11-14T11:30:00+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
+      "registrationEnd": "2026-10-19T23:59:59+08:00",
       "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "confidence": "high",
+      "evidence": "2、竞赛时间：本届竞赛初赛定于2026年11月14日（星期六）上午9：00—11：30举行，如有变动另行通知；决赛预计于2027年4月在大连理工大学举行，决赛的具体时间将在2027年1月通知。4、报名办法 2026年10月19日前，按所在省、自治区、直辖市数学会、军队院校数学教学联席会或学会委托的承办单位的要求报名。——中国数学会《关于举办第十八届全国大学生数学竞赛的通知》2026-06-10",
+      "sources": [
+        "https://www.cmathc.org.cn/tzgg/545.html"
+      ],
+      "researchNote": "第十八届，官方一手来源，初赛时刻精确，置信度 high。决赛在 2027 年 4 月（大连理工大学），不属于 2026 年赛期，未填入 contestEnd。报名各赛区自行组织，全国口径截止 2026-10-19。"
     },
     {
       "id": "nuc-81",
@@ -1817,10 +2145,16 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "往年赛期（第十一届“华炬杯”，2023 年）：2023-07-20 开赛，复赛/半决赛/决赛于 2023 年 11—12 月举行，2024-04 下发表彰决定；第十届颁奖仪式 2022-01 举行。2026 年（应为第十四届）通知未见发布",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "山西师范大学团委（2023-12-03）：“‘华炬杯’第十一届山西省大学生模拟法庭大赛自7月20日开赛以来，从特邀组（由省外高校参与）的复赛、半决赛、决赛，再到省内专业组和公开组复赛、半决赛、决赛，60支参赛队共计500余名师生积极参与”。中北大学党委宣传部（2024-04-28）：“近期，共青团山西省委……联合下发《关于“华炬杯”第十一届山西省大学生模拟法庭大赛的表彰决定》……我校荣获最佳组织奖、专业组团体三等奖和公开组团体二等奖……人文社会科学学院刘丹老师荣获‘最佳导师奖’”。",
+      "sources": [
+        "https://tw.sxnu.edu.cn/info/1027/11043.htm",
+        "https://dwxcb.nuc.edu.cn/info/1056/13499.htm",
+        "http://www.sxccyl.gov.cn/wj/jtlf/",
+        "http://www.sxccyl.gov.cn/wj/jtlf/2023/index.html"
+      ],
+      "researchNote": "检索过：团省委官网 sxccyl.gov.cn 的“晋团联发”文件栏目（仅更新到 2023 年，2026 年目录不存在，页面为空）、web_search“山西省大学生模拟法庭大赛 2026/第十四届/第十三届”等 6 组关键词、中北大学宣传部与山西师范大学团委站内新闻。2026 年第十四届的报名/比赛日期在任何可打开的页面均未见，故全部字段留空；dateHint 仅放 2023 年第十一届的确定赛期，且未写入 ISO 字段。建议由人文社会科学学院刘丹老师向团省委学校部或省青少年事业发展中心直接确认。"
     },
     {
       "id": "nuc-82",
@@ -1834,14 +2168,17 @@
       "url": "http://www.formulastudent.com.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-11-03T00:00:00+08:00",
+      "contestEnd": "2026-11-08T00:00:00+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-10-08T23:59:59+08:00",
+      "dateHint": "FSCC（油车）2026-11-03~08 成都东部新区简州新城天府国际赛道（11-04 为车队注册日）；FSEC&FSAC（电动/无人驾驶）2026-11-16~22 合肥骆岗中央公园机场跑道南段（11-17 注册日）",
+      "confidence": "high",
+      "evidence": "一、2026「吉利杯」中国大学生方程式汽车大赛（FSCC）比赛时间：2026年11月3-8日（11月4日为车队注册日）比赛地点：四川省成都市东部新区简州新城天府国际赛道……（三）油车队须在10月8日提交最终参赛确认回执，并于10月18日前确认提交参赛人员信息。",
+      "sources": [
+        "http://old.formulastudent.com.cn/a7443.html"
+      ],
+      "researchNote": "赛事组委会 2026-09-17 官方公告。registrationEnd 取「油车队最终参赛确认回执 10-08」；电车/无人驾驶车队回执截止 10-20、名单 11-01。车队注册/报名实际在赛事系统（ims.formulastudent.com.cn）内完成，公开通知未给报名开始日。"
     },
     {
       "id": "nuc-83",
@@ -1855,14 +2192,18 @@
       "url": "https://www.sxswlxh.com.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-05-14T00:00:00+08:00",
+      "contestEnd": "2026-05-17T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
       "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "confidence": "medium",
+      "evidence": "5月14日至17日，第九届山西省大学生物理学术竞赛（SXUPT）在我院成功举办。本次竞赛由山西省物理学会主办、我院承办，吸引了来自全省12所高校的15支代表队、共计132名师生参赛。经过3轮预选赛和1轮决赛的激烈角逐……开幕：5月15日上午，第九届山西省大学生物理学术竞赛（SXUPT）在晋中学院图书馆报告厅隆重开幕。——晋中学院新闻2026-05-19 / 2026-05-15",
+      "sources": [
+        "http://www.jzxy.edu.cn/index_xwzx/content_101833.html",
+        "http://physics.jzxy.edu.cn/xwgg/content_101884.html"
+      ],
+      "researchNote": "第九届（2026），晋中学院承办，赛期 5/14—5/17 由承办校官网两篇新闻互证（5/14 开赛、5/15 开幕式、5/17 闭幕）。报名由各校自行组织，未找到省级统一报名通知，故报名字段为 null。下届（第十一届）由吕梁学院承办、第十届在忻州，可作 2027/2028 规划参考。"
     },
     {
       "id": "nuc-84",
@@ -1876,14 +2217,17 @@
       "url": null,
       "note": "官网「无」",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-07-29T08:00:00+08:00",
+      "contestEnd": "2026-08-01T20:00:00+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "测评2026-08-03至08-05在中北大学举行；本届为“全国大学生电子设计竞赛（山西赛区）暨模拟电子系统设计专题赛选拔赛”，山西33所高校685队2055人参赛，中北大学79队",
+      "confidence": "high",
+      "evidence": "根据全国大学生电子设计竞赛（山西赛区）暨模拟电子系统设计专题赛选拔赛工作进度安排，2026年竞赛已于7月29日8时开始，将于8月1日20时结束，历时四天三夜。……测评工作将于8月3日-8月5日在我校举行。",
+      "sources": [
+        "https://cxcy.nuc.edu.cn/info/1037/7352.htm"
+      ],
+      "researchNote": "报名由各校统一向赛区组委会报名，公开页面未见起止日期，故registration留空。该赛事双数年与全国TI杯专题赛初赛合并。"
     },
     {
       "id": "nuc-85",
@@ -1901,10 +2245,14 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "关联的第四届特种装备创新设计大赛（全国，南京理工大学+中国兵工学会主办，指导单位：兵器类专业教指委）：校内报名 2026-07-20 前、作品提交 2026-10-20 前、网评 2026-11-20 前、决赛 2026-12-20 前",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "（第四届特种装备创新设计大赛报名通知）决赛时间：2026年12月20日前……（三）全国赛程：网评：2026年11月20日前，组委会遴选晋级决赛团队；决赛：2026年12月20日前，现场展示+会议答辩。（南理工 2024 报道）「长望杯」第十届南京理工大学武器创新设计大赛决赛暨第三届特种装备创新设计大赛（全国）启动仪式……第三届特种装备创新设计大赛（全国赛）决赛将于今年11月至12月拉开帷幕。",
+      "sources": [
+        "https://jwc.tit.edu.cn/info/1106/7963.htm",
+        "https://zs.njust.edu.cn/20/e5/c4621a336101/page.psp"
+      ],
+      "researchNote": "目录所填官网 xspace.njust.edu.cn 的对应页面多次返回 HTTP 202/空正文，无法读取原文，故未能取得「全国武器创新设计大赛」自身 2026 年赛期。检索发现南理工「长望杯」武器创新设计大赛为校级赛，与之同场启动的全国赛名为「特种装备创新设计大赛」，两者名称不一致，是否同一赛事需向承办方确认，故仅把全国赛（特种装备）日程放入 dateHint，四字段全部 null。"
     },
     {
       "id": "nuc-86",
@@ -1918,14 +2266,17 @@
       "url": "http://robo-maker.org/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-11-21T00:00:00+08:00",
+      "contestEnd": "2026-11-22T00:00:00+08:00",
+      "registrationStart": "2026-09-01T00:00:00+08:00",
+      "registrationEnd": "2026-10-15T23:59:59+08:00",
+      "dateHint": "第十届中国智能机器人格斗及竞技大赛：校赛选拔 2026-08-01~09-30（须先获校赛晋级资格）；作品提交 2026-10-01~10-20；全国初赛（线上评审）2026-11-01~11-05；全国决赛（线下）2026-11-21~11-22；报名费 500 元/队",
+      "confidence": "high",
+      "evidence": "第一步：前置选拔：获取校赛晋级资格 2026.08.01 — 2026.09.30……第二步：登录官方报名系统 2026.09.01 — 2026.10.15……第五步：提交参赛作品，缴纳报名费用 2026.10.01—2026.10.20……第六步：全国初赛（线上评审）2026.11.01 — 2026.11.05……第七步：全国决赛（线下竞技）2026.11.21—2026.11.22。",
+      "sources": [
+        "https://www.cameta.org.cn/index.php?m=content&c=index&a=show&catid=236&id=3741"
+      ],
+      "researchNote": "来源为中国机电一体化技术应用协会（主办单位）官网通知，赛事官网 www.robo-maker.org（目录所填网址）。报名须以学校为单位统一提交，个人不可直接报名。"
     },
     {
       "id": "nuc-87",
@@ -1943,10 +2294,14 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "最近可查为第四届（2024“正泰杯”）：2024年8月开始报名，2024-12-22至12-24在上海松江举行全国总决赛；未检索到2025/2026年（第五届）通知",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "12月22日至24日，第四届全国机械工业设计创新大赛在上海松江隆重举行……大赛自8月开始报名以来，共有来自全国各地的参赛项目达700余项。",
+      "sources": [
+        "https://www.nmu.edu.cn/info/1102/29633.htm",
+        "https://www.mei.net.cn/jxgy/202501/548438279972755349.html"
+      ],
+      "researchNote": "官网 idi.cmpiji.com DNS解析失败（ENOTFOUND），中国机械工业联合会 mei.net.cn 仅检索到2024年第四届启动与表彰通报；2026年赛程无公开信息，全部字段留空。"
     },
     {
       "id": "nuc-88",
@@ -1964,10 +2319,14 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "官网《比赛日程》为常年赛制（未标注年份）：报名至 6 月 30 日（官网「参赛报名」板块登记）；初赛材料提交 6-01~6-30；初赛评审 7-01~8-31（9-01 公布决赛入围）；决赛材料 9-01~10 月；决赛一般于 10 月中下旬至 11 月中旬现场答辩",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "（二）报名：自通知下发之日起至6月30日，各参赛团队需在大赛官网http://pmc.rubbervalley.com「参赛报名」板块登记团队信息……（六）决赛：一般于10月中下旬至11月中旬期间举行。决赛采用现场答辩的形式。",
+      "sources": [
+        "http://pmc.rubbervalley.com/gyds/bsrc/",
+        "http://pmc.rubbervalley.com/tzgg/"
+      ],
+      "researchNote": "官网「通知公告」栏最新一条为 2024-12-24 的第十二届获奖名单，未见 2025/2026 年（第十三/十四届）通知，2026 年具体赛期无法确认，四个字段全为 null。上列为官网《比赛日程》的固定流程表述，未绑定年份，故只能进 dateHint。"
     },
     {
       "id": "nuc-89",
@@ -1981,14 +2340,17 @@
       "url": null,
       "note": "官网「无」",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-09-01T00:00:00+08:00",
+      "contestEnd": "2026-09-02T00:00:00+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "赛事已更名：由「上纬杯」改为「CCE」大学生复合材料设计与制作大赛，第十一届 2026-09-01~09-02 在上海举办（随中国国际复合材料工业技术展览会，展会 2026-09-01~03 国家会展中心上海），33 支代表队参赛",
+      "confidence": "medium",
+      "evidence": "9月1日至9月2日，「CCE」第十一届大学生复合材料设计与制作大赛（原上纬杯）于上海圆满结束。来自西北工业大学、国防科技大学、同济大学、武汉理工大学、东华大学、北京化工大学等高校的33支代表队同台竞技……本次大赛由中国国际复合材料工业技术展览会组委会举办。",
+      "sources": [
+        "https://jxxy.fzu.edu.cn/info/1013/12342.htm"
+      ],
+      "researchNote": "目录中该条目官网为「无」，通过检索发现赛事已更名并挂靠展会组委会；报名经展会/组委会渠道，未见公开报名起止日，故 registration* 为 null。赛期取自参赛高校官方获奖报道（福州大学机械学院），故 medium。"
     },
     {
       "id": "nuc-90",
@@ -2003,14 +2365,17 @@
       "url": null,
       "note": "官网「无」",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-07-15T00:00:00+08:00",
+      "contestEnd": "2026-07-18T00:00:00+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第十一届「欧波同杯」失效分析赛（中国大学生机械工程创新创意大赛赛项之一）2026-07-15~07-18 复旦大学（邯郸路校区）；两级赛制：分区选拔赛→全国总决赛；每校不超过 20 支队伍、每队 2 人",
+      "confidence": "high",
+      "evidence": "2026年中国大学生机械工程创新创意大赛——「欧波同杯」第十一届失效分析赛定于2026年7月15日至18日在复旦大学隆重举行……赛事采取两级赛制，即分区选拔赛和全国总决赛，由分区赛推荐参加全国总决赛选手。现场比赛地点：复旦大学邯郸路校区（邯郸路220号）。",
+      "sources": [
+        "http://www.shixiaofenxi.com/61.html"
+      ],
+      "researchNote": "来源为中国机械工程学会失效分析分会官网（承办方）第一轮通知（2026-04-10）。该页正文在「参赛队数及人数」后被截断，未取得报名截止日期，故 registration* 为 null。目录中该条目官网为「无」。"
     },
     {
       "id": "nuc-91",
@@ -2024,14 +2389,17 @@
       "url": null,
       "note": "官网「无」",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-05-08T00:00:00+08:00",
+      "contestEnd": "2026-05-10T00:00:00+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-01-12T23:59:59+08:00",
+      "dateHint": "第九届全国决赛 2026-05-08~05-10 香港科技大学（广州）；参赛作品介绍 2026-04-15 前提交，2026-04-25 前公布决赛作品名单（依据湘潭大学校赛通知引用的官方文件）",
+      "confidence": "medium",
+      "evidence": "4.参赛选手于2026年4月15日前按照模板格式提交创新作品介绍，经组委会专家初审，确定决赛作品名单，并于2026年4月25日前初公布参加全国决赛作品名单。5.本次焊接创新大赛将于2026年5月8～10日在香港科技大学（广州）举行全国决赛。",
+      "sources": [
+        "https://jwc.xtu.edu.cn/info/1085/4732.htm"
+      ],
+      "researchNote": "报名为各校校内选拔报名（该通知要求 2026-01-12 前交报名表到湘潭大学焊接楼，全国赛不接受个人直接报名），故 registrationStart 记为 null、registrationEnd 采用校内报名截止；来源为高校教务处通知（引用《关于举办第九届全国大学生焊接创新大赛的通知》）。目录中该条目官网为「无」。"
     },
     {
       "id": "nuc-92",
@@ -2049,10 +2417,15 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "赛制惯例（据高校竞赛介绍）：报名截止每年4月底至5月中旬，作品提交截止每年9-10月，全国总决赛拟于10-11月举行；第十三届总决赛2025-11-30在上海工程技术大学落幕（历时八个月，174所高校364件作品）",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "「报名截止时间为每年4月底至5月中旬」「作品提交截止时间为每年9-10月」「全国总决赛拟于10-11月举行，具体时间及决赛形式另行通知」（湘潭大学教务处竞赛介绍）「2025年11月30日，第十三届“东富龙-国药工程杯”全国大学生制药工程设计竞赛全国总决赛在上海工程技术大学圆满落幕」（合肥工业大学）",
+      "sources": [
+        "https://jwc.xtu.edu.cn/info/1281/4135.htm",
+        "http://spysw.hfut.edu.cn/info/1092/4964.htm",
+        "https://bpetc.tju.edu.cn/dhl_13.html"
+      ],
+      "researchNote": "未检索到第十四届（2026年）的官方通知日期，故四个日期字段全部置 null。按惯例2026届总决赛应在2026年10-11月，但这是推断，不写入日期字段。注意区分：中国化工教育协会另有一个「2026年全国大学生制药工程实验竞赛」（中化教协发〔2026〕77号，第一轮通知2026-09-22），是不同赛事，不计入本条。官网 bpetc.tju.edu.cn 仅为天津大学参赛简介页，无赛程。"
     },
     {
       "id": "nuc-93",
@@ -2066,14 +2439,19 @@
       "url": "http://cid.nju.edu.cn",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-08-10T00:00:00+08:00",
+      "contestEnd": "2026-08-13T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第十四届总决赛2026-08-10至08-13在北京师范大学海淀校区举行，155所高校201名学生参赛；参赛资格由各校校赛/省级赛选拔产生",
+      "confidence": "medium",
+      "evidence": "「第十四届全国大学生化学实验竞赛全国总决赛于2026年8月10日至13日在北京师范大学海淀校区圆满落幕。北京大学、浙江大学等155所高校201名优秀学生参加了竞赛活动。」",
+      "sources": [
+        "https://chemistry.buct.edu.cn/2026/0831/c1655a222490/page.htm",
+        "http://chemlab.swu.edu.cn/info/1117/1324.htm",
+        "http://cid.nju.edu.cn"
+      ],
+      "researchNote": "官方通知页 chem.pku.edu.cn（关于举办第十四届全国大学生化学实验竞赛的通知）抓取失败（fetch failed）；chemcenter.zju.edu.cn 的组委会文件为 PDF，无法解析。日期取自北京化工大学化学学院赛后报道（2026-08-31），属事实性报道，故 confidence 记 medium。报名无统一公开截止（参赛者由拔尖/强基基地随机抽取＋省级赛选拔），置 null。"
     },
     {
       "id": "nuc-94",
@@ -2087,14 +2465,17 @@
       "url": "https://www.bmedesign.cn/#/home",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
+      "contestStart": "2026-07-18T00:00:00+08:00",
+      "contestEnd": "2026-07-19T23:59:59+08:00",
+      "registrationStart": "2026-03-15T00:00:00+08:00",
+      "registrationEnd": "2026-04-15T23:59:59+08:00",
       "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "confidence": "medium",
+      "evidence": "六、赛程安排（一）报名与线上评审环节 1.2026年3月15日-4月15日：线上报名 2.2026年5月15日-6月15日：提交预赛作品电子版材料与信息（二）线下竞赛环节 1.2026年7月17日报到 2.2026年7月18日进行预赛 3.2026年7月19日进行决赛 4.2026年7月19日晚举行闭幕式。——华中科技大学《关于组织参加“第十一届全国大学生生物医学工程创新设计竞赛”的通知》2025-12-23。本届竞赛拟定于2026年7月中、下旬在海南线下进行。",
+      "sources": [
+        "http://life.hust.edu.cn/info/2292/12084.htm"
+      ],
+      "researchNote": "第十一届，海南大学（生物医学工程学院、三亚研究院）承办，拟定 2026 年 7 月中下旬在海南线下举行。报名 3/15—4/15、预赛材料 5/15—6/15、线下 7/17 报到—7/18 预赛—7/19 决赛（日级，全部有据）。contestStart 取预赛日 7/18，报到日 7/17 写入 note。官网 www.bmedesign.cn 为 SPA 应用未能读到内容，故以高校转发全文为准，medium。"
     },
     {
       "id": "nuc-95",
@@ -2112,10 +2493,14 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "武术擂台赛为中国机器人大赛（中国机器人大赛赛区）赛项之一（含仿人格斗、轮式格斗、视觉挑战）；2026 年该赛事总决赛 10 月 16—18 日在杭州白马湖国际会展中心举行，但未见武术擂台赛单独赛期公告",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "一、比赛项目……3．武术擂台赛 (1) 仿人格斗 (2) 轮式格斗 (3) 视觉挑战项目……该赛事比赛项目多，比赛周期长，分为校赛、专项赛、总决赛。——齐鲁工业大学《2026中国机器人大赛暨RoboCup机器人世界杯中国赛（中国机器人大赛赛区）校赛的通知》2026-07-13。比赛将于2026年10月16日至18日在白马湖国际会展中心……举行。——中国自动化学会机器人竞赛与培训部2026-08-03",
+      "sources": [
+        "https://rcccaa.drct-caa.org.cn/article_info.php?id=139",
+        "https://dqxy.qlu.edu.cn/2026/0713/c8228a281176/page.htm"
+      ],
+      "researchNote": "本条无独立官网（目录登记为 null）。已确认“武术擂台赛”是 2026 中国机器人大赛（中国机器人大赛赛区）的正式赛项，但组织方未单独发布该赛项的赛期；赛程/秩序册均为 PDF 附件（1790761761741161.pdf、1791438387202555.pdf），本环境 web_fetch 不支持 application/pdf，无法读取，因此只把母赛事日期写入 dateHint，contest 字段一律 null。建议由组委会公众号或致电 13718801721 核实该赛项归入“专项赛（8 月）”还是“总决赛（10 月）”。"
     },
     {
       "id": "nuc-96",
@@ -2129,14 +2514,18 @@
       "url": "http://urc.ilur.org/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
+      "contestStart": "2026-07-21T00:00:00+08:00",
+      "contestEnd": "2026-07-22T00:00:00+08:00",
+      "registrationStart": "2026-04-07T00:00:00+08:00",
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第十九届（2026）国赛 2026-07-21~07-22 福建省泉州市闽南理工学院；校赛/省赛资格选拔先行，各省赛区时间不同；国赛按赛道分站举行",
+      "confidence": "medium",
+      "evidence": "（重庆科技大学 2026-08-05）7月21日至7月22日，第十九届先进机器人及仿真技术大赛国赛在福建省泉州市闽南理工学院举行……（三峡大学 2026-05-11 通知）本届大赛所有赛项的报名均通过大赛官网（www.ilur.org）报名通道进行，报名通道于2026年4月7日开通。各赛项省赛和国赛的具体比赛时间和地点将根据赛程进展滚动确认。",
+      "sources": [
+        "https://jxxy.cqust.edu.cn/info/1028/4298.htm",
+        "https://zs.ctgu.edu.cn/info/1801/1881.htm"
+      ],
+      "researchNote": "报名通道开通日 2026-04-07 来自高校转发的 2026 年大赛通知；公告明确省赛/国赛时间「滚动确认」，无统一报名截止日，故 registrationEnd 为 null。国赛日期取自高校官方获奖报道，故 overall medium。"
     },
     {
       "id": "nuc-97",
@@ -2152,12 +2541,15 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-09-01T00:00:00+08:00",
+      "registrationEnd": "2026-11-18T23:59:59+08:00",
+      "dateHint": "省赛 2026 年 11 月、国赛 2026 年 12 月（原文只到月，未给具体日；「比赛具体时间另行通知」）",
+      "confidence": "medium",
+      "evidence": "「一、时间安排 报名时间：2026年9月1日—2026年11月18日 省赛时间：2026年11月 国赛时间：2026年12月 注：比赛具体时间另行通知」；「举办第十七届全国大学生计算机应用能力与数字素养大赛暨2026第九届传智杯全国大学生数智创新与AI应用大赛」。",
+      "sources": [
+        "http://jwc.xjtu.edu.cn/info/1172/10505.htm"
+      ],
+      "researchNote": "重要变更：该赛事已更名为「全国大学生计算机应用能力与数字素养大赛」，2026 年为第十七届，并与「第九届传智杯」合并举办；原官网 www.5lds.org.cn 已无法解析（DNS ENOTFOUND），报名转至 http://dasai.ityxb.com/。目录中的旧名与旧网址宜同步更新。省赛/国赛仅到月，按铁律不入 contestStart/End。"
     },
     {
       "id": "nuc-98",
@@ -2171,14 +2563,17 @@
       "url": "http://www.ncccu.org.cn",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-11-29T00:00:00+08:00",
+      "contestEnd": "2026-12-20T23:59:59+08:00",
+      "registrationStart": "2026-07-09T00:00:00+08:00",
+      "registrationEnd": "2026-11-25T23:59:59+08:00",
+      "dateHint": "程序设计挑战赛：区域赛/省赛报名 2026-07-09—11-25，区域赛/省赛考试 2026-11-29，国赛晋级公示 2026-12-15 16:00，国赛 2026-12-20，国赛获奖公示 2026 年 12 月底",
+      "confidence": "high",
+      "evidence": "官网赛项页：「报名时间 2026年7月9日—11月25日」「区域赛/省赛时间 2026年11月29日」「晋级国赛公示 2026年12月15日16点」「国赛时间 2026年12月20日」「国赛公示 2026年12月底」；正文：「区域赛赛段个人赛各科目收取报名、考试及评审费人民币80元/科」。",
+      "sources": [
+        "http://www.ncccu.org.cn/index/Paper/case4.html?way=1"
+      ],
+      "researchNote": "第八届（2026）。字段取「程序设计挑战赛」赛项（官网 case4 页）；Office、人工智能、大数据、数字媒体等赛项同期举行，报名/考试日期可能微调，以各赛项页面为准。C/C++/Java/Python 四语言分科评奖。"
     },
     {
       "id": "nuc-99",
@@ -2192,14 +2587,18 @@
       "url": "https://www.h3c.com/cn/pub/2026_Event/h3c_cup2026/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-04-11T00:00:00+08:00",
+      "contestEnd": "2026-05-30T23:59:59+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-03-31T23:59:59+08:00",
+      "dateHint": "第十五届赛程轴（官网日程图）：2025 年 12 月启动报名 → 2026-03-31（报名截止）→ 2026-04-11（预赛）→ 2026-05-30（复赛）→ 2026 年 10 月（决赛，时间地点另行通知）",
+      "confidence": "high",
+      "evidence": "官网首页：「预赛介绍 考试时间 2026年4月11日，全国统一进行考试。」「复赛介绍 考试时间 2026年5月30日，全国统一进行考试。」赛项日程轴：「2025年12月 / 2026年3月31日 / 2026年4月11日 / 2026年5月30日 / 2026年10月」，注「决赛时间、地点视情况另行通知」。",
+      "sources": [
+        "https://www.h3c.com/cn/pub/2026_Event/h3c_cup2026/",
+        "https://www.h3c.com/cn/pub/2026_Event/h3c_cup2026/wlsd.html"
+      ],
+      "researchNote": "第十五届（2026 年决赛年）。报名起始只到「2025 年 12 月」这一月粒度，按铁律留 null（仅入 dateHint）；2026-03-31 为日程轴第二个节点（报名截止），与预赛 4/11、复赛 5/30 顺序吻合。决赛在 2026 年 10 月，具体日期官方仍标「另行通知」，故 contestEnd 取复赛 5/30 而非 10 月。网络赛道分本科组/职业组个人赛，安全赛道为 3 人团队赛。"
     },
     {
       "id": "nuc-100",
@@ -2217,10 +2616,15 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "赛事按“赛季”举办（春季赛/秋季赛），第十四届为2025—2026赛季、中北大学2025年曾发布校赛暨第十四届参赛通知；据此推断2026年对应第十五届（2026—2027赛季），但未检索到2026年赛程通知。历届春季赛约在4—5月、秋季赛约在10—11月（此为模式推断，未取得2026年原文，不作为日期依据）。",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "POCIB 官网（www.pocib.com）首页“课程动态”栏最新条目为“2024年11月POCIB升级公告（09-02）”“2024年五一国际劳动节放假通知”，未见2025—2026或2026—2027赛季大赛通知与赛程表；中北大学经管学院2025年通知标题为《2025年中北大学POCIB校赛暨第十四届POCIB全国外贸从业能力大赛通知》。",
+      "sources": [
+        "https://www.pocib.com/",
+        "https://winner.pocib.com/2024-2025/teams.html?session=11",
+        "https://jgy.nuc.edu.cn/info/1047/18238.htm"
+      ],
+      "researchNote": "官网新闻区长期未更新（最新为2024年），大赛通知实际发布在 winner.pocib.com 赛季页（需登录/赛季切换，本轮未取到2026赛季页面）。四个字段全部无据可填，按铁律留空。"
     },
     {
       "id": "nuc-101",
@@ -2239,10 +2643,15 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "赛事分春季赛与秋季赛两季举行（2025年可查到的最近届次为第十届秋季赛、第十一届春季赛），2026年对应届次与赛期待核；未检索到2026年报名通知与比赛日程。",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "目录中的官网 http://ds.ocale.net 返回“Not Found / HTTP Error 404. The requested resource is not found.”；备用站点 https://www.ocale.net/portal 首页内容为空（“No headline news.”“No course was added to the portal.”），无任何赛事日程；第三方院校通知仅见2025年及更早届次（如《关于举办第十届OCALE全国跨境电商创新创业能力大赛（秋季赛）外语外贸学院选拔赛通知》）。",
+      "sources": [
+        "http://ds.ocale.net",
+        "https://www.ocale.net/portal",
+        "https://yywyxy.gtcfla.edu.cn/info/1020/6306.htm"
+      ],
+      "researchNote": "官网已失效或改版，未找到可用的2026年赛程原始页面；四个字段全部留空。"
     },
     {
       "id": "nuc-102",
@@ -2260,10 +2669,14 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "未取得本条独立的2026年通知。该名称疑为序号40“全国企业竞争模拟大赛”的旧称（同一平台 iBizSim、同一主办方中国管理现代化研究会决策模拟专业委员会），若确认同一赛事，则2026年赛程参见序号40：校内初赛选拔截止2026-03-23，全国总决赛2026年6月上旬（河北唐山）。",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "iBizSim 官方《2026年全国企业竞争模拟大赛通知与规程》：“指导单位：中国管理现代化研究会、高等学校国家级实验教学示范中心联席会经管学科组 主办单位：中国管理现代化研究会决策模拟专业委员会……竞赛平台：企业决策赛道 采用iBizSim企业竞争模拟系统……网址https://www.ibizsim.cn”；目录中本条 url 为 null、备注“官网「无」”，未能定位到以“全国高等院校企业竞争模拟大赛”为名的2026年独立通知。",
+      "sources": [
+        "http://www.ibizsim.cn/main/news/275",
+        "http://www.ibizsim.com.cn/"
+      ],
+      "researchNote": "“与序号40同一赛事”属推断，未获原始文件证实，仅供交叉核对，不作为日期依据；四个字段留空。建议向赛事负责人（刘俊生）核实是否为同一比赛。"
     },
     {
       "id": "nuc-103",
@@ -2277,14 +2690,18 @@
       "url": null,
       "note": "官网「无」",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-10-31T00:00:00+08:00",
+      "contestEnd": "2026-11-28T23:59:59+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-09-30T23:59:59+08:00",
+      "dateHint": "第九届（2026年）：校赛2026-10-14；复赛2026-10-31；全国总决赛2026-11-28。报名（校内）即日起至2026-09-30 24:00，3人一队。",
+      "confidence": "medium",
+      "evidence": "南京财经大学教务处《关于举办2026年第九届“福思特杯”全国大学生审计精英挑战赛南京财经大学校赛的通知》（2026-09-21）：“四、比赛安排 1.校赛阶段 2026年10月14日 2.复赛阶段 2026年10月31月（原文如此）3.全国总决赛 2026年11月28日”“五、报名时间及方式 1.报名时间：即日起至2026年9月30日24点。”",
+      "sources": [
+        "http://jwc.nufe.edu.cn/info/1031/18799.htm",
+        "https://www.boustead.edu.cn/kuaiji/2026_09/22_16/content-24848.shtml"
+      ],
+      "researchNote": "registrationEnd 为校内报名截止日（各校可能不同）；contestStart 取全国复赛日、contestEnd 取全国总决赛日。"
     },
     {
       "id": "nuc-104",
@@ -2300,12 +2717,17 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-04-20T00:00:00+08:00",
+      "registrationEnd": "2026-05-20T23:59:59+08:00",
+      "dateHint": "2026年赛事归入「第五届全国高校国产软件应用与设计创新大赛」体系：全国报名2026-04-20至2026-05-20，报名网址 www.softcontest.cn；校内选拔赛报名截止同为2026-05-20；全国决赛时间通知中未给出",
+      "confidence": "medium",
+      "evidence": "「决定启动第五届全国高校国产软件应用与设计创新大赛」「（1）报名时间：2026年4月20日-2026年5月20日」「（2）报名网址：www.softcontest.cn」",
+      "sources": [
+        "https://ggxy.ahut.edu.cn/info/1083/10874.htm",
+        "https://www.qdhhc.edu.cn/kindeditor/attached/file/20260511/20260511091614_0869.pdf",
+        "http://www.softcontest.cn"
+      ],
+      "researchNote": "2026年该赛与第五届全国高校国产软件应用与设计创新大赛合并举办（安徽工业大学2026-05-14转发通知）；青岛黄海学院同名附件标注「报名截止时间2026年5月17日」，与安徽工大的5月20日略有出入，取较宽松的5月20日并在 note 中保留差异。全国决赛阶段时间未在可读页面给出，contest 字段置 null。官网 softcontest.cn 为动态站点，未取到正文。"
     },
     {
       "id": "nuc-105",
@@ -2324,10 +2746,15 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "第十一届（2026年）：报名与校内选拔2026年6—9月；校赛报名2026-05-28至06-14、校赛2026-06-21（广东金融学院）；山东管理学院校内报名截止2026-06-12。赛制为校赛（个人赛，金蝶云·星空理论）→区域赛（云端考试：企业数字化理论/实务）→全国总决赛（十强争夺赛+冠军争霸赛）。区域赛、全国总决赛日期未查到。",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "广东金融学院实验教学中心《第十一届全国大学生企业数字化管理创新大赛火热开启》（2026-06-04）：“五、赛程安排（一）报名与校内选拔(2026年6-9月）。以学校为单位，参赛团队指定一名指导教师注册登录全国大学生企业数字化管理创新大赛官网进行报名……校赛报名时间：2026年5月28日—6月14日 校赛举办时间：2026年6月21日（周日）”；山东管理学院通知：“二、比赛时间 报名日期：2026年6月12日前 比赛时间：QQ群（170078690）另行通知”；“大赛采用校内赛、区域赛、全国总决赛三级赛制”。",
+      "sources": [
+        "https://syjy.gduf.edu.cn/info/1172/2002.htm",
+        "https://jwc.sdmu.edu.cn/info/1053/5706.htm",
+        "https://kone.kingdee.com/bigdataintelligentcompetition"
+      ],
+      "researchNote": "只查到校级与“6—9月”阶段信息，区域赛/国赛无确定日期，四个字段留空。"
     },
     {
       "id": "nuc-106",
@@ -2344,11 +2771,15 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
+      "registrationEnd": "2026-06-06T23:59:59+08:00",
+      "dateHint": "2026年“商谈赢家杯”全国大学生商务谈判大赛由全国经济管理院校工业技术学研究会沟通与谈判委员会主办，在浙江横店举办（全国赛具体日期未查到）。西安工业大学校内选拔赛：报名至2026-06-06；商务谈判策划书提交2026-06-08前；模拟谈判2026-06-17。",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "西安工业大学经济管理学院《关于举办2026年“商谈赢家杯”全国大学生商务谈判大赛校内选拔赛的通知》（2026-05-27）：“全国经济管理院校工业技术学研究会沟通与谈判委员会将在浙江横店举办 2026 年‘商谈赢家杯’全国大学生商务谈判大赛”“3.校赛时间：2026年6月8日前 提交商务谈判策划书；2026年6月17日 商务谈判模拟谈判”“四、报名方式 报名时间：即日起至2026年6月6日。”",
+      "sources": [
+        "https://jgxy.xatu.edu.cn/info/1056/8359.htm",
+        "https://www.negotiationchina.com/mobile/default.aspx"
+      ],
+      "researchNote": "registrationEnd 为校内报名截止；全国赛（横店）日期只在附件PDF《2026年“商谈赢家杯”全国大学生商务谈判大赛通知》中，PDF未能解码读取，故 contest 字段留空。"
     },
     {
       "id": "nuc-107",
@@ -2364,14 +2795,18 @@
       "url": null,
       "note": "官网「无」",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-10-25T09:00:00+08:00",
+      "contestEnd": "2026-11-07T18:00:00+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-10-17T18:00:00+08:00",
+      "dateHint": "第十届（2026年）辽宁省选拔赛（=省赛）：网络培训2026-09-19；报名截止2026-10-17 18:00；校积分赛积分截止2026-10-19 23:59；审核推荐2026-10-20至10-22；初赛2026-10-25 09:00-18:00（抽签10-24）；决赛2026-11-07 09:00-18:00（抽签11-06）；胜出者晋级全国总决赛（日期未查到）。三主题：经济学综合博弈、财政学与公共管理决策、智慧银行数字化运营。",
+      "confidence": "medium",
+      "evidence": "沈阳理工大学创新创业学院《关于组织参加2026年第七届辽宁省高校经济决策虚仿实验大赛（暨第十届全国高校经济决策虚仿实验大赛辽宁省选拔赛）的通知》（2026-09-09）：“四、竞赛时间及报名方式 1.竞赛时间 网络培训时间：2026年9月19日 报名截止时间：2026年10月17日18:00 校积分赛获取积分截止时间：2026年10月19日23:59 审核推荐时间：2026年10月20日-10月22日23:59 初赛比赛时间（校内现场集中比赛）：10月25日9:00-18:00 决赛比赛时间（校内现场集中比赛）：11月7日9:00-18:00”；大连工程学院通知同文。",
+      "sources": [
+        "https://cxcyxy.sylu.edu.cn/info/1089/3360.htm",
+        "http://cxcyglpt.dlutci.edu.cn/comp/front/comp/noticedetail?id=5"
+      ],
+      "researchNote": "所填日期为辽宁省选拔赛（省赛）日程，各省赛区时间不同，全国总决赛日期未查到。报名截止2026-10-17 18:00即今日，需尽快确认。"
     },
     {
       "id": "nuc-108",
@@ -2387,12 +2822,16 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-09-01T00:00:00+08:00",
+      "registrationEnd": "2026-10-10T23:59:59+08:00",
+      "dateHint": "第九届（2026年，与“正保会计网校杯”第十五届全国校园财会大赛合并举办）：全国初赛（线上个人赛）报名及比赛2026年4月—6月；全国复赛（线上团队赛）报名2026-09-01至10-10，比赛2026-10-17，平台试用2026-09-15至10-14；全国总决赛2026年11月（线下，具体日未公布）。",
+      "confidence": "medium",
+      "evidence": "安徽工业大学商学院《关于举办全国高校企业价值创造实战竞赛校赛的通知》（2026-04-29）：“五、竞赛时间 全国初赛（线上）：报名时间2026年4月-2026年6月，比赛时间2026年4月-2026年6月；全国复赛（线上）：报名时间2026年9月1日-10月10日，比赛时间2026年10月17日，平台试用2026年9月15日-10月14日；全国总决赛：比赛时间2026年11月”。",
+      "sources": [
+        "https://sxy.ahut.edu.cn/info/1022/7019.htm",
+        "https://www.netinnet.cn/match/"
+      ],
+      "researchNote": "registrationStart/End 与 contestStart 取“全国复赛”环节（当前正在进行的报名窗口）；全国总决赛只知11月，contestEnd 留空。全国初赛4—6月见 dateHint。"
     },
     {
       "id": "nuc-109",
@@ -2409,11 +2848,15 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-04-15T17:00:00+08:00",
+      "dateHint": "第七届（2026年，中国物流与采购联合会、中国物流学会主办）；四个赛项（供应链实战、商贸供应链运营、创客训练营、国际赛项）：报名截止2026-04-15 17:00；省赛2026-04-26前；全国初赛2026-05-09；全国总决赛2026年6月初（具体安排另行通知，未查到精确日期）。国际赛项拟定2026年4月启动。",
+      "confidence": "medium",
+      "evidence": "北京物资学院物流学院《关于举办第七届全国供应链大赛暨我校校园赛报名的通知》（2026-03-25）：“四、赛程安排 供应链实战赛项、商贸供应链运营赛项分别设置省赛、全国初赛和全国总决赛三个环节……1. 报名：2026年4月15日17:00截止；2. 省赛：2026年4月26日前；3. 全国初赛：2026年5月9日；4. 全国总决赛：2026年6月初前，具体安排另行通知。”",
+      "sources": [
+        "https://wlxy.bwu.edu.cn/info/1016/15484.htm",
+        "http://dspt.clppx.org.cn/index/gylhome"
+      ],
+      "researchNote": "contestStart 取全国初赛日；全国总决赛只公布“6月初前”，按铁律未写入具体日期，contestEnd 留空。"
     },
     {
       "id": "nuc-110",
@@ -2427,14 +2870,18 @@
       "url": "https://www.netinnet.cn/match/index",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-04-25T00:00:00+08:00",
+      "contestEnd": "2026-05-30T23:59:59+08:00",
+      "registrationStart": "2026-03-16T00:00:00+08:00",
+      "registrationEnd": "2026-04-19T23:59:59+08:00",
+      "dateHint": "第十四届（2026年，中国商业会计学会主办）：本科组校内赛报名2026-03-16至04-09、校内赛2026-04-11或04-12；全国选拔赛（线上）报名2026-03-16至04-19、比赛2026-04-25、平台试用2026-03-31至04-22；全国总决赛2026-05-30。研究生组无总决赛（校内赛+全国赛，全国赛同为04-25）。",
+      "confidence": "medium",
+      "evidence": "南通大学商学院转发《关于举办“网中网杯”大学生财务决策大赛的通知》（2026-03-26）：“中国商业会计学会特启动 2026 年第十四届‘网中网杯’大学生财务决策大赛……（一）本科组 1.校内赛 报名时间：2026 年 3 月 16 日—4 月 9 日 比赛时间：2026 年 4 月 11 日或 4 月 12 日 2.全国选拔赛（线上）报名时间：2026 年 3 月 16 日—4 月 19 日 比赛时间：2026 年 4 月 25 日 平台试用：2026 年 3 月 31 日—4 月 22 日 3.全国总决赛（具体安排以决赛通知为准）比赛时间：2026 年 5 月 30 日”。",
+      "sources": [
+        "https://sem.ntu.edu.cn/2026/0326/c11410a297045/page.htm",
+        "https://www.netinnet.cn/match/index"
+      ],
+      "researchNote": "registrationStart/End 取全国选拔赛报名窗口（校内赛报名更早、截止04-09）；contestStart 为全国选拔赛、contestEnd 为全国总决赛。"
     },
     {
       "id": "nuc-111",
@@ -2448,14 +2895,18 @@
       "url": "http://www.lscat.cn",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2025-12-27T00:00:00+08:00",
+      "contestEnd": "2026-03-21T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第十四届（2025 年 12 月—2026 年 3 月）：校赛 2025-12-22 17:00—17:30；初赛（线上）2025-12-27；复赛（线上）2026-03-07；决赛（线下）2026-03-21；校赛报名 2025-12-15—12-21。选手须在大赛官网 www.lscat.cn 或公众号“LSCAT”注册报名",
+      "confidence": "medium",
+      "evidence": "宁波工程学院文传学院《第十四届全国口译大赛宁波工程学院校赛报名通知》（2025-12-15）：“第十四届全国口译大赛将于2025年12月至2026年3月举行”；赛程表：“校赛 2025年12月22日（周一）17:00-17:30……初赛 2025年12月27日 线上……复赛 2026年3月7日 线上……决赛 2026年3月21日 线下”；“本届大赛参赛选手由各高校先自行选拔，选拔出来的参赛选手统一在大赛官网（www.lscat.cn）或关注公众号‘LSCAT’注册报名”。",
+      "sources": [
+        "https://wcxy.nbut.edu.cn/info/1042/2371.htm",
+        "https://www.lscat.cn/notice/list.html"
+      ],
+      "researchNote": "lscat.cn 通知公告列表只挂微信公众号链接，mp.weixin.qq.com 抓取被拦（“环境异常，完成验证后可继续访问”），故改用高校校赛通知（转载全国赛程）。contestStart 2025-12-27 与 contestEnd 2026-03-21 属同一届（第十四届），该届跨 2025/2026 两年，决赛在 2026-03；第十五届（2026 年底启动）尚未发布任何日期。报名起止仅有校赛口径（12-15—12-21），未填入全国报名字段。"
     },
     {
       "id": "nuc-112",
@@ -2471,12 +2922,15 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-09-17T00:00:00+08:00",
+      "registrationEnd": "2026-10-09T00:00:00+08:00",
+      "dateHint": "2026 年（山西工程技术学院校赛通知，2026-09-16）：报名 2026-09-17—10-08 24:00；初赛 2026-10-15（学习通答题）；复赛 2026-10-22（答题+提交视频）；华北五省（市、自治区）决赛 2026 年 11—12 月。山西赛区省赛另行通知",
+      "confidence": "medium",
+      "evidence": "《【人文竞赛】关于举办2026年华北五省(市、 自治区)大学生人文知识大赛校赛的通知》（2026-09-16）：“三、赛程安排：报名：2026年9月17日-10月8日 初赛：2026年10月15日 复赛：2026年10月22日 华北五省(市、自治区)决赛：2026年11月至12月”；“报名时间截止2026年10月8日24:00，加入报名QQ群后修改群昵称为‘姓名+班级’”“参赛者加入QQ群……即为报名”。",
+      "sources": [
+        "https://www.sxit.edu.cn/rwzx/info/1022/3062.htm"
+      ],
+      "researchNote": "该赛事报名主渠道确为微信公众号/QQ群，无公开网页报名系统；本条信息来自山西省内高校（山西工程技术学院）的 2026 校赛通知网页，是能找到的最接近中北大学校情的公开赛程。registrationEnd 按原文“10月8日24:00”写作 2026-10-09T00:00:00+08:00（同一时刻，非虚构）；contestStart 只知日期不知时刻，按当日 00:00 记；华北五省决赛仅到“月”级，故 contestEnd 留空。"
     },
     {
       "id": "nuc-113",
@@ -2490,14 +2944,18 @@
       "url": null,
       "note": "报名渠道为微信公众号：词达人公众号",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-05-10T00:00:00+08:00",
+      "contestEnd": "2026-09-19T23:59:59+08:00",
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-04-30T23:59:59+08:00",
+      "dateHint": "第六届（2026）：比赛期 2026 年 5—9 月；校赛 2026-05-10—05-17；市赛 2026-06-27；全国决赛 2026-09-19；报名 即日起—2026-04-30，不收费",
+      "confidence": "medium",
+      "evidence": "首都经济贸易大学教务处《关于2026年全国大学生英语词汇能力大赛的通知》（2026-04-21）：“第六届‘外教社•词达人杯’全国大学生英语词汇能力大赛……将于今年5-9月举行”；“比赛时间：2026年5月-9月 校赛：2026年5月10日-5月17日（校赛中每组别成绩排名前10%（含）且不超过500人晋级省赛）市赛：2026年6月27日（每组别成绩排名前5%（含）的选手晋级全国决赛……）全国决赛：2026年9月19日”“报名时间：即日起 – 4月30日 报名费用：大赛不收取报名费”。",
+      "sources": [
+        "https://jwc.cueb.edu.cn/jwgg/35d2871fa5954d8588f9fecec8baef86.htm",
+        "https://wxy.xatu.edu.cn/20260417.pdf"
+      ],
+      "researchNote": "报名入口为词达人公众号/校内微信群，无公开网页报名页；报名开始日原文仅写“即日起”（通知发布 2026-04-21），故 registrationStart 留空。除首经贸外，西安工业大学（wxy.xatu.edu.cn，搜索结果中的 2026-04-17 通知 PDF）亦为同期同类通知（PDF 未能取文本）。数据来源为高校教务处转发官方通知，非大赛官网原始公告。"
     },
     {
       "id": "nuc-114",
@@ -2513,12 +2971,15 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-03-20T00:00:00+08:00",
+      "registrationEnd": "2026-06-20T23:59:59+08:00",
+      "dateHint": "第 12 届（2026）：主赛道投稿 2026-03-20—06-20；同期专项赛：中国好礼文创设计专项赛 2026-04-29—07-01、第五届雷锋精神国际文化创意设计专项赛 2026-03-05—07-01、WZD2026 纹藏国际纹样设计专项赛 2026-03-12—07-07、“大美中国·字”专项赛 2026-05-26—07-01、第五届荆楚文化创新设计大赛 2026-05-29—09-01",
+      "confidence": "high",
+      "evidence": "东方设计奖官网首页（oda.org.cn）：“投稿时间：2026年3月20日—2026年6月20日”；专项赛列表：“中国好礼文创设计专项赛 2026-04-29 ~ 2026-07-01”“第五届雷锋精神国际文化创意设计专项赛 2026-03-05 ~ 2026-07-01”“WZD2026纹藏国际纹样设计专项赛 2026-03-12 ~ 2026-07-07”“第五届荆楚文化创新设计大赛 2026-05-29 ~ 2026-09-01”“‘大美中国·字’专项赛 2026-05-26 ~ 2026-07-01”“2026年第12届东方设计奖主视觉设计 2025-11-25 ~ 2025-12-31”。",
+      "sources": [
+        "https://oda.org.cn/"
+      ],
+      "researchNote": "官网只公布投稿起止（03-20—06-20），未在首页给出评审/颁奖日级时间，故 contestStart/End 留空。截止日原文只到“6月20日”，按当日 23:59:59 归一化。报名与投稿同一动作，入口 https://match.oda.org.cn/。"
     },
     {
       "id": "nuc-115",
@@ -2534,12 +2995,16 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-08-15T00:00:00+08:00",
+      "registrationEnd": "2026-10-26T23:59:59+08:00",
+      "dateHint": "2026 年（官网称“2026 KTK 设计奖”，规章页标题即“2026 KTK设计奖·全球华人设计比赛”）：2026-08-15 大赛启动发布并开始征集；作品征集 2026-08-15—10-26（比赛截止日期 2026-10-26）；分区赛评审 2026 年 11 月上旬；全国赛评审 2026 年 11 月中下旬；学术活动 2026 年 12 月下旬。主题一“礼”、主题二“反战”，另设自由主题；学生组报名费 50 元/件",
+      "confidence": "high",
+      "evidence": "KTK 官网《2026 KTK设计奖·全球华人设计比赛 参赛规章及详情》：“九、比赛截止日期：2026年10月26日”；“十四、大赛日程 2026年8月15日：大赛启动发布 2026年8月15日至10月26日：作品征集期 2026年11月上旬：分区赛评审期 2026年11月中下旬：全国赛评审期 2026年12月下旬：举办相关学术活动（具体活动时间以官网公布的时间为准）”；“八、提交作品 1、请登录大赛官方网站（www.ktkda.cn）注册并选择相应组别……完成作品提交。”",
+      "sources": [
+        "http://www.ktkda.cn/competition.aspx",
+        "http://www.ktkda.cn/news.aspx"
+      ],
+      "researchNote": "赛程为官网规章原文，日级只到启动日与截止日；评审期为“上旬/中下旬”月内区间，不写入 ISO。截止日原文无时刻，按当日 23:59:59 归一化。官网“最新资讯”最新一条为 2026-01-31（2025 年度获奖），2026 年征集未见独立公告页，规章页即为权威赛程来源。"
     },
     {
       "id": "nuc-116",
@@ -2555,12 +3020,16 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-03-15T00:00:00+08:00",
+      "registrationEnd": "2026-05-15T23:59:59+08:00",
+      "dateHint": "第 35 届（2026）：作品征集 2026-03-15—05-15；校园创意分享会 2026 年 3—4 月；赛区评审第一阶段（线上互评）2026-05-25—05-31；第二阶段（分赛区复审及全球决审）2026-06-13—06-14；第三阶段（全球总决审）2026 年 6 月；金犊创意节（颁奖典礼、论坛、展览）2026 年 7—9 月；金犊游学季 2026 年 7—8 月；优秀作品全球巡展 2026 年 9 月—2027 年 5 月",
+      "confidence": "medium",
+      "evidence": "优本视觉《第35届金犊奖国际竞赛》赛事页（转载官方简章）：“作品征集 2026年3月15日-5月15日”“校园创意分享会2026年3月-4月”“赛区评审会：第一阶段（线上互评）：2026年5月25日-5月31日 第二阶段（分赛区复审及全球决审）：2026年6月13日-6月14日 第三阶段（全球总决审）：2026年6月”“金犊创意节（颁奖典礼、论坛、展览）2026年7月-9月”“报名方式 方式：一律官网在线交件，请至www.ad-young.com报名（新用户需先注册）”。",
+      "sources": [
+        "https://iuben.cn/wcsj/6356.html",
+        "https://www.ad-young.com/Home/index"
+      ],
+      "researchNote": "ad-young.com 官网首页是纯 JS 模板页面（大量 {{item.Title}} 占位符，无静态正文），无法读取赛程；故采用赛事资讯站 iuben.cn 对第 35 届简章的转载（medium）。截止日原文无时刻，按当日 23:59:59 归一化。"
     },
     {
       "id": "nuc-117",
@@ -2576,12 +3045,17 @@
       "security": false,
       "contestStart": null,
       "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationStart": "2026-09-10T00:00:00+08:00",
+      "registrationEnd": "2026-11-30T17:00:00+08:00",
+      "dateHint": "2026 年秋季征集大赛：参赛（报名+作品提交）2026-09-10 至 2026-11-30 17:00，以学院奖官方通知为准；学院奖一年两季（春季/秋季征集），本条为秋季季次",
+      "confidence": "medium",
+      "evidence": "重庆交通大学旅游与传媒学院《关于组织参加中国大学生广告艺术节学院奖2026年秋季征集大赛的通知》（2026-09-09）：“（二）参赛时间 2026年 9月10日至11月30日下午17:00，具体以学院奖官方通知为准。”；“（三）参赛流程 第1步：登陆官网 登陆学院奖官网下载命题（xyj.5iidea.com）第2步：作品创作 第3步：注册账号完善信息 在作品提交平台注册，填写报名表、承诺书，按要求上传作品成功后，系统将自动生成作品参赛报名表。”",
+      "sources": [
+        "http://rwxy.cqjtu.edu.cn/info/1282/6158.htm",
+        "https://yscm.yangtzeu.edu.cn/info/1087/12014.htm",
+        "https://www.5iidea.com/"
+      ],
+      "researchNote": "5iidea.com 与 xyj.5iidea.com 均为 JS 单页应用（返回“加载中...”，无静态正文），无法读取官方赛程；长江大学传媒学院（yscm.yangtzeu.edu.cn）亦有同期 2026 秋季征集通知可交叉印证。截止时刻原文写明“下午17:00”，属原文数据。该赛事一年分春季/秋季两次征集，本条只覆盖 2026 秋季季次；春季季次的 2026 年日期本轮未查到可靠页面，故未写入。"
     },
     {
       "id": "nuc-118",
@@ -2595,14 +3069,17 @@
       "url": "http://www.mooc.test.org",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-10-31T00:00:00+08:00",
+      "contestEnd": "2026-12-06T23:59:59+08:00",
+      "registrationStart": "2026-09-20T00:00:00+08:00",
+      "registrationEnd": "2026-10-30T23:59:59+08:00",
+      "dateHint": "四阶段：报名 2026.09.20-10.30、预选赛 2026.10.31-11.01、省赛 2026.11.14-11.15、总决赛 2026.12.05-12.06",
+      "confidence": "medium",
+      "evidence": "「一、赛程安排 赛程分为四个阶段，分别是：报名阶段、预选赛阶段、省赛阶段、总决赛阶段。（1）报名阶段：2026.09.20-10.30（2）预选赛阶段：2026.10.31-11.01（3）省赛阶段：2026.11.14-11.15（4）总决赛阶段：2026.12.05-12.06」。赛项：拓思杯开发者测试、慕测杯Web应用测试、凯云杯嵌入式测试、微信小微AI助手评测专项赛。",
+      "sources": [
+        "https://jwc.cwxu.edu.cn/info/1094/5967.htm"
+      ],
+      "researchNote": "第十一届（2026）。无锡学院教务处 2026-09-21 通知，赛程引自大赛组委会。报名正在进行中（截止 10/30），是 20 条中最近的可报名赛事之一。本校学生仅可报个人赛。官网 mooc.test.org 未能打开，故以高校教务处通知为准（confidence medium）。"
     },
     {
       "id": "nuc-119",
@@ -2616,14 +3093,17 @@
       "url": "http://swcontest.com.cn/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-02-03T00:00:00+08:00",
+      "contestEnd": "2026-05-31T23:59:59+08:00",
+      "registrationStart": "2025-12-02T10:00:00+08:00",
+      "registrationEnd": "2026-02-02T18:00:00+08:00",
+      "dateHint": "第十九届：报名 2025-12-02 10:00—2026-02-02 18:00（与区域赛初赛作品提交同步截止）；区域赛 2026-02-03—04-19；全国赛复赛 2026-04-21—04-30（4/23 18:00 前交材料）；全国赛决赛及颁奖 2026-05-30—05-31",
+      "confidence": "medium",
+      "evidence": "「六、比赛时间 1. 区域赛：2026年2月3日—4月19日……2. 全国赛复赛：2026年4月21日—4月30日（4月23日18:00前提交材料）；3. 全国赛决赛及颁奖：2026年5月30日—5月31日。」「报名日期：2025年12月2日10:00—2026年2月2日18:00（报名与区域赛初赛作品提交同步截止）」。",
+      "sources": [
+        "https://cst.hitwh.edu.cn/_t6/2025/1215/c371a208672/page.htm"
+      ],
+      "researchNote": "第十九届（2026），示范性软件学院联盟主办、西北工业大学承办，赛题「AI无界·创见未来」，赛项为软件设计创新赛。哈工大（威海）计算机学院 2025-12-15 通知。报名跨年（2025-12 开始），属 2026 届正常周期。官网 www.swcontest.com.cn 抓取返回空页面，故以高校通知为据（confidence medium）。"
     },
     {
       "id": "nuc-120",
@@ -2641,10 +3121,15 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "第十六届（2026）：实施方案 2026-02-03 发布，总决赛成绩 2026-07-15 公布，电子版获奖证书 2026-09-09 公布——可推断总决赛在 2026 年 7 月上旬前后，但页面未给出具体赛期。往年（第十五届）总决赛于 2025-04-26 在中国石油大学（北京）举行、4-28 颁奖",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "通知公告：「关于第十六届中国石油工程设计大赛总决赛成绩公布……中国石油工程设计大赛组委会 2026年7月15日」；新闻：「第十五届中国石油工程设计大赛总决赛在中石大成功举行 04-26」「第十五届中国石油工程设计大赛颁奖大会在中石大举办 04-28」；实施方案页：「第十六届中国石油工程设计大赛实施方案 大赛组委会秘书处 2026-02-03」。",
+      "sources": [
+        "https://cpedc.cup.edu.cn/c/",
+        "https://cpedc.cup.edu.cn/c/tzgg/769.htm",
+        "https://cpedc.cup.edu.cn/c/tzgg.htm"
+      ],
+      "researchNote": "官网《第十六届实施方案》为 PDF（application/pdf），本环境无法解析正文，故报名与比赛日期未能取证；通知公告列表页也未列出报名通知。严格按铁律，四个字段全部留 null，只把可确证的节点（方案发布 2026-02-03、成绩公布 2026-07-15）与往年赛期放进 dateHint。建议后续人工下载该 PDF 或用浏览器打开 https://cpedc.cup.edu.cn/c/dsfa/739.htm 补录。另注：该赛事主体为石油工程，与软件学院仅弱相关。"
     },
     {
       "id": "nuc-121",
@@ -2659,14 +3144,19 @@
       "url": null,
       "note": "官网「无」",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
+      "contestStart": "2026-08-19T00:00:00+08:00",
+      "contestEnd": "2026-08-20T23:59:59+08:00",
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "dateHint": "第12届决赛2026-08-19至08-20在西安科技大学举行，为第36届全国高校安全科学与工程学术年会组成部分；校内选拔：作品提交截止2026-05-20，校赛各环节2026-05-26前完成（中飞院预通知）",
+      "confidence": "medium",
+      "evidence": "「8月19日至20日，第12届全国高校安全科学与工程大学生实践与创新作品大赛在西安科技大学隆重举行。」「本次大赛是第36届全国高校安全科学与工程学术年会的重要组成部分」「共有90所高校的395件作品参与决赛评审」",
+      "sources": [
+        "https://aqyj.tyut.edu.cn/info/1158/11930.htm",
+        "https://www.cafuc.edu.cn/jwcx/info/1021/1676.htm",
+        "https://aqyj.tyust.edu.cn/info/1126/3920.htm"
+      ],
+      "researchNote": "本目录该条无官网（note 记「官网无」）。2026年为第12届。全国赛无统一公开报名起止（各校选拔后统一报送），故置 null；校内选拔节点见中飞院2026-04-09预通知。日期取自太原理工大学安全与应急管理工程学院赛后报道（2026-08-23），另有昆明理工、太原科技等校报道互证。"
     },
     {
       "id": "nuc-122",
@@ -2683,11 +3173,15 @@
       "contestStart": null,
       "contestEnd": null,
       "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "registrationEnd": "2026-06-15T23:59:59+08:00",
+      "dateHint": "第十二届（2026）作品提交截止2026-06-15，提交至摩课云竞赛平台；赛题与提交细则发布于中国建筑装饰协会 cbda.cn（2026-03-02）；评审与颁奖时间未公布",
+      "confidence": "medium",
+      "evidence": "「作品请按参赛规范整理好，于2026年6月15日前提交至摩课云竞赛平台」「“中装杯”全国大学生环境设计大赛，是一项面向全国在校环境设计及相关专业大学生的公益性大赛，2013年在清华大学启动，十一届大赛共覆盖院校1000余所」",
+      "sources": [
+        "https://www.shejijingsai.com/2026/03/1512289.html",
+        "http://www.cbda.cn/html/newjd/20260302/143982.html"
+      ],
+      "researchNote": "2026年为第十二届，分本科/研究生组与专科/高职组两个赛道。该赛为作品征集+评审制，无现场比赛日程，故 contest 字段置 null；报名起始日通知未写（随赛题发布即开放），置 null。来源为设计竞赛网（本目录登记的 url）与中国建筑装饰协会附件页，属行业媒体/主办方渠道，故记 medium。"
     },
     {
       "id": "nuc-123",
@@ -2701,14 +3195,17 @@
       "url": "https://www.asfc.org.cn/index/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-10-09T00:00:00+08:00",
+      "contestEnd": "2026-10-18T00:00:00+08:00",
+      "registrationStart": "2026-08-13T00:00:00+08:00",
+      "registrationEnd": "2026-09-23T12:00:00+08:00",
+      "dateHint": "2026CADC 总决赛暨科研类全国航空航天模型锦标赛：2026-10-09~10-18 合肥市骆岗公园、合肥工业大学翡翠湖校区；分大学生组、高中生组、公开组",
+      "confidence": "high",
+      "evidence": "一、比赛时间和地点（一）时间：2026年10月9-18日（二）地点：合肥市骆岗公园、合肥工业大学翡翠湖校区……三、报名参赛（一）报名自通知发布之日开始，于9月23日12时截止。报名截止后不得更改报名信息。",
+      "sources": [
+        "https://www.sport.gov.cn/hgzx/n15154/c29850998/content.html"
+      ],
+      "researchNote": "国家体育总局航空无线电模型运动管理中心 2026-08-13 正式通知（发布日即报名开始日）；报名材料须报名截止前发至 keyanlei@126.com，并携纸质盖章报名表到报到现场。"
     },
     {
       "id": "nuc-124",
@@ -2726,10 +3223,13 @@
       "contestEnd": null,
       "registrationStart": null,
       "registrationEnd": null,
-      "dateHint": "",
+      "dateHint": "2026 年 11 月举办，地点待定（规模约 400 人，竞赛内容为飞行技术）；承办单位征集材料递交截止 2026-10-15",
       "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "evidence": "一、竞赛活动名称 2026年全国高校模拟飞行锦标赛 二、时间 2026年11月 三、规模 400人左右 四、地点 待定 五、竞赛和相关活动内容（一）竞赛 飞行技术",
+      "sources": [
+        "https://www.sport.gov.cn/hgzx/n14912/n14914/n14921/c30086543/content.html"
+      ],
+      "researchNote": "体育总局航管中心 2026-09-30 发布的是「申办公告」（承办单位尚未确定），只公布到「2026 年 11 月」，无具体日期与地点，故四个字段全为 null，只记 dateHint。"
     },
     {
       "id": "nuc-125",
@@ -2743,14 +3243,17 @@
       "url": "https://www.asfc.org.cn/index/",
       "note": "",
       "security": false,
-      "contestStart": null,
-      "contestEnd": null,
-      "registrationStart": null,
-      "registrationEnd": null,
-      "dateHint": "",
-      "confidence": "low",
-      "evidence": "",
-      "sources": []
+      "contestStart": "2026-10-09T00:00:00+08:00",
+      "contestEnd": "2026-10-18T00:00:00+08:00",
+      "registrationStart": "2026-08-13T00:00:00+08:00",
+      "registrationEnd": "2026-09-23T12:00:00+08:00",
+      "dateHint": "2026CADC 总决赛：2026-10-09~10-18 合肥市骆岗公园、合肥工业大学翡翠湖校区（与 no=123 为同一赛事，负责学院/负责人不同）",
+      "confidence": "high",
+      "evidence": "2026年中国国际飞行器设计挑战赛总决赛暨科研类全国航空航天模型锦标赛（简称：2026CADC总决赛）将于10月在安徽省合肥市举办……（一）时间：2026年10月9-18日。",
+      "sources": [
+        "https://www.sport.gov.cn/hgzx/n15154/c29850998/content.html"
+      ],
+      "researchNote": "目录中 no=123 与 no=125 指向同一赛事（CADC，官网均为 www.asfc.org.cn），仅所属学院与负责人不同，故数据一致；如需区分可备注「123 由航空宇航学院刘福负责、125 由田佳负责」。"
     }
   ]
 }
