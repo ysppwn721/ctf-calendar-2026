@@ -27,10 +27,9 @@
 
   /* 分类定义：只按「参赛对象准入限制」划分，不按宣传文案里的关键词 */
   const CATEGORY_DESC = {
-    college: '参赛对象限于在校学生（高校/中学限定，或人工核验的国内大学生学科竞赛）',
-    'domestic-technical': '中国境内举办、面向社会与行业的公开技术赛',
-    'international-technical': '境外举办或无地域限定的公开赛（Open / 个人赛 / 邀请制 / 需资格赛等）',
-    catalog: '《中北大学学科竞赛目录（2026版）》收录的校内认定竞赛，覆盖各学科方向；官方未公布具体日期，状态为「时间待定」',
+    'domestic-technical': '中国境内举办的竞赛（公开技术赛与全国性大学生学科竞赛）',
+    'international-technical': '境外举办或无地域限定的公开赛（准入限制显示在副标签里，如「高校限定」「个人赛」「邀请制」）',
+    catalog: '《中北大学学科竞赛目录（2026版）》收录的校内认定竞赛，覆盖各学科方向',
   };
 
   const state = {
@@ -426,7 +425,7 @@
     if (!el.catHint) return;
     el.catHint.textContent = state.cat
       ? CATEGORY_DESC[state.cat]
-      : '按参赛对象准入划分：大学生竞赛类＝仅限在校学生';
+      : '按赛事举办地域与性质划分；参赛准入限制见各处详情页';
   }
 
   function syncControls() {

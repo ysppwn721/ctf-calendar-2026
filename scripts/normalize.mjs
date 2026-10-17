@@ -33,28 +33,30 @@ const RESEARCH = resolve(ROOT, 'data', 'research');
  * 曾经的做法是扫描述里有没有 university/student/school —— 那是错的：
  * 公开赛的说明里普遍会提到学生组别，结果 302 场对外开放的赛事被误标成
  * 「大学生竞赛类」。分类必须基于赛事的准入规则，而不是宣传文案。
+ *
+ * 后续「大学生竞赛」这一档整体取消（对实验室选赛帮助有限）：
+ * 准入限制不再单独成类，改由 subCategory 表达（如「高校限定 · 国际公开赛」），
+ * 信息不丢失；学生向赛事由人工核验的国内赛事与校内认定目录承担。
  * ------------------------------------------------------------------ */
 function inferCategory(ev) {
   const r = (ev.restrictions || '').trim().toLowerCase();
-
-  if (r === 'academic' || r === 'high-school' || r === 'high school'
-      || r === 'collegiate' || r === 'student') {
-    return {
-      category: 'college',
-      subCategory: r === 'high-school' ? '中学生限定' : '高校/学术限定',
-    };
-  }
-
   const where = ev.onsite ? '线下现场赛' : '国际公开赛';
-  if (r === 'open' || r === '') return { category: 'international-technical', subCategory: where };
 
   const label = {
+    academic: '高校限定',
+    'high-school': '中学限定',
+    'high school': '中学限定',
+    collegiate: '高校限定',
+    student: '学生限定',
     casual: '休闲赛',
     individual: '个人赛',
     prequalified: '需资格赛',
     invited: '邀请制',
-  }[r] || ev.restrictions;
-  return { category: 'international-technical', subCategory: `${label} · ${where}` };
+  }[r];
+
+  if (label) return { category: 'international-technical', subCategory: `${label} · ${where}` };
+  if (r === 'open' || r === '') return { category: 'international-technical', subCategory: where };
+  return { category: 'international-technical', subCategory: `${ev.restrictions} · ${where}` };
 }
 
 function inferRegion(ev) {
@@ -312,12 +314,16 @@ function normalizeResearch(item, fallbackCategory) {
     else if (item.contestStart) basis = 'derived';
     else basis = 'unknown';
   }
+  // 「大学生竞赛」档已取消：人工核验的国内大学生学科竞赛统一归入「国内赛事」
+  let cat = item.category || fallbackCategory;
+  if (cat === 'college') cat = 'domestic-technical';
+
   return {
     id: item.id || researchId(item.title),
     title: item.title,
     titleEn: item.titleEn || item.title,
     aliases: item.aliases || [],
-    category: item.category || fallbackCategory,
+    category: cat,
     subCategory: item.subCategory || '',
     region: item.region || '中国',
     organizer: item.organizer || '',

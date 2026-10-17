@@ -246,9 +246,9 @@ t(`2026 年 12 个月全覆盖（缺 ${missing.join(',') || '无'}）`, missing.
 // 分类构成
 const cats = {};
 evs.forEach((e) => { cats[e.category] = (cats[e.category] || 0) + 1; });
-t(`大学生竞赛类非空（${cats.college || 0} 条）`, (cats.college || 0) > 10);
-t(`国内技术性赛事非空（${cats['domestic-technical'] || 0} 条）`, (cats['domestic-technical'] || 0) > 10);
+t(`国内赛事非空（${cats['domestic-technical'] || 0} 条）`, (cats['domestic-technical'] || 0) > 10);
 t(`国际赛事非空（${cats['international-technical'] || 0} 条）`, (cats['international-technical'] || 0) > 100);
+t(`校内认定学科竞赛非空（${cats.catalog || 0} 条）`, (cats.catalog || 0) > 100);
 
 console.log(`\n分类构成: ${JSON.stringify(cats)}`);
 console.log(`报名依据: stated=${evs.filter((e) => e.registrationBasis === 'stated').length} ` +
@@ -261,16 +261,15 @@ const byCat = {};
 evs.forEach((e) => { byCat[e.category] = (byCat[e.category] || 0) + 1; });
 
 t('所有赛事都归类', evs.every((e) =>
-  ['college', 'domestic-technical', 'international-technical', 'catalog'].includes(e.category)));
-t(`restrictions=Open 的赛事不得归为大学生竞赛类`,
-  evs.filter((e) => /^open$/i.test(e.restrictions || '')).every((e) => e.category !== 'college'));
-t(`大学生竞赛类均有准入依据（${byCat.college} 条）`,
-  evs.filter((e) => e.category === 'college')
-    .every((e) => /academic|high-school/i.test(e.restrictions || '') || e.id.startsWith('research-')));
-t(`大学生竞赛类占比合理（${((byCat.college / evs.length) * 100).toFixed(1)}% < 20%）`,
-  byCat.college < evs.length * 0.2);
-t('国内技术性赛事均来自人工核验', evs.filter((e) => e.category === 'domestic-technical')
-  .every((e) => e.id.startsWith('research-')));
+  ['domestic-technical', 'international-technical', 'catalog'].includes(e.category)));
+t('「大学生竞赛」分类已取消', evs.every((e) => e.category !== 'college'));
+t('国内赛事含人工核验的国内大学生学科竞赛', evs.filter((e) => e.category === 'domestic-technical')
+  .some((e) => /大学生|研究生|职业院校|世界技能/.test(e.title)));
+t('准入限制信息未丢失（学术/中学限定落在 subCategory）',
+  evs.filter((e) => /academic|high-school/i.test(e.restrictions || ''))
+    .every((e) => /高校限定|中学限定/.test(e.subCategory || '')));
+t(`三类分布合理（国内 ${byCat['domestic-technical'] || 0} / 国际 ${byCat['international-technical'] || 0} / 目录 ${byCat.catalog || 0}）`,
+  (byCat['domestic-technical'] || 0) > 20 && (byCat['international-technical'] || 0) > 200);
 
 console.log('\n— 筛选一致性 —');
 const dec = evs.map((e) => ({ ev: e, st: C.computeStatus(e, Date.now()) }));

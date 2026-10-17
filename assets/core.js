@@ -10,8 +10,7 @@
   'use strict';
 
   const CATEGORY_LABEL = {
-    college: '大学生竞赛',
-    'domestic-technical': '国内技术赛',
+    'domestic-technical': '国内赛事',
     'international-technical': '国际赛事',
     catalog: '校内认定学科竞赛',
   };
