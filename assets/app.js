@@ -38,7 +38,7 @@
     tab: 'calendar',
     tzIndex: 0, theme: 'dark',
     q: '', cat: '', level: '', rangeField: 'contest', from: '', to: '',
-    overlap: 'overlap', sort: 'start-asc', status: 'all', openable: false,
+    overlap: 'overlap', sort: 'start-asc', status: 'all', openable: false, includeTbd: false,
     nq: '', nlevel: 'all', ndept: '', nsort: 'no-asc',
     nowOverride: null,
   };
@@ -64,6 +64,8 @@
     levelChips: $('levelChips'), nucReset: $('nucReset'), nucCsv: $('nucCsv'),
     nucPrint: $('nucPrint'), nucCrossRefHint: $('nucCrossRefHint'),
     nucRowTpl: $('nucRowTpl'),
+    chipIncludeTbd: $('chipIncludeTbd'), cntExcluded: $('cntExcluded'),
+    btnClearRange: $('btnClearRange'), rangeHint: $('rangeHint'),
   };
 
   function effectiveTz() {
@@ -201,20 +203,41 @@
     return state.events.map((ev) => ({ ev, st: C.computeStatus(ev, t), hay: C.haystack(ev) }));
   }
 
-  function filterList(decorated) {
+  /** 当前时间区间（含反向区间自动纠正） */
+  function rangeOpts() {
     const tz = TZ();
-    const fromTs = C.dayStart(state.from, tz);
-    const toTs = C.dayEnd(state.to, tz);
+    return {
+      field: state.rangeField,
+      fromTs: C.dayStart(state.from, tz),
+      toTs: C.dayEnd(state.to, tz),
+      mode: state.overlap,
+    };
+  }
+  function rangeActive(o) {
+    const r = o || rangeOpts();
+    return r.fromTs != null || r.toTs != null;
+  }
+
+  /** 与时间区间无关的其余筛选条件 */
+  function passesNonRange(d, groups) {
+    if (state.cat && d.ev.category !== state.cat) return false;
+    if (state.level === 'none') { if (d.ev.nucLevel) return false; }
+    else if (state.level) { if (d.ev.nucLevel !== state.level) return false; }
+    // 独立开关：只看「报名通道现在开着」的（含推定窗口）
+    if (state.openable && d.st.reg !== 'open') return false;
+    return C.statusMatches(d.st, state.status) && C.queryMatches(d.hay, groups);
+  }
+
+  function filterList(decorated) {
     const groups = C.tokenizeQuery(state.q);
+    const o = rangeOpts();
+    const active = rangeActive(o);
     return decorated.filter((d) => {
-      if (state.cat && d.ev.category !== state.cat) return false;
-      if (state.level === 'none') { if (d.ev.nucLevel) return false; }
-      else if (state.level) { if (d.ev.nucLevel !== state.level) return false; }
-      // 独立开关：只看「报名通道现在开着」的（含推定的推定窗口）
-      if (state.openable && d.st.reg !== 'open') return false;
-      return C.statusMatches(d.st, state.status)
-        && C.queryMatches(d.hay, groups)
-        && C.rangeMatches(d.st, { field: state.rangeField, fromTs, toTs, mode: state.overlap });
+      if (!passesNonRange(d, groups)) return false;
+      if (!active) return true;
+      if (C.rangeMatches(d.st, o)) return true;
+      // 没有日期可比的赛事：默认隐藏，勾选「含日期待定项」后一并显示
+      return state.includeTbd && !C.hasComparableDate(d.st, o.field);
     });
   }
 
@@ -224,9 +247,40 @@
     if (state.level) bits.push('级别：' + (state.level === 'none' ? '目录未收录' : state.level));
     if (state.status !== 'all') bits.push('状态：' + (STATUS_META[state.status] || {}).label);
     if (state.openable) bits.push('只看现在可报名');
+    if (state.includeTbd && rangeActive()) bits.push('含日期待定项');
     if (nGroups) bits.push(`关键词 ${nGroups} 组`);
     if (state.from || state.to) bits.push(`时间 ${state.from || '…'} ~ ${state.to || '…'}`);
     return bits.length ? '　·　' + bits.join('　·　') : '';
+  }
+
+  /** 区间被自动纠正时给出提示；同时更新「待定项」计数 */
+  function updateRangeUi(decorated) {
+    const o = rangeOpts();
+    const active = rangeActive(o);
+    const groups = C.tokenizeQuery(state.q);
+
+    // 有日期可比、但落在区间外 → 正常的过滤结果；
+    // 完全没有日期可比 → 「日期待定」，若被隐藏则把数量亮出来，避免无声消失
+    let undated = 0;
+    if (active) {
+      undated = decorated.filter((d) => passesNonRange(d, groups)
+        && !C.rangeMatches(d.st, o) && !C.hasComparableDate(d.st, o.field)).length;
+    }
+
+    if (el.cntExcluded) el.cntExcluded.textContent = String(undated);
+    if (el.chipIncludeTbd) {
+      el.chipIncludeTbd.classList.toggle('on', state.includeTbd);
+      el.chipIncludeTbd.disabled = !active;
+    }
+    if (el.rangeHint) {
+      if (state.rangeSwapped) {
+        el.rangeHint.textContent = `起始/终止已自动对调为 ${state.from} ~ ${state.to}`;
+      } else if (active && undated > 0 && !state.includeTbd) {
+        el.rangeHint.textContent = `另有 ${undated} 项日期待定未显示`;
+      } else {
+        el.rangeHint.textContent = '';
+      }
+    }
   }
 
   /** 「现在可报名」计数：报名窗口尚未关闭（含推定窗口） */
@@ -252,6 +306,19 @@
     ];
     el.stats.innerHTML = cards.map(([cls, num, lbl]) =>
       `<div class="stat ${cls}"><div class="stat-num">${num}</div><div class="stat-lbl">${lbl}</div></div>`).join('');
+  }
+
+  /** 起始/终止写反时自动对调（否则会静默返回毫无意义的结果） */
+  function normalizeDates() {
+    state.rangeSwapped = false;
+    if (state.from && state.to && state.from > state.to) {
+      const t = state.from;
+      state.from = state.to;
+      state.to = t;
+      state.rangeSwapped = true;
+      if (el.from) el.from.value = state.from;
+      if (el.to) el.to.value = state.to;
+    }
   }
 
   function apply() {
@@ -288,6 +355,7 @@
     }
     renderStats(decorated);
     updateOpenable(decorated);
+    updateRangeUi(decorated);
     syncUrl();
   }
 
@@ -392,6 +460,7 @@
     if (state.sort !== 'start-asc') p.set('sort', state.sort);
     if (state.tzIndex !== 0) p.set('tz', String(state.tzIndex));
     if (state.openable) p.set('open', '1');
+    if (state.includeTbd) p.set('tbd', '1');
     if (state.nq) p.set('nq', state.nq);
     if (state.nlevel !== 'all') p.set('nlvl', state.nlevel);
     if (state.ndept) p.set('ndept', state.ndept);
@@ -419,6 +488,8 @@
     if (p.get('nsort')) state.nsort = p.get('nsort');
     if (p.get('now')) { const t = new Date(p.get('now')).getTime(); if (!Number.isNaN(t)) state.nowOverride = t; }
     if (p.get('open') === '1') state.openable = true;
+    if (p.get('tbd') === '1') state.includeTbd = true;
+    normalizeDates();
   }
 
   function updateCatHint() {
@@ -564,8 +635,8 @@
     onSel(el.rangeField, 'rangeField');
     onSel(el.overlap, 'overlap');
     onSel(el.sort, 'sort');
-    el.from.addEventListener('change', () => { state.from = el.from.value; apply(); });
-    el.to.addEventListener('change', () => { state.to = el.to.value; apply(); });
+    el.from.addEventListener('change', () => { state.from = el.from.value; normalizeDates(); apply(); });
+    el.to.addEventListener('change', () => { state.to = el.to.value; normalizeDates(); apply(); });
 
     el.statusChips.addEventListener('click', (e) => {
       const b = e.target.closest('.chip');
@@ -578,6 +649,21 @@
     if (chipOpen) {
       chipOpen.addEventListener('click', () => {
         state.openable = !state.openable;
+        apply();
+      });
+    }
+
+    if (el.chipIncludeTbd) {
+      el.chipIncludeTbd.addEventListener('click', () => {
+        if (!rangeActive()) return;
+        state.includeTbd = !state.includeTbd;
+        apply();
+      });
+    }
+    if (el.btnClearRange) {
+      el.btnClearRange.addEventListener('click', () => {
+        state.from = ''; state.to = ''; state.includeTbd = false; state.rangeSwapped = false;
+        el.from.value = ''; el.to.value = '';
         apply();
       });
     }
@@ -615,6 +701,7 @@
       Object.assign(state, {
         q: '', cat: '', level: '', rangeField: 'contest', from: '', to: '',
         overlap: 'overlap', sort: 'start-asc', status: 'all', openable: false,
+        includeTbd: false, rangeSwapped: false,
       });
       syncControls(); apply();
     };

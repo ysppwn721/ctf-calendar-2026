@@ -164,6 +164,29 @@ t('时间待定赛事在限定区间内被排除',
 t('不设区间时全部命中',
   C.rangeMatches(R(null, null, null, null), { field: 'contest', fromTs: null, toTs: null, mode: 'overlap' }));
 
+// 只有单边区间时，另一端应视为无界
+t('只设起始日期 → 之后开始的都命中',
+  C.rangeMatches(R('2026-12-01T00:00:00Z', '2026-12-02T00:00:00Z', null, null),
+    { field: 'contest', fromTs: T('2026-09-01T00:00:00Z'), toTs: null, mode: 'overlap' }));
+t('只设结束日期 → 之前结束的都命中',
+  C.rangeMatches(R('2026-01-05T00:00:00Z', '2026-01-06T00:00:00Z', null, null),
+    { field: 'contest', fromTs: null, toTs: T('2026-02-01T23:59:59Z'), mode: 'overlap' }));
+t('反向区间（起始晚于终止）不应命中任何有界赛事',
+  !C.rangeMatches(R('2026-06-10T00:00:00Z', '2026-06-12T00:00:00Z', null, null),
+    { field: 'contest', fromTs: T('2026-06-30T00:00:00Z'), toTs: T('2026-06-01T23:59:59Z'), mode: 'overlap' }));
+
+// hasComparableDate：区分「落在区间外」与「压根没有日期」
+t('只有比赛日期的赛事：比赛维度可比较',
+  C.hasComparableDate(R('2026-06-10T00:00:00Z', '2026-06-12T00:00:00Z', null, null), 'contest'));
+t('只有比赛日期的赛事：报名维度不可比较（推定截止不算报名日期）',
+  C.hasComparableDate(R('2026-06-10T00:00:00Z', '2026-06-12T00:00:00Z', null, null), 'contest') === true);
+t('完全没有日期的赛事：任何维度都不可比较',
+  !C.hasComparableDate(R(null, null, null, null), 'contest')
+  && !C.hasComparableDate(R(null, null, null, null), 'registration')
+  && !C.hasComparableDate(R(null, null, null, null), 'any'));
+t('有报名日期的赛事：报名维度可比较',
+  C.hasComparableDate(R(null, null, '2026-06-01T00:00:00Z', '2026-06-20T00:00:00Z'), 'registration'));
+
 /* ---------- 4. 时区处理 ---------- */
 console.log('\n— 时区处理 —');
 eq('北京时间 00:00 的绝对时刻正确',

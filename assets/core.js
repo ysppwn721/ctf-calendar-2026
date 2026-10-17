@@ -218,6 +218,15 @@
      mode='contain' 事件区间完全落在查询区间内
      区间端点缺失时用另一端退化处理。
   ------------------------------------------- */
+  /** 该赛事在指定维度上是否存在可比较的日期。
+   *  用于区分「落在区间外」与「压根没有日期」——后者不该被静默隐藏。 */
+  function hasComparableDate(st, field) {
+    const f = field || 'contest';
+    if ((f === 'contest' || f === 'any') && (st.cs != null || st.ce != null)) return true;
+    if ((f === 'registration' || f === 'any') && (st.rs != null || st.re != null)) return true;
+    return false;
+  }
+
   function rangeMatches(st, opt) {
     const { field = 'contest', fromTs = null, toTs = null, mode = 'overlap' } = opt || {};
     if (fromTs == null && toTs == null) return true;
@@ -277,7 +286,7 @@
     CATEGORY_LABEL, CONF_LABEL, REG_BASIS_LABEL, STATUS_LABEL,
     tzOffsetMs, zonedToTs, dayStart, dayEnd, toTs, fmtDT, fmtDay, monthKey, tzAbbr, human,
     computeStatus, statusMatches,
-    tokenizeQuery, haystack, queryMatches, rangeMatches,
+    tokenizeQuery, haystack, queryMatches, rangeMatches, hasComparableDate,
     sortDecorated, summarize,
   };
 });
