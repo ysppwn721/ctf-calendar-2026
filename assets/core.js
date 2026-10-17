@@ -13,6 +13,7 @@
     college: '大学生竞赛',
     'domestic-technical': '国内技术赛',
     'international-technical': '国际赛事',
+    catalog: '校内认定学科竞赛',
   };
 
   const CONF_LABEL = { high: '高可信', medium: '中可信', low: '待核实' };
@@ -232,13 +233,19 @@
   const MAXI = Number.MAX_SAFE_INTEGER;
   const n = (v) => (v == null ? MAXI : v);
 
+  /* 排序：同日期时按中北级别优先（超级 > 一级 > 二级 > 三级），
+     让「时间待定」这一大组里级别高的排在前面。 */
+  const LVL_RANK = { '超级': 4, '一级': 3, '二级': 2, '三级': 1 };
+  const lvlRank = (ev) => LVL_RANK[ev.nucLevel] || 0;
+  const titleCmp = (a, b) => String(a.ev.title).localeCompare(String(b.ev.title), 'zh-CN');
+
   function sortDecorated(list, key) {
     const cmp = {
-      'start-asc': (a, b) => n(a.st.cs) - n(b.st.cs) || String(a.ev.title).localeCompare(String(b.ev.title)),
-      'start-desc': (a, b) => n(b.st.cs) - n(a.st.cs) || String(a.ev.title).localeCompare(String(b.ev.title)),
-      'reg-asc': (a, b) => n(a.st.rs) - n(b.st.rs) || n(a.st.cs) - n(b.st.cs),
-      'weight-desc': (a, b) => (b.ev.weight || -1) - (a.ev.weight || -1) || n(a.st.cs) - n(b.st.cs),
-      'title-asc': (a, b) => String(a.ev.title).localeCompare(String(b.ev.title), 'zh-CN'),
+      'start-asc': (a, b) => n(a.st.cs) - n(b.st.cs) || lvlRank(b.ev) - lvlRank(a.ev) || titleCmp(a, b),
+      'start-desc': (a, b) => n(b.st.cs) - n(a.st.cs) || lvlRank(b.ev) - lvlRank(a.ev) || titleCmp(a, b),
+      'reg-asc': (a, b) => n(a.st.rs) - n(b.st.rs) || n(a.st.cs) - n(b.st.cs) || titleCmp(a, b),
+      'weight-desc': (a, b) => (b.ev.weight || -1) - (a.ev.weight || -1) || n(a.st.cs) - n(b.st.cs) || titleCmp(a, b),
+      'title-asc': (a, b) => titleCmp(a, b),
     }[key];
     return cmp ? list.sort(cmp) : list;
   }

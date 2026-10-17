@@ -165,13 +165,15 @@ const evs = data.events;
 const dated = evs.filter((e) => e.contestStart && e.contestEnd);
 const withStart = evs.filter((e) => e.contestStart);
 const tbd = evs.filter((e) => !e.contestStart);
+const catalogRows = evs.filter((e) => e.category === 'catalog');
 
 t(`数据集非空（${evs.length} 条）`, evs.length > 200);
-t(`绝大多数有完整比赛时间（${dated.length}/${evs.length}）`, dated.length >= evs.length - 15);
+t(`有完整赛程的赛事占多数（${dated.length}/${evs.length}）`, dated.length > evs.length * 0.6);
+t('有赛程的赛事，比赛时间可解析', dated.every((e) => Number.isFinite(Date.parse(e.contestStart))));
 t('已知的结束不早于开始', dated.every((e) => Date.parse(e.contestEnd) >= Date.parse(e.contestStart)));
 t('赛程区间与 2026 自然年均有交集', dated.every((e) =>
   Date.parse(e.contestStart) < Date.UTC(2027, 0, 1) && Date.parse(e.contestEnd) >= Date.UTC(2026, 0, 1)));
-t(`时间待定赛事被明确标记（${tbd.length} 条）`, tbd.every((e) => !e.contestStart));
+t(`时间待定赛事被明确标记（含目录并入 ${catalogRows.length} 条）`, tbd.every((e) => !e.contestStart));
 t('ID 唯一', new Set(evs.map((e) => e.id)).size === evs.length);
 t('ID 非空', evs.every((e) => e.id && e.id !== 'research-'));
 t('标题非空', evs.every((e) => e.title && String(e.title).trim().length > 1));
@@ -187,7 +189,16 @@ t('stated 档报名开始不晚于报名截止',
 t('derived 档的报名截止恒等于比赛开始（推定规则一致）',
   evs.filter((e) => e.registrationBasis === 'derived' && e.contestStart)
     .every((e) => Date.parse(e.registrationEnd) === Date.parse(e.contestStart)));
-t('每条都有来源链接', evs.every((e) => (e.sources || []).length > 0));
+t('除目录并入项外，每条都有来源链接',
+  evs.filter((e) => e.category !== 'catalog').every((e) => (e.sources || []).length > 0));
+
+// 目录并入项：必须带级别、负责单位，且不得伪造日期
+t('目录并入项均带中北级别', catalogRows.every((e) => !!e.nucLevel));
+t('目录并入项均带负责单位', catalogRows.every((e) => !!e.nucDept));
+t('目录并入项不得伪造任何日期', catalogRows.every((e) =>
+  !e.contestStart && !e.contestEnd && !e.registrationStart && !e.registrationEnd));
+t('目录并入项报名依据为未知', catalogRows.every((e) => e.registrationBasis === 'unknown'));
+t('目录并入项序号能对上目录', catalogRows.every((e) => !!e.nucNo));
 
 // 月份覆盖：2026 年 12 个月应全部有赛事
 const months = new Set(evs.map((e) => C.monthKey(e.contestStart, 'Asia/Shanghai')));
@@ -215,7 +226,8 @@ console.log('\n— 分类口径 —');
 const byCat = {};
 evs.forEach((e) => { byCat[e.category] = (byCat[e.category] || 0) + 1; });
 
-t('所有赛事都归类', evs.every((e) => ['college', 'domestic-technical', 'international-technical'].includes(e.category)));
+t('所有赛事都归类', evs.every((e) =>
+  ['college', 'domestic-technical', 'international-technical', 'catalog'].includes(e.category)));
 t(`restrictions=Open 的赛事不得归为大学生竞赛类`,
   evs.filter((e) => /^open$/i.test(e.restrictions || '')).every((e) => e.category !== 'college'));
 t(`大学生竞赛类均有准入依据（${byCat.college} 条）`,
@@ -262,7 +274,8 @@ t(`级别分布 超级=${lv['超级']} 一级=${lv['一级']} 二级=${lv['二�
 // 交叉引用：日历里带 nucLevel 的赛事必须能对应到真实目录条目
 const withNuc = evs.filter((e) => e.nucLevel);
 const nos = new Set(cat.map((c) => c.no));
-t(`日历赛事带中北级别标注（${withNuc.length} 条）`, withNuc.length > 0);
+const fromCatalogRow = withNuc.filter((e) => e.category === 'catalog').length;
+t(`日历赛事带中北级别标注（${withNuc.length} 条 ＝ 目录并入 ${fromCatalogRow} + 真实赛程交叉 ${withNuc.length - fromCatalogRow}）`, withNuc.length > 0);
 t('带标注的赛事，级别合法', withNuc.every((e) => LEVELS.includes(e.nucLevel)));
 t('带标注的赛事，序号能在目录中找到', withNuc.every((e) => nos.has(e.nucNo)));
 t('带标注的赛事，级别与目录一致', withNuc.every((e) => {

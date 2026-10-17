@@ -272,7 +272,7 @@ function attachNucRefs(events, catalog) {
       e.nucLevel = best.c.level;
       e.nucDept = best.c.dept;
       e.nucOwners = best.c.owners;
-      matched.push({ event: e.title, catalog: best.c.name, level: best.c.level });
+      matched.push({ event: e.title, catalog: best.c.name, level: best.c.level, catalogNo: best.c.no });
     }
   }
   return matched;
@@ -382,6 +382,58 @@ async function main() {
   for (const m of nucMatches) {
     console.log(`    [${m.level}] ${m.catalog}  ←  ${m.event}`);
   }
+
+  /* 把目录里还没有对应赛程的条目，也并入赛事列表。
+     实验室要的是「学校认定的全部竞赛」，而不只是已公布日期的那些。
+     已经通过交叉引用落到真实赛程上的条目不重复生成，避免同一赛事出现两行。 */
+  const referencedNos = new Set(nucMatches.map((m) => m.catalogNo));
+  const synthesized = catalog
+    .filter((c) => !referencedNos.has(c.no))
+    .map((c) => ({
+      id: `catalog-${c.id}`,
+      title: c.name,
+      titleEn: c.name,
+      aliases: [],
+      category: 'catalog',
+      subCategory: `校内认定 · ${c.level} · ${c.dept}`,
+      region: '中国',
+      organizer: c.dept,
+      format: '',
+      onsite: null,
+      restrictions: '',
+      weight: null,
+      officialUrl: c.url || '',
+      ctftimeUrl: '',
+      registrationStart: null,
+      registrationEnd: null,
+      registrationBasis: 'unknown',
+      contestStart: null,
+      contestEnd: null,
+      registrationNote: '《中北大学学科竞赛目录（2026版）》未提供该竞赛的报名与比赛日期，请以官网通知为准。',
+      note: c.note || '',
+      year: 2026,
+      confidence: 'low',
+      sources: c.url ? [c.url] : [],
+      evidence: '',
+      logo: '',
+      prizes: '',
+      durationHours: null,
+      nucNo: c.no,
+      nucLevel: c.level,
+      nucDept: c.dept,
+      nucOwners: c.owners,
+    }));
+  deduped.push(...synthesized);
+  deduped.sort((a, b) => {
+    const ta = a.contestStart ? new Date(a.contestStart).getTime() : Infinity;
+    const tb = b.contestStart ? new Date(b.contestStart).getTime() : Infinity;
+    if (ta !== tb) return ta - tb;
+    const lv = { '超级': 4, '一级': 3, '二级': 2, '三级': 1 };
+    return (lv[b.nucLevel] || 0) - (lv[a.nucLevel] || 0)
+      || String(a.title).localeCompare(String(b.title), 'zh-CN');
+  });
+  console.log(`  目录条目并入赛事列表 ${synthesized.length} 条（已在赛程中的 ${referencedNos.size} 条不重复）`);
+  console.log(`  赛事总数 ${deduped.length}`);
 
   const nucStats = {
     generatedAt: new Date().toISOString(),
