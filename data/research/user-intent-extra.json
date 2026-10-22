@@ -1,0 +1,50 @@
+[
+  {
+    "title": "2026“鲲鹏杯”网络安全大赛",
+    "titleEn": "2026 Kunpeng Cup Cybersecurity Competition",
+    "aliases": ["鲲鹏杯", "Kunpeng Cup 2026"],
+    "category": "domestic-technical",
+    "subCategory": "社区赛",
+    "region": "中国",
+    "organizer": "Yunsee俱乐部 & 鱼影安全",
+    "format": "CTF",
+    "onsite": false,
+    "registrationStart": "2026-10-10T00:00:00+08:00",
+    "registrationEnd": "2026-11-06T23:59:00+08:00",
+    "contestStart": "2026-11-07T09:00:00+08:00",
+    "contestEnd": "2026-11-07T17:00:00+08:00",
+    "registrationNote": "DigiForensics 比赛日历：报名开始 2026-10-10 00:00，报名截止 2026-11-06 23:59；比赛 2026-11-07 09:00—17:00（线上）。报名入口 ctfplus.cn。",
+    "note": "数据来源为社区赛历聚合站（DigiForensics），非主办方原始公告，confidence 记为 medium。",
+    "year": 2026,
+    "confidence": "medium",
+    "sources": [
+      "https://www.digiforensics.cn/calendar?month=2026-10",
+      "https://www.digiforensics.cn/calendar/2026-kunpeng-cup",
+      "https://www.ctfplus.cn/competition/hall"
+    ],
+    "evidence": "【2026鲲鹏杯网络安全大赛】CTF 竞赛 比赛 2026-11-07 09:00 — 11-07 17:00 Yunsee俱乐部&鱼影安全 线上；报名开始 10-10 00:00 报名截止 2026-11-06 23:59"
+  },
+  {
+    "title": "首届 CCF 网络安全智能挑战赛暨“京华杯”TPCTF 2026",
+    "titleEn": "CCF Cybersecurity Intelligence Challenge / TPCTF 2026",
+    "aliases": ["TPCTF 2026", "京华杯", "CCF 网络安全智能挑战赛"],
+    "category": "domestic-technical",
+    "subCategory": "高校赛",
+    "region": "中国",
+    "organizer": "中国计算机学会（CCF）",
+    "format": "CTF",
+    "onsite": false,
+    "registrationStart": null,
+    "registrationEnd": null,
+    "contestStart": null,
+    "contestEnd": null,
+    "registrationNote": "2026 年赛程与报名时间未能在公开来源确认。",
+    "note": "历届 TPCTF 有公开记录（如 TPCTF2025 官方仓库），但首届 CCF 京华杯 TPCTF 2026 的日期尚未检索到。本条目按同学意向保留，日期待官方通知后补充。",
+    "year": 2026,
+    "confidence": "low",
+    "sources": [
+      "https://github.com/tp-ctf/TPCTF2025"
+    ],
+    "evidence": "GitHub 仓库 tp-ctf/TPCTF2025 描述为「official repository of TPCTF2025」，可确认 TPCTF 系列赛事存在；未见 2026 年届次公告。"
+  }
+]

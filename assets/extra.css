@@ -47,6 +47,32 @@
 /* 新增的状态统计卡：报名已截止 */
 .stat.s-regclosed .stat-num { color: var(--text-dim); }
 
+/* 意向标记：静态清单徽标 + 个人勾选星标 */
+.badge.intent {
+  color: #fbbf24;
+  border-color: rgba(251, 191, 36, .5);
+  background: rgba(251, 191, 36, .13);
+}
+.star {
+  appearance: none;
+  border: 1px solid var(--panel-border);
+  background: var(--bg-soft);
+  color: var(--text-mute);
+  border-radius: 999px;
+  width: 26px;
+  height: 26px;
+  line-height: 1;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all .15s;
+  padding: 0;
+}
+.star:hover { border-color: #fbbf24; color: #fbbf24; transform: scale(1.08); }
+.star.on { color: #fbbf24; border-color: rgba(251, 191, 36, .65); background: rgba(251, 191, 36, .16); }
+.card.is-wanted { border-left-color: #fbbf24; }
+#btnMine { border-color: rgba(251, 191, 36, .45); color: #fbbf24; }
+#btnMine.on { background: rgba(251, 191, 36, .18); border-color: rgba(251, 191, 36, .7); }
+
 /* 筛选区说明行（不参与 flex 对齐，避免挤压下拉框宽度） */
 .row-note {
   margin-top: 8px;

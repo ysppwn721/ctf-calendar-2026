@@ -342,5 +342,35 @@ t('带标注的赛事，级别与目录一致', withNuc.every((e) => {
 console.log(`目录级别分布: ${JSON.stringify(lv)}`);
 console.log(`交叉标注: ${withNuc.length} 条日历赛事 ↔ 目录条目`);
 
+/* ---------- 8. 实验室意向清单 ---------- */
+console.log('\n— 实验室意向清单 —');
+const intentFile = require('../data/intent.json');
+const intentItems = intentFile.items || [];
+const wanted = evs.filter((e) => e.intent);
+
+t(`意向清单条目数（${intentItems.length}）`, intentItems.length === 12);
+t('清单每项都有名称与分组', intentItems.every((i) => i.name && i.group));
+t(`清单全部命中赛事（未命中 ${(data.stats.intentUnmatched || []).length} 项）`,
+  (data.stats.intentUnmatched || []).length === 0);
+t(`被标记的赛事非空（${wanted.length} 条）`, wanted.length > 0);
+t('被标记的赛事都带分组', wanted.every((e) => !!e.intentGroup));
+t('被标记的赛事标题确实相关', wanted.every((e) =>
+  /信息安全|对抗|计算机|数字媒体|人工智能|创新|创业|电子商务|羊城|蓝桥|CCF|鲲鹏/.test(e.title)));
+t('stats 中的意向计数与实际一致', data.stats.intentCount === wanted.length);
+
+// 新补录的两个赛事
+const kunpeng = evs.find((e) => /鲲鹏杯/.test(e.title));
+const tpctf = evs.find((e) => /CCF|京华杯|TPCTF/i.test(e.title));
+t('鲲鹏杯已补录', !!kunpeng);
+t('鲲鹏杯有比赛时间与报名时间', !!kunpeng && !!kunpeng.contestStart && !!kunpeng.registrationEnd);
+t('鲲鹏杯报名截止早于比赛开始',
+  !!kunpeng && Date.parse(kunpeng.registrationEnd) <= Date.parse(kunpeng.contestStart));
+t('鲲鹏杯标注为意向', !!kunpeng && kunpeng.intent === true);
+t('TPCTF 已补录', !!tpctf);
+t('TPCTF 日期留空（不臆造）', !!tpctf && !tpctf.contestStart && !tpctf.contestEnd);
+t('TPCTF 标注为意向', !!tpctf && tpctf.intent === true);
+
+console.log(`意向命中: ${wanted.length} 条 — ${wanted.map((e) => e.intentLabel).join(' / ')}`);
+
 console.log(`\n================ 通过 ${pass} / ${pass + fail} ================`);
 process.exit(fail ? 1 : 0);

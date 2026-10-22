@@ -1,31 +1,34 @@
 {
   "stats": {
-    "generatedAt": "2026-10-17T13:35:10.712Z",
+    "generatedAt": "2026-10-22T13:13:46.792Z",
     "scope": "2026-01-01 ~ 2026-12-31",
     "scopeNote": "赛程与 2026 自然年有交集即收录（多阶段赛事常跨年）；时间为绝对时刻，前端按所选时区渲染",
-    "total": 462,
+    "total": 464,
     "byCategory": {
       "catalog": 124,
-      "domestic-technical": 35,
+      "domestic-technical": 37,
       "international-technical": 303
     },
     "byRegistrationBasis": {
       "derived": 331,
-      "stated": 101,
-      "unknown": 30
+      "stated": 102,
+      "unknown": 31
     },
     "byConfidence": {
-      "medium": 88,
+      "medium": 89,
       "high": 64,
-      "low": 310
+      "low": 311
     },
-    "withContestStart": 395,
-    "withContestEnd": 393,
-    "withRegistrationStart": 54,
-    "withRegistrationEnd": 425,
-    "registrationStated": 101,
+    "withContestStart": 396,
+    "withContestEnd": 394,
+    "withRegistrationStart": 55,
+    "withRegistrationEnd": 426,
+    "registrationStated": 102,
     "nucCatalogTotal": 126,
-    "nucCrossReferenced": 5
+    "nucCrossReferenced": 5,
+    "intentTotal": 12,
+    "intentCount": 15,
+    "intentUnmatched": []
   },
   "events": [
     {
@@ -113,7 +116,10 @@
       "nucDept": "计算机科学与技术学院",
       "nucOwners": [
         "石琼"
-      ]
+      ],
+      "intent": true,
+      "intentGroup": "网络安全",
+      "intentLabel": "全国大学生信息安全竞赛"
     },
     {
       "id": "ctftime-2981",
@@ -4539,7 +4545,10 @@
       "nucDept": "软件学院",
       "nucOwners": [
         "洪军"
-      ]
+      ],
+      "intent": true,
+      "intentGroup": "网络安全",
+      "intentLabel": "信息安全与对抗技术竞赛"
     },
     {
       "id": "ctftime-3177",
@@ -7204,7 +7213,10 @@
       "nucDept": "经济与管理学院",
       "nucOwners": [
         "吕微"
-      ]
+      ],
+      "intent": true,
+      "intentGroup": "创新创业",
+      "intentLabel": "全国大学生电子商务创新创意及创业挑战赛"
     },
     {
       "id": "ctftime-3335",
@@ -7468,7 +7480,10 @@
         "李泽宇",
         "张奋飞",
         "陆青梅"
-      ]
+      ],
+      "intent": true,
+      "intentGroup": "计算机应用",
+      "intentLabel": "中国大学生计算机设计大赛"
     },
     {
       "id": "catalog-nuc-72",
@@ -9269,7 +9284,10 @@
       "nucDept": "计算机科学与技术学院",
       "nucOwners": [
         "石琼"
-      ]
+      ],
+      "intent": true,
+      "intentGroup": "网络安全",
+      "intentLabel": "全国大学生信息安全竞赛"
     },
     {
       "id": "catalog-nuc-28",
@@ -9795,7 +9813,10 @@
       "nucDept": "计算机科学与技术学院",
       "nucOwners": [
         "石琼"
-      ]
+      ],
+      "intent": true,
+      "intentGroup": "网络安全",
+      "intentLabel": "全国大学生信息安全竞赛"
     },
     {
       "id": "ctftime-3290",
@@ -11759,7 +11780,10 @@
       "nucDept": "计算机科学与技术学院",
       "nucOwners": [
         "石琼"
-      ]
+      ],
+      "intent": true,
+      "intentGroup": "网络安全",
+      "intentLabel": "全国大学生信息安全竞赛"
     },
     {
       "id": "research-e0682f369a",
@@ -11794,7 +11818,10 @@
       "evidence": "南方都市报2026-09-16报道：「2026年“羊城杯”网络安全大赛来了，9月16日在“AI赋能网络安全新生态”活动上正式启动报名。……【报名时间】即日起至10月12日（星期一）24：00 【比赛日期】线上初赛：2026年10月17日（星期六）10：00—14：00 线下决赛：2026年10月31日（初定）【报名渠道】报名官网：ycb.dasctf.com 官方QQ群：1148320638、696494060」",
       "logo": "",
       "prizes": "",
-      "durationHours": null
+      "durationHours": null,
+      "intent": true,
+      "intentGroup": "网络安全",
+      "intentLabel": "羊城杯"
     },
     {
       "id": "ctftime-3364",
@@ -12066,7 +12093,10 @@
       "nucOwners": [
         "熊风光",
         "陆青梅"
-      ]
+      ],
+      "intent": true,
+      "intentGroup": "数字媒体",
+      "intentLabel": "全国大学生数字媒体科技作品及创意竞赛"
     },
     {
       "id": "research-05461e68c3",
@@ -12852,6 +12882,46 @@
       "durationHours": 4
     },
     {
+      "id": "research-dc7096a2b8",
+      "title": "2026“鲲鹏杯”网络安全大赛",
+      "titleEn": "2026 Kunpeng Cup Cybersecurity Competition",
+      "aliases": [
+        "鲲鹏杯",
+        "Kunpeng Cup 2026"
+      ],
+      "category": "domestic-technical",
+      "subCategory": "社区赛",
+      "region": "中国",
+      "organizer": "Yunsee俱乐部 & 鱼影安全",
+      "format": "CTF",
+      "onsite": false,
+      "restrictions": "",
+      "weight": null,
+      "officialUrl": "https://www.digiforensics.cn/calendar?month=2026-10",
+      "ctftimeUrl": "",
+      "registrationStart": "2026-10-10T00:00:00+08:00",
+      "registrationEnd": "2026-11-06T23:59:00+08:00",
+      "registrationBasis": "stated",
+      "contestStart": "2026-11-07T09:00:00+08:00",
+      "contestEnd": "2026-11-07T17:00:00+08:00",
+      "registrationNote": "DigiForensics 比赛日历：报名开始 2026-10-10 00:00，报名截止 2026-11-06 23:59；比赛 2026-11-07 09:00—17:00（线上）。报名入口 ctfplus.cn。",
+      "note": "数据来源为社区赛历聚合站（DigiForensics），非主办方原始公告，confidence 记为 medium。",
+      "year": 2026,
+      "confidence": "medium",
+      "sources": [
+        "https://www.digiforensics.cn/calendar?month=2026-10",
+        "https://www.digiforensics.cn/calendar/2026-kunpeng-cup",
+        "https://www.ctfplus.cn/competition/hall"
+      ],
+      "evidence": "【2026鲲鹏杯网络安全大赛】CTF 竞赛 比赛 2026-11-07 09:00 — 11-07 17:00 Yunsee俱乐部&鱼影安全 线上；报名开始 10-10 00:00 报名截止 2026-11-06 23:59",
+      "logo": "",
+      "prizes": "",
+      "durationHours": null,
+      "intent": true,
+      "intentGroup": "网络安全",
+      "intentLabel": "鲲鹏杯"
+    },
+    {
       "id": "ctftime-3455",
       "title": "Mimic",
       "titleEn": "Mimic",
@@ -12994,7 +13064,10 @@
       "nucOwners": [
         "李泽宇",
         "于一"
-      ]
+      ],
+      "intent": true,
+      "intentGroup": "计算机应用",
+      "intentLabel": "华北五省计算机应用大赛"
     },
     {
       "id": "ctftime-3082",
@@ -13760,7 +13833,10 @@
       "nucDept": "创新创业学院",
       "nucOwners": [
         "姬文芳"
-      ]
+      ],
+      "intent": true,
+      "intentGroup": "创新创业",
+      "intentLabel": "中国国际大学生创新大赛"
     },
     {
       "id": "catalog-nuc-43",
@@ -14940,7 +15016,10 @@
       "nucDept": "信息与通信工程学院",
       "nucOwners": [
         "李传坤"
-      ]
+      ],
+      "intent": true,
+      "intentGroup": "人工智能",
+      "intentLabel": "全球校园人工智能算法精英大赛"
     },
     {
       "id": "catalog-nuc-20",
@@ -16365,7 +16444,49 @@
       "evidence": "江苏师范大学教务处《关于举办第十七届蓝桥杯全国大学生软件和信息技术大赛的通知》（2025年12月4日）：『1.软件赛（1）C/C++程序设计（研究生组、大学A组、B组、C组）（2）Java 软件开发（研究生组、大学A组、B组、C组）（3）Python 程序设计（研究生组、大学A组、B组、C组）（4）Web 应用开发（大学组、职业院校组）（5）软件测试（6）网络安全……三、时间安排 1.报名时间 2025年10月20日10:00—2025 年 12月15日14:00（一般会延长到2026年1月份）2.比赛时间（1）省赛/全国选拔赛：2026年4月（2）全国总决赛：2026年6月中上旬 各赛项的具体举办时间（或时间如有调整）将另行通知。』‖ 东北财经大学创新创业学院通知（2025年12月4日）：『（八）报名与提交作品时间 1. 软件赛、电子赛、人工智能赛报名时间：2025年10月20日 - 12月15日……（九）个人赛比赛时间 1. 省赛：2026年4月 2. 全国总决赛：2025年6月中上旬。』",
       "logo": "",
       "prizes": "",
-      "durationHours": null
+      "durationHours": null,
+      "intent": true,
+      "intentGroup": "程序设计",
+      "intentLabel": "蓝桥杯"
+    },
+    {
+      "id": "research-71ad649234",
+      "title": "首届 CCF 网络安全智能挑战赛暨“京华杯”TPCTF 2026",
+      "titleEn": "CCF Cybersecurity Intelligence Challenge / TPCTF 2026",
+      "aliases": [
+        "TPCTF 2026",
+        "京华杯",
+        "CCF 网络安全智能挑战赛"
+      ],
+      "category": "domestic-technical",
+      "subCategory": "高校赛",
+      "region": "中国",
+      "organizer": "中国计算机学会（CCF）",
+      "format": "CTF",
+      "onsite": false,
+      "restrictions": "",
+      "weight": null,
+      "officialUrl": "https://github.com/tp-ctf/TPCTF2025",
+      "ctftimeUrl": "",
+      "registrationStart": null,
+      "registrationEnd": null,
+      "registrationBasis": "unknown",
+      "contestStart": null,
+      "contestEnd": null,
+      "registrationNote": "2026 年赛程与报名时间未能在公开来源确认。",
+      "note": "历届 TPCTF 有公开记录（如 TPCTF2025 官方仓库），但首届 CCF 京华杯 TPCTF 2026 的日期尚未检索到。本条目按同学意向保留，日期待官方通知后补充。",
+      "year": 2026,
+      "confidence": "low",
+      "sources": [
+        "https://github.com/tp-ctf/TPCTF2025"
+      ],
+      "evidence": "GitHub 仓库 tp-ctf/TPCTF2025 描述为「official repository of TPCTF2025」，可确认 TPCTF 系列赛事存在；未见 2026 年届次公告。",
+      "logo": "",
+      "prizes": "",
+      "durationHours": null,
+      "intent": true,
+      "intentGroup": "网络安全",
+      "intentLabel": "CCF 网络安全智能挑战赛"
     }
   ]
 }

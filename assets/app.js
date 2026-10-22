@@ -39,6 +39,7 @@
     tzIndex: 0, theme: 'dark',
     q: '', cat: '', level: '', rangeField: 'contest', from: '', to: '',
     overlap: 'overlap', sort: 'start-asc', status: 'all', openable: false, includeTbd: false,
+    wanted: false,
     nq: '', nlevel: 'all', ndept: '', nsort: 'no-asc',
     nowOverride: null,
   };
@@ -66,6 +67,8 @@
     nucRowTpl: $('nucRowTpl'),
     chipIncludeTbd: $('chipIncludeTbd'), cntExcluded: $('cntExcluded'),
     btnClearRange: $('btnClearRange'), rangeHint: $('rangeHint'),
+    chipWanted: $('chipWanted'), cntWanted: $('cntWanted'),
+    intentHint: $('intentHint'), btnClearMine: $('btnClearMine'),
   };
 
   function effectiveTz() {
@@ -78,6 +81,25 @@
   }
   const now = () => (state.nowOverride != null ? state.nowOverride : Date.now());
   const TZ = () => effectiveTz();
+
+  /* ---------------- 我的意向（存在浏览器本地，不联网） ---------------- */
+  const MINE_KEY = 'ctf-my-intent';
+  let myIntent = new Set();
+
+  function loadMine() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(MINE_KEY) || '[]');
+      myIntent = new Set(Array.isArray(raw) ? raw.filter((x) => typeof x === 'string') : []);
+    } catch (e) { myIntent = new Set(); }
+  }
+  function saveMine() {
+    try { localStorage.setItem(MINE_KEY, JSON.stringify([...myIntent])); } catch (e) { /* ignore */ }
+  }
+  function toggleMine(id) {
+    if (myIntent.has(id)) myIntent.delete(id); else myIntent.add(id);
+    saveMine();
+    apply();
+  }
 
   /* ---------------- 渲染工具 ---------------- */
   function esc(s) {
@@ -182,6 +204,27 @@
       badges.appendChild(lb);
     }
 
+    // 实验室意向清单（静态标记，所有人可见）
+    if (ev.intent) {
+      const ib = document.createElement('span');
+      ib.className = 'badge intent';
+      ib.textContent = '★ 同学意向';
+      ib.title = '实验室有意向参加' + (ev.intentGroup ? ' · ' + ev.intentGroup : '');
+      badges.appendChild(ib);
+    }
+
+    // 我的意向（点击切换，存 localStorage，不联网）
+    const mine = myIntent.has(ev.id);
+    const star = document.createElement('button');
+    star.type = 'button';
+    star.className = 'star' + (mine ? ' on' : '');
+    star.textContent = mine ? '★' : '☆';
+    star.title = mine ? '从「我的意向」移除' : '加入「我的意向」';
+    star.setAttribute('aria-label', star.title);
+    star.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); toggleMine(ev.id); });
+    badges.appendChild(star);
+    if (mine) node.classList.add('is-wanted');
+
     node.querySelector('.reg-start').outerHTML = slot(ev.registrationStart, derived ? '官方未公布' : '', derived ? 'derived' : '');
     node.querySelector('.reg-end').outerHTML = slot(ev.registrationEnd, derived ? '推定值' : '', derived ? 'derived' : '');
     node.querySelector('.c-start').outerHTML = slot(ev.contestStart);
@@ -225,6 +268,8 @@
     else if (state.level) { if (d.ev.nucLevel !== state.level) return false; }
     // 独立开关：只看「报名通道现在开着」的（含推定窗口）
     if (state.openable && d.st.reg !== 'open') return false;
+    // 意向：实验室清单 ∪ 我勾选的
+    if (state.wanted && !d.ev.intent && !myIntent.has(d.ev.id)) return false;
     return C.statusMatches(d.st, state.status) && C.queryMatches(d.hay, groups);
   }
 
@@ -293,6 +338,19 @@
     if (chip) chip.classList.toggle('on', state.openable);
   }
 
+  /** 意向计数：实验室清单 ∪ 我的勾选（只统计确实存在的赛事） */
+  function updateWanted(decorated) {
+    const list = decorated || decorate();
+    const existing = new Set(state.events.map((e) => e.id));
+    const mine = [...myIntent].filter((id) => existing.has(id)).length;
+    const lab = list.filter((d) => d.ev.intent).length;
+    const union = list.filter((d) => d.ev.intent || myIntent.has(d.ev.id)).length;
+
+    if (el.cntWanted) el.cntWanted.textContent = String(union);
+    if (el.chipWanted) el.chipWanted.classList.toggle('on', state.wanted);
+    if (el.intentHint) el.intentHint.textContent = `实验室 ${lab} · 我的 ${mine}`;
+  }
+
   function renderStats(decorated) {
     const c = C.summarize(decorated);
     const cards = [
@@ -356,6 +414,7 @@
     renderStats(decorated);
     updateOpenable(decorated);
     updateRangeUi(decorated);
+    updateWanted(decorated);
     syncUrl();
   }
 
@@ -461,6 +520,7 @@
     if (state.tzIndex !== 0) p.set('tz', String(state.tzIndex));
     if (state.openable) p.set('open', '1');
     if (state.includeTbd) p.set('tbd', '1');
+    if (state.wanted) p.set('want', '1');
     if (state.nq) p.set('nq', state.nq);
     if (state.nlevel !== 'all') p.set('nlvl', state.nlevel);
     if (state.ndept) p.set('ndept', state.ndept);
@@ -489,6 +549,7 @@
     if (p.get('now')) { const t = new Date(p.get('now')).getTime(); if (!Number.isNaN(t)) state.nowOverride = t; }
     if (p.get('open') === '1') state.openable = true;
     if (p.get('tbd') === '1') state.includeTbd = true;
+    if (p.get('want') === '1') state.wanted = true;
     normalizeDates();
   }
 
@@ -549,7 +610,7 @@
 
   function exportCsv() {
     const rows = C.sortDecorated(filterList(decorate()), state.sort);
-    const head = ['赛事名称', '类型', '中北级别', '中北负责单位', '主办方', '地区', '赛制',
+    const head = ['赛事名称', '类型', '中北级别', '中北负责单位', '实验室意向', '我的意向', '主办方', '地区', '赛制',
       '开始报名', '报名截止', '报名依据', '比赛开始', '比赛结束', '状态', '报名状态', '官网', '可信度', '来源'];
     const q = (s) => `"${String(s == null ? '' : s).replace(/"/g, '""')}"`;
     const lines = [head.map(q).join(',')];
@@ -558,6 +619,7 @@
       lines.push([
         ev.title, CATEGORY_LABEL[ev.category] || ev.category,
         ev.nucLevel || '', ev.nucDept || '',
+        ev.intent ? '是' : '', myIntent.has(ev.id) ? '是' : '',
         ev.organizer, ev.region, ev.format,
         C.fmtDT(ev.registrationStart, tz, false) || '待定',
         C.fmtDT(ev.registrationEnd, tz, false) || '待定',
@@ -668,6 +730,20 @@
       });
     }
 
+    if (el.chipWanted) {
+      el.chipWanted.addEventListener('click', () => {
+        state.wanted = !state.wanted;
+        apply();
+      });
+    }
+    if (el.btnClearMine) {
+      el.btnClearMine.addEventListener('click', () => {
+        if (!myIntent.size) return;
+        if (!confirm(`清空我在本机勾选的 ${myIntent.size} 项意向？（不影响实验室清单）`)) return;
+        myIntent.clear(); saveMine(); apply();
+      });
+    }
+
     document.querySelectorAll('[data-quick]').forEach((b) => {
       b.addEventListener('click', () => {
         const tz = TZ();
@@ -701,7 +777,7 @@
       Object.assign(state, {
         q: '', cat: '', level: '', rangeField: 'contest', from: '', to: '',
         overlap: 'overlap', sort: 'start-asc', status: 'all', openable: false,
-        includeTbd: false, rangeSwapped: false,
+        includeTbd: false, rangeSwapped: false, wanted: false,
       });
       syncControls(); apply();
     };
@@ -761,6 +837,7 @@
       const payload = await evRes.json();
       state.events = payload.events || [];
       state.stats = payload.stats || null;
+      loadMine();
 
       if (nucRes && nucRes.ok) {
         const nucPayload = await nucRes.json();

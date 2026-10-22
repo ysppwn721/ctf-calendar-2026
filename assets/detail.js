@@ -30,7 +30,26 @@
     btnTz: document.getElementById('btnTz'),
     btnIcsOne: document.getElementById('btnIcsOne'),
     btnPrint: document.getElementById('btnPrint'),
+    btnMine: document.getElementById('btnMine'),
   };
+
+  /* 我的意向：与列表页共用同一个 localStorage 键 */
+  const MINE_KEY = 'ctf-my-intent';
+  function readMine() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(MINE_KEY) || '[]');
+      return new Set(Array.isArray(raw) ? raw : []);
+    } catch (e) { return new Set(); }
+  }
+  function writeMine(set) {
+    try { localStorage.setItem(MINE_KEY, JSON.stringify([...set])); } catch (e) { /* ignore */ }
+  }
+  function syncMineBtn() {
+    if (!el.btnMine || !state.event) return;
+    const on = readMine().has(state.event.id);
+    el.btnMine.textContent = on ? '★ 已加入我的意向' : '☆ 加入我的意向';
+    el.btnMine.classList.toggle('on', on);
+  }
 
   const state = { tzIndex: 0, event: null, catalogEntry: null, catalog: null, events: null };
 
@@ -104,13 +123,17 @@
       ev.restrictions,
     ].filter(Boolean).map(esc).join(' · ');
 
+    const intentBadge = ev.intent
+      ? `<span class="badge intent" title="实验室有意向参加${ev.intentGroup ? ' · ' + esc(ev.intentGroup) : ''}">★ 同学意向</span>`
+      : '';
+
     const badges = `
       <span class="badge status ${sm.cls}">${esc(sm.label)}</span>
       <span class="badge reg ${st.reg === 'open' ? 'open' : st.reg === 'closed' ? 'closed' : 'unknown'}">${
         derived && st.reg === 'open' ? '报名中 · 推定' : {
           open: '报名进行中', closed: '报名已截止', notopen: '报名未开始', unknown: '报名时间待定',
         }[st.reg]}</span>
-      ${catBadge}${lvl}`;
+      ${catBadge}${lvl}${intentBadge}`;
 
     const regNotice = {
       stated: `<div class="callout ok"><b>报名字段：官方明确</b>报名起止时间取自赛事原文或官方通知，下方附原文摘录，可直接核实。</div>`,
@@ -383,9 +406,19 @@
     state.event = ev;
     document.title = `${ev.title} · 赛事详情`;
     renderEvent(ev);
+    syncMineBtn();
   }
 
   function bind() {
+    if (el.btnMine) {
+      el.btnMine.addEventListener('click', () => {
+        if (!state.event) return;
+        const s = readMine();
+        if (s.has(state.event.id)) s.delete(state.event.id); else s.add(state.event.id);
+        writeMine(s);
+        syncMineBtn();
+      });
+    }
     el.btnTz.addEventListener('click', () => {
       state.tzIndex = (state.tzIndex + 1) % TZ_PRESETS.length;
       el.btnTz.textContent = '时区：' + TZ_PRESETS[state.tzIndex].label;

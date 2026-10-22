@@ -360,10 +360,12 @@ async function main() {
 
   const college = (await readJsonIfExists(resolve(RESEARCH, 'college-competitions.json'))) || [];
   const domestic = (await readJsonIfExists(resolve(RESEARCH, 'domestic-ctf.json'))) || [];
-  console.log(`调研-大学生竞赛: ${college.length} | 调研-国内技术赛: ${domestic.length}`);
+  const intentExtra = (await readJsonIfExists(resolve(RESEARCH, 'user-intent-extra.json'))) || [];
+  console.log(`调研-大学生竞赛: ${college.length} | 调研-国内技术赛: ${domestic.length} | 意向补充: ${intentExtra.length}`);
 
   for (const item of college) events.push(normalizeResearch(item, 'college'));
   for (const item of domestic) events.push(normalizeResearch(item, 'domestic-technical'));
+  for (const item of intentExtra) events.push(normalizeResearch(item, 'domestic-technical'));
 
   // 年度归属：赛程与 2026 自然年有交集即收录（多阶段赛事常跨年）
   const Y0 = Date.UTC(2026, 0, 1);
@@ -528,6 +530,37 @@ async function main() {
   console.log(`  目录条目并入赛事列表 ${synthesized.length} 条（已在赛程中的 ${referencedNos.size} 条不重复）`);
   console.log(`  赛事总数 ${deduped.length}`);
 
+  /* ---- 意向清单标记：实验室同学有意向参加的赛事 ----
+     归一化标题后按 match 片段匹配（全部命中才算），未配 match 的用 name 包含匹配。
+     未命中的项会打印出来，避免「清单里写了但页面上没有」这种静默失效。 */
+  const normTitle = (s) => String(s || '')
+    .replace(/[“”"'‘’]/g, '')
+    .replace(/[（(][^)）]*[)）]/g, '')
+    .replace(/[\s·、,，:：\-—_]/g, '')
+    .replace(/20\d{2}\s*年?/g, '')
+    .toLowerCase();
+
+  const intentFile = await readJsonIfExists(resolve(ROOT, 'data', 'intent.json'));
+  const intentItems = (intentFile && intentFile.items) || [];
+  const intentUnmatched = [];
+  for (const it of intentItems) {
+    const keys = (it.match && it.match.length ? it.match : [it.name]).map(normTitle).filter(Boolean);
+    if (!keys.length) continue;
+    const hits = deduped.filter((e) => {
+      const t = normTitle(e.title);
+      return keys.every((k) => t.includes(k));
+    });
+    if (!hits.length) { intentUnmatched.push(it.name); continue; }
+    for (const e of hits) {
+      e.intent = true;
+      e.intentGroup = it.group || '';
+      if (!e.intentLabel) e.intentLabel = it.name;
+    }
+  }
+  const intentCount = deduped.filter((e) => e.intent).length;
+  console.log(`意向清单: ${intentItems.length} 项 → 标记 ${intentCount} 条赛事；未命中 ${intentUnmatched.length} 项`
+    + (intentUnmatched.length ? ` (${intentUnmatched.join(' / ')})` : ''));
+
   const nucStats = {
     generatedAt: new Date().toISOString(),
     source: '中北大学学科竞赛目录（2026版）',
@@ -564,6 +597,9 @@ async function main() {
     registrationStated: deduped.filter((e) => e.registrationBasis === 'stated').length,
     nucCatalogTotal: catalog.length,
     nucCrossReferenced: nucMatches.length,
+    intentTotal: intentItems.length,
+    intentCount,
+    intentUnmatched,
   };
   for (const e of deduped) {
     stats.byCategory[e.category] = (stats.byCategory[e.category] || 0) + 1;
